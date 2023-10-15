@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import HomeFormeMebers from "../modules/members/login/pages/HomeFormeMebers.vue"
+import HomeFormeMebers from "../modules/members/pages/HomeFormeMebers.vue"
+import Addproject from '../modules/members/pages/addProjectMember.vue'
 const routes = [
   {
     path: '/',
@@ -18,6 +19,18 @@ const routes = [
   {
     path:"/member",
     component:HomeFormeMebers,
+    children: [
+      {
+        path: '/addproject', 
+        component:Addproject
+      },
+      {
+        path: 'profile',
+      },
+      {
+        path: 'settings',
+      }
+    ]
   }
 ]
 
