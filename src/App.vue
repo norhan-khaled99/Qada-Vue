@@ -4,8 +4,10 @@
     <router-link to="/about">About</router-link>
   </nav>
   <router-view/> -->
-  <Main_Header/>
-  <MainFooter/>
+   <Main_Header/>
+    <MainFooter/>
+    <router-view/>
+ 
 </template>
 <script>
 import Main_Header from './components/Main_Header.vue'
@@ -15,7 +17,8 @@ export default {
   name: 'App',
   components: {
     Main_Header,
-    MainFooter
+    MainFooter,
+    
   }
 }
 </script>

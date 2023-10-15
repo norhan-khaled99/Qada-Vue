@@ -5,13 +5,11 @@
         <div> تسجيل الدخول للأفراد </div>
       </div>
     </div>
-    <form>
-      <div>
+    <form >
+      <div class="w-50 m-auto my-3">
         <img src="../../../assets/Vector.png" alt="">
         <label for="name">اسم المستخدم</label>
         <input type="text" class="form-control" />
-      </div>
-      <div>
         <img src="../../../assets/passwd.png" alt="">
         <label for="password">كلمة السر</label>
         <input type="text" class="form-control" />
@@ -31,9 +29,9 @@ export default {};
 </script>
 
 <style scoped>
-* {
+/* * {
   direction: rtl;
-}
+} */
 
 .header {
   text-align: center;
@@ -42,7 +40,9 @@ export default {};
   font-size: 3rem;
   font-weight: 700px;
 }
-
+form{
+  justify-content: center;
+}
 form span {
   color: #000000;
   font-size: 2.0rem;
