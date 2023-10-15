@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import HomeFormeMebers from "../modules/members/pages/HomeFormeMebers.vue"
-import LoginPanal from "../components/LoginPanal.vue"
+// import LoginPanal from "../components/LoginPanal.vue"
 import Addproject from '../modules/members/pages/addProjectMember.vue'
 import PersonRegister from '../modules/members/pages/PersonRegister.vue'
 import PersonLogin from "../modules/members/pages/PersonLogin.vue";
@@ -23,20 +23,18 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    path: "/member",
-    component: HomeFormeMebers,
+    path:"/member",
+    
     children: [
       {
-        path: "/addproject",
-        component: Addproject,
+        path:"",
+        component:HomeFormeMebers,
       },
       {
-        path: "profile",
+        path:"addproject", 
+        component:Addproject,
       },
-      {
-        path: "settings",
-      },
-    ],
+    ]
   },
   {
     path: "/person/register",
