@@ -1,5 +1,10 @@
 <template>
- <div class="container">
-     <h1>add new project</h1>
- </div>
+  <button class="btn">add project</button>
+  <h1>test</h1>
 </template>
+
+<script>
+export default {
+  
+}
+</script>
