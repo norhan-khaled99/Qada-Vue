@@ -9,9 +9,6 @@
     </div>
     <div class="row"></div>
     <div class="row-col-6 my-5 add-project">
-      <!-- <button class="btn  add-project-text">
-        اطرح مشروعك الآن
-      </button> -->
       <router-link to="/member/addproject">
         <button class="btn add-project-text">
           اطرح مشروعك الآن
