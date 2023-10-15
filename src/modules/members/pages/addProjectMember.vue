@@ -1,5 +1,21 @@
 <template>
   <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="50" fill="#48847B"/>
+        <path d="M31.5 54.5L46.2122 65L65 35" stroke="white" stroke-width="5"/>
+      </svg>
+      <p>مسودة المشروع</p>
+      </div>
+       <!-- <hr class="w-50"/> -->
+       <div class="">
+       <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="50" fill="#656565"/>
+      </svg>
+      <p > إرسال للمراجعة</p>
+      </div>
+    </div>
     <p class="projecttitle">تفاصيل المشروع</p>
     <form action="" class="add-project">
       <div class="row">
@@ -113,8 +129,14 @@
           <img src="../../../assets/3322766-2001.png">
          </div> 
       </div>
-      <div class="row">
-        <p>طلب جداول الكميات</p>
+
+      <div class="row d-flex justify-content-between">
+        <div class="col-6">
+        <span >طلب جداول الكميات</span>
+       </div>
+       <div class="col-6">
+        <input class="form-check-input " type="checkbox" value="" >
+      </div>
       </div>
 
       <div class="row">
@@ -176,5 +198,14 @@ export default {};
 }
 .add-project p {
   text-align: right;
+}
+
+.form-check-input {
+  background-color: #0C483F;
+}
+.form-check-input:checked {
+  border-color: #0C483F;
+  background-color: #0C483F;
+
 }
 </style>

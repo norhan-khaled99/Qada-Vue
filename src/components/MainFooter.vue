@@ -1,5 +1,6 @@
 <template>
-  <footer class="text-light text-center py-3">
+  <div></div>
+  <!-- <footer class="text-light text-center py-3">
     <div class="container">
       <h1>قدة</h1>
       <div class="row">
@@ -29,7 +30,7 @@
         </p>
       </div>
     </div>
-  </footer>
+  </footer> -->
 </template>
   
   <script>
