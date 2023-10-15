@@ -1,6 +1,6 @@
 import axios from "axios";
 const apiClient = axios.create({
-  baseURL: "http://localhost:8000/api",
+  baseURL: "https://finalqada.000webhostapp.com",
   headers: {
     // Add any common headers if needed
     "Content-Type": "application/json",
@@ -9,8 +9,9 @@ const apiClient = axios.create({
 });
 
 const authService = {
-  userData: {},
+  personData: {},
   register(credentials) {
+    // console.log("sjzalZJLx")
     return apiClient.post("person/register", credentials);
   },
   login(credentials) {

@@ -6,10 +6,12 @@
       </div>
     </div>
     <form >
-      <div class="w-50 m-auto my-3">
+      <div style=" margin: auto; display: flex; justify-content: center;">
         <img src="../../../assets/Vector.png" alt="">
         <label for="name">اسم المستخدم</label>
         <input type="text" class="form-control" />
+      </div>
+      <div>
         <img src="../../../assets/passwd.png" alt="">
         <label for="password">كلمة السر</label>
         <input type="text" class="form-control" />

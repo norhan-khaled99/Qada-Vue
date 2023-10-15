@@ -5,19 +5,19 @@
   </nav>
   <router-view/> -->
     <Main_Header/>
-    <MainFooter/>
+    <!-- <MainFooter/> -->
     <router-view/>
 
 </template>
 <script>
 import Main_Header from './components/Main_Header.vue'
-import MainFooter from './components/MainFooter.vue'
+// import MainFooter from './components/MainFooter.vue'
 
 export default {
   name: 'App',
   components: {
     Main_Header,
-    MainFooter,
+    // MainFooter,
     
   }
 }
