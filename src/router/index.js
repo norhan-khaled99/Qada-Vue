@@ -14,6 +14,10 @@ const routes = [
     component: HomeView,
   },
   {
+    path: "/loginPanal",
+    component: LoginPanal,
+  },
+  {
     path: "/about",
     name: "about",
     // route level code-splitting
