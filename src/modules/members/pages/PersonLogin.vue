@@ -1,28 +1,22 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="header">
-        <div> تسجيل الدخول للأفراد </div>
-      </div>
+  <div class="container w-50 m-auto my-5">
+    
+    <div class="header">
+      <p>تسجيل الدخول للأفراد </p>
     </div>
     <form >
-      <div style=" margin: auto; display: flex; justify-content: center;">
         <img src="../../../assets/Vector.png" alt="">
-        <label for="name">اسم المستخدم</label>
-        <input type="text" class="form-control" />
-      </div>
-      <div>
+        <label  for="name">اسم المستخدم</label>
+        <input type="text" class="form-control w-75" />
         <img src="../../../assets/passwd.png" alt="">
-        <label for="password">كلمة السر</label>
-        <input type="text" class="form-control" />
-      </div>
+        <label class="my-3 " for="password">كلمة السر</label>
+        <input type="text" class="form-control w-75" />
     </form>
-    <br><br>               
-       <button type="button" class="btn"> 
+    <!-- <br><br>               
+        <button type="button" class="btn"> 
         <img src="../../../assets/Vector2.png" alt="">
-         حساب جديد
-        </button>
-
+          حساب جديد
+        </button> -->
   </div>
 </template>
 
@@ -42,9 +36,10 @@ export default {};
   font-size: 3rem;
   font-weight: 700px;
 }
-form{
+/* form{
   justify-content: center;
-}
+  text-align: center;
+} */
 form span {
   color: #000000;
   font-size: 2.0rem;
@@ -53,8 +48,8 @@ form span {
 }
 
 input {
-  width: 450px;
-  height: 55px;
+  /* width: 450px; */
+  height: 55px; 
   border-radius: 20px;
   text-align: center;
 }
@@ -66,17 +61,14 @@ label {
 
 .btn {
   width: 200px;
-
 }
 
 hr {
   border: 1px solid rgba(53, 53, 53, 0.7);
 }
-
 .container p {
   display: inline;
 }
-
 .p1 {
   color: rgba(0, 0, 0, 0.7);
 }

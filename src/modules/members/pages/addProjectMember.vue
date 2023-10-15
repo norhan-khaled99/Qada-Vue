@@ -99,18 +99,18 @@
           </select>
         </div>
       </div>
-      <div class="row my-5 justify-content-center ">
+      <div class="row my-5 justify-content-center  text-center">
          <div class="col-3">
           <p class="text-center">صورة من صك الملكية</p>
-          <img src="../../../assets/3322766-2001.png" alt="">
+          <img src="../../../assets/3322766-2001.png" >
          </div> 
          <div class="col-3"> 
           <p class="text-center"> صورة من هوية المالك <span class="text-danger">*</span></p>
-          <img src="../../../assets/3322766-2001.png" alt="">
+          <img src="../../../assets/3322766-2001.png">
          </div> 
          <div class="col-3">
           <p class="text-center">مستندات اخري داعمة </p>
-          <img src="../../../assets/3322766-2001.png" alt="">
+          <img src="../../../assets/3322766-2001.png">
          </div> 
       </div>
       <div class="row">

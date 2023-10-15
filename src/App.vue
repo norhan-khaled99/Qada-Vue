@@ -24,6 +24,10 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+*{
+    font-family: "Cairo", sans-serif;
+}
 /* *{
   direction: rtl;
 } */

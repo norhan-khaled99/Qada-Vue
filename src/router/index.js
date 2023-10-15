@@ -13,6 +13,10 @@ const routes = [
     name: "home",
     component: HomeView,
   },
+  // {
+  //   path: "/loginPanal",
+  //   component: LoginPanal,
+  // },
   {
     path: "/about",
     name: "about",
@@ -23,20 +27,18 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    path: "/member",
-    component: HomeFormeMebers,
+    path:"/member",
+    
     children: [
       {
-        path: "/addproject",
-        component: Addproject,
+        path:"",
+        component:HomeFormeMebers,
       },
       {
-        path: "profile",
+        path:"addproject", 
+        component:Addproject,
       },
-      {
-        path: "settings",
-      },
-    ],
+    ]
   },
   {
     path: "/person/register",
