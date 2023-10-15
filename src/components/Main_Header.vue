@@ -15,8 +15,8 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           
-          <button type="button" class="btn btn-info mx-4 create">إنشاء حساب</button>
-          <button type="button" class="btn btn-info  login">تسجيل دخول</button>
+          <button type="button" class="btn  mx-4 create">إنشاء حساب</button>
+          <button type="button" class="btn  login">تسجيل دخول</button>
           <li class="nav-item">
             <a class="nav-link" href="#">إتصل بنا</a>
           </li>
