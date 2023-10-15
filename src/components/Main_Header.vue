@@ -1,27 +1,78 @@
 <template>
-  <div class="hello">
-    <h1>header</h1>
-  </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          
+          <button type="button" class="btn btn-info mx-4 create">إنشاء حساب</button>
+          <button type="button" class="btn btn-info  login">تسجيل دخول</button>
+          <li class="nav-item">
+            <a class="nav-link" href="#">إتصل بنا</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">شركاء النجاح</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">الشروط والاحكام</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">الاسئلة المتكررة</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">لوحة التحكم</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">من نحن؟</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active page_active" aria-current="page" href="#"> الرئيسية</a>
+          </li>
+          <li class="nav-item">
+          <h1 class="navbar-brand" href="#">قدة</h1>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </template>
 
 <script>
 export default {};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+nav{
+  font-family: "Cairo", sans-serif;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.create{
+  background-color: #fff;
+  color: #2A665D;
+  border-color: #2A665D;
+  border-radius: 1rem;
+  width: 150px;
+  height: 40px;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.login{
+  background-color: #2A665D;
+  color: #fff;
+  width: 150px;
+  height: 40px;
+  border-radius: 1rem;
+  border-color: #2A665D;
 }
-a {
-  color: #42b983;
+.page_active{
+  color: #fff;
 }
 </style>

@@ -5,6 +5,7 @@ import Addproject from '../modules/members/pages/addProjectMember.vue'
 import PersonRegister from '../modules/members/pages/PersonRegister.vue'
 import PersonLogin from "../modules/members/pages/PersonLogin.vue";
 
+// import Login  from '../sharedcomponents/LoginPage.vue'
 const routes = [
   {
     path: "/",
@@ -45,6 +46,9 @@ const routes = [
     component: PersonLogin,
   },
 ];
+    
+    
+
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

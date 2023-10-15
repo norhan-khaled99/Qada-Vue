@@ -1,12 +1,29 @@
 <template>
-  <nav>
+  <!-- <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
-  <router-view/>
+  <router-view/> -->
+  <Main_Header/>
+  <MainFooter/>
 </template>
+<script>
+import Main_Header from './components/Main_Header.vue'
+import MainFooter from './components/MainFooter.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Main_Header,
+    MainFooter
+  }
+}
+</script>
 
 <style>
+/* *{
+  direction: rtl;
+} */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,5 +43,6 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
-}
+} 
+
 </style>

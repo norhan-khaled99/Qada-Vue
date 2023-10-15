@@ -9,9 +9,14 @@
     </div>
     <div class="row"></div>
     <div class="row-col-6 my-5 add-project">
-      <button class="btn  add-project-text">
+      <!-- <button class="btn  add-project-text">
         اطرح مشروعك الآن
-      </button>
+      </button> -->
+      <router-link to="/member/addproject">
+        <button class="btn add-project-text">
+          اطرح مشروعك الآن
+        </button>
+      </router-link>
     </div>
     <div class="row my-5">
       <p class="seconed-subtitle">كيف تعمل منصتنا؟</p>
@@ -53,6 +58,18 @@
         <div class="card">
           <div class="card-body">
             This is some text within a card body.
+          </div>
+          <div class="col-3">
+
+          </div>
+          <div class="col-3">
+
+          </div>
+          <div class="col-3">
+
+          </div>
+          <div class="col-3">
+
           </div>
         </div>
       </div>
@@ -106,9 +123,7 @@ export default {};
   text-decoration: underline;
   text-decoration-color: #ffb800;
 }
-.steps img{
 
-}
 .first-step {
   border-radius: 41px;
   width: 50%;
