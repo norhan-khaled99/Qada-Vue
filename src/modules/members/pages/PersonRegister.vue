@@ -8,33 +8,33 @@
     <form @submit.prevent="register">
       <div class="row">
         <div class="col-md-6 mb-4">
-          <img src="../../../assets/Vector.png" alt="">
+          <img src="../../../assets/Vector.png" class="mx-2" alt="">
           <label  for="name">اسم المستخدم</label>
-          <input type="text" class="form-control" v-model.trim="name" />
+          <input type="text" class="form-control mt-2" v-model.trim="name" />
         </div>
         <div class="col-md-6 mb-4">
-          <img src="../../../assets/bxs_phone.png" alt="">
+          <img src="../../../assets/bxs_phone.png" class="mx-2" alt="">
           <label for="phone">رقم الهاتف</label>
-          <input type="text" class="form-control" v-model.trim="phone" />
+          <input type="text" class="form-control mt-2" v-model.trim="phone" />
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 mb-4">
-          <img src="../../../assets/passwd.png" alt="">
+          <img src="../../../assets/passwd.png " class="mx-2" alt="">
           <label for="password">كلمة السر</label>
-          <input type="text" class="form-control" v-model.trim="password" />
+          <input type="text" class="form-control mt-2" v-model.trim="password" />
         </div>
         <div class="col-md-6 mb-4">
-          <img src="../../../assets/passwd.png" alt="">
+          <img src="../../../assets/passwd.png" class="mx-2" alt="">
           <label for="password">تأكيد كلمة السر</label>
-          <input type="text" class="form-control" v-model.trim="confirmPassword"/>
+          <input type="text" class="form-control mt-2" v-model.trim="confirmPassword"/>
             <small v-if="!isValidConfirmPassword" class="error-message">Passwords do not match.</small>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 mb-4">
           <label for="email">البريد اللإلكتروني</label>
-          <input type="text" class="form-control" />
+          <input type="text" class="form-control mt-2" />
         </div>
 
       </div>

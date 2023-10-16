@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>home for member</h1>
+    <!-- <h1>home for member</h1> -->
     <div class="row">
       <div class="header">
         <div>جميع مشاريعك الهندسية تحت</div>

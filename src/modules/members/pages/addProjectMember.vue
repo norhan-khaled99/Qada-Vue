@@ -1,11 +1,11 @@
 <template>
-  <div class="container">
+  <div class="container ">
     <p class="projecttitle">تفاصيل المشروع</p>
-    <form action="" class="add-project">
+    <form action="" class="add-project ">
       <div class="row">
         <input
           type="text"
-          class="form-control project-details"
+          class="form-control  project-details"
           placeholder="المشروع عبارة عن مسودة يجب إرساله للمراجعة بعد الانتهاء."
         />
       </div>
