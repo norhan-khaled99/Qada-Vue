@@ -1,22 +1,26 @@
 <template>
   <div class="container">
-    <div class="row d-flex justify-content-center">
-      <div>
+    <div class="row d-flex justify-content-between align-items-center mt-5">
+      <div class="col-md-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
         <circle cx="50" cy="50" r="50" fill="#48847B"/>
         <path d="M31.5 54.5L46.2122 65L65 35" stroke="white" stroke-width="5"/>
       </svg>
       <p>مسودة المشروع</p>
       </div>
-       <!-- <hr class="w-50"/> -->
-       <div class="">
+
+      <hr class="col-md-7  my-4 custom-hr">
+
+       <div class="col-md-2">
        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
         <circle cx="50" cy="50" r="50" fill="#656565"/>
       </svg>
       <p > إرسال للمراجعة</p>
       </div>
     </div>
+
     <p class="projecttitle">تفاصيل المشروع</p>
+
     <form action="" class="add-project">
       <div class="row">
         <input
@@ -34,6 +38,7 @@
         <textarea
           class="form-control"
           style="height: 100px"
+          placeholder="ارغب في تصميم فيلا دوبليكس مكونه من 4 غرف نوم و 5 حمامات والمرافق الخدمية لها..."
         ></textarea>
         <p class="descriptionfortextarea">عدد الحروف لا يقل عن 150 (95/150)</p>
       </div>
@@ -41,17 +46,16 @@
       <div class="row">
         <div class="col-md-6 col-sm-12">
           <p>مساحة المشروع</p>
-          <input type="number" class="form-control" min="0" />
+          <input type="number" class="form-control text-start" min="0" placeholder="م^2"  />
         </div>
         <div class="col-md-6 col-sm-12">
           <p>تصنيف المشروع</p>
-          <select class="form-control" id="floatingSelect">
+          <select class="form-control custom-select" id="floatingSelect">
             <option selected></option>
             <option value="1">تجاري</option>
             <option value="2">سكني</option>
             <option value="3">صناعي</option>
           </select>
-          <!-- <label for="floatingSelect">Works with selects</label> -->
         </div>
       </div>
       <div class="row">
@@ -155,6 +159,35 @@ export default {};
 * {
   direction: rtl;
 }
+.custom-hr {
+  margin-left: 1.25rem;
+  border: none;
+  height:5px; /* Adjust thickness as needed */
+  background-color: #656565; /* Change color to the desired background color */
+}
+
+
+/* Style the selected option */
+/* Style the selected option */
+select#floatingSelect option:checked {
+  background-color: #0C483F;
+  color: #fff;
+}
+
+/* Style the options on hover */
+.custom-select:hover option:hover {
+  background-color: #0C483F;
+  color: #fff;
+}
+
+/* Style the dropdown arrow (optional) */
+select#floatingSelect {
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 30px; /* Adjust based on your arrow icon width */
+}
+
+
 .projecttitle {
   color: #000;
   text-align: center;
@@ -196,6 +229,7 @@ export default {};
 .row {
   margin: 10px 0px;
 }
+
 .add-project p {
   text-align: right;
 }
