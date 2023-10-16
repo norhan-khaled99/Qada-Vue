@@ -39,17 +39,19 @@
         </div>
       </div>
     </div>
-     <div class=" row my-5"></div>
+    <div class="row my-5"></div>
     <div class="row d-flex justify-content-between my-5">
       <div class="col-9 subtitle_text">
         <p class="text-end">اخر المشاريع المضافة</p>
       </div>
-      <div class="col-3 add-new-project ">
-        <button class="btn ">اضف مشروعك</button>
+      <div class="col-3 add-new-project">
+        <button class="btn">اضف مشروعك</button>
       </div>
     </div>
 
-    <div class="row m-auto justify-content-between p-3 w-50 filter-projects my-5">
+    <div
+      class="row m-auto justify-content-between p-3 w-50 filter-projects my-5"
+    >
       <div class="col-md-3">
         <p>المنطقة</p>
         <select class="form-select my-3" aria-label="Default select example">
@@ -84,7 +86,42 @@
 
     <div class="row my-3">
       <div class="card">
-        <div class="card-body">فيلا 5 اوض، 3 حمامات في الرياض</div>
+        <div class="row align-items-baseline justify-content-between">
+          <div class="col-md-6">
+            <div class="card-body">فيلا 5 اوض، 3 حمامات في الرياض</div>
+          </div>
+          <div class="col-md-2 align-items-end">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="29"
+              viewBox="0 0 30 29"
+              fill="none"
+            >
+              <path
+                d="M18.561 4.27922L16.8678 2.65092V5V10.1993C11.1713 10.3661 7.3313 11.9802 4.92479 14.8528C2.41212 17.852 1.64722 22.0129 1.64722 26.6471L3.61539 26.8974C4.35801 24.0248 5.76578 21.9134 7.64351 20.5141C9.52539 19.1117 11.9532 18.3697 14.8237 18.3697H16.8678V23.5546V26.0893L18.5984 24.2374L27.7308 14.4653L28.4039 13.7451L27.6933 13.0617L18.561 4.27922Z"
+                stroke="#9F9F9F"
+                stroke-width="2"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="mx-4"
+              width="32"
+              height="28"
+              viewBox="0 0 32 28"
+              fill="none"
+            >
+              <path
+                d="M3.29929 3.27199L3.29922 3.27192L3.28952 3.28159C1.89938 4.66765 1 6.56922 1 8.74487C1 10.8914 1.90259 12.787 3.27989 14.1984L3.27982 14.1985L3.28952 14.2081L14.8233 25.7081L15.5294 26.4121L16.2355 25.7081L27.7693 14.2081C29.1594 12.8221 30.0588 10.9205 30.0588 8.74487C30.0588 6.59835 29.1562 4.70273 27.7789 3.29133L27.779 3.29126L27.7693 3.28159C26.3792 1.89554 24.4734 1 22.2941 1C20.1441 1 18.2442 1.89874 16.8287 3.27199L16.8286 3.27192L16.8189 3.28159C16.3163 3.78278 15.8778 4.35136 15.5228 4.97594C15.1717 4.35985 14.7408 3.79478 14.2495 3.29133L14.2496 3.29126L14.2399 3.28159C12.8498 1.89554 10.9439 1 8.76471 1C6.61468 1 4.71483 1.89874 3.29929 3.27199Z"
+                fill="white"
+                stroke="#9F9F9F"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
         <div class="row my-3">
           <div class="col-3 d-flex flex-column align-items-center">
             <div class="card-content">
@@ -387,13 +424,12 @@ export default {};
   text-align: center;
 }
 
-
 .add-new-project button {
   border-radius: 20px;
-background: #48847B;
+  background: #48847b;
   width: 198px;
-height: 52px;
-flex-shrink: 0;
+  height: 52px;
+  flex-shrink: 0;
   padding: 0;
   color: #fff;
   font-size: 1.25rem;
