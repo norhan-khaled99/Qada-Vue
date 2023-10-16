@@ -25,7 +25,7 @@
       <div class="row">
         <input
           type="text"
-          class="form-control project-details"
+          class="form-control  project-details"
           placeholder="المشروع عبارة عن مسودة يجب إرساله للمراجعة بعد الانتهاء."
         />
       </div>
