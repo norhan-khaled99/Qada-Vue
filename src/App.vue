@@ -5,9 +5,9 @@
   </nav>
   <router-view/> -->
     <Main_Header/>
+     <router-view/>
     <!-- <MainFooter/> -->
-    <router-view/>
-
+   
 </template>
 <script>
 import Main_Header from './components/Main_Header.vue'
@@ -18,11 +18,9 @@ export default {
   components: {
     Main_Header,
     // MainFooter,
-    
   }
 }
 </script>
-
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
 *{
@@ -51,5 +49,4 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }   */
-
 </style>
