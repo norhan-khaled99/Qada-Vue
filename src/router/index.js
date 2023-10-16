@@ -5,7 +5,7 @@ import HomeFormeMebers from "../modules/members/pages/HomeFormeMebers.vue"
 import Addproject from '../modules/members/pages/addProjectMember.vue'
 import PersonRegister from '../modules/members/pages/PersonRegister.vue'
 import PersonLogin from "../modules/members/pages/PersonLogin.vue";
-
+import ProjectListforMember from "../modules/members/pages/dashboardForMember/MyProjects.vue";
 // import Login  from '../sharedcomponents/LoginPage.vue'
 const routes = [
   {
@@ -27,8 +27,7 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    path:"/member",
-    
+    path:"/member", 
     children: [
       {
         path:"",
@@ -39,10 +38,10 @@ const routes = [
         component:Addproject,
       },
       {
-        path:"",
-        component:Addproject
+        path:"dashborad/projects",
+        component:ProjectListforMember
       }
-    ]
+    ],
   },
   {
     path: "/person/register",

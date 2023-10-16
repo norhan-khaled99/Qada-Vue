@@ -166,6 +166,9 @@ export default {};
   background-color: #656565; /* Change color to the desired background color */
 }
 
+form .form-control{
+  
+}
 
 /* Style the selected option */
 /* Style the selected option */
@@ -173,6 +176,7 @@ select#floatingSelect option:checked {
   background-color: #0C483F;
   color: #fff;
 }
+
 
 /* Style the options on hover */
 .custom-select:hover option:hover {
