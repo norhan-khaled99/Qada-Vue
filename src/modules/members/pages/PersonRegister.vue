@@ -48,7 +48,7 @@
     </form>
     <hr>
     <p class="p1" > لديك حساب بالفعل ؟</p>
-    <p class="p2"> سجل دخولك من هنا </p>
+    <p class="p2" > <router-link to="login"> سجل دخولك من هنا </router-link> </p>
   </div>
 </template>
 
