@@ -28,7 +28,6 @@
           <img src="../../../assets/passwd.png" alt="">
           <label for="password">تأكيد كلمة السر</label>
           <input type="text" class="form-control" v-model.trim="confirmPassword"/>
-            <small v-if="!isValidConfirmPassword" class="error-message">Passwords do not match.</small>
         </div>
       </div>
       <div class="row">
@@ -95,7 +94,9 @@ export default {
           localStorage.setItem('phone', phone);
           localStorage.setItem('email', email);
           this.$router.push('/');
-        })
+        }).catch(error => {
+          console.log(error);
+        });
     }
   }
 

@@ -11,10 +11,10 @@ const apiClient = axios.create({
 const authService = {
   personData: {},
   register(credentials) {
-    // console.log("sjzalZJLx")
     return apiClient.post("person/register", credentials);
   },
   login(credentials) {
+     console.log("sjzalZJLx")
     return apiClient.post("person/login", credentials);
   },
 };
