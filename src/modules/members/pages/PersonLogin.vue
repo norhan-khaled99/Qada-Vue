@@ -4,24 +4,64 @@
     <div class="header">
       <p>تسجيل الدخول للأفراد </p>
     </div>
-    <form >
+    <form @submit.prevent="login">
         <img src="../../../assets/Vector.png" alt="">
         <label  for="name">اسم المستخدم</label>
-        <input type="text" class="form-control w-75" />
+        <input type="text" class="form-control w-75" v-model="name"/>
         <img src="../../../assets/passwd.png" alt="">
         <label class="my-3 " for="password">كلمة السر</label>
-        <input type="text" class="form-control w-75" />
+        <input type="text" class="form-control w-75" v-model="password" />
+        <button type="submit" class="btn btn-primary">دخول</button>
     </form>
-    <!-- <br><br>               
+    <br><br>               
         <button type="button" class="btn"> 
         <img src="../../../assets/Vector2.png" alt="">
           حساب جديد
-        </button> -->
+        </button>
   </div>
 </template>
 
 <script>
-export default {};
+import authService from '@/services/AuthService';
+
+export default {
+   data() {
+    return {
+      email: '',
+      password: '',
+      loginSuccess: false,
+    };
+  }, methods: {
+    login() {
+      const credentials = {
+        email: this.email,
+        password: this.password,
+      };
+      authService
+        .login(credentials)
+        .then(response => {
+         
+          console.log(response.data);
+          this.loginSuccess = true;
+          const token = response.data.token;
+          const name = response.data.name;
+          const phone = response.data.phone;
+          const email = response.data.email;
+          const id = response.data.id;
+
+          localStorage.setItem('token', token);
+          localStorage.setItem('name', name);
+          localStorage.setItem('id', id);
+          localStorage.setItem('phone', phone);
+          localStorage.setItem('email', email);
+          this.$router.push('/');
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    },
+  },
+};
 </script>
 
 <style scoped>
