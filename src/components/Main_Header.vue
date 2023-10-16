@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary ">
     <div class="container-fluid">
       <button
         class="navbar-toggler"
@@ -55,6 +55,7 @@ export default {};
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
 nav{
   font-family: "Cairo", sans-serif;
+  height: 80px;
 }
 .create{
   background-color: #fff;

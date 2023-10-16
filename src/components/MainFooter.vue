@@ -41,11 +41,10 @@ export default {};
   <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
 footer {
-  position: absolute;
+  position:absolute;
   bottom: 0;
   width: 100%;
   background-color: #0c483f;
   font-family: "Cairo", sans-serif;
 }
 </style>
-  

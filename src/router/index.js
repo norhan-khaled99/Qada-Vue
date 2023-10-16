@@ -13,10 +13,10 @@ const routes = [
     name: "home",
     component: HomeView,
   },
-  {
-    path: "/loginPanal",
-    component: LoginPanal,
-  },
+  // {
+  //   path: "/loginPanal",
+  //   component: LoginPanal,
+  // },
   {
     path: "/about",
     name: "about",

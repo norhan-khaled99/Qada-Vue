@@ -5,29 +5,30 @@
         <div> إنشاء حساب </div>
       </div>
     </div>
-    <form>
+    <form @submit.prevent="register">
       <div class="row">
         <div class="col-md-6 mb-4">
           <img src="../../../assets/Vector.png" alt="">
           <label  for="name">اسم المستخدم</label>
-          <input type="text" class="form-control" />
+          <input type="text" class="form-control" v-model.trim="name" />
         </div>
         <div class="col-md-6 mb-4">
           <img src="../../../assets/bxs_phone.png" alt="">
           <label for="phone">رقم الهاتف</label>
-          <input type="text" class="form-control" />
+          <input type="text" class="form-control" v-model.trim="phone" />
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 mb-4">
           <img src="../../../assets/passwd.png" alt="">
           <label for="password">كلمة السر</label>
-          <input type="text" class="form-control" />
+          <input type="text" class="form-control" v-model.trim="password" />
         </div>
         <div class="col-md-6 mb-4">
           <img src="../../../assets/passwd.png" alt="">
           <label for="password">تأكيد كلمة السر</label>
-          <input type="text" class="form-control" />
+          <input type="text" class="form-control" v-model.trim="confirmPassword"/>
+            <small v-if="!isValidConfirmPassword" class="error-message">Passwords do not match.</small>
         </div>
       </div>
       <div class="row">
@@ -44,7 +45,7 @@
           <label class="form-check-label">الموافقة علي الشروط والأحكام</label>
         </div>
       </div>
-              <button type="button" class="btn btn-primary">إنشاء</button>
+              <button type="submit" class="btn btn-primary">إنشاء</button>
     </form>
     <hr>
     <p class="p1" > لديك حساب بالفعل ؟</p>
@@ -53,14 +54,51 @@
 </template>
 
 <script>
+import authService from '@/services/AuthService';
 
 
 export default {
   name: 'App',
-  components: {
-   
-    
+  components: { 
   },
+  data(){
+    return {
+      name: '',
+      email: '',
+      password: '',
+      phone:'',
+      confirmPassword: '',
+      registrationSuccess: false,
+    }
+  },
+  methods:{
+     register() {
+      const personData = {
+        name: this.name,
+        email: this.email,
+        phone: this.phone,
+        password: this.password,
+      };
+
+      authService
+        .register(personData)
+        .then(response => {
+          this.registrationSuccess = true;
+          const token = response.data.token;
+          const name = response.data.name;
+          const id = response.data.id;
+          const email = response.data.email;
+          const phone = response.data.phone;
+          localStorage.setItem('token', token);
+          localStorage.setItem('name', name);
+          localStorage.setItem('id', id);
+          localStorage.setItem('phone', phone);
+          localStorage.setItem('email', email);
+          this.$router.push('/');
+        })
+    }
+  }
+
 }
 </script>
 
