@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <div class="row d-flex justify-content-between align-items-center mt-5">
+    <div class="row d-flex justify-content-between align-items-center mx-auto mt-5 main-section">
       <div class="col-md-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
         <circle cx="50" cy="50" r="50" fill="#48847B"/>
         <path d="M31.5 54.5L46.2122 65L65 35" stroke="white" stroke-width="5"/>
       </svg>
-      <p>مسودة المشروع</p>
+      <p style="color: #48847B;">مسودة المشروع</p>
       </div>
 
       <hr class="col-md-7  my-4 custom-hr">
@@ -15,7 +15,7 @@
        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
         <circle cx="50" cy="50" r="50" fill="#656565"/>
       </svg>
-      <p > إرسال للمراجعة</p>
+      <p style="color:#656565;"> إرسال للمراجعة</p>
       </div>
     </div>
 
@@ -50,7 +50,7 @@
         </div>
         <div class="col-md-6 col-sm-12">
           <p>تصنيف المشروع</p>
-          <select class="form-control custom-select" id="floatingSelect">
+          <select class="form-select  custom-select" id="floatingSelect" >
             <option selected></option>
             <option value="1">تجاري</option>
             <option value="2">سكني</option>
@@ -60,7 +60,7 @@
       </div>
       <div class="row">
         <p>الخدمة الإلكترونية المطلوبة</p>
-        <select class="form-control" id="floatingSelect">
+        <select class="form-select" id="floatingSelect">
           <option selected></option>
           <option value="1">مراجعة و إعتماد المخططات لإصدار التراخيص</option>
           <option value="2">تصميم هندسي بغرض إستخراج رخصة بناء</option>
@@ -74,7 +74,7 @@
       </div>
       <div class="row">
         <p>تاريخ نهاية طرح المشروع</p>
-        <select class="form-control" id="floatingSelect">
+        <select class="form-select" id="floatingSelect">
           <option selected></option>
           <option value="1">طرح المشروع في منصة المشاريع لمدة 4 أيام</option>
           <option value="2">طرح المشروع في منصة المشاريع لمدة 9 أيام</option>
@@ -84,7 +84,7 @@
       <div class="row">
         <div class="col-md-6 col-sm-12">
           <p>المنطقة</p>
-          <select class="form-control" id="floatingSelect">
+          <select class="form-select" id="floatingSelect">
             <option selected></option>
             <option value="1">طرح المشروع في منصة المشاريع لمدة 4 أيام</option>
             <option value="2">طرح المشروع في منصة المشاريع لمدة 9 أيام</option>
@@ -99,7 +99,7 @@
       <div class="row">
         <div class="col-md-6 col-sm-12">
           <p>اختيار تصنيف المكاتب الهندسية</p>
-          <select class="form-control" id="floatingSelect">
+          <select class="form-select" id="floatingSelect">
             <option selected></option>
             <option value="1">تصنيف درجة 1 الي 3 </option>
             <option value="2">تصنيف درجة 3 الي 6 </option>
@@ -108,7 +108,7 @@
         </div>
         <div class="col-md-6 col-sm-12">
           <p>المدينة</p>
-          <select class="form-control" id="floatingSelect">
+          <select class="form-select" id="floatingSelect">
             <option selected></option>
             <option value="1">الرياض</option>
             <option value="2">مكة المكرمة</option>
@@ -159,15 +159,36 @@ export default {};
 * {
   direction: rtl;
 }
+.main-section{
+  width: 80%;
+  margin: auto;
+}
+.main-section p{
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  margin-left: 40px;
+}
 .custom-hr {
   margin-left: 1.25rem;
   border: none;
-  height:5px; /* Adjust thickness as needed */
-  background-color: #656565; /* Change color to the desired background color */
+  height:5px;
+  background-color: #656565; 
 }
 
+form {
+  width: 80%;
+  margin: auto;
+}
 form .form-control{
-  
+  margin-right: 0px;
+}
+form .form-select{
+  margin-right: 10px;
+}
+.custom-select{
+ text-align: left;
 }
 
 /* Style the selected option */
@@ -236,6 +257,10 @@ select#floatingSelect {
 
 .add-project p {
   text-align: right;
+}
+.add-project{
+  padding: 10px;
+
 }
 
 .form-check-input {
