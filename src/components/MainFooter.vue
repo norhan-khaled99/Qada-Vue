@@ -1,6 +1,6 @@
 <template>
   <footer class="text-light text-center py-3">
-    
+
     <div class="container">
       <h1>قدة</h1>
       <div class="row">
@@ -25,9 +25,9 @@
       <div class="row ">
         <p class="text-align-center">
           Lörem ipsum od ohet dilogi. Bell trabel, samuligt, ohöbel utom diska.
-          Jinesade bel när feras redorade i belogi. FAR paratyp i muvåning, och
-          pesask vyfisat. Viktiga poddradio har un mad och inde.
+          Jinesade bel när feras redorade i belogi. FAR paratyp
         </p>
+        <p>i muvåning, och pesask vyfisat. Viktiga poddradio har un mad och inde.</p>
       </div>
 
       <div class="iqon">
@@ -41,43 +41,45 @@
   </footer>
 </template>
   
-  <script>
+<script>
 export default {};
 </script>
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
-  <style scoped>
+<style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+
 footer {
-  position:absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   background-color: #0c483f;
   font-family: "Cairo", sans-serif;
 }
-.endfooter{
+
+.endfooter {
   text-align: center;
 }
+
 .iqon:before {
-    content: '';
-    background-color: #00221D;
-    position: absolute;
-    width: 40%;
-    height: 30px;
-    left: 0;
-    bottom: 0;
-    border-top-right-radius: 61px;
+  content: '';
+  background-color: #00221D;
+  position: absolute;
+  width: 40%;
+  height: 30px;
+  left: 0;
+  bottom: 0;
+  border-top-right-radius: 61px;
 }
 
 .iqon:after {
-    content: '';
-    background-color: #00221D;
-    position: absolute;
-    width: 40%;
-    height: 30px;
-    right: 0;
-    bottom: 0;
-    border-top-left-radius: 61px;
+  content: '';
+  background-color: #00221D;
+  position: absolute;
+  width: 40%;
+  height: 30px;
+  right: 0;
+  bottom: 0;
+  border-top-left-radius: 61px;
 
-}
-</style>
+}</style>

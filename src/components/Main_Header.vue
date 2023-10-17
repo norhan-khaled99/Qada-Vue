@@ -7,40 +7,39 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-baseline">
           
-          <li class="nav-item mx-5 position-relative">
+          
+          <li class="nav-item mx-lg-2">
+            <a class="nav-link qada" href="#">قد<span>ة</span></a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a class="nav-link ra2esia" href="#"> الرئيسية</a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a class="nav-link" href="#">من نحن؟</a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a class="nav-link" href="#">لوحة التحكم</a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a class="nav-link" href="#">الاسئلة المتكررة</a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a class="nav-link" href="#">الشروط والاحكام</a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a class="nav-link" href="#">شركاء النجاح</a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a class="nav-link" href="#">إتصل بنا</a>
+          </li>
+          <button type="button" class="btn  login mx-lg-4">تسجيل دخول</button>
+          <button type="button" class="btn   create">إنشاء حساب</button>
+          <li class="nav-item mx-lg-5 position-relative">
             <i class="fa-regular fa-bell"></i>
-              <span class="position-absolute top-0 start-lg-100 translate-middle badge rounded-pill bg-danger text-light">
+              <span class="position-absolute top-0 start-lg-100  badge rounded-pill bg-danger text-light">
                 10
                 <span class="visually-hidden">unread messages</span>
               </span>
-          </li>
-
-          <button type="button" class="btn   create">إنشاء حساب</button>
-          <button type="button" class="btn  login mx-lg-4">تسجيل دخول</button>
-          
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#">إتصل بنا</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#">شركاء النجاح</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#">الشروط والاحكام</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#">الاسئلة المتكررة</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#">لوحة التحكم</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#">من نحن؟</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link ra2esia" href="#"> الرئيسية</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link qada" href="#">قد<span>ة</span></a>
           </li>
         </ul>
       </div>
@@ -53,6 +52,9 @@ export default {};
 </script>
 
 <style scoped>
+* {
+  direction: rtl;
+}
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
   nav{
     font-family: "Cairo", sans-serif;
