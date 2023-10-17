@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row d-flex justify-content-between align-items-center mx-auto mt-5 main-section">
-      <div class="col-md-2">
+      <div class="col-md-2 col-sm-4">
       <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
         <circle cx="50" cy="50" r="50" fill="#48847B"/>
         <path d="M31.5 54.5L46.2122 65L65 35" stroke="white" stroke-width="5"/>
@@ -9,9 +9,9 @@
       <p style="color: #48847B;">مسودة المشروع</p>
       </div>
 
-      <hr class="col-md-7  my-4 custom-hr">
+      <hr class="col-sm-2 my-4 custom-hr">
 
-       <div class="col-md-2">
+       <div class="col-md-2 col-sm-2">
        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
         <circle cx="50" cy="50" r="50" fill="#656565"/>
       </svg>
@@ -120,15 +120,15 @@
         </div>
       </div>
       <div class="row my-5 justify-content-center  text-center">
-         <div class="col-3">
+         <div class="col">
           <p class="text-center">صورة من صك الملكية</p>
           <img src="../../../assets/3322766-2001.png" >
          </div> 
-         <div class="col-3"> 
+         <div class="col"> 
           <p class="text-center"> صورة من هوية المالك <span class="text-danger">*</span></p>
           <img src="../../../assets/3322766-2001.png">
          </div> 
-         <div class="col-3">
+         <div class="col">
           <p class="text-center">مستندات اخري داعمة </p>
           <img src="../../../assets/3322766-2001.png">
          </div> 
