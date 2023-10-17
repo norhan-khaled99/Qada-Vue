@@ -5,7 +5,9 @@ import LoginPanal from "../components/LoginPanal.vue"
 import Addproject from '../modules/members/pages/addProjectMember.vue'
 import PersonRegister from '../modules/members/pages/PersonRegister.vue'
 import PersonLogin from "../modules/members/pages/PersonLogin.vue";
+import AboutUs from "../components/AboutUs.vue";
 import ProjectListforMember from "../modules/members/pages/dashboardForMember/MyProjects.vue";
+import projectDetails from "../modules/members/pages/Tabs/projectDetails.vue"
 // import Login  from '../sharedcomponents/LoginPage.vue'
 const routes = [
   {
@@ -30,16 +32,20 @@ const routes = [
     path:"/member", 
     children: [
       {
-        path:"",
-        component:HomeFormeMebers,
+        path: "",
+        component: HomeFormeMebers,
       },
       {
-        path:"addproject", 
-        component:Addproject,
+        path: "addproject",
+        component: Addproject,
       },
       {
         path:"dashborad/projects",
         component:ProjectListforMember
+      },
+      {
+        path:"projectdetails",
+        component:projectDetails
       }
     ],
   },
@@ -50,6 +56,10 @@ const routes = [
   {
     path: "/person/login",
     component: PersonLogin,
+  },
+  {
+    path: "/aboutus",
+    component: AboutUs,
   },
 ];
     

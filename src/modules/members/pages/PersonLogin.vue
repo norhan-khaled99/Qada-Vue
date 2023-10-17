@@ -16,7 +16,7 @@
     <br><br>               
         <button type="button" class="btn"> 
         <img src="../../../assets/Vector2.png" alt="">
-          حساب جديد
+        <router-link to="register"> حساب جديد </router-link> 
         </button>
   </div>
 </template>
