@@ -25,9 +25,9 @@
       <div class="row ">
         <p class="text-align-center">
           Lörem ipsum od ohet dilogi. Bell trabel, samuligt, ohöbel utom diska.
-          Jinesade bel när feras redorade i belogi. FAR paratyp i muvåning, och
-          pesask vyfisat. Viktiga poddradio har un mad och inde.
+          Jinesade bel när feras redorade i belogi. FAR paratyp 
         </p>
+        <p>i muvåning, och pesask vyfisat. Viktiga poddradio har un mad och inde.</p>
       </div>
 
       <div class="iqon">
