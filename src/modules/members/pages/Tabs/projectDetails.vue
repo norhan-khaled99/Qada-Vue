@@ -89,9 +89,10 @@
         </div>
       </div>
     </div>
-
-    
-   <div class="row my-5">
+    </div>
+    <div class="dashed-hr my-5"></div>
+   <div class="container">
+   <div class=" row my-5">
     <div class="header-title">
         تفاصيل المشروع 
     </div>
@@ -111,9 +112,8 @@
         1-اعطاء تسعيرة مفصلة و واضحة لكل الاعمال المصنعية بدون مواد.
     </div>
    </div>
-  </div>
-   <div class="dashed-hr my-5"></div>
-
+    
+   </div>
 
   
    </div>

@@ -12,8 +12,8 @@
         <button class="btn add-project-text">اطرح مشروعك الآن</button>
       </router-link>
     </div>
-<!-- 
-    <div class="container-fluid d-flex  mx-auto ">
+
+    <!-- <div class="container-fluid d-flex ">
      <div class="shapes">
         <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="407" viewBox="0 0 1440 407" fill="none">
         <g filter="url(#filter0_d_693_7161)">
@@ -32,7 +32,7 @@
           </filter>
         </defs>
       </svg>
-      <div class="shapetwo">
+    
         <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="407" viewBox="0 0 1440 407" fill="none">
         <g filter="url(#filter0_d_693_7162)">
           <path d="M1441 397V256.691L-7 30V397L1441 397Z" fill="#259F5A"/>
@@ -50,7 +50,6 @@
           </filter>
         </defs>
       </svg>
-      </div>
     </div>
 
     </div> -->
@@ -164,7 +163,7 @@
           </div>
         </div>
         <div class="row my-3">
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -215,7 +214,7 @@
             </div>
           </div>
 
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -254,7 +253,7 @@
             </div>
           </div>
 
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -293,7 +292,7 @@
             </div>
           </div>
 
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -395,7 +394,7 @@
         </div>
 
         <div class="row my-3">
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -446,7 +445,7 @@
             </div>
           </div>
 
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -485,7 +484,7 @@
             </div>
           </div>
 
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -524,7 +523,7 @@
             </div>
           </div>
 
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -626,7 +625,7 @@
         </div>
 
         <div class="row my-3">
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -677,7 +676,7 @@
             </div>
           </div>
 
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -716,7 +715,7 @@
             </div>
           </div>
 
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -755,7 +754,7 @@
             </div>
           </div>
 
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -857,7 +856,7 @@
         </div>
 
         <div class="row my-3">
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -908,7 +907,7 @@
             </div>
           </div>
 
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -947,7 +946,7 @@
             </div>
           </div>
 
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -986,7 +985,7 @@
             </div>
           </div>
 
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -1088,7 +1087,7 @@
         </div>
 
         <div class="row my-3">
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -1139,7 +1138,7 @@
             </div>
           </div>
 
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -1178,7 +1177,7 @@
             </div>
           </div>
 
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -1217,7 +1216,7 @@
             </div>
           </div>
 
-          <div class="col-3 d-flex flex-column align-items-center">
+          <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
             <div class="card-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
