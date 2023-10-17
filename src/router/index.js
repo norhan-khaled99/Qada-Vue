@@ -7,6 +7,7 @@ import PersonRegister from '../modules/members/pages/PersonRegister.vue'
 import PersonLogin from "../modules/members/pages/PersonLogin.vue";
 import AboutUs from "../components/AboutUs.vue";
 import ProjectListforMember from "../modules/members/pages/dashboardForMember/MyProjects.vue";
+import projectDetails from "../modules/members/pages/Tabs/projectDetails.vue"
 // import Login  from '../sharedcomponents/LoginPage.vue'
 const routes = [
   {
@@ -41,6 +42,10 @@ const routes = [
       {
         path:"dashborad/projects",
         component:ProjectListforMember
+      },
+      {
+        path:"projectdetails",
+        component:projectDetails
       }
     ],
   },

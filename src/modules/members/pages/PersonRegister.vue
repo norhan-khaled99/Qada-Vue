@@ -27,7 +27,7 @@
         <div class="col-md-6 mb-4">
           <img src="../../../assets/passwd.png" class="mx-2" alt="">
           <label for="password">تأكيد كلمة السر</label>
-          <input type="text" class="form-control" v-model.trim="confirmPassword"/>
+          <input type="text" class="form-control mt-2" v-model.trim="confirmPassword"/>
         </div>
       </div>
       <div class="row">
@@ -44,11 +44,13 @@
           <label class="form-check-label">الموافقة علي الشروط والأحكام</label>
         </div>
       </div>
-              <button type="submit" class="btn btn-primary">إنشاء</button>
+              <button type="submit" class="btn btn-primary mt-3">إنشاء</button>
     </form>
     <hr>
+    <div class="mb-5">
     <p class="p1" > لديك حساب بالفعل ؟</p>
-    <p class="p2" > <router-link to="login"> سجل دخولك من هنا </router-link> </p>
+    <p class="p2 " > <router-link to="login"> سجل دخولك من هنا </router-link> </p>
+    </div>
   </div>
 </template>
 
