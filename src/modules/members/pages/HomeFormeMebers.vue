@@ -12,12 +12,12 @@
         <button class="btn add-project-text">اطرح مشروعك الآن</button>
       </router-link>
     </div>
-
-    <div class="row">
-     
-      <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="407" viewBox="0 0 1440 407" fill="none">
+<!-- 
+    <div class="container-fluid d-flex  mx-auto ">
+     <div class="shapes">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="407" viewBox="0 0 1440 407" fill="none">
         <g filter="url(#filter0_d_693_7161)">
-          <path d="M-7 397L-7 256.691L1441 30V397L-7 397Z" fill="#259F5A"/>
+          <path d="M-7 397L-7 256.691L1441 30V397L-7 397Z" fill="#48847B"/>
         </g>
         <defs>
           <filter id="filter0_d_693_7161" x="-27" y="0" width="1488" height="407" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -32,7 +32,8 @@
           </filter>
         </defs>
       </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="407" viewBox="0 0 1440 407" fill="none">
+      <div class="shapetwo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="407" viewBox="0 0 1440 407" fill="none">
         <g filter="url(#filter0_d_693_7162)">
           <path d="M1441 397V256.691L-7 30V397L1441 397Z" fill="#259F5A"/>
         </g>
@@ -49,7 +50,10 @@
           </filter>
         </defs>
       </svg>
+      </div>
     </div>
+
+    </div> -->
     
     <div class="row my-5">
       <p class="seconed-subtitle">كيف تعمل منصتنا؟</p>
@@ -1409,4 +1413,6 @@ export default {};
 .card:hover {
   border: 5px solid #48847b;
 }
+
+
 </style>
