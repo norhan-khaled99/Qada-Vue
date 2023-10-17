@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid ">
 
-        <div class="row">
+        <div class="row ">
             <div class="col-lg-2 card officeCard mx-lg-4 my-5">
                 <div class="card-body">
                     <h4 class="card-title office">مكتب هندسي</h4>
@@ -28,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 offset-lg-1 ">
+            <div class="col-lg-3 offset-lg-1 qdas me-auto">
                 <h1>منصة قد<span>ة</span></h1>
                 <p>ساهمت منصة قدة في تقليل عمر القضية بنسبة %79</p>
             </div>
@@ -51,8 +51,9 @@ export default {
 <style scoped>
 .container-fluid {
     background-color: #F5FFFC;
-    height: 100vh;
+    /* height: 100vh; */
 }
+
 
 .card {
     transition: height 1s, ;
