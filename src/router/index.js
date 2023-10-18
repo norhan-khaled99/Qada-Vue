@@ -8,9 +8,9 @@ import PersonRegister from '../modules/members/pages/PersonRegister.vue'
 import PersonLogin from "../modules/members/pages/PersonLogin.vue";
 import AboutUs from "../components/AboutUs.vue";
 import ProjectListforMember from "../modules/members/pages/dashboardForMember/MyProjects.vue";
-import projectDetails from "../modules/members/pages/Tabs/projectDetails.vue"
-import Prices_offers from "../modules/members/pages/Tabs/Prices_offers.vue";
-import Business_banner
+import projectDetails from "../modules/members/pages/Tabs/projectDetails.vue";
+import projectPhases from "../modules/members/pages/Tabs/projectPhases.vue";
+import electronicContract from '../modules/members/pages/Tabs/ElectronicContract.vue';
 const routes = [
   {
     path: "/",
@@ -51,8 +51,12 @@ const routes = [
         component:projectDetails
       },
       {
-        path:"pricesOffers",
-        component:Prices_offers
+        path:"projectPhases",
+        component:projectPhases
+      },
+      {
+        path:"electronicContract",
+        component:electronicContract
       }
     ],
   },
