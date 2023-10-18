@@ -23,7 +23,7 @@ export default {
     display: right;
 }
 header{
-    background-image: url(../assets/Rectangle\ 33.png);
+    /* background-image: url(../assets/Rectangle\ 33.png); */
     width: 100%;
     height: 100%;
     padding-bottom: 10rem;

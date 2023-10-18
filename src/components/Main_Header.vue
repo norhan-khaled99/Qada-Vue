@@ -1,4 +1,5 @@
 <template>
+  <!-- <img class="navBg-img" src="../assets/bg-color.png" alt="navBg-img"> -->
   <nav class="navbar navbar-expand-lg  ">
     <div class="container-fluid ">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,6 +46,7 @@
       </div>
     </div>
   </nav>
+
 </template>
 
 <script>
@@ -58,6 +60,10 @@ export default {};
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
   nav{
     font-family: "Cairo", sans-serif;
+  }
+  .navBg-img{
+    width: 100vw;
+    object-fit: cover;
   }
   li a{
     color: #000000CC;
@@ -93,6 +99,14 @@ export default {};
   li span{
     color: #2A665D;
   }
+  /* section{
+    width: 100%;
+    height: 50vh;
+    background: url(../assets/bg-color.png);
+    background-size: cover;
+    background-position: center;
+    top: 0;
+  } */
   /* .rounded-pill{
    background-color: #FF4B4B;
    color: #fff;
