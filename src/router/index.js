@@ -9,7 +9,7 @@ import AboutUs from "../components/AboutUs.vue";
 import ProjectListforMember from "../modules/members/pages/dashboardForMember/MyProjects.vue";
 import projectDetails from "../modules/members/pages/Tabs/projectDetails.vue";
 import projectPhases from "../modules/members/pages/Tabs/projectPhases.vue";
-// import Login  from '../sharedcomponents/LoginPage.vue'
+import electronicContract from '../modules/members/pages/Tabs/ElectronicContract.vue';
 const routes = [
   {
     path: "/",
@@ -51,6 +51,10 @@ const routes = [
       {
         path:"projectPhases",
         component:projectPhases
+      },
+      {
+        path:"electronicContract",
+        component:electronicContract
       }
     ],
   },
