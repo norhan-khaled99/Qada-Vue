@@ -11,13 +11,20 @@
         المراحل المستلمة
     </div>
 
-    <div class="card col-md-6 col-sm-12"> 
+    <div class="card col-md-6 col-sm-12 my-5"> 
       <div class="d-flex justify-content-between align-items-baseline ms-3 me-3 my-1">
+        <span class="first-svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 30 31" fill="none">
+          <circle cx="15" cy="15.7217" r="15" fill="#FF5555"/>
+          <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="16" fill="white">5</text>
+        </svg>
+       </span>  
+          <div class="d-flex align-self-start">
           <div class="card-title text-right">المراحل المستلمة</div>
-          <div class="">
               <button class="btn first-stage">طلب تعديل</button>
-              <button class="btn recieve-stage">استلام المرحلة</button>
+              <button class="btn recieve-stage">استلام المرحلة</button>  
           </div>
+       
       </div>
       <div class="seperator"></div>
       <div class="d-flex justify-content-between align-items-baseline ms-3 me-3 my-1">
@@ -31,6 +38,19 @@
         </div>
     </div>
   </div>
+
+   <div class="card col-md-6 col-sm-12">
+    <div class="d-flex justify-content-between p-2">
+      <span class="second-card-title">مرحلة الاستفسارات</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+    </div>
+    <div class="d-flex justify-content-between p-2">
+      <span class="rate">14/7/2023</span>
+      <span class="rate">اكثر من رائع، ممتاز جدًا. سعدت بالتعامل معكم</span>
+    </div>
+   </div>
   
     </div>
   </div>
@@ -47,9 +67,15 @@ export default {
     direction: rtl;
 }
 .card{
+position: relative;  
 margin: auto;    
 border-radius: 10px;
 border: 1px solid rgba(0, 0, 0, 0.70);
+}
+.first-svg{
+  position: absolute;
+  top: -10px;
+  right: -15px;
 }
 .card-body{
 color: #000;
@@ -65,6 +91,7 @@ text-align: right;
 font-family: Cairo;
 font-size: 17px;
 font-weight: 600;
+text-wrap: nowrap;
 }
 .card-content{
 color: #259F5A;
@@ -119,5 +146,23 @@ padding: 5px 15px;
   color:#FFFFFF;
   padding: 5px 15px;
 }
+.second-card-title{
+color: #245C54;
+text-align: right;
+font-family: Cairo;
+font-size: 17px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
 
+.rate{
+color: #747474;
+text-align: right;
+font-family: Cairo;
+font-size: 10px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
 </style>

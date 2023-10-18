@@ -38,8 +38,7 @@ export default {};
 .responsive-table th,
 .responsive-table td {
 border: 1px solid #0c483f;
-  padding: 10px;
   text-align: center;
-  border-radius: 10px; 
+  border-radius: 50px; 
 }
 </style>

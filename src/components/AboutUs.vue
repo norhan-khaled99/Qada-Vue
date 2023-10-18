@@ -90,6 +90,7 @@
             <button type="submit" class="btn">إرسال</button>
         </div>
     </div>
+
 </template>
 
 <script>
@@ -110,7 +111,6 @@ export default {
 }
 
 header {
-    background-image: url(../assets/Rectangle\ 33.png);
     width: 100%;
     height: 100%;
     padding-bottom: 10rem;

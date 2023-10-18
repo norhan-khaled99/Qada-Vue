@@ -11,6 +11,7 @@ import ProjectListforMember from "../modules/members/pages/dashboardForMember/My
 import projectDetails from "../modules/members/pages/Tabs/projectDetails.vue";
 import projectPhases from "../modules/members/pages/Tabs/projectPhases.vue";
 import electronicContract from '../modules/members/pages/Tabs/ElectronicContract.vue';
+import projectTransactions from "../modules/members/pages/Tabs/projectTransactions.vue";
 const routes = [
   {
     path: "/",
@@ -57,13 +58,17 @@ const routes = [
       {
         path:"electronicContract",
         component:electronicContract
+      },
+      {
+        path:"projecttransactions",
+        component:projectTransactions
       }
     ],
   },
-  {
-    path: "/business", 
-    component : Business-banner
-  },
+  // {
+  //   path: "/business", 
+  //   component :Business-banner
+  // },
   {
     path: "/person/register",
     component: PersonRegister,
