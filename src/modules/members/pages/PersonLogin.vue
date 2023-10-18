@@ -1,23 +1,29 @@
 <template>
-  <div class="container w-50 m-auto my-5">
-    
+  <div class="container m-auto my-5">
     <div class="header">
       <p>تسجيل الدخول للأفراد </p>
     </div>
-    <form @submit.prevent="login">
-        <img src="../../../assets/Vector.png" alt="">
-        <label  for="name">اسم المستخدم</label>
-        <input type="text" class="form-control w-75" v-model="name"/>
-        <img src="../../../assets/passwd.png" alt="">
+    <form @submit.prevent="login" class="w-50 m-auto mt-5">
+      <div class="mb-2">
+        <img src="../../../assets/Vector.png" class="mx-2" alt="">
+        <label for="name">اسم المستخدم</label>
+      </div>
+      <input type="text" class="form-control " v-model="name" />
+      <div class="mb-2">
+        <img src="../../../assets/passwd.png" class="mx-2" alt="">
         <label class="my-3 " for="password">كلمة السر</label>
-        <input type="text" class="form-control w-75" v-model="password" />
-        <button type="submit" class="btn btn-primary">دخول</button>
+      </div>
+      <input type="text" class="form-control " v-model="password" />
+      <div class=" text-center">
+        <button type="submit" class="btn btn-primary mt-4 ">دخول</button>
+      </div>
     </form>
-    <br><br>               
-        <button type="button" class="btn"> 
-        <img src="../../../assets/Vector2.png" alt="">
-        <router-link to="register"> حساب جديد </router-link> 
-        </button>
+    <div class=" text-center">
+    <button type="button" class="register mt-4">
+      <img src="../../../assets/Vector2.png" class="mx-2" alt="">
+      <router-link to="register"> حساب جديد </router-link>
+    </button>
+    </div>
   </div>
 </template>
 
@@ -25,7 +31,7 @@
 import authService from '@/services/AuthService';
 
 export default {
-   data() {
+  data() {
     return {
       email: '',
       password: '',
@@ -40,7 +46,7 @@ export default {
       authService
         .login(credentials)
         .then(response => {
-         
+
           console.log(response.data);
           this.loginSuccess = true;
           const token = response.data.token;
@@ -65,9 +71,9 @@ export default {
 </script>
 
 <style scoped>
-/* * {
+* {
   direction: rtl;
-} */
+}
 
 .header {
   text-align: center;
@@ -76,43 +82,37 @@ export default {
   font-size: 3rem;
   font-weight: 700px;
 }
-/* form{
-  justify-content: center;
-  text-align: center;
-} */
+
+p {
+  color: #0378AE;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
 form span {
   color: #000000;
   font-size: 2.0rem;
   margin: 0;
   padding: 0;
 }
-
 input {
-  /* width: 450px; */
-  height: 55px; 
+  height: 55px;
   border-radius: 20px;
   text-align: center;
+  background-color: #EAEAEA;
 }
-
-label {
-  /* background-color: #000000; */
-  text-align: left;
-}
-
 .btn {
   width: 200px;
+  height: 55px;
+  border-radius: 20px
+}
+.register{
+  border-color: #616567;
+  width: 180px;
+  height: 30px;
+  border-radius: 20px
 }
 
 hr {
   border: 1px solid rgba(53, 53, 53, 0.7);
-}
-.container p {
-  display: inline;
-}
-.p1 {
-  color: rgba(0, 0, 0, 0.7);
-}
-
-.p2 {
-  color: rgba(3, 120, 174, 1);
 }</style>
