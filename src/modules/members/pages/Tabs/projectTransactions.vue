@@ -1,23 +1,47 @@
 <template>
   <div class="container">
-    <div class="table-container">
-      <table class="responsive-table">
-        <tr>
-          <th>Column 1</th>
-          <th>Column 2</th>
-          <th>Column 3</th>
-          <th>Column 4</th>
-          <th>Column 5</th>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
+    <p class="table-header">الصفحة</p>
+    <div class=" table-responsive my-3">
+      <table class="table-bordered">
+        <tbody>
+          <tr>
+            <td>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <circle cx="15" cy="15" r="15" fill="#ABABAB"/>
+                <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="16" fill="white">1</text>
+              </svg>
+              </td>
+            <td>تقرير دراسة الموقع ودراسة احتياج المصرف والتصاميم الأولية</td>
+          </tr>
+          <tr>
+            <td>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <circle cx="15" cy="15" r="15" fill="#ABABAB"/>
+                <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="16" fill="white">2</text>
+              </svg>
+            </td>
+            <td>تطوير التصميم بعد اعتماده</td>
+          </tr>
+          <tr>
+            <td>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <circle cx="15" cy="15" r="15" fill="#ABABAB"/>
+                <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="16" fill="white">3</text>
+              </svg>
+            </td>
+            <td>إعداد المخططات الوثائق التنفيذية النهائية ومستندات الطرح وجداول الكميات</td>
+          </tr>
+          <tr>
+            <td><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+              <circle cx="15" cy="15" r="15" fill="#ABABAB"/>
+              <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="16" fill="white">4</text>
+            </svg></td>
+            <td>إستخراج الرخص</td>
+          </tr>
+        </tbody>
       </table>
     </div>
+       
   </div>
 </template>
 
@@ -26,20 +50,20 @@ export default {};
 </script>
 
 <style scoped>
-.table-container {
-  overflow-x: auto;
+*{
+  direction: rtl;
 }
-
-.responsive-table {
-  width: 100%;
-  border-collapse: collapse;
+.table-header{
+  color: #000;
+text-align: center;
+font-family: Cairo;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
 }
-
-.responsive-table th,
-.responsive-table td {
-border: 1px solid #0c483f;
-  text-align: center;
-  border-radius: 50px; 
-  min-width: 100px;
+.table-responsive{
+  background-color: #0F9678;
+  color:#FFF;
 }
 </style>
