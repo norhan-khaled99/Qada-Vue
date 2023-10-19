@@ -6,18 +6,18 @@
   <router-view/> -->
     <Main_Header/>
      <router-view/>
-    <MainFooter/>
+    <!-- <MainFooter/> -->
    
 </template>
 <script>
 import Main_Header from './components/Main_Header.vue'
-import MainFooter from './components/MainFooter.vue'
+// import MainFooter from './components/MainFooter.vue'
 
 export default {
   name: 'App',
   components: {
     Main_Header,
-    MainFooter,
+    // MainFooter,
   }
 }
 </script>

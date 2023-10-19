@@ -81,5 +81,4 @@ footer {
   right: 0;
   bottom: 0;
   border-top-left-radius: 61px;
-
 }</style>
