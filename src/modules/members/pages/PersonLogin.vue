@@ -11,7 +11,7 @@
       <input type="text" class="form-control " v-model="name" />
       <div class="mb-2">
         <img src="../../../assets/passwd.png" class="mx-2" alt="">
-        <label class="my-3 " for="password">كلمة السر</label>
+        <label class="my-3 " for="password mx-2">كلمة السر</label>
       </div>
       <input type="text" class="form-control " v-model="password" />
       <div class=" text-center">
@@ -21,7 +21,7 @@
     <div class=" text-center">
     <button type="button" class="register mt-4">
       <img src="../../../assets/Vector2.png" class="mx-2" alt="">
-      <router-link to="register"> حساب جديد </router-link>
+      <router-link class="link" to="register"> حساب جديد </router-link>
     </button>
     </div>
   </div>
@@ -112,7 +112,10 @@ input {
   height: 30px;
   border-radius: 20px
 }
-
+.link{
+    text-decoration: none;
+    color: #6a6868 ;
+}
 hr {
   border: 1px solid rgba(53, 53, 53, 0.7);
 }</style>

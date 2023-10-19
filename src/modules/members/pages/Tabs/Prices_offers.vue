@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="mt-5">
     <div class="row justify-content-between w-50 p-3 m-auto my-3 text-center card1 ">
         <p><span>ملاحظة : </span> سيتعين عليك طرح مشروعك من جديد في حال لم يتم التعاقد مع مكتب هندسي
             خلال مدة 10 أيام</p>
@@ -248,7 +248,8 @@
             </div>
         </div>
     </div>
-  </div>
+
+    </div>
 </template>
 
 <script>
@@ -319,6 +320,7 @@ span {
     border-radius: 8px;
     padding: 2px, 13px, 2px, 13px;
     height: 37px;
+    
 
 }
 
@@ -329,6 +331,5 @@ span {
     border-radius: 8px;
     padding: 2px, 13px, 2px, 13px;
     height: 37px;
-
 }
 </style>

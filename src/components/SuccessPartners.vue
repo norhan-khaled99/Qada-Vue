@@ -24,7 +24,7 @@
     </div>
 
     <div class="row justify-content-between w-50 p-3 m-auto my-3 cardd">
-        <div class="col-lg-3 text-center">
+        <div class="col-lg-3 col-sm-12 text-center">
             <p>المكتب الهندسي</p>
             <h5>شركة المهندسين</h5>
         </div>
@@ -37,6 +37,7 @@
             <h5 class="number">1</h5>
         </div>
     </div>
+
     <div class="row justify-content-between w-50 p-3 m-auto my-3 cardd">
         <div class="col-lg-3 text-center">
             <p>المكتب الهندسي</p>
