@@ -125,7 +125,7 @@ export default {
 }
 
 h1 {
-  color: #259F5A;
+  color: #0378AE;
   font-weight: 700;
   font-size: 3rem;
 }
@@ -146,11 +146,11 @@ input {
 label {
   /* background-color: #000000; */
   text-align: left;
-  color: #259F5A;
+  color: #0378AE;
 }
 
 .fa-solid {
-  color: #259F5A;
+  color: #0378AE;
   font-size: 25px;
   font-weight: 700;
 }
@@ -161,10 +161,10 @@ label {
 
 .btn {
   width: 200px;
-  background-color: #259F5A;
+  background-color: #0378AE;
   height: 55px;
   border-radius: 20px;
-  border: #259F5A;
+  border: #0378AE;
 }
 
 hr {
@@ -180,13 +180,13 @@ hr {
 }
 
 .p2 {
-  color: #259F5A;
+  color: #0378AE;
 }
 
 .border {
   width: 25%;
   height: 5px;
-  background-color: #259F5A;
+  background-color: #0378AE;
   margin: 15px auto;
 }
 
@@ -196,6 +196,6 @@ hr {
 }
 
 .checkbox-label .mycheckbox {
-  background-color: #259F5A;
+  background-color: #0378AE;
 }
 </style>

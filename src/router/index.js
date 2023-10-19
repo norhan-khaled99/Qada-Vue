@@ -17,11 +17,15 @@ import Prices_offers from "../modules/members/pages/Tabs/Prices_offers.vue";
 import electronicContract from "../modules/members/pages/Tabs/ElectronicContract.vue";
 import BusinessPanner from "../modules/Business/pages/BusinessPanner.vue";
 import PersonLogin from "../modules/members/pages/PersonLogin.vue";
-import BusinessRegister from "../modules/Business/pages/BusinessRegister.vue";
-import BusinessLogin from "../modules/Business/pages/BusinessLogin.vue";
-import Engineering_officesRegister from "../modules/Engineering_offices/Pages/Engineering_officesRegister.vue";
-import Engineering_officesLogin from "../modules/Engineering_offices/Pages/Engineering_officesLogin.vue";
+import BusinessRegister from '../modules/Business/pages/BusinessRegister.vue'
+import BusinessLogin from '../modules/Business/pages/BusinessLogin.vue'
+import Engineering_officesRegister from '../modules/Engineering_offices/Pages/Engineering_officesRegister.vue'
+import Engineering_officesLogin from '../modules/Engineering_offices/Pages/Engineering_officesLogin.vue'
+import CheckLine from '../modules/members/pages/dashboardForMember/CheckLine.vue'
+
 import projectTransactions from "../modules/members/pages/Tabs/projectTransactions.vue";
+import projectFiles from '../modules/members/pages/Tabs/projectsFile.vue';
+
 const routes = [
   {
     path: "/",
@@ -74,9 +78,17 @@ const routes = [
         component: electronicContract,
       },
       {
-        path: "projecttransactions",
-        component: projectTransactions,
+        path:"projecttransactions",
+        component:projectTransactions
       },
+      {
+        path:"projectfiles",
+        component:projectFiles
+      },
+      {
+        path: "checkLine",
+        component: CheckLine
+      }
     ],
   },
   {

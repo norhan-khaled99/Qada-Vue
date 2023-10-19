@@ -63,13 +63,6 @@ export default {};
 
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
 
-.content {
-  height: 50vh;
-  width: 100%;
-  background: linear-gradient(95.07deg, rgba(42, 102, 93, 0.8) 56.22%, rgba(48, 255, 81, 0.48) 157.23%);
-
-}
-
 nav {
   font-family: "Cairo", sans-serif;
   /* background: linear-gradient(95.07deg, rgba(42, 102, 93, 0.8) 56.22%, rgba(48, 255, 81, 0.48) 157.23%);
@@ -77,14 +70,16 @@ nav {
   height: 380px; */
   ;
 }
-
+.content {
+  height: 50vh;
+  width: 100%;
+  background: linear-gradient(95.07deg, rgba(42, 102, 93, 0.8) 56.22%, rgba(48, 255, 81, 0.48) 157.23%);
+}
 .artcl {
   position: absolute;
   top: 25%;
   left: 8%;
-
 }
-
 .artcl h3 {
   font-size: 4rem;
   font-weight: 700;
@@ -92,7 +87,6 @@ nav {
   letter-spacing: 0em;
   color: #fff;
 }
-
 .navBg-img {
   width: 100vw;
   object-fit: cover;
@@ -124,7 +118,7 @@ li .qada {
 
 .login {
   background-color: #fff;
-  color: #48847B;
+  color: #2A665D;
   width: 150px;
   height: 40px;
   border-radius: 1rem;
@@ -132,7 +126,7 @@ li .qada {
 }
 
 li .ra2esia {
-  color: #fff;
+  color: #2A665D;
   text-decoration-line: underline;
 }
 
@@ -151,4 +145,5 @@ li span {
 /* .rounded-pill{
    background-color: #FF4B4B;
    color: #fff;
-  } */</style>
+  } */
+</style>
