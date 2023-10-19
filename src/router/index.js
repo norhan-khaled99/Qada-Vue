@@ -19,6 +19,7 @@ import Engineering_officesRegister from '../modules/Engineering_offices/Pages/En
 import Engineering_officesLogin from '../modules/Engineering_offices/Pages/Engineering_officesLogin.vue'
 
 
+import projectTransactions from "../modules/members/pages/Tabs/projectTransactions.vue";
 const routes = [
   {
     path: "/",
@@ -69,6 +70,10 @@ const routes = [
       {
         path:"electronicContract",
         component:electronicContract
+      },
+      {
+        path:"projecttransactions",
+        component:projectTransactions
       }
     ],
   },

@@ -12,28 +12,18 @@
         <button class="btn add-project-text">اطرح مشروعك الآن</button>
       </router-link>
     </div>
+<!-- 
+    <div class="d-flex"></div>
+      <img src="../../../assets/Rectangle5.png">
+    </div>
+    <div class="col-6">
+      <img src="../../../assets/Rectangle4.png">
+    </div>
+    </div> -->
 
-    <!-- <div class="container-fluid d-flex ">
+    <div class="d-flex ">
      <div class="shapes">
-        <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="407" viewBox="0 0 1440 407" fill="none">
-        <g filter="url(#filter0_d_693_7161)">
-          <path d="M-7 397L-7 256.691L1441 30V397L-7 397Z" fill="#48847B"/>
-        </g>
-        <defs>
-          <filter id="filter0_d_693_7161" x="-27" y="0" width="1488" height="407" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset dy="-10"/>
-            <feGaussianBlur stdDeviation="10"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_693_7161"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_693_7161" result="shape"/>
-          </filter>
-        </defs>
-      </svg>
-    
-        <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="407" viewBox="0 0 1440 407" fill="none">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="407" viewBox="0 0 1440 407" fill="none">
         <g filter="url(#filter0_d_693_7162)">
           <path d="M1441 397V256.691L-7 30V397L1441 397Z" fill="#259F5A"/>
         </g>
@@ -50,9 +40,27 @@
           </filter>
         </defs>
       </svg>
+    
+      <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="407" viewBox="0 0 1440 407" fill="none">
+        <g filter="url(#filter0_d_693_7161)">
+          <path d="M-7 397L-7 256.691L1441 30V397L-7 397Z" fill="#259F5A"/>
+        </g>
+        <defs>
+          <filter id="filter0_d_693_7161" x="-27" y="0" width="1488" height="407" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="-10"/>
+            <feGaussianBlur stdDeviation="10"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_693_7161"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_693_7161" result="shape"/>
+          </filter>
+        </defs>
+      </svg>
     </div>
 
-    </div> -->
+    </div>
     
     <div class="row my-5">
       <p class="seconed-subtitle">كيف تعمل منصتنا؟</p>
