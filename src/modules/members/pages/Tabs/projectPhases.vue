@@ -43,7 +43,8 @@
         </div>
     </div>
   </div> -->
-
+ 
+  
   <div class="card col-lg-6 col-md-8 col-sm-12 my-5">
     <span class="first-svg">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 30 31" fill="none">
