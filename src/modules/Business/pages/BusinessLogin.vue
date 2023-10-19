@@ -45,6 +45,9 @@ export default {
     font-size: 3rem;
     font-weight: 700px;
 }
+.header p{
+    color: #259F5A;
+}
 
 p {
     color: #259F5A;

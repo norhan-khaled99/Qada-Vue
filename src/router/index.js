@@ -17,7 +17,7 @@ import BusinessRegister from '../modules/Business/pages/BusinessRegister.vue'
 import BusinessLogin from '../modules/Business/pages/BusinessLogin.vue'
 import Engineering_officesRegister from '../modules/Engineering_offices/Pages/Engineering_officesRegister.vue'
 import Engineering_officesLogin from '../modules/Engineering_offices/Pages/Engineering_officesLogin.vue'
-
+import CheckLine from '../modules/members/pages/dashboardForMember/CheckLine.vue'
 
 import projectTransactions from "../modules/members/pages/Tabs/projectTransactions.vue";
 const routes = [
@@ -74,6 +74,10 @@ const routes = [
       {
         path:"projecttransactions",
         component:projectTransactions
+      },
+      {
+        path: "checkLine",
+        component: CheckLine
       }
     ],
   },
