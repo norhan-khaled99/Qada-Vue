@@ -181,6 +181,7 @@ header h3 {
     background-color: rgba(15, 150, 120, 1);
     color: rgba(255, 255, 255, 1);
     margin-top: 2rem;
+    margin-bottom: 2rem;
 
 }
 </style>

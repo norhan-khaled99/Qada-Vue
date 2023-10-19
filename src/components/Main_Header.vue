@@ -15,7 +15,8 @@
             <a class="nav-link ra2esia" href="#"> الرئيسية</a>
           </li>
           <li class="nav-item mx-lg-2">
-            <a class="nav-link" href="#">من نحن؟</a>
+            <router-link to="/aboutus"> من نحن؟</router-link>
+            <!-- <a class="nav-link" href="#">من نحن؟</a> -->
           </li>
           <li class="nav-item mx-lg-2">
             <a class="nav-link" href="#">لوحة التحكم</a>

@@ -6,8 +6,9 @@ import Addproject from '../modules/members/pages/addProjectMember.vue'
 import PersonRegister from '../modules/members/pages/PersonRegister.vue'
 import PersonLogin from "../modules/members/pages/PersonLogin.vue";
 import AboutUs from "../components/AboutUs.vue";
+import TermsAndConditions from "../components/TermsAndConditions.vue";
+import FAQComponent from "../components/FAQComponent.vue";
 import ProjectListforMember from "../modules/members/pages/dashboardForMember/MyProjects.vue";
-import projectDetails from "../modules/members/pages/Tabs/projectDetails.vue"
 // import Login  from '../sharedcomponents/LoginPage.vue'
 const routes = [
   {
@@ -29,7 +30,7 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    path:"/member", 
+    path: "/member",
     children: [
       {
         path: "",
@@ -40,13 +41,9 @@ const routes = [
         component: Addproject,
       },
       {
-        path:"dashborad/projects",
-        component:ProjectListforMember
+        path: "dashborad/projects",
+        component: ProjectListforMember,
       },
-      {
-        path:"projectdetails",
-        component:projectDetails
-      }
     ],
   },
   {
@@ -60,6 +57,14 @@ const routes = [
   {
     path: "/aboutus",
     component: AboutUs,
+  },
+  {
+    path: "/termsandconditions",
+    component: TermsAndConditions,
+  },
+  {
+    path: "/faq",
+    component: FAQComponent,
   },
 ];
     
