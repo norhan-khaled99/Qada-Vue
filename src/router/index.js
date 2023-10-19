@@ -12,6 +12,8 @@ import projectDetails from "../modules/members/pages/Tabs/projectDetails.vue";
 import projectPhases from "../modules/members/pages/Tabs/projectPhases.vue";
 import electronicContract from '../modules/members/pages/Tabs/ElectronicContract.vue';
 import projectTransactions from "../modules/members/pages/Tabs/projectTransactions.vue";
+import projectFiles from '../modules/members/pages/Tabs/projectsFile.vue';
+
 const routes = [
   {
     path: "/",
@@ -62,7 +64,11 @@ const routes = [
       {
         path:"projecttransactions",
         component:projectTransactions
-      }
+      },
+      {
+        path:"projectfiles",
+        component:projectFiles
+      },
     ],
   },
   // {
