@@ -22,6 +22,8 @@ import Engineering_officesLogin from '../modules/Engineering_offices/Pages/Engin
 import CheckLine from '../modules/members/pages/dashboardForMember/CheckLine.vue'
 
 import projectTransactions from "../modules/members/pages/Tabs/projectTransactions.vue";
+import projectFiles from '../modules/members/pages/Tabs/projectsFile.vue';
+
 const routes = [
   {
     path: "/",
@@ -76,6 +78,10 @@ const routes = [
       {
         path:"projecttransactions",
         component:projectTransactions
+      },
+      {
+        path:"projectfiles",
+        component:projectFiles
       },
       {
         path: "checkLine",
