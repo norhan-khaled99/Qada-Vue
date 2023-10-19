@@ -46,6 +46,5 @@ text-wrap: nowrap;
     text-wrap: nowrap;
     color: #FFF;
 
-
 }
 </style>

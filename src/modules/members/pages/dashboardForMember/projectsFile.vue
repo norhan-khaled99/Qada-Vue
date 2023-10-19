@@ -82,7 +82,9 @@
             <path d="M6.25 25H23.75V22.5H6.25M23.75 11.25H18.75V3.75H11.25V11.25H6.25L15 20L23.75 11.25Z" fill="white"/>
           </svg></span></button></div>
         </div>
-      </div>
+    </div>
+
+
     </div>
 </template>
 
@@ -92,6 +94,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+
 
 </style>

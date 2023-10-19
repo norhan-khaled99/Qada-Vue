@@ -10,11 +10,11 @@
           <th>Column 5</th>
         </tr>
         <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
-          <td>Data 3</td>
-          <td>Data 4</td>
-          <td>Data 5</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
       </table>
     </div>
@@ -40,5 +40,6 @@ export default {};
 border: 1px solid #0c483f;
   text-align: center;
   border-radius: 50px; 
+  min-width: 100px;
 }
 </style>
