@@ -51,7 +51,7 @@
         <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="16" fill="white">5</text>
       </svg>
      </span>  
-     
+
     <div class="d-flex justify-content-between align-items-center ms-3 me-3 my-1">
       <!-- SVG and Title -->
       <div class="col-4 justify-content-center">
@@ -66,7 +66,6 @@
     </div>
   
     <div class="seperator"></div>
-  
     <!-- Additional Information and Buttons -->
     <div class="d-flex flex-column flex-sm-row justify-content-between align-items-baseline ms-3 me-3 my-1">
       <!-- Information -->
