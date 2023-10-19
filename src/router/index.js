@@ -28,6 +28,8 @@ import projectFiles from '../modules/members/pages/Tabs/projectsFile.vue';
 
 //------Dashboard
 import BusinessSettings from "../modules/members/pages/dashboardForMember/BusinessSettings.vue";
+import UserSettings from "../modules/members/pages/dashboardForMember/UserSettings.vue";
+import OfficeSettings from "../modules/members/pages/dashboardForMember/OfficeSettings.vue";
 
 const routes = [
   {
@@ -151,6 +153,14 @@ const routes = [
   {
     path: "/businesssettings",
     component: BusinessSettings,
+  },
+  {
+    path: "/usersettings",
+    component: UserSettings,
+  },
+  {
+    path: "/officesettings",
+    component: OfficeSettings,
   },
 ];
 
