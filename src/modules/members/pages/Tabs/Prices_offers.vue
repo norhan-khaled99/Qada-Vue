@@ -317,6 +317,7 @@ span {
     border-radius: 8px;
     padding: 2px, 13px, 2px, 13px;
     height: 37px;
+    
 
 }
 
@@ -327,6 +328,5 @@ span {
     border-radius: 8px;
     padding: 2px, 13px, 2px, 13px;
     height: 37px;
-
 }
 </style>

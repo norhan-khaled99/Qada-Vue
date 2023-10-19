@@ -25,6 +25,7 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
 *{
     font-family: "Cairo", sans-serif;
+    box-sizing: border-box;
 }
 /* *{
   direction: rtl;
