@@ -1,0 +1,277 @@
+<template>
+  <div class="container">
+    <div class="my-5">
+    <div class="card col-md-7 col-sm-12 text-center">
+        <div class="card-body">
+             <span class="card-content ">تنويه</span>: حفاظًا علي الجدول الزمني لمشروعك يلزم إرسال طلب بدء أعمال للمكتب الهندسي.
+        </div>
+    </div>
+
+    <div class="header">
+        المراحل المستلمة
+    </div>
+
+    <div class="card col-md-6 col-sm-12 my-5"> 
+      <div class="d-flex justify-content-between align-items-center ms-3 me-3 my-1">
+        <span class="first-svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 30 31" fill="none">
+          <circle cx="15" cy="15.7217" r="15" fill="#FF5555"/>
+          <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="16" fill="white">5</text>
+        </svg>
+       </span>  
+          <div class="d-flex justify-content-between align-items-center ms-3 me-3 my-1">
+            <div class="col-4 justify-content-center">
+           <div class="card-title text-center ">المراحل المستلمة</div>
+          </div>
+          <div class="col-md-8 d-flex justify-content-end ">
+              <button class="btn first-stage">طلب تعديل</button>
+              <button class="btn recieve-stage">استلام المرحلة</button>  
+            </div>    
+          </div>
+       
+      </div>
+
+      <div class="seperator"></div>
+      <div class="d-flex justify-content-between align-items-baseline ms-3 me-3 my-1">
+        <div class="text-right">
+          <span>عدد ايام المرحلة: <span class="numbers">  (10) يوم | </span></span>
+          <span>عدد التعديلات: <span class="numbers">2/5</span></span>        
+        </div>
+        <div class="button-stage">
+          <button class="btn request-start-working ">طلب بدءالاعمال</button>
+            <button class="btn edit-button ">توقيع غرامة تأخير</button>
+        </div>
+    </div>
+  </div>
+
+   <!-- start second card -->
+   <div class="card col-md-6 col-sm-12 my-3">
+    <div class="d-flex justify-content-between p-2">
+      <span class="second-card-title">مرحلة الاستفسارات</span>
+      <div class="stars ms-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+    </div>
+    </div>
+    <div class="d-flex justify-content-between p-2">
+      <span class="rate">14/7/2023</span>
+      <span class="rate">اكثر من رائع، ممتاز جدًا. سعدت بالتعامل معكم</span>
+    </div>
+   </div>
+   
+   <div class="card col-md-6 col-sm-12 my-3">
+    <div class="d-flex justify-content-between p-2">
+      <span class="second-card-title">مرحلة الاستفسارات</span>
+      <div class="stars ms-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+    </div>
+    </div>
+    <div class="d-flex justify-content-between p-2">
+      <span class="rate">14/7/2023</span>
+      <span class="rate">اكثر من رائع، ممتاز جدًا. سعدت بالتعامل معكم</span>
+    </div>
+   </div>
+
+   <div class="card col-md-6 col-sm-12 my-3">
+    <div class="d-flex justify-content-between p-2">
+      <span class="second-card-title">مرحلة الاستفسارات</span>
+      <div class="stars ms-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+    </div>
+    </div>
+    <div class="d-flex justify-content-between p-2">
+      <span class="rate">14/7/2023</span>
+      <span class="rate">اكثر من رائع، ممتاز جدًا. سعدت بالتعامل معكم</span>
+    </div>
+   </div>
+
+   <div class="card col-md-6 col-sm-12 my-3">
+    <div class="d-flex justify-content-between p-2">
+      <span class="second-card-title">مرحلة الاستفسارات</span>
+      <div class="stars ms-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5.825 22.7218L8.15 15.1218L2 10.7218H9.6L12 2.7218L14.4 10.7218H22L15.85 15.1218L18.175 22.7218L12 18.0218L5.825 22.7218Z" fill="#FFB800"/>
+      </svg>
+    </div>
+    </div>
+    <div class="d-flex justify-content-between p-2">
+      <span class="rate">14/7/2023</span>
+      <span class="rate">اكثر من رائع، ممتاز جدًا. سعدت بالتعامل معكم</span>
+    </div>
+   </div>
+
+  
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style  scoped>
+*{
+    direction: rtl;
+}
+.card{
+position: relative;  
+margin: auto;    
+border-radius: 10px;
+border: 1px solid rgba(0, 0, 0, 0.70);
+}
+.first-svg{
+  position: absolute;
+  top: -10px;
+  right: -15px;
+}
+button{
+  min-width: 9rem;
+}
+.card-body{
+color: #000;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.card-title{
+color: #336059;
+text-align: right;
+font-family: Cairo;
+font-size: 17px;
+font-weight: 600;
+text-wrap: nowrap;
+}
+.card-content{
+color: #259F5A;
+text-align: center;
+font-size: 24px;
+font-weight: 700;
+}
+.header{
+color: #259F5A;
+font-family: Cairo;
+font-size: 25px;
+font-weight: 700;
+margin: 1rem 0 ;
+text-align: center;
+}
+.first-stage{
+border-radius: 5px;
+border: 2px solid hsl(171, 29%, 40%);
+color: #48847B;
+margin-left: 0.5rem;
+padding: 5px 30px;
+
+}
+.recieve-stage{
+border-radius: 5px;
+background: #48847B;
+color:#FFFFFF;
+padding: 5px 25px;
+}
+.seperator{
+border-bottom: 1px solid #48847B;
+width: 99.9%;
+}
+.button-stage button{
+  margin: 0rem 0.25rem;
+}
+.numbers{
+color: #259F5A;
+font-family: Cairo;
+font-size: 17px;
+font-weight: 700;
+}
+.edit-button{
+border-radius: 5px;
+background: #CF2525;
+color:#FFFFFF;
+padding: 5px 15px;
+}
+.request-start-working{
+  border-radius: 5px;
+  background: #48847B;
+  color:#FFFFFF;
+  padding: 5px 15px;
+}
+.second-card-title{
+color: #245C54;
+text-align: right;
+font-family: Cairo;
+font-size: 17px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.rate{
+color: #747474;
+text-align: right;
+font-family: Cairo;
+font-size: 10px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.stars svg{
+  margin: 0px 5px;
+}
+</style>
