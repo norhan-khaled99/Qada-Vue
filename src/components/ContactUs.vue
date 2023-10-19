@@ -1,4 +1,5 @@
 <template>
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-2 card">
@@ -15,8 +16,9 @@
             </div>
         </div>
     </div>
-    <div class="container m-auto w-75 justify-content-center form ">
-        <p>املئ البيانات وسيقوم فريقنا بالتواصل معك في اقرب وقت</p>
+
+    <div class="container m-auto w-75 justify-content-center form my-3">
+        <p class="pt-5">املئ البيانات وسيقوم فريقنا بالتواصل معك في اقرب وقت</p>
         <p class="text">نحن نحب ان نستمع منك !</p>
 
         <div class="row justify-content-center">
@@ -37,11 +39,12 @@
             </div>
 
             <div class="text-center">
-                <button type="submit" class="btn mt-4 ">إرسال</button>
+                <button type="submit" class="btn my-5 ">إرسال</button>
             </div>
         </div>
 
     </div>
+    
 </template>
 
 <script>
