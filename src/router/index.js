@@ -26,6 +26,9 @@ import CheckLine from '../modules/members/pages/dashboardForMember/CheckLine.vue
 import projectTransactions from "../modules/members/pages/Tabs/projectTransactions.vue";
 import projectFiles from '../modules/members/pages/Tabs/projectsFile.vue';
 
+//------Dashboard
+import BusinessSettings from "../modules/members/pages/dashboardForMember/BusinessSettings.vue";
+
 const routes = [
   {
     path: "/",
@@ -78,17 +81,17 @@ const routes = [
         component: electronicContract,
       },
       {
-        path:"projecttransactions",
-        component:projectTransactions
+        path: "projecttransactions",
+        component: projectTransactions,
       },
       {
-        path:"projectfiles",
-        component:projectFiles
+        path: "projectfiles",
+        component: projectFiles,
       },
       {
         path: "checkLine",
-        component: CheckLine
-      }
+        component: CheckLine,
+      },
     ],
   },
   {
@@ -144,6 +147,10 @@ const routes = [
   {
     path: "/contactus",
     component: ContactUs,
+  },
+  {
+    path: "/businesssettings",
+    component: BusinessSettings,
   },
 ];
 
