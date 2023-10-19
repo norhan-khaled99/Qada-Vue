@@ -8,6 +8,8 @@ import PersonRegister from "../modules/members/pages/PersonRegister.vue";
 import AboutUs from "../components/AboutUs.vue";
 import TermsAndConditions from "../components/TermsAndConditions.vue";
 import FAQComponent from "../components/FAQComponent.vue";
+import ContactUs from "../components/ContactUs.vue";
+
 import ProjectListforMember from "../modules/members/pages/dashboardForMember/MyProjects.vue";
 import projectDetails from "../modules/members/pages/Tabs/projectDetails.vue";
 import projectPhases from "../modules/members/pages/Tabs/projectPhases.vue";
@@ -138,6 +140,10 @@ const routes = [
   {
     path: "/faq",
     component: FAQComponent,
+  },
+  {
+    path: "/contactus",
+    component: ContactUs,
   },
 ];
 

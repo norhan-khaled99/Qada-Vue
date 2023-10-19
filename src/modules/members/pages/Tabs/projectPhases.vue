@@ -10,7 +10,7 @@
     <div class="header">
         المراحل المستلمة
     </div>
-
+<!-- 
     <div class="card col-md-6 col-sm-12 my-5"> 
       <div class="d-flex justify-content-between align-items-center ms-3 me-3 my-1">
         <span class="first-svg">
@@ -38,11 +38,54 @@
           <span>عدد التعديلات: <span class="numbers">2/5</span></span>        
         </div>
         <div class="button-stage">
-          <button class="btn request-start-working ">طلب بدءالاعمال</button>
+          <button class="btn request-start-working">طلب بدءالاعمال</button>
             <button class="btn edit-button ">توقيع غرامة تأخير</button>
         </div>
     </div>
+  </div> -->
+
+  <div class="card col-lg-6 col-md-8 col-sm-12 my-5">
+    <span class="first-svg">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 30 31" fill="none">
+        <circle cx="15" cy="15.7217" r="15" fill="#FF5555"/>
+        <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="16" fill="white">5</text>
+      </svg>
+     </span>  
+     
+    <div class="d-flex justify-content-between align-items-center ms-3 me-3 my-1">
+      <!-- SVG and Title -->
+      <div class="col-4 justify-content-center">
+        <div class="card-title text-center ">المراحل المستلمة</div>
+      </div>
+  
+      <!-- Buttons -->
+      <div class="col-lg-8 col-md-8 col-sm-12 text-end">
+        <button class="btn first-stage">طلب تعديل</button>
+        <button class="btn recieve-stage">استلام المرحلة</button>
+      </div>
+    </div>
+  
+    <div class="seperator"></div>
+  
+    <!-- Additional Information and Buttons -->
+    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-baseline ms-3 me-3 my-1">
+      <!-- Information -->
+      <div class="text-center text-sm-right mb-2 mb-sm-0 text-nowrap">
+        <span>عدد ايام المرحلة: <span class="numbers"> (10) يوم | </span></span>
+        <span>عدد التعديلات: <span class="numbers">2/5</span></span>
+      </div>
+    
+      <!-- Buttons -->
+      <div class="row">
+      <div class="button-stage text-center text-sm-end">
+        <button class="btn request-start-working mb-2 mb-sm-0">طلب بدء الأعمال</button>
+        <button class="btn edit-button mt-2">توقيع غرامة تأخير</button>
+      </div>
+      </div>
+    </div>
+    
   </div>
+  
 
    <!-- start second card -->
    <div class="card col-md-6 col-sm-12 my-3">

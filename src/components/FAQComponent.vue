@@ -1,8 +1,11 @@
 <template>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-6 w-25   ">
+            <div class="col-lg-6 w-25">
                 <p>ما الذي يميز خدماتنا؟</p>
+                <p>شركتنا تعمل منذ زمن بأحدث التقنيات الممكنة
+                    لما جعلنا من الاوائل دائمًا طيله هذه الفترة، لما جعلنا
+                    أأمن واسرع واوسع شركة شحن طيله هذه المدة.</p>
             </div>
             <div class="col-lg-2">
                 <a><i class="fa-light fa fa-circle-arrow-down"></i></a>
@@ -48,7 +51,8 @@ export default {
 }
 
 .container {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
 
 }
 
