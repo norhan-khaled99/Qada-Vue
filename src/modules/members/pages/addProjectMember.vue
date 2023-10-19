@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row d-flex justify-content-between align-items-center mx-auto mt-5 main-section">
+    <div class="d-flex justify-content-between align-items-center mx-auto mt-5 main-section">
       <div class="col-md-2 col-sm-4">
       <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
         <circle cx="50" cy="50" r="50" fill="#48847B"/>
@@ -9,7 +9,7 @@
       <p style="color: #48847B;">مسودة المشروع</p>
       </div>
 
-      <hr class="col-sm-2 my-4 custom-hr">
+      <hr class="col-md-6 col-sm-5 my-4 custom-hr">
 
        <div class="col-md-2 col-sm-2">
        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
