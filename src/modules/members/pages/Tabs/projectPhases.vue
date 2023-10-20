@@ -19,15 +19,16 @@
           <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="16" fill="white">5</text>
         </svg>
        </span>  
-          <div class="d-flex justify-content-between align-items-center ms-3 me-3 my-1">
-            <div class="col-4 justify-content-center">
-           <div class="card-title text-center ">المراحل المستلمة</div>
-          </div>
-          <div class="col-md-8 d-flex justify-content-end ">
-              <button class="btn first-stage">طلب تعديل</button>
-              <button class="btn recieve-stage">استلام المرحلة</button>  
-            </div>    
-          </div>
+       <div class="d-flex justify-content-between align-items-center  my-1">
+        <div class=" col-sm-4">
+            <div class="card-title text-center">المراحل المستلمة</div>
+        </div>
+        <div class="col-sm-8 d-flex justify-content-end">
+            <button class="first-stage">طلب تعديل</button>
+            <button class="recieve-stage">استلام المرحلة</button>
+        </div>
+    </div>
+    
 
       </div>
 
@@ -38,8 +39,8 @@
           <span>عدد التعديلات: <span class="numbers">2/5</span></span>        
         </div>
         <div class="button-stage">
-          <button class="btn request-start-working">طلب بدءالاعمال</button>
-            <button class="btn edit-button ">توقيع غرامة تأخير</button>
+          <button class=" request-start-working">طلب بدءالاعمال</button>
+            <button class="edit-button ">توقيع غرامة تأخير</button>
         </div>
     </div>
   </div>
@@ -185,6 +186,7 @@ border: 1px solid rgba(0, 0, 0, 0.70);
 }
 button{
   min-width: 9rem;
+  border: none;
 }
 .card-body{
 color: #000;
@@ -200,7 +202,7 @@ text-align: right;
 font-family: Cairo;
 font-size: 17px;
 font-weight: 600;
-text-wrap: nowrap;
+white-space: nowrap;
 }
 .card-content{
 color: #259F5A;
@@ -221,7 +223,6 @@ border-radius: 5px;
 border: 2px solid hsl(171, 29%, 40%);
 color: #48847B;
 margin-left: 0.5rem;
-padding: 5px 30px;
 
 }
 .recieve-stage{
