@@ -27,6 +27,12 @@ import projectTransactions from "../modules/members/pages/Tabs/projectTransactio
 import projectFiles from '../modules/members/pages/Tabs/projectsFile.vue';
 import AcceptedProject from '../modules/members/pages/dashboardForMember/AcceptedProject.vue'
 import DashboardCard from '../modules/members/pages/dashboardForMember/DashboardCard.vue'
+
+//------Dashboard
+import BusinessSettings from "../modules/members/pages/dashboardForMember/BusinessSettings.vue";
+import UserSettings from "../modules/members/pages/dashboardForMember/UserSettings.vue";
+import OfficeSettings from "../modules/members/pages/dashboardForMember/OfficeSettings.vue";
+
 const routes = [
   {
     path: "/",
@@ -79,12 +85,12 @@ const routes = [
         component: electronicContract,
       },
       {
-        path:"projecttransactions",
-        component:projectTransactions
+        path: "projecttransactions",
+        component: projectTransactions,
       },
       {
-        path:"projectfiles",
-        component:projectFiles
+        path: "projectfiles",
+        component: projectFiles,
       },
       {
         path: "checkLine",
@@ -153,6 +159,18 @@ const routes = [
   {
     path: "/contactus",
     component: ContactUs,
+  },
+  {
+    path: "/businesssettings",
+    component: BusinessSettings,
+  },
+  {
+    path: "/usersettings",
+    component: UserSettings,
+  },
+  {
+    path: "/officesettings",
+    component: OfficeSettings,
   },
 ];
 
