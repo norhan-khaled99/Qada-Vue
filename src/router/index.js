@@ -25,7 +25,7 @@ import CheckLine from '../modules/members/pages/dashboardForMember/CheckLine.vue
 
 import projectTransactions from "../modules/members/pages/Tabs/projectTransactions.vue";
 import projectFiles from '../modules/members/pages/Tabs/projectsFile.vue';
-
+import projectQuereries from  "../modules/members/pages/Tabs/projectQuereries";
 //------Dashboard
 import BusinessSettings from "../modules/members/pages/dashboardForMember/BusinessSettings.vue";
 import UserSettings from "../modules/members/pages/dashboardForMember/UserSettings.vue";
@@ -89,6 +89,10 @@ const routes = [
       {
         path: "projectfiles",
         component: projectFiles,
+      },
+      {
+        path:"projectquereries",
+        component:projectQuereries
       },
       {
         path: "checkLine",
