@@ -25,7 +25,8 @@ import CheckLine from '../modules/members/pages/dashboardForMember/CheckLine.vue
 
 import projectTransactions from "../modules/members/pages/Tabs/projectTransactions.vue";
 import projectFiles from '../modules/members/pages/Tabs/projectsFile.vue';
-
+import AcceptedProject from '../modules/members/pages/dashboardForMember/AcceptedProject.vue'
+import DashboardCard from '../modules/members/pages/dashboardForMember/DashboardCard.vue'
 const routes = [
   {
     path: "/",
@@ -88,6 +89,14 @@ const routes = [
       {
         path: "checkLine",
         component: CheckLine
+      },
+      {
+        path: "acceptedProject",
+        component: AcceptedProject
+      },
+      {
+        path: "DashboardCard",
+        component: DashboardCard
       }
     ],
   },

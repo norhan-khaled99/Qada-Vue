@@ -4,29 +4,30 @@
     <router-link to="/about">About</router-link>
   </nav>
   <router-view/> -->
-    <Main_Header/>
-     <router-view/>
-    <!-- <MainFooter/> -->
-   
+  <Main_Header />
+  <router-view />
+  <MainFooter />
 </template>
 <script>
 import Main_Header from './components/Main_Header.vue'
-// import MainFooter from './components/MainFooter.vue'
+import MainFooter from './components/MainFooter.vue'
 
 export default {
   name: 'App',
   components: {
     Main_Header,
-    // MainFooter,
+    MainFooter,
   }
 }
 </script>
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
-*{
-    font-family: "Cairo", sans-serif;
-    box-sizing: border-box;
+
+* {
+  font-family: "Cairo", sans-serif;
+  box-sizing: border-box;
 }
+
 /* *{
   direction: rtl;
 } */
