@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <p class="table-header">الصفحة</p>
-    <div class=" table-responsive my-3">
-      <table class="table-bordered">
+    <div class=" table-responsive  my-3">
+      <table class="table-border">
         <tbody>
           <tr>
             <td>
@@ -53,7 +53,6 @@ export default {};
 * {
   direction: rtl;
 }
-
 .table-header {
   color: #000;
   text-align: center;
@@ -63,9 +62,26 @@ export default {};
   font-weight: 600;
   line-height: normal;
 }
-
 .table-responsive {
-  background-color: #0F9678;
-  color: #FFF;
+  color: #000;
 }
+table{
+  border-collapse: collapse;
+  border: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+}
+
+table,
+th,
+td {
+    border:lightgray;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
 </style>

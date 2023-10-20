@@ -2,7 +2,7 @@
   <div class="">
     <div class="dashed-hr my-5"></div>
     <div class="container">
-    <div class="row d-flex justify-content-center ">
+    <div class="row d-flex justify-content-center my-5">
       <div class="col-md-4 col-sm-12 d-flex flex-column justify-content-center align-items-start ">
         <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
@@ -104,7 +104,7 @@
     <div class="dashed-hr my-5"></div>
    <div class="container">
    <div class=" row my-5">
-    <div class="header">
+    <div class="header my-3">
         تفاصيل المشروع 
     </div>
     <div class="sub-title">
@@ -116,7 +116,7 @@
    </div>
 
    <div class="row my-5">
-    <div class="header-title">
+    <div class="header-title my-3">
         متطلبات المشروع
     </div>
     <div class="sub-title">
@@ -212,6 +212,8 @@ font-size: 20px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
+margin: 1.5rem 0rem;
+align-items: baseline;
 }
 .col-sub-title{
 color: #2A665D;
@@ -220,6 +222,8 @@ font-size: 20px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
+align-items: baseline;
+margin-bottom: 0.5rem;
 }
 </style>
 
