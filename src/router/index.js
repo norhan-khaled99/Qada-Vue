@@ -26,6 +26,9 @@ import CheckLine from '../modules/members/pages/dashboardForMember/CheckLine.vue
 import projectTransactions from "../modules/members/pages/Tabs/projectTransactions.vue";
 import projectFiles from '../modules/members/pages/Tabs/projectsFile.vue';
 import projectQuereries from  "../modules/members/pages/Tabs/projectQuereries";
+import AcceptedProject from '../modules/members/pages/dashboardForMember/AcceptedProject.vue'
+import DashboardCard from '../modules/members/pages/dashboardForMember/DashboardCard.vue'
+
 //------Dashboard
 import BusinessSettings from "../modules/members/pages/dashboardForMember/BusinessSettings.vue";
 import UserSettings from "../modules/members/pages/dashboardForMember/UserSettings.vue";
@@ -96,8 +99,16 @@ const routes = [
       },
       {
         path: "checkLine",
-        component: CheckLine,
+        component: CheckLine
       },
+      {
+        path: "acceptedProject",
+        component: AcceptedProject
+      },
+      {
+        path: "DashboardCard",
+        component: DashboardCard
+      }
     ],
   },
   {

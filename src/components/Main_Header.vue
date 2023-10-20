@@ -47,7 +47,8 @@
       </div>
     </nav>
     <div class="container artcl">
-      <h3>عن قدة</h3>
+      <p class="text-light">لوحة التحكم</p>
+      <h3>الرئيسية</h3>
     </div>
   </div>
 </template>
@@ -70,23 +71,29 @@ nav {
   height: 380px; */
   ;
 }
+
 .content {
   height: 50vh;
   width: 100%;
   background: linear-gradient(95.07deg, rgba(42, 102, 93, 0.8) 56.22%, rgba(48, 255, 81, 0.48) 157.23%);
 }
+
 .artcl {
   position: absolute;
   top: 25%;
   left: 8%;
 }
+
 .artcl h3 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
-  line-height: 120px;
-  letter-spacing: 0em;
   color: #fff;
 }
+
+p {
+  font-size: 20px;
+}
+
 .navBg-img {
   width: 100vw;
   object-fit: cover;
@@ -146,4 +153,9 @@ li span {
    background-color: #FF4B4B;
    color: #fff;
   } */
-</style>
+@media (max-width: 576px) {
+  .artcl {
+
+left: 0;
+  }
+}</style>
