@@ -211,8 +211,10 @@ line-height: normal;
 }
 .nav-link.active {
   color: #0F9678;
-  text-decoration: underline;
-
+  
+  /*  
+  border-bottom:2px solid #0F9678  ;
+  */
 }
 
 </style>
