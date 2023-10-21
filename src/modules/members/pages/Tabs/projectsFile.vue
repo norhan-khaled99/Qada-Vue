@@ -3,14 +3,14 @@
         <div class="row text-center my-5">
             <h1>الملفات المتاحة الان</h1>
         </div>
-        <div class="uploadFile  m-auto text-center mb-5 ">
+        <div class="uploadFile col-md-3 col-sm-12 m-auto text-center mb-5 ">
             <svg class="mt-3" xmlns="http://www.w3.org/2000/svg" width="60" height="54" viewBox="0 0 60 54" fill="none">
                 <rect y="24" width="60" height="30" rx="15" fill="#282B2A" />
                 <path
                     d="M31.0607 0.939341C30.4749 0.353554 29.5251 0.353554 28.9393 0.939341L19.3934 10.4853C18.8076 11.0711 18.8076 12.0208 19.3934 12.6066C19.9792 13.1924 20.9289 13.1924 21.5147 12.6066L30 4.12132L38.4853 12.6066C39.0711 13.1924 40.0208 13.1924 40.6066 12.6066C41.1924 12.0208 41.1924 11.0711 40.6066 10.4853L31.0607 0.939341ZM31.5 24L31.5 2H28.5L28.5 24H31.5Z"
                     fill="#2A665D" />
             </svg>
-            <h3 class="my-3">اضغط لإضافة مرفق جديد(ملف)</h3>
+            <h3 class="my-3 px-3">اضغط لإضافة مرفق جديد(ملف)</h3>
         </div>
         <div class="text-center two">
             <div class="row justify-content-between align-items-baseline my-5 ">
@@ -530,7 +530,7 @@ h1 {
 .uploadFile {
     border: 3px solid #2A665D;
     border-radius: 10px;
-    width: 37%;
+    
 }
 
 .uploadFile h3 {
