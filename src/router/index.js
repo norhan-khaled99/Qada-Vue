@@ -36,6 +36,10 @@ import OfficeSettings from "../modules/members/pages/dashboardForMember/OfficeSe
 import BusinessAccount from "../modules/members/pages/dashboardForMember/BusinessAccount.vue";
 import UserAccount from "../modules/members/pages/dashboardForMember/UserAccount.vue";
 import OfficeAccount from "../modules/members/pages/dashboardForMember/OfficeAccount.vue";
+import BusinessComponent from "../modules/members/pages/dashboardForMember/BusinessComponent.vue";
+import OfficesComponent from "../modules/members/pages/dashboardForMember/OfficesComponent.vue";
+import UsersComponent from "../modules/members/pages/dashboardForMember/UsersComponent.vue";
+
 
 const routes = [
   {
@@ -191,6 +195,18 @@ const routes = [
   {
     path: "/officeaccount",
     component: OfficeAccount,
+  },
+  {
+    path: "/business",
+    component: BusinessComponent,
+  },
+  {
+    path: "/offices",
+    component: OfficesComponent,
+  },
+  {
+    path: "/users",
+    component: UsersComponent,
   },
 ];
 
