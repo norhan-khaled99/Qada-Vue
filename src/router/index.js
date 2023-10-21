@@ -33,6 +33,9 @@ import DashboardCard from '../modules/members/pages/dashboardForMember/Dashboard
 import BusinessSettings from "../modules/members/pages/dashboardForMember/BusinessSettings.vue";
 import UserSettings from "../modules/members/pages/dashboardForMember/UserSettings.vue";
 import OfficeSettings from "../modules/members/pages/dashboardForMember/OfficeSettings.vue";
+import BusinessAccount from "../modules/members/pages/dashboardForMember/BusinessAccount.vue";
+import UserAccount from "../modules/members/pages/dashboardForMember/UserAccount.vue";
+import OfficeAccount from "../modules/members/pages/dashboardForMember/OfficeAccount.vue";
 
 const routes = [
   {
@@ -94,21 +97,21 @@ const routes = [
         component: projectFiles,
       },
       {
-        path:"projectquereries",
-        component:projectQuereries
+        path: "projectquereries",
+        component: projectQuereries,
       },
       {
         path: "checkLine",
-        component: CheckLine
+        component: CheckLine,
       },
       {
         path: "acceptedProject",
-        component: AcceptedProject
+        component: AcceptedProject,
       },
       {
         path: "DashboardCard",
-        component: DashboardCard
-      }
+        component: DashboardCard,
+      },
     ],
   },
   {
@@ -176,6 +179,18 @@ const routes = [
   {
     path: "/officesettings",
     component: OfficeSettings,
+  },
+  {
+    path: "/businessaccount",
+    component: BusinessAccount,
+  },
+  {
+    path: "/useraccount",
+    component: UserAccount,
+  },
+  {
+    path: "/officeaccount",
+    component: OfficeAccount,
   },
 ];
 
