@@ -47,8 +47,8 @@
       </div>
     </nav>
     <div class="container artcl">
-      <!-- <p class="text-light">لوحة التحكم</p> -->
-      <h3>منصة المشاريع</h3>
+      <p class="text-light">لوحة التحكم</p>
+      <h3>الرئيسية</h3>
     </div>
   </div>
 </template>
@@ -156,6 +156,7 @@ li span {
 @media (max-width: 576px) {
   .artcl {
 
-left: 0;
+    left: 0;
   }
-}</style>
+}
+</style>
