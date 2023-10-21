@@ -33,7 +33,7 @@ import DashboardCard from '../modules/members/pages/dashboardForMember/Dashboard
 import BusinessSettings from "../modules/members/pages/dashboardForMember/BusinessSettings.vue";
 import UserSettings from "../modules/members/pages/dashboardForMember/UserSettings.vue";
 import OfficeSettings from "../modules/members/pages/dashboardForMember/OfficeSettings.vue";
-
+import PendingProject from "../modules/members/pages/dashboardForMember/PendingProject.vue"
 const routes = [
   {
     path: "/",
@@ -108,6 +108,9 @@ const routes = [
       {
         path: "DashboardCard",
         component: DashboardCard
+      }, {
+        path: 'pendingProject',
+        component: PendingProject
       }
     ],
   },

@@ -127,7 +127,7 @@
           </div>
     </div>
         <!-- start second card -->
-    <div class="col-md-8 col-sm-12 mt-5 d-flex me-5">
+    <div class="col-md-8 col-sm-12 mt-5 d-flex me-5 mb-5">
             <div class="avatar">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                     <circle cx="20" cy="20" r="20" fill="#0C483F"/>
@@ -142,7 +142,7 @@
               <div class="sub-title-reply my-2">
                 الارض مسجله عقد اخضر ومتاحه تمويل عقاري بالفعل
               </div>
-              <div class="contract-text">
+              <div class="contract-text ">
                 <span>GreenContract.pdf <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path d="M5.82748 11H2.37927C1.61752 11 0.999995 10.4403 1 9.74999L1.00005 2.25C1.00006 1.55964 1.61758 1 2.37933 1H8.58625C9.34801 1 9.96553 1.55965 9.96553 2.25V4.75001M3.41396 3.50001H7.5518M3.41396 5.37501H7.5518M7.5518 7.85104V9.38458C7.5518 10.1424 8.44339 10.8374 9.27956 10.8374C10.1157 10.8374 11 10.1424 11 9.38458V7.44748C11 7.04629 10.7455 6.63917 10.1794 6.63917C9.57382 6.63917 9.27956 7.04629 9.27956 7.44748V9.30386M3.41396 7.25002H5.48288" stroke="#0043A8" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg></span>
