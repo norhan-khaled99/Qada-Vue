@@ -81,7 +81,6 @@ export default {
     width: 150px;
     text-align: center;
     border-radius: 18px 0 0 18px;
-
 }
 
 .headerCard {
@@ -109,4 +108,6 @@ th {
     width: 50px;
     text-align: center;
     color: #54847D;
-}</style>
+}
+
+</style>
