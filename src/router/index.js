@@ -34,6 +34,14 @@ import BusinessSettings from "../modules/members/pages/dashboardForMember/Busine
 import UserSettings from "../modules/members/pages/dashboardForMember/UserSettings.vue";
 import OfficeSettings from "../modules/members/pages/dashboardForMember/OfficeSettings.vue";
 import PendingProject from "../modules/members/pages/dashboardForMember/PendingProject.vue"
+import BusinessAccount from "../modules/members/pages/dashboardForMember/BusinessAccount.vue";
+import UserAccount from "../modules/members/pages/dashboardForMember/UserAccount.vue";
+import OfficeAccount from "../modules/members/pages/dashboardForMember/OfficeAccount.vue";
+import BusinessComponent from "../modules/members/pages/dashboardForMember/BusinessComponent.vue";
+import OfficesComponent from "../modules/members/pages/dashboardForMember/OfficesComponent.vue";
+import UsersComponent from "../modules/members/pages/dashboardForMember/UsersComponent.vue";
+
+
 const routes = [
   {
     path: "/",
@@ -94,16 +102,16 @@ const routes = [
         component: projectFiles,
       },
       {
-        path:"projectquereries",
-        component:projectQuereries
+        path: "projectquereries",
+        component: projectQuereries,
       },
       {
         path: "checkLine",
-        component: CheckLine
+        component: CheckLine,
       },
       {
         path: "acceptedProject",
-        component: AcceptedProject
+        component: AcceptedProject,
       },
       {
         path: "DashboardCard",
@@ -111,7 +119,11 @@ const routes = [
       }, {
         path: 'pendingProject',
         component: PendingProject
-      }
+      },
+      {
+        path:'dashboardCard',
+        component: DashboardCard,
+      },
     ],
   },
   {
@@ -179,6 +191,30 @@ const routes = [
   {
     path: "/officesettings",
     component: OfficeSettings,
+  },
+  {
+    path: "/businessaccount",
+    component: BusinessAccount,
+  },
+  {
+    path: "/useraccount",
+    component: UserAccount,
+  },
+  {
+    path: "/officeaccount",
+    component: OfficeAccount,
+  },
+  {
+    path: "/business",
+    component: BusinessComponent,
+  },
+  {
+    path: "/offices",
+    component: OfficesComponent,
+  },
+  {
+    path: "/users",
+    component: UsersComponent,
   },
 ];
 
