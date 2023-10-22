@@ -61,7 +61,6 @@ export default {
 .container-fliud {
     position: relative;
 }
-
 .div1 {
     position: absolute;
     top:0%;
@@ -70,7 +69,6 @@ export default {
     background-size: 100% 100%;
     width: 100%;
 }
-
 .div2 {
     position: absolute;
     top: 0%;
@@ -81,3 +79,4 @@ export default {
     margin-bottom: 10px;
 }
 </style>
+
