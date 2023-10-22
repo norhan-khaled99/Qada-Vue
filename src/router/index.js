@@ -13,12 +13,13 @@ import test from "../modules/members/pages/Tabs/mainTabs.vue";
 import ProjectListforMember from "../modules/members/pages/dashboardForMember/MyProjects.vue";
 import BusinessPanner from "../modules/Business/pages/BusinessPanner.vue";
 import PersonLogin from "../modules/members/pages/PersonLogin.vue";
-import BusinessRegister from '../modules/Business/pages/BusinessRegister.vue'
-import BusinessLogin from '../modules/Business/pages/BusinessLogin.vue'
-import Engineering_officesRegister from '../modules/Engineering_offices/Pages/Engineering_officesRegister.vue'
-import Engineering_officesLogin from '../modules/Engineering_offices/Pages/Engineering_officesLogin.vue'
-import CheckLine from '../modules/members/pages/dashboardForMember/CheckLine.vue'
-import chatMember from '@/modules/members/pages/dashboardForMember/chatMember'
+import BusinessRegister from "../modules/Business/pages/BusinessRegister.vue";
+import BusinessLogin from "../modules/Business/pages/BusinessLogin.vue";
+import Engineering_officesRegister from "../modules/Engineering_offices/Pages/Engineering_officesRegister.vue";
+import Engineering_officesLogin from "../modules/Engineering_offices/Pages/Engineering_officesLogin.vue";
+import CheckLine from "../modules/members/pages/dashboardForMember/CheckLine.vue";
+import chatMember from "@/modules/members/pages/dashboardForMember/chatMember";
+import testModal from "../modules/members/pages/Tabs/testModal.vue";
 
 //  routes for tabs for member
 import electronicContract from "../modules/members/pages/Tabs/ElectronicContract.vue";
@@ -26,24 +27,23 @@ import projectDetails from "../modules/members/pages/Tabs/projectDetails.vue";
 import projectPhases from "../modules/members/pages/Tabs/projectPhases.vue";
 import Prices_offers from "../modules/members/pages/Tabs/Prices_offers.vue";
 import projectTransactions from "../modules/members/pages/Tabs/projectTransactions.vue";
-import projectFiles from '../modules/members/pages/Tabs/projectsFile.vue';
-import projectQuereries from  "../modules/members/pages/Tabs/projectQuereries";
+import projectFiles from "../modules/members/pages/Tabs/projectsFile.vue";
+import projectQuereries from "../modules/members/pages/Tabs/projectQuereries";
 
-import AcceptedProject from '../modules/members/pages/dashboardForMember/AcceptedProject.vue'
-import DashboardCard from '../modules/members/pages/dashboardForMember/DashboardCard.vue'
+import AcceptedProject from "../modules/members/pages/dashboardForMember/AcceptedProject.vue";
+import DashboardCard from "../modules/members/pages/dashboardForMember/DashboardCard.vue";
 
 //------Dashboard
 import BusinessSettings from "../modules/members/pages/dashboardForMember/BusinessSettings.vue";
 import UserSettings from "../modules/members/pages/dashboardForMember/UserSettings.vue";
 import OfficeSettings from "../modules/members/pages/dashboardForMember/OfficeSettings.vue";
-import PendingProject from "../modules/members/pages/dashboardForMember/PendingProject.vue"
+import PendingProject from "../modules/members/pages/dashboardForMember/PendingProject.vue";
 import BusinessAccount from "../modules/members/pages/dashboardForMember/BusinessAccount.vue";
 import UserAccount from "../modules/members/pages/dashboardForMember/UserAccount.vue";
 import OfficeAccount from "../modules/members/pages/dashboardForMember/OfficeAccount.vue";
 import BusinessComponent from "../modules/members/pages/dashboardForMember/BusinessComponent.vue";
 import OfficesComponent from "../modules/members/pages/dashboardForMember/OfficesComponent.vue";
 import UsersComponent from "../modules/members/pages/dashboardForMember/UsersComponent.vue";
-
 
 const routes = [
   {
@@ -118,23 +118,28 @@ const routes = [
       },
       {
         path: "DashboardCard",
-        component: DashboardCard
-      }, {
-        path: 'pendingProject',
-        component: PendingProject
-      },
-      {
-        path:'dashboardCard',
         component: DashboardCard,
       },
       {
-        path:"test",
-        component:test
+        path: "pendingProject",
+        component: PendingProject,
       },
       {
-        path:"chatMember",
-        component:chatMember
-      }
+        path: "dashboardCard",
+        component: DashboardCard,
+      },
+      {
+        path: "test",
+        component: test,
+      },
+      {
+        path: "testModal",
+        component: testModal,
+      },
+      {
+        path: "chatMember",
+        component: chatMember,
+      },
     ],
   },
   {

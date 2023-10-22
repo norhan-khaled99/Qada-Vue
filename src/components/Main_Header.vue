@@ -16,22 +16,32 @@
               <a class="nav-link ra2esia" href="#"> الرئيسية</a>
             </li>
             <li class="nav-item mx-lg-2">
-              <a class="nav-link" href="#">من نحن؟</a>
+              <router-link to="/aboutus">
+              <a class="nav-link">من نحن؟</a>
+              </router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <a class="nav-link" href="#">لوحة التحكم</a>
+              <a class="nav-link" router-link to="/member/addproject">لوحة التحكم</a>
             </li>
             <li class="nav-item mx-lg-2">
-              <a class="nav-link" href="#">الاسئلة المتكررة</a>
+              <router-link to="/faq">
+              <a class="nav-link" >الاسئلة المتكررة</a>
+            </router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <a class="nav-link" href="#">الشروط والاحكام</a>
+              <router-link to="/termsandconditions">
+              <a class="nav-link">الشروط والاحكام</a>
+            </router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <a class="nav-link" href="#">شركاء النجاح</a>
+              <router-link to="">
+              <a class="nav-link">شركاء النجاح</a>
+            </router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <a class="nav-link" href="#">إتصل بنا</a>
+              <router-link to="/contactus">
+              <a class="nav-link">إتصل بنا</a>
+            </router-link>
             </li>
             <button type="button" class="btn  login mx-lg-4">تسجيل دخول</button>
             <button type="button" class="btn   create">إنشاء حساب</button>
@@ -70,6 +80,10 @@ nav {
   margin-bottom: 20px;
   height: 380px; */
   ;
+}
+.nav-link:hover{
+  color: #fff;
+
 }
 
 .content {
