@@ -17,11 +17,11 @@
       <div class="modal-dialog ">
         <div class="modal-content rounded-5 " style="background-color: #0F9678; width:45rem ">
           <div class="modal-body d-flex flex-column align-items-center ">
-             <img src="../../../../assets/Ellipse31.png" alt="">
+             <img src="../../../../assets/Ellipse31.png" alt="" class="my-3">
              <svg xmlns="http://www.w3.org/2000/svg" width="130" height="124" viewBox="0 0 130 124" fill="none">
                 <path d="M6.5 72.3L56.5652 108L120.5 6" stroke="#0F9678" stroke-width="22"/>
               </svg>
-            <div class="modal-text mx-5">
+            <div class="modal-text my-3">
                 تم إرسال رسالتك الي فريقنا بنجاح , نشكرك لتواصلك معنا
             </div>
           </div>
@@ -77,8 +77,14 @@ padding-right: 20px;
 padding-left:20px ;
 }
 img{
-    width: 50%;
-    height: 50%;
+    width: 40%;
+    height: 40%;
+    position: relative;
+  
 }
+svg{
+  position: absolute;
+  top: 100px;
 
+}
 </style>
