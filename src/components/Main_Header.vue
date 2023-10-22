@@ -56,10 +56,10 @@
         </div>
       </div>
     </nav>
-    <div class="container artcl">
+    <!-- <div class="container artcl">
       <p class="text-light">لوحة التحكم</p>
-      <h3>الرئيسية</h3>
-    </div>
+      <h3>المراسلات</h3>
+    </div> -->
   </div>
 </template>
 
@@ -86,11 +86,11 @@ nav {
 
 }
 
-.content {
+/* .content {
   height: 50vh;
   width: 100%;
   background: linear-gradient(95.07deg, rgba(42, 102, 93, 0.8) 56.22%, rgba(48, 255, 81, 0.48) 157.23%);
-}
+} */
 
 /* .artcl {
   position: absolute;
@@ -114,7 +114,7 @@ p {
 }
 
 li a {
-  color: #fff;
+  color: rgba(0, 0, 0, 0.80);
   font-weight: 500;
   font-size: 18px;
 }
@@ -125,7 +125,7 @@ li .qada {
 
 .fa-bell {
   font-size: 2rem;
-  color: #fff;
+color: rgba(0, 0, 0, 0.80);
 }
 
 .create {
@@ -138,8 +138,8 @@ li .qada {
 }
 
 .login {
-  background-color: #fff;
-  color: #2A665D;
+  background-color: #2A665D;
+  color: #fff;
   width: 150px;
   height: 40px;
   border-radius: 1rem;

@@ -45,6 +45,7 @@ import BusinessComponent from "../modules/members/pages/dashboardForMember/Busin
 import OfficesComponent from "../modules/members/pages/dashboardForMember/OfficesComponent.vue";
 import UsersComponent from "../modules/members/pages/dashboardForMember/UsersComponent.vue";
 
+
 const routes = [
   {
     path: "/",
@@ -65,6 +66,7 @@ const routes = [
     path: "/successPartners",
     component: SuccessPartners,
   },
+  
   {
     path: "/member",
     children: [
@@ -137,9 +139,9 @@ const routes = [
         component: testModal,
       },
       {
-        path: "chatMember",
-        component: chatMember,
-      },
+        path:"chatMember",
+        component:chatMember
+      }
     ],
   },
   {

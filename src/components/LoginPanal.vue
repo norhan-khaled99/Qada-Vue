@@ -1,43 +1,67 @@
 <template>
-    <div class="container-fluid ">
+    <div class="container-fluid row align-items-center">
 
-        <div class="row ">
-            <div class="col-lg-2 card officeCard mx-lg-4 my-5">
-                <div class="card-body">
-                    <h4 class="card-title office">مكتب هندسي</h4>
-                    <p class="card-text">خدمات اعمالك الهندسية بين يديك</p>
-                    <a href="#" class="btn btn-secondary my-2">تسجيل دخول</a>
-                    <a href="#" class="btn createBtn">إنشاء حساب</a>
-                </div>
-            </div>
-            <div class="col-lg-2 card bussinseCard mx-lg-4 my-5">
-                <div class="card-body">
-                    <h5 class="card-title bussinse">أعمال</h5>
-                    <p class="card-text">دعم هندسي الكتروني متكامل</p>
-                    <a href="#" class="btn btn-success my-2">تسجيل دخول</a>
-                    <a href="#" class="btn createBtn">إنشاء حساب</a>
-                </div>
-            </div>
-            <div class="col-lg-2 card memberCard  mx-lg-4 my-5">
-                <div class="card-body">
-                    <h5 class="card-title member">أفراد</h5>
-                    <p class="card-text">خدمات هندسية الكترونية متكاملة</p>
-                    <a href="#" class="btn btn-primary my-2">تسجيل دخول</a>
-                    <div >
-                        <a href="#" class="btn createBtn">إنشاء حساب</a>
+        <div class="row view align-items-center">
+            <div class="col-lg-3 offset-lg-1 qdas ">
+                <h1 class="mb-">منصة قد<span>ة</span></h1>
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <p>ساهمت منصة قدة في تقليل عمر القضية بنسبة %79</p>
+                        </div>
+                        <div class="carousel-item">
+                            <p>ساهمت منصة قدة بإتاحة التقاضي إلكترونيًا لأكثر من 6 ملايين جلسة عن بعد، وإصدار 2 مليون حكم
+                                قضائي إلكتروني</p>
+                        </div>
+                        <div class="carousel-item">
+                            <p>ساهمت منصة قدة في إصدار أكثر من مليون طلب تنفيذ، وأكثر من 1,6 مليون قرار تنفيذ إلكتروني</p>
+                        </div>
+                        <div class="carousel-item">
+                            <p>وفرت منصة ناجز على المستفيدين خلال سنة 2022 أكثر من 47 مليون زيارة للمقرات العدلية</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 offset-lg-1 qdas me-auto">
-                <h1>منصة قد<span>ة</span></h1>
-                <p>ساهمت منصة قدة في تقليل عمر القضية بنسبة %79</p>
-            </div>
-            <!-- <div class="col-lg-2 card officeCard ">
+            <div class="col-lg-8">
+                <div class="row  ">
+                    <div class="col-lg-3 card memberCard  mx-lg-4 my-5">
+                        <div class="card-body">
+                            <h5 class="card-title member">أفراد</h5>
+                            <p class="card-text">خدمات هندسية الكترونية متكاملة</p>
+                            <a href="#" class="btn btn-primary my-2">تسجيل دخول</a>
+                            <div>
+                                <a href="#" class="btn createBtn">إنشاء حساب</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 card bussinseCard mx-lg-4 my-5">
+                        <div class="card-body">
+                            <h5 class="card-title bussinse">أعمال</h5>
+                            <p class="card-text">دعم هندسي الكتروني متكامل</p>
+                            <a href="#" class="btn btn-success my-2">تسجيل دخول</a>
+                            <div class="">
+                                <a href="#" class="btn createBtn">إنشاء حساب</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 card officeCard mx-lg-4 my-5">
+                        <div class="card-body">
+                            <h4 class="card-title office">مكتب هندسي</h4>
+                            <p class="card-text">خدمات اعمالك الهندسية بين يديك</p>
+                            <a href="#" class="btn btn-secondary my-2">تسجيل دخول</a>
+                            <div class="">
+                                <a href="#" class="btn createBtn">إنشاء حساب</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-2 card officeCard ">
                 <h4 class="expert-name office">مكتب هندسي</h4>
                 <p class="bio">خدمات اعمالك الهندسية بين يديك</p>
                 <button class='btn bg-main text-white w-100 my-3 login'>تسجيل دخول</button>
                 <button class='btn bg-main text-white w-100 my-3 register'>إنشاء حساب</button>
             </div> -->
+            </div>
         </div>
     </div>
 </template>
@@ -49,12 +73,24 @@ export default {
 </script>
 
 <style scoped>
+*{
+    direction: rtl;
+}
 .container-fluid {
     background-color: #F5FFFC;
-    /* height: 100vh; */
+    background-image: url(../assets/graph.png);
+    background-size: 100% 100%;
+    height: 100vh;
 }
-
-
+.member {
+    color: #2B83CD;
+}
+.bussinse {
+    color: #098661;
+}
+.office {
+    color: #616567;
+}
 .card {
     transition: height 1s, ;
     padding: 1.5em .5em .5em;
@@ -137,7 +173,8 @@ span {
     justify-content: space-evenly ;
     border-radius: 1.2rem;
     margin: 2rem;
-}*/</style>
+}*/
+</style>
 
 
 
