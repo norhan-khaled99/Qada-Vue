@@ -44,6 +44,8 @@ import BusinessComponent from "../modules/members/pages/dashboardForMember/Busin
 import OfficesComponent from "../modules/members/pages/dashboardForMember/OfficesComponent.vue";
 import UsersComponent from "../modules/members/pages/dashboardForMember/UsersComponent.vue";
 import DashboardAccount from "../modules/members/pages/dashboardForMember/DashboardAccount.vue"
+import UsersStats from "../modules/members/pages/dashboardForMember/UsersStats.vue";
+//-----------------
 import TriangleDesign from "../modules/members/pages/Tabs/TriangleDesign.vue"
 const routes = [
   {
@@ -118,31 +120,32 @@ const routes = [
       },
       {
         path: "DashboardCard",
-        component: DashboardCard
-      }, {
-        path: 'pendingProject',
-        component: PendingProject
-      },
-      {
-        path:'dashboardCard',
         component: DashboardCard,
       },
       {
-        path:"test",
-        component:test
+        path: "pendingProject",
+        component: PendingProject,
       },
       {
-        path:"chatMember",
-        component:chatMember
+        path: "dashboardCard",
+        component: DashboardCard,
       },
       {
-        path: 'dashboardAccount',
-        component: DashboardAccount
+        path: "test",
+        component: test,
       },
       {
-        path: 'triangle',
-        component: TriangleDesign
-      }
+        path: "chatMember",
+        component: chatMember,
+      },
+      {
+        path: "dashboardAccount",
+        component: DashboardAccount,
+      },
+      {
+        path: "triangle",
+        component: TriangleDesign,
+      },
     ],
   },
   {
@@ -234,6 +237,10 @@ const routes = [
   {
     path: "/users",
     component: UsersComponent,
+  },
+  {
+    path: "/usersstats",
+    component: UsersStats,
   },
 ];
 
