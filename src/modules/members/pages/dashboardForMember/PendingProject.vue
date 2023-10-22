@@ -1,13 +1,13 @@
 <template>
     <div class="containe">
-        <div class="sideCard">
+        <!-- <div class="sideCard">
             <p>مرحبا</p>
             <h4>عبدالعزيز</h4>
             <p>الرئيسية</p>
             <p>حسابي</p>
             <p>المراسلات</p>
             <p>تسجيل خروج</p>
-        </div>
+        </div> -->
         <div class="">
             <CheckLine />
         </div>
@@ -70,6 +70,7 @@
             </div>
         </div>
     </div>
+
 </template>
 
 <script>
@@ -90,20 +91,24 @@ export default {
 .containe {
     position: relative;
 }
+
 h5 {
     color: #575757;
     font-size: 17px;
 }
+
 p {
     color: #000000;
     font-weight: 600;
-    font-size:18px
+    font-size: 18px
 }
+
 .descripe {
     color: #1C1C1C;
     font-size: 18px;
     font-weight: 500;
 }
+
 .contract {
     border-radius: 20px;
     background: #6ab38a;
@@ -113,6 +118,7 @@ p {
     white-space: nowrap;
     width: 300px;
 }
+
 .sideCard {
     position: absolute;
     top: -15%;
@@ -122,13 +128,38 @@ p {
     text-align: center;
     border-radius: 18px 0 0 18px;
 }
-.sideCard p{
+
+.sideCard p {
     color: #fff;
     font-weight: 400;
     margin-top: 20px;
 }
-@media(max-width: 576px){
-}
+
+table {
+        border-collapse: collapse;
+        width: 300px;
+        border: 2px solid #000;
+        border-radius: 10px;
+    }
+
+    th, td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:first-child {
+        border-radius: 10px 10px 0 0;
+    }
+
+    tr:last-child {
+        border-radius: 0 0 10px 10px;
+    }
+@media(max-width: 576px) {}
 </style>
 
 

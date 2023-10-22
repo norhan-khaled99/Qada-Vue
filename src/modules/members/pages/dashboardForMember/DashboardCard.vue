@@ -96,6 +96,8 @@ table {
     border-collapse: collapse;
     border-radius: 20px;
     box-shadow: 2px 2px 15px 0px #00000040;
+
+
 }
 
 td {
@@ -109,5 +111,4 @@ th {
     text-align: center;
     color: #54847D;
 }
-
 </style>

@@ -78,11 +78,11 @@ nav {
   background: linear-gradient(95.07deg, rgba(42, 102, 93, 0.8) 56.22%, rgba(48, 255, 81, 0.48) 157.23%);
 }
 
-.artcl {
+/* .artcl {
   position: absolute;
   top: 25%;
   left: 8%;
-}
+} */
 
 .artcl h3 {
   font-size: 3rem;
@@ -155,7 +155,6 @@ li span {
   } */
 @media (max-width: 576px) {
   .artcl {
-
     left: 0;
   }
 }
