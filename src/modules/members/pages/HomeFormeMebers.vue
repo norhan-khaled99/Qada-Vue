@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fliud w-100">
+  <div class="container w-100">
     <div class="row ">
       <div class="header mt-5">
         <div>جميع مشاريعك الهندسية تحت</div>
@@ -15,10 +15,11 @@
         <button class="btn add-project-text">اطرح مشروعك الآن</button>
       </router-link>
     </div>
+  </div>
     <div class="my-5 mosls">
       <TriangleDesign />
     </div>
-  </div>
+  
   <div class="container">
     <div class="row my-5">
       <p class="seconed-subtitle">كيف تعمل منصتنا؟</p>
@@ -53,7 +54,9 @@
         <p class="text-end">اخر المشاريع المضافة</p>
       </div>
       <div class="col-3 add-new-project">
-        <button class="btn">اضف مشروعك</button>
+        <router-link to="/member/addproject">
+          <button class="border-none">اضف مشروعك</button>
+        </router-link>
       </div>
     </div>
 
@@ -829,6 +832,8 @@ export default {
   padding: 0;
   color: #fff;
   font-size: 1.25rem;
+  border: none;
+
 }
 
 .filter-projects {
