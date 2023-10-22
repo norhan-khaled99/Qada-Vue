@@ -43,8 +43,8 @@ import OfficeAccount from "../modules/members/pages/dashboardForMember/OfficeAcc
 import BusinessComponent from "../modules/members/pages/dashboardForMember/BusinessComponent.vue";
 import OfficesComponent from "../modules/members/pages/dashboardForMember/OfficesComponent.vue";
 import UsersComponent from "../modules/members/pages/dashboardForMember/UsersComponent.vue";
-
-
+import DashboardAccount from "../modules/members/pages/dashboardForMember/DashboardAccount.vue"
+import TriangleDesign from "../modules/members/pages/Tabs/TriangleDesign.vue"
 const routes = [
   {
     path: "/",
@@ -134,6 +134,14 @@ const routes = [
       {
         path:"chatMember",
         component:chatMember
+      },
+      {
+        path: 'dashboardAccount',
+        component: DashboardAccount
+      },
+      {
+        path: 'triangle',
+        component: TriangleDesign
       }
     ],
   },

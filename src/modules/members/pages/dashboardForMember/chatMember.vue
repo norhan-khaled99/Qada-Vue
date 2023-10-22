@@ -1,5 +1,13 @@
 <template>
   <div class="conatiner">
+    <!-- <div class="sideCard">
+            <p >مرحبا</p>
+            <h4>عبدالعزيز</h4>
+            <p >الرئيسية</p>
+            <p >حسابي</p>
+            <p >المراسلات</p>
+            <p >تسجيل خروج</p>
+        </div> -->
     <div class="row main-chat w-75 mx-auto d-flex my-5">
       <!-- this is for right column -->
       <div class="col-4">
@@ -203,6 +211,17 @@ export default {};
 * {
   direction: rtl;
 }
+.container{
+}
+/* .sideCard {
+    position: absolute;
+    top: 45%;
+    background-color: #54847D;
+    color: #fff;
+    width: 150px;
+    text-align: center;
+    border-radius: 18px 0 0 18px;
+} */
 .messages {
   margin: 20px 0;
 }

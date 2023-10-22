@@ -22,7 +22,7 @@
       </button>
     </div>
   </div>
-
+   
 
   <!-- <div class="row  my-5 ">
         <div class="col-lg-4 col-sm-12">
@@ -150,7 +150,10 @@
 </template>
 
 <script>
-export default {};
+
+export default {
+  
+};
 </script>
 
 <style scoped>
