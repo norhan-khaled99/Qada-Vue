@@ -9,7 +9,7 @@ import AboutUs from "../components/AboutUs.vue";
 import TermsAndConditions from "../components/TermsAndConditions.vue";
 import FAQComponent from "../components/FAQComponent.vue";
 import ContactUs from "../components/ContactUs.vue";
-import test from "../modules/members/pages/Tabs/mainTabs.vue";
+import maintabs from "../modules/members/pages/Tabs/mainTabs.vue";
 import ProjectListforMember from "../modules/members/pages/dashboardForMember/MyProjects.vue";
 import BusinessPanner from "../modules/Business/pages/BusinessPanner.vue";
 import PersonLogin from "../modules/members/pages/PersonLogin.vue";
@@ -20,7 +20,7 @@ import Engineering_officesLogin from "../modules/Engineering_offices/Pages/Engin
 import CheckLine from "../modules/members/pages/dashboardForMember/CheckLine.vue";
 import chatMember from "@/modules/members/pages/dashboardForMember/chatMember";
 import testModal from "../modules/members/pages/Tabs/testModal.vue";
-
+import testModal2 from '@/modules/members/pages/Tabs/testModal2.vue';
 //  routes for tabs for member
 import electronicContract from "../modules/members/pages/Tabs/ElectronicContract.vue";
 import projectDetails from "../modules/members/pages/Tabs/projectDetails.vue";
@@ -30,8 +30,12 @@ import projectTransactions from "../modules/members/pages/Tabs/projectTransactio
 import projectFiles from "../modules/members/pages/Tabs/projectsFile.vue";
 import projectQuereries from "../modules/members/pages/Tabs/projectQuereries";
 
+
+
 import AcceptedProject from "../modules/members/pages/dashboardForMember/AcceptedProject.vue";
 import DashboardCard from "../modules/members/pages/dashboardForMember/DashboardCard.vue";
+
+
 
 //------Dashboard
 import BusinessSettings from "../modules/members/pages/dashboardForMember/BusinessSettings.vue";
@@ -131,12 +135,16 @@ const routes = [
         component: DashboardCard,
       },
       {
-        path: "test",
-        component: test,
+        path: "maintabs",
+        component: maintabs,
       },
       {
         path: "testModal",
         component: testModal,
+      },
+      {
+        path: "testModal2",
+        component: testModal2,
       },
       {
         path:"chatMember",

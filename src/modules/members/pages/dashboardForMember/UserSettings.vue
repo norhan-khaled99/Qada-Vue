@@ -1,10 +1,9 @@
 <template>
     <div class="nada">
         <div class="container">
-            <form @submit.prevent="login">
+            <form @submit.prevent="login"   class="p-5" >
                 <div class="">
-                    <div class="mt-2"></div>
-                    <div class="row formContainer w-75 auto">
+                    <div class="row formContainer w-75 m-auto py-5">
                         <div class="col-9 m-auto">
                             <i class="fa-solid fa-user mx-2 text"></i>
                             <label class="text" for="email">اسم العميل</label>
@@ -30,10 +29,13 @@
                             <label class="text" for="email">تأكيد كلمة المرور</label>
                             <input class="form-control mt-2 w-75 input" v-model.trim="name" />
                         </div>
+
+                        <div class="text-center my-2">
+                            <button type="submit" class="btnn">حفظ التغييرات</button>
+                        </div>
+
                     </div>
-                    <div class="text-center ">
-                        <button type="submit" class="btnn">حفظ التغييرات</button>
-                    </div>
+                
                 </div>
             </form>
         </div>
