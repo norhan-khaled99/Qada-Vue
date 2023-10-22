@@ -48,8 +48,15 @@ import OfficeAccount from "../modules/members/pages/dashboardForMember/OfficeAcc
 import BusinessComponent from "../modules/members/pages/dashboardForMember/BusinessComponent.vue";
 import OfficesComponent from "../modules/members/pages/dashboardForMember/OfficesComponent.vue";
 import UsersComponent from "../modules/members/pages/dashboardForMember/UsersComponent.vue";
+<<<<<<< HEAD
+import DashboardAccount from "../modules/members/pages/dashboardForMember/DashboardAccount.vue"
+import UsersStats from "../modules/members/pages/dashboardForMember/UsersStats.vue";
+//-----------------
+import TriangleDesign from "../modules/members/pages/Tabs/TriangleDesign.vue"
+=======
 
 
+>>>>>>> 267864c003e5cc3a488a94a004fa24cb23d4dd14
 const routes = [
   {
     path: "/",
@@ -241,6 +248,10 @@ const routes = [
   {
     path: "/users",
     component: UsersComponent,
+  },
+  {
+    path: "/usersstats",
+    component: UsersStats,
   },
 ];
 
