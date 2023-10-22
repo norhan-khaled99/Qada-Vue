@@ -86,11 +86,12 @@ nav {
 
 }
 
-/* .content {
-  height: 50vh;
+.content {
+  /* height: 50vh;
   width: 100%;
-  background: linear-gradient(95.07deg, rgba(42, 102, 93, 0.8) 56.22%, rgba(48, 255, 81, 0.48) 157.23%);
-} */
+  background: linear-gradient(95.07deg, rgba(42, 102, 93, 0.8) 56.22%, rgba(48, 255, 81, 0.48) 157.23%); */
+  background: linear-gradient(121.09deg, #59467C 30.12%, #000000 173.77%);
+}
 
 /* .artcl {
   position: absolute;
@@ -114,7 +115,8 @@ p {
 }
 
 li a {
-  color: rgba(0, 0, 0, 0.80);
+  color: #fff;
+  /* color: rgba(0, 0, 0, 0.80); */
   font-weight: 500;
   font-size: 18px;
 }
@@ -125,21 +127,25 @@ li .qada {
 
 .fa-bell {
   font-size: 2rem;
-color: rgba(0, 0, 0, 0.80);
+  /* color: rgba(0, 0, 0, 0.80); */
+  color: #fff;
 }
 
 .create {
   background-color: #fff;
-  color: #2A665D;
+  /* color: #2A665D; */
   border-color: #2A665D;
   border-radius: 1rem;
   width: 150px;
   height: 40px;
+  color: linear-gradient(121.09deg, #59467C 30.12%, #000000 173.77%);
 }
 
 .login {
-  background-color: #2A665D;
-  color: #fff;
+  /* background-color: #2A665D;
+  color: #fff; */
+  color: linear-gradient(121.09deg, #59467C 30.12%, #000000 173.77%);
+  background-color: #fff;
   width: 150px;
   height: 40px;
   border-radius: 1rem;
@@ -147,7 +153,7 @@ color: rgba(0, 0, 0, 0.80);
 }
 
 li .ra2esia {
-  color: #2A665D;
+  /* color: #2A665D; */
   text-decoration-line: underline;
 }
 
