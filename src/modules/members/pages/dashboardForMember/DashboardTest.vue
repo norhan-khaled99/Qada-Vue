@@ -1,6 +1,6 @@
 <template>
     <div class="containe">
-        <Checkline/>
+        <CheckLine/>
     </div>
 </template>
 
