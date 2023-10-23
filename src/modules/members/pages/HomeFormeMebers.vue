@@ -54,7 +54,9 @@
         <p class="text-end">اخر المشاريع المضافة</p>
       </div>
       <div class="col-3 add-new-project">
-        <button class="btn">اضف مشروعك</button>
+        <router-link to="/member/addproject">
+          <button class="border-none">اضف مشروعك</button>
+        </router-link>
       </div>
     </div>
 
@@ -830,6 +832,8 @@ export default {
   padding: 0;
   color: #fff;
   font-size: 1.25rem;
+  border: none;
+
 }
 
 .filter-projects {
