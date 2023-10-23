@@ -24,7 +24,9 @@
             <p class="me-3">المرحلةالاولي</p>
           </div>
           <div class=" ">
-            <button class="first-stage mx-2">طلب تعديل</button>
+            <button class="first-stage mx-2" @click="showModal">طلب تعديل</button>
+            <modal-component v-if="isModalVisible" @close="closeModal"></modal-component>
+
             <button class="recieve-stage mx-2">استلام المرحلة</button>
           </div>
         </div>
@@ -281,14 +283,31 @@
         </div>
       </div>
 
-
+      <!-- sction of modal -->
+       
     </div>
   </div>
 </template>
 
 <script>
+import ModalComponent from "../../components/projectPhaseModal";
 export default {
-
+  components: {
+    ModalComponent
+  },
+  data() {
+    return {
+      isModalVisible: false
+    };
+  },
+  methods: {
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    }
+  }
 }
 </script>
 
