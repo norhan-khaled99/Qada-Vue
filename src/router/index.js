@@ -54,7 +54,7 @@ import UsersStats from "../modules/members/pages/dashboardForMember/UsersStats.v
 import TriangleDesign from "../modules/members/pages/Tabs/TriangleDesign.vue"
 
 import DashboardTest from "../modules/members/pages/dashboardForMember/DashboardTest.vue"
-
+import MainHomepage from '@/modules/Admin/MainHomepage'
 const routes = [
   {
     path: "/",
@@ -264,6 +264,10 @@ const routes = [
     path: "/usersstats",
     component: UsersStats,
   },
+  {
+    path:"/admin/homepage",
+    component:MainHomepage
+  }
 ];
 
 const router = createRouter({
