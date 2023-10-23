@@ -53,6 +53,7 @@ import UsersStats from "../modules/members/pages/dashboardForMember/UsersStats.v
 //-----------------
 import TriangleDesign from "../modules/members/pages/Tabs/TriangleDesign.vue"
 
+import DashboardTest from "../modules/members/pages/dashboardForMember/DashboardTest.vue"
 
 const routes = [
   {
@@ -153,6 +154,18 @@ const routes = [
       {
         path:"chatMember",
         component:chatMember
+      },
+      {
+        path: 'dashboardAccount',
+        component: DashboardAccount
+      },
+      {
+        path: 'triangle',
+        component: TriangleDesign
+      },
+      {
+        path: 'dashboardTest',
+        component: DashboardTest
       }
     ],
   },
@@ -171,6 +184,7 @@ const routes = [
         path: "businessPanner",
         component: BusinessPanner,
       },
+      
     ],
   },
   {
