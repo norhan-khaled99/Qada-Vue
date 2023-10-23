@@ -45,6 +45,7 @@ import OfficesComponent from "../modules/members/pages/dashboardForMember/Office
 import UsersComponent from "../modules/members/pages/dashboardForMember/UsersComponent.vue";
 import DashboardAccount from "../modules/members/pages/dashboardForMember/DashboardAccount.vue"
 import TriangleDesign from "../modules/members/pages/Tabs/TriangleDesign.vue"
+import DashboardTest from "../modules/members/pages/dashboardForMember/DashboardTest.vue"
 const routes = [
   {
     path: "/",
@@ -142,6 +143,10 @@ const routes = [
       {
         path: 'triangle',
         component: TriangleDesign
+      },
+      {
+        path: 'dashboardTest',
+        component: DashboardTest
       }
     ],
   },
@@ -160,6 +165,7 @@ const routes = [
         path: "businessPanner",
         component: BusinessPanner,
       },
+      
     ],
   },
   {
