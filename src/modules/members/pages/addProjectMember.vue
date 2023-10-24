@@ -6,7 +6,7 @@
         <circle cx="50" cy="50" r="50" fill="#48847B"/>
         <path d="M31.5 54.5L46.2122 65L65 35" stroke="white" stroke-width="5"/>
       </svg>
-      <p style="color: #48847B;">مسودة المشروع</p>
+      <p class="project-draft">مسودة المشروع</p>
       </div>
 
       <hr class="col-md-6 col-sm-5 my-4 custom-hr">
@@ -21,17 +21,18 @@
 
     <p class="projecttitle">تفاصيل المشروع</p>
 
-    <form action="" class="add-project">
+    <form action="" class="add-project" v-model="form">
       <div class="row">
         <input
           type="text"
           class="form-control  project-details"
+          v-model="form.project_details"
           placeholder="المشروع عبارة عن مسودة يجب إرساله للمراجعة بعد الانتهاء."
         />
       </div>
       <div class="row">
         <p>اسم المشروع</p>
-        <input type="text" class="form-control" />
+        <input type="text" class="form-control"  v-model="form.project_title" />
       </div>
       <div class="row ">
         <p>وصف المشروع (مثال: عدد غرف النوم، والفراغات، ومكونات المشروع )</p>
@@ -46,7 +47,7 @@
       <div class="row">
         <div class="col-md-6 col-sm-12">
           <p>مساحة المشروع</p>
-          <input type="number" class="form-control text-start" min="0" placeholder="م^2"  />
+          <input type="number" class="form-control text-start" min="0" placeholder="م^2" v-model="form.space" />
         </div>
         <div class="col-md-6 col-sm-12">
           <p>تصنيف المشروع</p>
@@ -84,7 +85,7 @@
       <div class="row">
         <div class="col-md-6 col-sm-12">
           <p>المنطقة</p>
-          <select class="form-select" id="floatingSelect">
+          <select class="form-select" id="floatingSelect" v-model="form.area">
             <option selected></option>
             <option value="1">طرح المشروع في منصة المشاريع لمدة 4 أيام</option>
             <option value="2">طرح المشروع في منصة المشاريع لمدة 9 أيام</option>
@@ -92,14 +93,14 @@
         </div>
         <div class="col-md-6 col-sm-12">
           <p>المدة المقترحة لأنهاء الاعمال المطلوبة</p>
-          <input type="number" placeholder="عدد الايام" class="form-control" min="0" />
+          <input type="number" placeholder="عدد الايام" class="form-control" min="0" v-model="form.delivery_date" />
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-6 col-sm-12">
           <p>اختيار تصنيف المكاتب الهندسية</p>
-          <select class="form-select" id="floatingSelect">
+          <select class="form-select" id="floatingSelect" v-model="form.service_category">
             <option selected></option>
             <option value="1">تصنيف درجة 1 الي 3 </option>
             <option value="2">تصنيف درجة 3 الي 6 </option>
@@ -108,7 +109,7 @@
         </div>
         <div class="col-md-6 col-sm-12">
           <p>المدينة</p>
-          <select class="form-select" id="floatingSelect">
+          <select class="form-select" id="floatingSelect" v-model="city">
             <option selected></option>
             <option value="1">الرياض</option>
             <option value="2">مكة المكرمة</option>
@@ -121,14 +122,17 @@
       </div>
       <div class="row my-5 justify-content-center  text-center">
          <div class="col">
+          <input type="file" v-model="form.title_deed" accept="image/*">
           <p class="text-center">صورة من صك الملكية</p>
           <img src="../../../assets/3322766-2001.png" >
          </div> 
          <div class="col"> 
+          <input type="file" v-model="form.owner_id" accept="image/*">
           <p class="text-center"> صورة من هوية المالك <span class="text-danger">*</span></p>
           <img src="../../../assets/3322766-2001.png">
          </div> 
          <div class="col">
+          <input type="file" v-model="form.other_files[]", accept="image/*">
           <p class="text-center">مستندات اخري داعمة </p>
           <img src="../../../assets/3322766-2001.png">
          </div> 
@@ -139,7 +143,7 @@
         <span >طلب جداول الكميات</span>
        </div>
        <div class="col-6">
-        <input class="form-check-input " type="checkbox" value="" >
+        <input class="form-check-input " type="checkbox" value="" v-model="request_qty_tables">
       </div>
       </div>
 
@@ -152,7 +156,42 @@
 </template>
 
 <script>
-export default {};
+import { ref, onMounted } from "vue";
+import memberService from "../services/memberService";
+export default {
+setup(){
+
+  const form=ref({
+    project_title:"",
+    project_details: "",
+    space: "", 
+    service_category: "",
+    area: "",
+    city: "",
+    offer_choosing_date: "",
+    project_days_limit: "",
+    last_offers_date: "",
+    request_qty_tables: ref(false),
+    request_engs: "",
+    delivery_date: "",
+    title_deed: "",
+    owner_id: "",
+    other_files: ref([]),
+  });
+
+  const addproject=()=>{
+    memberService.addproject(form.value).then(res)
+  }
+  onMounted(()=>{
+    addproject();
+  })
+  return{
+    form
+  }
+}
+
+
+};
 </script>
 
 <style scoped>
@@ -229,7 +268,7 @@ select#floatingSelect {
 
 
 .descriptionfortextarea {
-  color: #259f5a;
+  color:  #0C483F;
   text-align: right;
   font-size: 16px;
   font-weight: 400;
@@ -269,6 +308,9 @@ select#floatingSelect {
 .form-check-input:checked {
   border-color: #0C483F;
   background-color: #0C483F;
+}
 
+.project-draft{
+color: #48847B;
 }
 </style>
