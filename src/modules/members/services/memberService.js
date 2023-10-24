@@ -11,8 +11,16 @@ const apiClient = axios.create({
 const memberService = {
     addproject(data){
         return apiClient.post(`person/projects/create`,data)
+    },
+    addcontract(data){
+        return apiClient.post(`bussiness/contracts/create`,data)
+    },
+    addnewFile(){
+        return apiClient.post(`bussiness/projects/newfile`)
+    },
+    placeproject(){
+        return apiClient.post(`person/offers/placeOffer`)
     }
-
    
 };
 

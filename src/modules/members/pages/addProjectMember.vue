@@ -21,7 +21,7 @@
 
     <p class="projecttitle">تفاصيل المشروع</p>
 
-    <form action="" class="add-project" v-model="form">
+    <form action="" class="add-project">
       <div class="row">
         <input
           type="text"
@@ -32,7 +32,7 @@
       </div>
       <div class="row">
         <p>اسم المشروع</p>
-        <input type="text" class="form-control"  v-model="form.project_title" />
+        <input type="text" class="form-control" v-model="form.project_title" />
       </div>
       <div class="row ">
         <p>وصف المشروع (مثال: عدد غرف النوم، والفراغات، ومكونات المشروع )</p>
@@ -122,17 +122,17 @@
       </div>
       <div class="row my-5 justify-content-center  text-center">
          <div class="col">
-          <input type="file" v-model="form.title_deed" accept="image/*">
+          <input type="file" @change="handleFileChange" />
           <p class="text-center">صورة من صك الملكية</p>
           <img src="../../../assets/3322766-2001.png" >
          </div> 
          <div class="col"> 
-          <input type="file" v-model="form.owner_id" accept="image/*">
+          <input type="file" @change="handleFileChange" />
           <p class="text-center"> صورة من هوية المالك <span class="text-danger">*</span></p>
           <img src="../../../assets/3322766-2001.png">
          </div> 
          <div class="col">
-          <input type="file" v-model="form.other_files[]", accept="image/*">
+          <input type="file" @change="handleFileChange" />
           <p class="text-center">مستندات اخري داعمة </p>
           <img src="../../../assets/3322766-2001.png">
          </div> 
@@ -143,7 +143,7 @@
         <span >طلب جداول الكميات</span>
        </div>
        <div class="col-6">
-        <input class="form-check-input " type="checkbox" value="" v-model="request_qty_tables">
+        <input class="form-check-input " type="checkbox" value="" v-model="form.request_qty_tables">
       </div>
       </div>
 
@@ -180,7 +180,7 @@ setup(){
   });
 
   const addproject=()=>{
-    memberService.addproject(form.value).then(res)
+    memberService.addproject(form.value).then()
   }
   onMounted(()=>{
     addproject();
@@ -189,7 +189,6 @@ setup(){
     form
   }
 }
-
 
 };
 </script>
