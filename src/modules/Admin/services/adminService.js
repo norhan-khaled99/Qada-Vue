@@ -9,18 +9,21 @@ const apiClient = axios.create({
 
 
 const adminService = {
-    approveproject(){
-        return apiClient.post(`admin/projects/approve`)
+    approveproject(projectID){
+        return apiClient.post(`admin/projects/approve`,projectID)
     },
-    addcontract(){
-        return apiClient.post(`admin/projects/reject`)
+    addcontract(projectID){
+        return apiClient.post(`admin/projects/reject`,projectID)
     },
-    addnewFile(){
-        return apiClient.post(`bussiness/projects/newfile`)
-    },
-    placeproject(){
-        return apiClient.post(`person/offers/placeOffer`)
-    }
+   addQuestion(){
+    return apiClient.post(`admin/questions/create`)
+   },
+   editQuestion(){
+    return apiClient.post(`admin/questions/update`)
+   },
+   deleteQuestion(questionid){
+    return apiClient.post(`admin/questions/delete`,questionid)
+   }
    
 };
 
