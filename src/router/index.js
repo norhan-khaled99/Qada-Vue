@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+// import HomeView from "../views/HomeView.vue";
 import LoginPanal from "../components/LoginPanal.vue";
 import SuccessPartners from "../components/SuccessPartners.vue";
 import HomeFormeMebers from "../modules/members/pages/HomeFormeMebers.vue";
@@ -59,7 +59,7 @@ const routes = [
   {
     path: "/",
     name: "home",
-    component: HomeView,
+    component: HomeFormeMebers,
   },
   {
     path: "/loginPanal",

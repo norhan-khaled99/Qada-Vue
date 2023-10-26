@@ -1,14 +1,24 @@
 <template>
     <div class="main">
-        <div class="col-lg-5 me-5">
-            <ul class="d-flex ">
+        <!-- <div class="sideCard">
+            <p >مرحبا</p>
+            <h4>عبدالعزيز</h4>
+            <p class="mt-5">الرئيسية</p>
+            <p class="" >الاحصائيات</p>
+            <p >الفريق</p>
+            <p> المشاريع</p>
+            <p >تسجيل خروج</p>
+        </div> -->
+        <!-- <div class="col-lg-5">
+            <ul class="d-flex">
                 <li class="me-5 secondLink"><a>افراد</a></li>
-                <li class="mx-5"><a>اعمال</a></li>
+                <li class="mx-5 secondLink"><a>اعمال</a></li>
                 <li><a>مكاتب هندسية</a></li>
             </ul>
-        </div>
-        <div class="row justify-content-center align-items-center ">
-            <div class="col-2 box">
+        </div> -->
+        <div class="container ">
+        <div class="row justify-content-center align-items-center mt-5">
+            <div class="col-lg-2 col-sm-4 box mt-2 text-center bg-danger">
                 <div class="mt-5 d-flex align-items-center">
                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path opacity="0.3" d="M15 17H9V16H5V19H19V16H15V17ZM4 14H9V11H15V14H20V9H4V14Z" fill="white" />
@@ -16,11 +26,11 @@
                             d="M20 7H16V5L14 3H10L8 5V7H4C2.9 7 2 7.9 2 9V14C2 14.75 2.4 15.38 3 15.73V19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V15.72C21.59 15.37 22 14.73 22 14V9C22 7.9 21.1 7 20 7ZM10 5H14V7H10V5ZM19 19H5V16H9V17H15V16H19V19ZM11 15V13H13V15H11ZM20 14H15V11H9V14H4V9H20V14Z"
                             fill="white" />
                     </svg>
-                    <p class="text me-2 mt-3">عدد المشاريع بالمنصة</p>
+                    <p class="text me-2 mt-3 text-center">عدد المشاريع بالمنصة</p>
                 </div>
                 <p class="number">12000</p>
             </div>
-            <div class="col-2 box ">
+            <div class="col-lg-2 box mt-2 me-lg-4">
                 <div class="mt-5 d-flex align-items-center">
                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path opacity="0.3" d="M15 17H9V16H5V19H19V16H15V17ZM4 14H9V11H15V14H20V9H4V14Z" fill="white" />
@@ -32,7 +42,7 @@
                 </div>
                 <p class="number">12000</p>
             </div>
-            <div class="col-2 box ">
+            <div class="col-lg-2 box mt-2 me-lg-4">
                 <div class="mt-5 d-flex align-items-center">
                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path opacity="0.3" d="M15 17H9V16H5V19H19V16H15V17ZM4 14H9V11H15V14H20V9H4V14Z" fill="white" />
@@ -47,7 +57,7 @@
         </div>
 
         <div class="row justify-content-center align-items-center mt-5 ">
-            <div class="col-2 boxpackage">
+            <div class="col-lg-3 col-sm-4 boxpackage mt-2">
                 <div class="mt-5 d-flex align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path
@@ -58,14 +68,14 @@
                 </div>
                 <p class="number">12000</p>
             </div>
-            <div class="col-2 boxx ">
+            <div class="col-2 boxx mt-2 me-lg-4">
                 <div class="mt-5 d-flex align-items-center">
                     <p class="text me-2 mt-3"> X </p>
                     <p class="text me-2 mt-3">مشاريع ملغية</p>
                 </div>
                 <p class="number">12000</p>
             </div>
-            <div class="col-2 boxx ">
+            <div class="col-2 boxx mt-2 me-lg-4">
                 <div class="mt-5 d-flex align-items-center">
                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path opacity="0.3" d="M15 17H9V16H5V19H19V16H15V17ZM4 14H9V11H15V14H20V9H4V14Z" fill="white" />
@@ -73,11 +83,11 @@
                             d="M20 7H16V5L14 3H10L8 5V7H4C2.9 7 2 7.9 2 9V14C2 14.75 2.4 15.38 3 15.73V19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V15.72C21.59 15.37 22 14.73 22 14V9C22 7.9 21.1 7 20 7ZM10 5H14V7H10V5ZM19 19H5V16H9V17H15V16H19V19ZM11 15V13H13V15H11ZM20 14H15V11H9V14H4V9H20V14Z"
                             fill="white" />
                     </svg>
-                    <p class="text me-2 mt-3">مشاريع مسودة</p>
+                    <p class="text me-2 mt-3 ">مشاريع مسودة</p>
                 </div>
                 <p class="number">12000</p>
             </div>
-            <div class="col-2 boxx ">
+            <div class="col-2 boxx mt-2 me-lg-4">
                 <div class="mt-5 d-flex align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path
@@ -88,7 +98,7 @@
                 </div>
                 <p class="number">12000</p>
             </div>
-            <div class="col-2 boxx ">
+            <div class="col-2 boxx mt-2 me-lg-4">
                 <div class="mt-5 d-flex align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path
@@ -100,6 +110,7 @@
                 <p class="number">12000</p>
             </div>
         </div>
+    </div>
     </div>
 </template>
 
@@ -115,60 +126,61 @@ export default {
 }
 
 .main {
-    height: 100vh;
-    overflow: hidden;
+    /* height: 100vh; */
+    /* overflow: hidden; */
     /* background: linear-gradient(301.09deg, #59467C 30.12%, #000000 173.77%);; */
 }
-
+/* .sideCard {
+    position: absolute;
+    top: 45%;
+    background-color: #59467C;
+    color: #fff;
+    width: 150px;
+    text-align: center;
+    border-radius: 18px 0 0 18px;
+}  */
 li {
     list-style-type: none;
     color: #fff;
     font-size: 20px;
     font-weight: 500;
 }
-
 .secondLink {
     color: #fff;
     text-decoration-line: underline;
 }
-
 .box {
-    width: 241px;
+    /* width: 241px; */
     height: 178px;
     border-radius: 10px;
     background: #0378AE;
-    margin-left: 3rem;
+    /* margin-left: 3rem; */
 }
-
 .text {
     color: #FFFFFF;
-    text-align: center;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
 }
-
 .number {
     color: #FFFFFF;
-    text-align: center;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
 }
-
 .boxpackage {
-    width: 313px;
+    /* width: 313px; */
     height: 188px;
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     border-radius: 10px;
     background: #0378AE;
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
 }
 
 .boxx {
-    width: 221px;
+    /* width: 221px; */
     height: 188px;
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     border-radius: 10px;
     background: #0378AE;
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
 }
 </style>
