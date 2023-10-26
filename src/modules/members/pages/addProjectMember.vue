@@ -180,7 +180,13 @@ setup(){
   });
 
   const addproject=()=>{
-    memberService.addproject(form.value).then()
+    memberService.addproject(form.value)
+        .then(response => {
+            console.log("Project added successfully:", response.data);
+        })
+        .catch(error => {
+            console.error("Error adding project:", error);
+        });
   }
   onMounted(()=>{
     addproject();

@@ -15,7 +15,7 @@
       </div>
       <input type="text" class="form-control" v-model="password" />
       <div class="text-center">
-        <button type="submit" class="btn btn-primary mt-4">دخول</button>
+        <button type="submit" class="btn mt-4">دخول</button>
       </div>
     </form>
     <div class="text-center">
@@ -154,6 +154,7 @@ input {
   width: 200px;
   height: 55px;
   border-radius: 20px;
+  background-color: #0378ae;
 }
 .register {
   border-color: #616567;
@@ -168,4 +169,5 @@ input {
 hr {
   border: 1px solid rgba(53, 53, 53, 0.7);
 }
+
 </style>
