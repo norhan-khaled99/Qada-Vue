@@ -4,9 +4,11 @@
     <router-link to="/about">About</router-link>
   </nav>
   <router-view/> -->
-  <Main_Header />
-  <router-view />
-  <MainFooter />
+  <div class="tmn">
+    <Main_Header />
+    <router-view />
+    <MainFooter />
+  </div>
 </template>
 <script>
 import Main_Header from './components/Main_Header.vue'
@@ -26,6 +28,10 @@ export default {
 * {
   font-family: "Cairo", sans-serif;
   box-sizing: border-box;
+}
+
+.tmn {
+  background: linear-gradient(121.09deg, #59467C 30.12%, #000000 173.77%);
 }
 
 /* *{

@@ -1,4 +1,5 @@
 <template>
+    <div>
     <div class="header me-5">
         <div class="inf" style="display:inline">معلومات العميل</div>
     </div>
@@ -23,6 +24,7 @@
     </div>
     <div class="header me-5 ">
         <div class="inf" style="display:inline">اخر المشاريع لهذا العميل</div>
+    </div>
     </div>
 </template>
 

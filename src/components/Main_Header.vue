@@ -56,10 +56,10 @@
         </div>
       </div>
     </nav>
-    <!-- <div class="container artcl">
+    <div class="container artcl">
       <p class="text-light">لوحة التحكم</p>
-      <h3>المراسلات</h3>
-    </div> -->
+      <h3>الفريق</h3>
+    </div>
   </div>
 </template>
 
@@ -83,54 +83,44 @@ nav {
 }
 .nav-link:hover{
   color: #fff;
-
 }
-
 .content {
-  /* height: 50vh;
+  height: 50vh;
   width: 100%;
-  background: linear-gradient(95.07deg, rgba(42, 102, 93, 0.8) 56.22%, rgba(48, 255, 81, 0.48) 157.23%); */
-  background: linear-gradient(121.09deg, #59467C 30.12%, #000000 173.77%);
+  /*background: linear-gradient(95.07deg, rgba(42, 102, 93, 0.8) 56.22%, rgba(48, 255, 81, 0.48) 157.23%); */
+  /* background-color: #59467C; */
 }
-
-/* .artcl {
+.artcl {
   position: absolute;
   top: 25%;
   left: 8%;
-} */
-
+}
 .artcl h3 {
   font-size: 3rem;
   font-weight: 700;
   color: #fff;
 }
-
 p {
   font-size: 20px;
 }
-
 .navBg-img {
   width: 100vw;
   object-fit: cover;
 }
-
 li a {
   color: #fff;
   /* color: rgba(0, 0, 0, 0.80); */
   font-weight: 500;
   font-size: 18px;
 }
-
 li .qada {
   font-size: 35px;
 }
-
 .fa-bell {
   font-size: 2rem;
   /* color: rgba(0, 0, 0, 0.80); */
   color: #fff;
 }
-
 .create {
   background-color: #fff;
   /* color: #2A665D; */
@@ -140,7 +130,6 @@ li .qada {
   height: 40px;
   color: linear-gradient(121.09deg, #59467C 30.12%, #000000 173.77%);
 }
-
 .login {
   /* background-color: #2A665D;
   color: #fff; */
@@ -151,14 +140,16 @@ li .qada {
   border-radius: 1rem;
   border-color: #2A665D;
 }
-
+a{
+  text-decoration: none;
+}
 li .ra2esia {
   /* color: #2A665D; */
   text-decoration-line: underline;
 }
 
 li span {
-  color: #2A665D;
+  color: #48ac9d;
 }
 
 /* section{
@@ -170,8 +161,8 @@ li span {
     top: 0;
   } */
 /* .rounded-pill{
-   background-color: #FF4B4B;
-   color: #fff;
+  background-color: #FF4B4B;
+  color: #fff;
   } */
 @media (max-width: 576px) {
   .artcl {

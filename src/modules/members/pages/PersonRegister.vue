@@ -59,7 +59,7 @@
     </div>
   </div>
 </template>
-
+<!-- nada hamed code
 <script>
 import authService from '@/services/AuthService';
 
@@ -109,6 +109,50 @@ export default {
   }
 
 }
+</script> -->
+
+<script>
+import { ref } from 'vue';
+import authService from '@/services/AuthService';
+import router from '@/router';
+export default {
+  name: 'App',
+  setup() {
+    const form = ref({
+      name: '',
+      email: '',
+      password: '',
+      phone: '',
+      confirmPassword: '',
+    });
+
+    const registrationSuccess = ref(false);
+
+    const register = () => {
+      authService
+        .register(form.value)
+        .then(response => {
+          registrationSuccess.value = true;
+          const { token, name, id, email, phone } = response.data;
+          localStorage.setItem('token', token);
+          localStorage.setItem('name', name);
+          localStorage.setItem('id', id);
+          localStorage.setItem('phone', phone);
+          localStorage.setItem('email', email);
+          router.push('/');
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    };
+
+    return {
+      form,
+      registrationSuccess,
+      register,
+    };
+  },
+};
 </script>
 
 <style scoped>

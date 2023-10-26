@@ -1,6 +1,13 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center align-items-center mx-auto">
+    <div class="main">
+        <div class="col-lg-5 me-5">
+            <ul class="d-flex ">
+                <li class="me-5 secondLink"><a>افراد</a></li>
+                <li class="mx-5"><a>اعمال</a></li>
+                <li><a>مكاتب هندسية</a></li>
+            </ul>
+        </div>
+        <div class="row justify-content-center align-items-center ">
             <div class="col-2 box">
                 <div class="mt-5 d-flex align-items-center">
                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -38,9 +45,8 @@
                 <p class="number">12000</p>
             </div>
         </div>
-    </div>
 
-        <div class="row justify-content-center align-items-center mt-5">
+        <div class="row justify-content-center align-items-center mt-5 ">
             <div class="col-2 boxpackage">
                 <div class="mt-5 d-flex align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -94,7 +100,7 @@
                 <p class="number">12000</p>
             </div>
         </div>
-    
+    </div>
 </template>
 
 <script>
@@ -106,6 +112,24 @@ export default {
 <style scoped>
 * {
     direction: rtl;
+}
+
+.main {
+    height: 100vh;
+    overflow: hidden;
+    /* background: linear-gradient(301.09deg, #59467C 30.12%, #000000 173.77%);; */
+}
+
+li {
+    list-style-type: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.secondLink {
+    color: #fff;
+    text-decoration-line: underline;
 }
 
 .box {
@@ -141,11 +165,10 @@ export default {
 
 .boxx {
     width: 221px;
-height: 188px;
-flex-shrink: 0;
-border-radius: 10px;
-background: #0378AE;
+    height: 188px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #0378AE;
     margin-left: 2rem;
-
 }
 </style>

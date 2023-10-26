@@ -15,14 +15,14 @@
       aria-hidden="true"
     >
       <div class="modal-dialog ">
-        <div class="modal-content rounded-5 " style="background-color: #0F9678; width:45rem ">
+        <div class="modal-content rounded-5 " style="background-color: #0F9678; width:35rem ">
           <div class="modal-body d-flex flex-column align-items-center ">
-             <img src="../../../../assets/Ellipse31.png" alt="" class="my-3">
-             <svg xmlns="http://www.w3.org/2000/svg" width="130" height="124" viewBox="0 0 130 124" fill="none">
-                <path d="M6.5 72.3L56.5652 108L120.5 6" stroke="#0F9678" stroke-width="22"/>
-              </svg>
-            <div class="modal-text my-3">
+            <div class="modal-text my-5">
                 تم إرسال رسالتك الي فريقنا بنجاح , نشكرك لتواصلك معنا
+            </div>
+            <div class="d-flex justify-content-around">
+              <button class="btn btn-success">نعم</button>
+              <button class="btn btn-danger">لا</button>
             </div>
           </div>
         </div>
@@ -58,11 +58,9 @@
 
 
 <style scoped>
-
-.blur-background {
-  filter: blur(5px);
-  /* You can adjust the blur intensity as needed */
-}
+ *{
+  direction: rtl;
+ }
 
 .test-5{
     background-color: #0F9678;
@@ -90,5 +88,10 @@ svg{
   position: absolute;
   top: 100px;
 
+}
+button{
+  margin: 0rem 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
 }
 </style>
