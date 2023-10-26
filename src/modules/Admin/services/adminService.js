@@ -15,11 +15,11 @@ const adminService = {
     addcontract(projectID){
         return apiClient.post(`admin/projects/reject`,projectID)
     },
-   addQuestion(){
-    return apiClient.post(`admin/questions/create`)
+   addQuestion(data){
+    return apiClient.post(`admin/questions/create`,data)
    },
-   editQuestion(){
-    return apiClient.post(`admin/questions/update`)
+   editQuestion(questionid,data){
+    return apiClient.post(`admin/questions/update`,questionid,data)
    },
    deleteQuestion(questionid){
     return apiClient.post(`admin/questions/delete`,questionid)

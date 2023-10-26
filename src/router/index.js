@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+// import HomeView from "../views/HomeView.vue";
 import LoginPanal from "../components/LoginPanal.vue";
 import SuccessPartners from "../components/SuccessPartners.vue";
 import HomeFormeMebers from "../modules/members/pages/HomeFormeMebers.vue";
@@ -35,7 +35,7 @@ import DashboardCard from "../modules/members/pages/dashboardForMember/Dashboard
 
 //------Dashboard
 import BusinessSettings from "../modules/members/pages/dashboardForMember/BusinessSettings.vue";
-import UserSettings from "../modules/modules/Admin/pages/UserSettings.vue";
+import UserSettings from "../modules/Admin/pages/UserSettings.vue";
 import OfficeSettings from "../modules/members/pages/dashboardForMember/OfficeSettings.vue";
 import PendingProject from "../modules/members/pages/dashboardForMember/PendingProject.vue";
 import BusinessAccount from "../modules/members/pages/dashboardForMember/BusinessAccount.vue";
@@ -43,20 +43,28 @@ import UserAccount from "../modules/Admin/pages/UserAccount.vue";
 import OfficeAccount from "../modules/members/pages/dashboardForMember/OfficeAccount.vue";
 import BusinessComponent from "../modules/members/pages/dashboardForMember/BusinessComponent.vue";
 import OfficesComponent from "../modules/members/pages/dashboardForMember/OfficesComponent.vue";
-import UsersComponent from "../modules/modules/Admin/pages/UsersComponent.vue";
+import UsersComponent from "../modules/Admin/pages/UsersComponent.vue";
+// import DashboardAccount from "../modules/members/pages/dashboardForMember/DashboardAccount.vue"
+import UsersStats from "../modules/Admin/pages/UsersStats.vue";
+//-----------------
+// import TriangleDesign from "../modules/members/pages/Tabs/TriangleDesign.vue"
+
+
+// import UsersComponent from "../modules/modules/Admin/pages/UsersComponent.vue";
 import DashboardAccount from "../modules/members/pages/dashboardForMember/DashboardAccount.vue";
-import UsersStats from "../modules/Admin/pages//UsersStats.vue";
+// import UsersStats from "../modules/Admin/pages//UsersStats.vue";
 import  UserAccountDashboard from "../modules/Admin/pages/UserAccountDashboard.vue";
+// import UsersStats from "../modules/Admin/pages//UsersStats.vue";
 //-----------------
 import TriangleDesign from "../modules/members/pages/Tabs/TriangleDesign.vue";
 
 import DashboardTest from "../modules/members/pages/dashboardForMember/DashboardTest.vue";
-import MainHomepage from "@/modules/Admin/MainHomepage";
+import MainHomepage from "../modules/Admin/pages/MainHomepage.vue";
 const routes = [
   {
     path: "/",
     name: "home",
-    component: HomeView,
+    component: HomeFormeMebers,
   },
   {
     path: "/loginPanal",
