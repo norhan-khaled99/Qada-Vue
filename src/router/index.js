@@ -46,6 +46,7 @@ import OfficesComponent from "../modules/members/pages/dashboardForMember/Office
 import UsersComponent from "../modules/modules/Admin/pages/UsersComponent.vue";
 import DashboardAccount from "../modules/members/pages/dashboardForMember/DashboardAccount.vue";
 import UsersStats from "../modules/Admin/pages//UsersStats.vue";
+import  UserAccountDashboard from "../modules/Admin/pages/UserAccountDashboard.vue";
 //-----------------
 import TriangleDesign from "../modules/members/pages/Tabs/TriangleDesign.vue";
 
@@ -165,6 +166,7 @@ const routes = [
       },
     ],
   },
+
   {
     path: "/business",
     children: [
@@ -182,6 +184,7 @@ const routes = [
       },
     ],
   },
+
   {
     path: "/EngineeringOffices",
     children: [
@@ -263,6 +266,10 @@ const routes = [
     path: "/admin/homepage",
     component: MainHomepage,
   },
+  {
+    path:"/UserAccountDashboard",
+    component:UserAccountDashboard
+  }
 ];
 
 const router = createRouter({
