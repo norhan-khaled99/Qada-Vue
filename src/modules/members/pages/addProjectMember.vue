@@ -51,7 +51,7 @@
         </div>
         <div class="col-md-6 col-sm-12">
           <p>تصنيف المشروع</p>
-          <select class="form-select  custom-select" id="floatingSelect" >
+          <select class="form-select  custom-select" id="floatingSelect"  v-model="form.service_category">
             <option selected></option>
             <option value="1">تجاري</option>
             <option value="2">سكني</option>
@@ -61,7 +61,7 @@
       </div>
       <div class="row">
         <p>الخدمة الإلكترونية المطلوبة</p>
-        <select class="form-select" id="floatingSelect">
+        <select class="form-select" id="floatingSelect" v-model="form">
           <option selected></option>
           <option value="1">مراجعة و إعتماد المخططات لإصدار التراخيص</option>
           <option value="2">تصميم هندسي بغرض إستخراج رخصة بناء</option>
@@ -75,7 +75,7 @@
       </div>
       <div class="row">
         <p>تاريخ نهاية طرح المشروع</p>
-        <select class="form-select" id="floatingSelect">
+        <select class="form-select" id="floatingSelect" v-model="form.offer_choosing_date">
           <option selected></option>
           <option value="1">طرح المشروع في منصة المشاريع لمدة 4 أيام</option>
           <option value="2">طرح المشروع في منصة المشاريع لمدة 9 أيام</option>
@@ -93,7 +93,7 @@
         </div>
         <div class="col-md-6 col-sm-12">
           <p>المدة المقترحة لأنهاء الاعمال المطلوبة</p>
-          <input type="number" placeholder="عدد الايام" class="form-control" min="0" v-model="form.delivery_date" />
+          <input type="number" placeholder="عدد الايام" class="form-control" min="0" v-model="form.project_days_limit" />
         </div>
       </div>
 
@@ -109,7 +109,7 @@
         </div>
         <div class="col-md-6 col-sm-12">
           <p>المدينة</p>
-          <select class="form-select" id="floatingSelect" v-model="city">
+          <select class="form-select" id="floatingSelect" v-model="form.city">
             <option selected></option>
             <option value="1">الرياض</option>
             <option value="2">مكة المكرمة</option>

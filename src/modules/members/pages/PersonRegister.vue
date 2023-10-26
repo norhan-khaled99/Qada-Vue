@@ -59,8 +59,8 @@
     </div>
   </div>
 </template>
-<!-- nada hamed code
-<script>
+
+<!-- <script>
 import authService from '@/services/AuthService';
 
 
