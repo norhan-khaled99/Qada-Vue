@@ -59,6 +59,10 @@
 
 <style scoped>
 
+.blur-background {
+  filter: blur(5px);
+  /* You can adjust the blur intensity as needed */
+}
 
 .test-5{
     background-color: #0F9678;
