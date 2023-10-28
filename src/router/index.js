@@ -13,8 +13,6 @@ import maintabs from "../modules/members/pages/Tabs/mainTabs.vue";
 import ProjectListforMember from "../modules/members/pages/dashboardForMember/MyProjects.vue";
 import BusinessPanner from "../modules/Business/pages/BusinessPanner.vue";
 import PersonLogin from "../modules/members/pages/PersonLogin.vue";
-import BusinessRegister from "../modules/Business/pages/BusinessRegister.vue";
-import BusinessLogin from "../modules/Business/pages/BusinessLogin.vue";
 import Engineering_officesRegister from "../modules/Engineering_offices/Pages/Engineering_officesRegister.vue";
 import Engineering_officesLogin from "../modules/Engineering_offices/Pages/Engineering_officesLogin.vue";
 import CheckLine from "../modules/members/pages/dashboardForMember/CheckLine.vue";
@@ -32,18 +30,31 @@ import projectQuereries from "../modules/members/pages/Tabs/projectQuereries";
 
 import AcceptedProject from "../modules/members/pages/dashboardForMember/AcceptedProject.vue";
 import DashboardCard from "../modules/members/pages/dashboardForMember/DashboardCard.vue";
-
-//------Dashboard
-import BusinessSettings from "../modules/members/pages/dashboardForMember/BusinessSettings.vue";
-import UserSettings from "../modules/Admin/pages/UserSettings.vue";
-import OfficeSettings from "../modules/members/pages/dashboardForMember/OfficeSettings.vue";
 import PendingProject from "../modules/members/pages/dashboardForMember/PendingProject.vue";
-import BusinessAccount from "../modules/members/pages/dashboardForMember/BusinessAccount.vue";
+
+//------Users--Dashboard----admin-----
+import UserSettings from "../modules/Admin/pages/UserSettings.vue";
 import UserAccount from "../modules/Admin/pages/UserAccount.vue";
-import OfficeAccount from "../modules/members/pages/dashboardForMember/OfficeAccount.vue";
-import BusinessComponent from "../modules/members/pages/dashboardForMember/BusinessComponent.vue";
-import OfficesComponent from "../modules/members/pages/dashboardForMember/OfficesComponent.vue";
 import UsersComponent from "../modules/Admin/pages/UsersComponent.vue";
+
+//------Offices--Dashboard----admin-----
+import OfficesComponent from "../modules/members/pages/dashboardForMember/OfficesComponent.vue";
+import OfficeAccount from "../modules/members/pages/dashboardForMember/OfficeAccount.vue";
+import OfficeSettings from "../modules/members/pages/dashboardForMember/OfficeSettings.vue";
+
+//--------Business--Dashboard----admin------
+import BusinessSettings from "../modules/members/pages/dashboardForMember/BusinessSettings.vue";
+import BusinessAccount from "../modules/members/pages/dashboardForMember/BusinessAccount.vue";
+import BusinessComponent from "../modules/members/pages/dashboardForMember/BusinessComponent.vue";
+
+//--------Business------------
+import BusinessRegister from "../modules/Business/pages/BusinessRegister.vue";
+import BusinessLogin from "../modules/Business/pages/BusinessLogin.vue";
+
+
+
+
+
 // import DashboardAccount from "../modules/members/pages/dashboardForMember/DashboardAccount.vue"
 import UsersStats from "../modules/Admin/pages/UsersStats.vue";
 //-----------------
@@ -81,7 +92,6 @@ const routes = [
     path: "/successPartners",
     component: SuccessPartners,
   },
-
   {
     path: "/member",
     children: [

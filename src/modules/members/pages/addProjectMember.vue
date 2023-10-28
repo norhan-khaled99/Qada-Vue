@@ -50,7 +50,7 @@
       </div>
       <div class="row">
         <p>الخدمة الإلكترونية المطلوبة</p>
-        <select class="form-select" id="floatingSelect" v-model="form">
+        <select class="form-select" id="floatingSelect" v-model="form.request_qty_tables">
           <option selected></option>
           <option value="1">مراجعة و إعتماد المخططات لإصدار التراخيص</option>
           <option value="2">تصميم هندسي بغرض إستخراج رخصة بناء</option>
@@ -64,7 +64,7 @@
       </div>
       <div class="row">
         <p>تاريخ نهاية طرح المشروع</p>
-        <select class="form-select" id="floatingSelect" v-model="form.offer_choosing_date">
+        <select class="form-select" id="floatingSelect" v-model="form.last_offers_date">
           <option selected></option>
           <option value="1">طرح المشروع في منصة المشاريع لمدة 4 أيام</option>
           <option value="2">طرح المشروع في منصة المشاريع لمدة 9 أيام</option>
@@ -89,7 +89,7 @@
       <div class="row">
         <div class="col-md-6 col-sm-12">
           <p>اختيار تصنيف المكاتب الهندسية</p>
-          <select class="form-select" id="floatingSelect" v-model="form.service_category">
+          <select class="form-select" id="floatingSelect" v-model="form.request_engs">
             <option selected></option>
             <option value="1">تصنيف درجة 1 الي 3 </option>
             <option value="2">تصنيف درجة 3 الي 6 </option>
