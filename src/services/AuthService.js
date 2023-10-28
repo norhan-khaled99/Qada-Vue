@@ -1,10 +1,7 @@
 import axios from "axios";
 const apiClient = axios.create({
-  baseURL: "https://finalqada.000webhostapp.com",
-  headers: {
-    "Content-Type": "application/json",
-    Accept: "application/json",
-  },
+  baseURL: "https://finalqada.000webhostapp.com/",
+  headers: {},
 });
 
 const authService = {
@@ -13,9 +10,11 @@ const authService = {
     return apiClient.post("person/register", credentials);
   },
   login(credentials) {
-     console.log("sjzalZJLx")
+    console.log(credentials);
     return apiClient.post("person/login", credentials);
   },
 };
 
 export default authService;
+
+

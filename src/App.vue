@@ -30,9 +30,9 @@ export default {
   box-sizing: border-box;
 }
 
-.tmn {
+/* .tmn {
   background: linear-gradient(121.09deg, #59467C 30.12%, #000000 173.77%);
-}
+} */
 
 /* *{
   direction: rtl;
