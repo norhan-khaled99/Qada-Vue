@@ -1,4 +1,5 @@
 <template>
+  <!-- <img class="navBg-img" src="../assets/bg-color.png" alt="navBg-img"> -->
   <div class="content">
     <nav class="navbar navbar-expand-lg ">
       <div class="container-fluid ">
@@ -32,9 +33,7 @@
             <li class="nav-item mx-lg-2">
               <router-link to="/contactus" class="nav-link">إتصل بنا</router-link>
             </li>
-            <router-link to="/loginPanal">
-              <button type="button" class="btn  login mx-lg-4">تسجيل الدخول</button>
-            </router-link>
+            <button type="button" class="btn  login mx-lg-4">تسجيل دخول</button>
             <button type="button" class="btn   create">إنشاء حساب</button>
             <li class="nav-item mx-lg-5 position-relative">
               <i class="fa-regular fa-bell"></i>
@@ -47,6 +46,10 @@
         </div>
       </div>
     </nav>
+    <div class="container artcl">
+      <p class="text-light">لوحة التحكم</p>
+      <h3>الفريق</h3>
+    </div>
   </div>
 </template>
 
@@ -63,11 +66,35 @@ export default {};
 
 nav {
   font-family: "Cairo", sans-serif;
+  /* background: linear-gradient(95.07deg, rgba(42, 102, 93, 0.8) 56.22%, rgba(48, 255, 81, 0.48) 157.23%);
+  margin-bottom: 20px;
+  height: 380px; */
+  ;
 }
 
-/* .nav-link:hover {
+.nav-link:hover {
   color: #fff;
-} */
+}
+
+.content {
+  height: 50vh;
+  width: 100%;
+  background: linear-gradient(95.07deg, rgba(42, 102, 93, 0.8) 56.22%, rgba(48, 255, 81, 0.48) 157.23%);
+  /* background-color: #59467C; */
+}
+
+.artcl {
+  position: absolute;
+  top: 25%;
+  left: 8%;
+}
+
+.artcl h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
 p {
   font-size: 20px;
 }
@@ -78,7 +105,8 @@ p {
 }
 
 li a {
-  color: #000000CC;
+  color: #fff;
+  /* color: rgba(0, 0, 0, 0.80); */
   font-weight: 500;
   font-size: 18px;
 }
@@ -88,10 +116,9 @@ li .qada {
 }
 
 .fa-bell {
-  font-size: 1.5rem;
+  /* font-size: 2rem; */
   color: rgba(0, 0, 0, 0.80);
-  color: #000000CC;
-  ;
+  color: #fff;
 }
 
 .create {
@@ -101,15 +128,22 @@ li .qada {
   border-radius: 1rem;
   width: 150px;
   height: 40px;
+  color: linear-gradient(121.09deg, #59467C 30.12%, #000000 173.77%);
 }
 
 .login {
-  background-color: #2A665D;
-  color: #fff;
+  /* background-color: #2A665D; */
+  color: #2A665D;
+  /* color: linear-gradient(121.09deg, #59467C 30.12%, #000000 173.77%); */
+  background-color: #fff;
   width: 150px;
   height: 40px;
   border-radius: 1rem;
   border-color: #2A665D;
+}
+
+a {
+  text-decoration: none;
 }
 
 li .ra2esia {
@@ -119,4 +153,22 @@ li .ra2esia {
 
 li span {
   color: #48ac9d;
+}
+
+/* section{
+    width: 100%;
+    height: 50vh;
+    background: url(../assets/bg-color.png);
+    background-size: cover;
+    background-position: center;
+    top: 0;
+  } */
+/* .rounded-pill{
+  background-color: #FF4B4B;
+  color: #fff;
+  } */
+@media (max-width: 576px) {
+  .artcl {
+    left: 0;
+  }
 }</style>

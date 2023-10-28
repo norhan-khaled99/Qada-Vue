@@ -1,5 +1,5 @@
 <template>
-    
+    <MemberHeader/>
     <div class="container article mb-5">
         <p>مرحبًا بك في منصة قدة! نحن نسعى جاهدين لتوفير بيئة ملائمة ومبتكرة للمهندسين والعمل الحر في المملكة العربية
             السعودية. نؤمن بأن المهندسين لديهم الكفاءة والقدرة على إحداث تغيير إيجابي في المجتمع والمساهمة في تطويره.</p>
@@ -89,10 +89,8 @@
 
 </template>
 
-<script>
-
-export default {
-}
+<script setup>
+import MemberHeader from "../modules/members/MemberHeader.vue"
 </script>
 
 <style scoped>

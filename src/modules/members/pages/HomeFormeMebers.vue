@@ -1,6 +1,7 @@
 <template>
   <div>
-  <div class="container w-100">
+  <MainHeader/>
+  <div class="container w-100 mt-5">
     <div class="row ">
       <div class="header mt-5">
         <div>جميع مشاريعك الهندسية تحت</div>
@@ -694,14 +695,9 @@
 </div>  
 </template>
 
-<script>
+<script setup>
 import TriangleDesign from "./Tabs/TriangleDesign.vue"
-export default {
-  name: 'HomeForMebers',
-  components: {
-    TriangleDesign,
-  }
-};
+import MainHeader from "../../../components/Main_Header.vue"
 </script>
 
 <style scoped>

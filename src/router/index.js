@@ -60,6 +60,7 @@ import TriangleDesign from "../modules/members/pages/Tabs/TriangleDesign.vue";
 
 import DashboardTest from "../modules/members/pages/dashboardForMember/DashboardTest.vue";
 import MainHomepage from "../modules/Admin/pages/MainHomepage.vue";
+import BprojectDetails from "../modules/Business/pages/Tabs/projectDetails.vue"
 const routes = [
   {
     path: "/",
@@ -189,6 +190,10 @@ const routes = [
       {
         path: "businessPanner",
         component: BusinessPanner,
+      },
+      {
+        path: "BprojectDetails",
+        component: BprojectDetails,
       },
     ],
   },

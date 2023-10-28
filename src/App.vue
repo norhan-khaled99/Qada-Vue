@@ -5,19 +5,16 @@
   </nav>
   <router-view/> -->
   <div class="tmn">
-    <Main_Header />
     <router-view />
     <MainFooter />
   </div>
 </template>
 <script>
-import Main_Header from './components/Main_Header.vue'
 import MainFooter from './components/MainFooter.vue'
 
 export default {
   name: 'App',
   components: {
-    Main_Header,
     MainFooter,
   }
 }
