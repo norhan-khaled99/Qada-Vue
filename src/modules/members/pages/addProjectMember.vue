@@ -51,7 +51,7 @@
         </div>
         <div class="col-md-6 col-sm-12">
           <p>تصنيف المشروع</p>
-          <select class="form-select  custom-select" id="floatingSelect" >
+          <select class="form-select  custom-select" id="floatingSelect"  v-model="form.service_category">
             <option selected></option>
             <option value="1">تجاري</option>
             <option value="2">سكني</option>
@@ -61,7 +61,7 @@
       </div>
       <div class="row">
         <p>الخدمة الإلكترونية المطلوبة</p>
-        <select class="form-select" id="floatingSelect">
+        <select class="form-select" id="floatingSelect" v-model="form.request_qty_tables">
           <option selected></option>
           <option value="1">مراجعة و إعتماد المخططات لإصدار التراخيص</option>
           <option value="2">تصميم هندسي بغرض إستخراج رخصة بناء</option>
@@ -75,7 +75,7 @@
       </div>
       <div class="row">
         <p>تاريخ نهاية طرح المشروع</p>
-        <select class="form-select" id="floatingSelect">
+        <select class="form-select" id="floatingSelect" v-model="form.last_offers_date">
           <option selected></option>
           <option value="1">طرح المشروع في منصة المشاريع لمدة 4 أيام</option>
           <option value="2">طرح المشروع في منصة المشاريع لمدة 9 أيام</option>
@@ -93,14 +93,14 @@
         </div>
         <div class="col-md-6 col-sm-12">
           <p>المدة المقترحة لأنهاء الاعمال المطلوبة</p>
-          <input type="number" placeholder="عدد الايام" class="form-control" min="0" v-model="form.delivery_date" />
+          <input type="number" placeholder="عدد الايام" class="form-control" min="0" v-model="form.project_days_limit" />
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-6 col-sm-12">
           <p>اختيار تصنيف المكاتب الهندسية</p>
-          <select class="form-select" id="floatingSelect" v-model="form.service_category">
+          <select class="form-select" id="floatingSelect" v-model="form.request_engs">
             <option selected></option>
             <option value="1">تصنيف درجة 1 الي 3 </option>
             <option value="2">تصنيف درجة 3 الي 6 </option>
@@ -109,7 +109,7 @@
         </div>
         <div class="col-md-6 col-sm-12">
           <p>المدينة</p>
-          <select class="form-select" id="floatingSelect" v-model="city">
+          <select class="form-select" id="floatingSelect" v-model="form.city">
             <option selected></option>
             <option value="1">الرياض</option>
             <option value="2">مكة المكرمة</option>
@@ -168,7 +168,7 @@ setup(){
     service_category: "",
     area: "",
     city: "",
-    offer_choosing_date: "",
+    offer_choosing_date: "21",
     project_days_limit: "",
     last_offers_date: "",
     request_qty_tables: ref(false),
@@ -180,7 +180,13 @@ setup(){
   });
 
   const addproject=()=>{
-    memberService.addproject(form.value).then()
+    memberService.addproject(form.value)
+        .then(response => {
+            console.log("Project added successfully:", response.data);
+        })
+        .catch(error => {
+            console.error("Error adding project:", error);
+        });
   }
   onMounted(()=>{
     addproject();

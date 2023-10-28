@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="container w-100">
     <div class="row ">
       <div class="header mt-5">
@@ -690,6 +691,7 @@
       </div>
     </div>
   </div>
+</div>  
 </template>
 
 <script>
