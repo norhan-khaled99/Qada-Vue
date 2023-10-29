@@ -2,11 +2,11 @@ import { createRouter, createWebHistory } from "vue-router";
 // import HomeView from "../views/HomeView.vue";
 //---components
 import LoginPanal from "../components/LoginPanal.vue";
-import SuccessPartners from "../components/SuccessPartners.vue";
-import AboutUs from "../components/AboutUs.vue";
-import TermsAndConditions from "../components/TermsAndConditions.vue";
-import ContactUs from "../components/ContactUs.vue";
-import FAQComponent from "../components/FAQComponent.vue";
+import SuccessPartners from "../modules/members/components/SuccessPartners.vue";
+import AboutUs from "../modules/members/components/AboutUs.vue";
+import TermsAndConditions from "../modules/members/components/TermsAndConditions.vue";
+import ContactUs from "../modules/members/components/ContactUs.vue";
+import FAQComponent from "../modules/members/components/FAQComponent.vue";
 //--modules
 //--------members------------
 import HomePageForMembers from "../modules/members/pages/HomeFormeMebers.vue";

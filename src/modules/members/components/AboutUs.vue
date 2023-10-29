@@ -23,7 +23,7 @@
 
         <div class="col-lg-2 card my-5">
             <div class="container">
-                <div><img class="image" src="../assets/Ellipse.png" alt=""></div>
+                <div><img class="image" src="../../../assets/Ellipse.png" alt=""></div>
                 <div class="headercard">اريج علي</div>
                 <p class="pcard">( عميل مميز <i class="fa-solid fa-star"></i> )</p>
                 <p class="p2" style="font-size: 3rem; margin-bottom: -1rem;"><i class="fa-solid fa-quote-right"></i></p>
@@ -39,8 +39,8 @@
         </div>
         <div class="col-lg-2 card my-5">
             <div class="container">
-                <div><img class="image" src="../assets/Ellipse.png" alt=""></div>
-                <div class="headercard">اريج علي</div>
+                    <div><img class="image" src="../../../assets/Ellipse.png" alt=""></div>
+                    <div class="headercard">اريج علي</div>
                 <p class="pcard">( عميل مميز <i class="fa-solid fa-star"></i> )</p>
                 <p class="p2" style="font-size: 3rem; margin-bottom: -1rem;"><i class="fa-solid fa-quote-right"></i></p>
                 <p class="p2 ">
@@ -55,8 +55,8 @@
         </div>
         <div class="col-lg-2 card my-5">
             <div class="container">
-                <div><img class="image" src="../assets/Ellipse.png" alt=""></div>
-                <div class="headercard">اريج علي</div>
+                    <div><img class="image" src="../../../assets/Ellipse.png" alt=""></div>
+                    <div class="headercard">اريج علي</div>
                 <p class="pcard">( عميل مميز <i class="fa-solid fa-star"></i> )</p>
                 <p class="p2" style="font-size: 3rem; margin-bottom: -1rem;"><i class="fa-solid fa-quote-right"></i></p>
                 <p class="p2 ">
@@ -90,7 +90,7 @@
 </template>
 
 <script setup>
-import MemberHeader from "../modules/members/MemberHeader.vue"
+import MemberHeader from "../components/MemberHeader.vue"
 </script>
 
 <style scoped>

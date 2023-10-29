@@ -144,7 +144,7 @@
 <script>
 import { ref, onMounted } from "vue";
 import memberService from "../services/memberService";
-import MemberHeader from "../MemberHeader.vue"
+import MemberHeader from "../components/MemberHeader.vue"
 
 export default {
   components: {
