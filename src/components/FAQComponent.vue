@@ -1,4 +1,5 @@
 <template>
+    <MemberHeader/>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 w-25">
@@ -40,10 +41,9 @@
     </div>
 </template>
 
-<script>
+<script setup>
+import MemberHeader from "../modules/members/MemberHeader.vue"
 
-export default {
-}
 </script>
 
 <style scoped>

@@ -10,7 +10,7 @@ const authService = {
     return apiClient.post("person/register", credentials);
   },
   login(credentials) {
-    console.log(credentials);
+    console.log("sjzalZJLx")
     return apiClient.post("person/login", credentials);
   },
 };

@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 // import HomeView from "../views/HomeView.vue";
 import LoginPanal from "../components/LoginPanal.vue";
 import SuccessPartners from "../components/SuccessPartners.vue";
-import HomeFormeMebers from "../modules/members/pages/HomeFormeMebers.vue";
+import HomePageForMembers from "../modules/members/pages/HomeFormeMebers.vue";
 import Addproject from "../modules/members/pages/addProjectMember.vue";
 import PersonRegister from "../modules/members/pages/PersonRegister.vue";
 import AboutUs from "../components/AboutUs.vue";
@@ -45,7 +45,8 @@ import OfficeSettings from "../modules/members/pages/dashboardForMember/OfficeSe
 import BusinessSettings from "../modules/members/pages/dashboardForMember/BusinessSettings.vue";
 import BusinessAccount from "../modules/members/pages/dashboardForMember/BusinessAccount.vue";
 import BusinessComponent from "../modules/members/pages/dashboardForMember/BusinessComponent.vue";
-
+import chatOffice from "../modules/Engineering_offices/Pages/chatOffice.vue"
+import HomePageforOffice from '@/modules/Engineering_offices/Pages/HomePageforOffice'
 //--------Business------------
 import BusinessRegister from "../modules/Business/pages/BusinessRegister.vue";
 import BusinessLogin from "../modules/Business/pages/BusinessLogin.vue";
@@ -55,6 +56,17 @@ import BContactUs from "../modules/Business/components/ContactUs.vue";
 import BFAQComponent from "../modules/Business/components/FAQComponent.vue";
 import BSuccessPartners from "../modules/Business/components/SuccessPartners.vue";
 import BTermsAndConditions from "../modules/Business/components/TermsAndConditions.vue";
+import BprojectDetails from "../modules/Business/pages/Tabs/projectDetails.vue"
+import BelectronicContract from "../modules/Business/pages/Tabs/ElectronicContract.vue";
+import BPrices_offers from "../modules/Business/pages/Tabs/Prices_offers.vue";
+import BprojectFiles from "../modules/Business/pages/Tabs/projectsFile.vue";
+import BprojectQuereries from "../modules/Business/pages/Tabs/projectQuereries";
+import Bprojectphases from "../modules/Business/pages/Tabs/projectPhases.vue";
+// import BusinessPanner from "../modules/Business/pages/BusinessPanner.vue";
+import BusinessHomePage from "../modules/Business/pages/bussinessHomePage.vue";
+
+
+///////////////////////////////////////////////////////////
 
 
 
@@ -78,7 +90,7 @@ const routes = [
   {
     path: "/",
     name: "home",
-    component: HomeFormeMebers,
+    component: HomePageForMembers,
   },
   {
     path: "/loginPanal",
@@ -99,7 +111,7 @@ const routes = [
     children: [
       {
         path: "",
-        component: HomeFormeMebers,
+        component:HomePageForMembers,
       },
       {
         path: "addproject",
@@ -192,6 +204,10 @@ const routes = [
     path: "/business",
     children: [
       {
+        path: "",
+        component: BusinessHomePage,
+      },
+      {
         path: "businessRegister",
         component: BusinessRegister,
       },
@@ -218,6 +234,29 @@ const routes = [
       {
         path: "TermsAndConditions",
         component: BTermsAndConditions,
+      },{
+        path: "BprojectDetails",
+        component: BprojectDetails,
+      },
+      {
+        path: "BprojectQuereries",
+        component: BprojectQuereries,
+      },
+      {
+        path: "BprojectFiles",
+        component: BprojectFiles,
+      },
+        {
+        path: "BPrices_offers",
+        component: BPrices_offers,
+      },
+      {
+        path: "BelectronicContract",
+        component: BelectronicContract,
+      },
+      {
+        path: "projectPhases",
+        component: Bprojectphases,
       },
     ],
   },
@@ -226,6 +265,10 @@ const routes = [
     path: "/EngineeringOffices",
     children: [
       {
+        path:"",
+        component:HomePageforOffice
+      },
+      {
         path: "Engineering_officesRegister",
         component: Engineering_officesRegister,
       },
@@ -233,6 +276,10 @@ const routes = [
         path: "Engineering_officesLogin",
         component: Engineering_officesLogin,
       },
+      {
+        path:"chatOffice",
+        component:chatOffice
+      }
     ],
   },
   {
