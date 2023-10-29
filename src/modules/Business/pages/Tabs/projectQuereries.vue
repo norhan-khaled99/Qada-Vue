@@ -1,4 +1,5 @@
 <template>
+  <BusinessHeader/>
   <div class="container m-auto">
     <div class="row justify-content-center text-center">
         
@@ -162,8 +163,8 @@
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+import BusinessHeader from "../../components/BusinessHeader.vue"
 </script>
 
 <style scoped>

@@ -1,9 +1,9 @@
 <template>
+    <BusinessHeader/>
     <div class="container-fliud overflow-x-hidden ">
         <div class="row text-center my-5">
             <h1>الملفات المتاحة الان</h1>
         </div>
-
         <div class="uploadFile col-lg-3  col-md-6 col-8  m-auto text-center mb-5 ">
             <svg class="mt-3" xmlns="http://www.w3.org/2000/svg" width="60" height="54" viewBox="0 0 60 54" fill="none">
                 <rect y="24" width="60" height="30" rx="15" fill="#282B2A" />
@@ -13,7 +13,6 @@
             </svg>
             <h3 class="my-3 px-3">اضغط لإضافة مرفق جديد(ملف)</h3>
         </div>
-
         <div class="text-center two">
             <div class="row justify-content-between align-items-baseline my-5 ">
                 <div class="col-3 title mt-2">
@@ -445,10 +444,8 @@
     </div>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+import BusinessHeader from "../../components/BusinessHeader.vue"
 </script>
 
 <style scoped>
@@ -463,7 +460,7 @@ h1 {
 }
 
 .uploadFile {
-    border: 3px solid #2A665D;
+    border: 3px solid #259F5A;
     border-radius: 10px;
     
 }
@@ -471,7 +468,7 @@ h1 {
 .uploadFile h3 {
     font-size: 25px;
     font-weight: 700px;
-    color: #2A665D;
+    color: #259F5A;
 }
 
 .title {
@@ -487,11 +484,11 @@ h1 {
     font-style: normal;
     font-weight: 600;
     line-height: 21px;
-    color: #2A665D;
+    color: #259F5A;
 }
 
 .content-text button {
-    background-color: #2A665D;
+    background-color: #259F5A;
     color: #FFF;
 }
 
@@ -510,7 +507,7 @@ h1 {
         font-style: normal;
         font-weight: 600;
         line-height: 21px;
-        color: #2A665D;
+        color: #259F5A;
         
     }
     .content-text svg{

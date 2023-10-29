@@ -1,4 +1,5 @@
 <template>
+    <BusinessHeader />
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 w-25">
@@ -36,14 +37,11 @@
                 <a><i class="fa-light fa fa-circle-arrow-down"></i></a>
             </div>
         </div>
-
     </div>
 </template>
 
-<script>
-
-export default {
-}
+<script setup>
+import BusinessHeader from "./BusinessHeader.vue"
 </script>
 
 <style scoped>

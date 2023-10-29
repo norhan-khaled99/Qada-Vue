@@ -11,7 +11,6 @@ import FAQComponent from "../components/FAQComponent.vue";
 import ContactUs from "../components/ContactUs.vue";
 import maintabs from "../modules/members/pages/Tabs/mainTabs.vue";
 import ProjectListforMember from "../modules/members/pages/dashboardForMember/MyProjects.vue";
-import BusinessPanner from "../modules/Business/pages/BusinessPanner.vue";
 import PersonLogin from "../modules/members/pages/PersonLogin.vue";
 import Engineering_officesRegister from "../modules/Engineering_offices/Pages/Engineering_officesRegister.vue";
 import Engineering_officesLogin from "../modules/Engineering_offices/Pages/Engineering_officesLogin.vue";
@@ -50,8 +49,12 @@ import BusinessComponent from "../modules/members/pages/dashboardForMember/Busin
 //--------Business------------
 import BusinessRegister from "../modules/Business/pages/BusinessRegister.vue";
 import BusinessLogin from "../modules/Business/pages/BusinessLogin.vue";
-
-
+import BprojectDetails from "../modules/Business/pages/Tabs/projectDetails.vue"
+import BelectronicContract from "../modules/Business/pages/Tabs/ElectronicContract.vue";
+import BPrices_offers from "../modules/Business/pages/Tabs/Prices_offers.vue";
+import BprojectFiles from "../modules/Business/pages/Tabs/projectsFile.vue";
+import BprojectQuereries from "../modules/Business/pages/Tabs/projectQuereries";
+import Bprojectphases from "../modules/Business/pages/Tabs/projectPhases.vue";
 
 
 
@@ -71,7 +74,6 @@ import TriangleDesign from "../modules/members/pages/Tabs/TriangleDesign.vue";
 
 import DashboardTest from "../modules/members/pages/dashboardForMember/DashboardTest.vue";
 import MainHomepage from "../modules/Admin/pages/MainHomepage.vue";
-import BprojectDetails from "../modules/Business/pages/Tabs/projectDetails.vue"
 const routes = [
   {
     path: "/",
@@ -198,12 +200,28 @@ const routes = [
         component: BusinessLogin,
       },
       {
-        path: "businessPanner",
-        component: BusinessPanner,
-      },
-      {
         path: "BprojectDetails",
         component: BprojectDetails,
+      },
+      {
+        path: "BprojectQuereries",
+        component: BprojectQuereries,
+      },
+      {
+        path: "BprojectFiles",
+        component: BprojectFiles,
+      },
+        {
+        path: "BPrices_offers",
+        component: BPrices_offers,
+      },
+      {
+        path: "BelectronicContract",
+        component: BelectronicContract,
+      },
+      {
+        path: "projectPhases",
+        component: Bprojectphases,
       },
     ],
   },

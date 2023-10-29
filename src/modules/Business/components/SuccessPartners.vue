@@ -1,4 +1,5 @@
 <template>
+    <BusinessHeader/>
     <div class="row m-auto justify-content-between p-3 w-25 filter-projects my-5">
         <div class="col-lg-4">
             <p>المدينة</p>
@@ -166,13 +167,8 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: 'SuccessPartners',
-    components: {
-
-    }
-}
+<script setup>
+import BusinessHeader from "./BusinessHeader.vue"
 </script>
 
 <style scoped>

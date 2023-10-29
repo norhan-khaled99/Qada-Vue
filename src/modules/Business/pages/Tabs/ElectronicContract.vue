@@ -1,4 +1,5 @@
 <template>
+  <BusinessHeader/>
   <div class="container">
     <div class="header-title my-3">تعاقد الكتروني</div>
     <div class="d-flex justify-content-center my-5">
@@ -149,11 +150,9 @@
 
 </template>
 
-<script>
+<script setup>
+import BusinessHeader from "../../components/BusinessHeader.vue"
 
-export default {
-  
-};
 </script>
 
 <style scoped>

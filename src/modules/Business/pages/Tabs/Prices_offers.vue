@@ -1,4 +1,5 @@
 <template>
+    <BusinessHeader/>
     <div class="mt-5">
     <div class="row justify-content-between w-50 p-3 m-auto my-3 text-center card1 ">
         <p><span>ملاحظة : </span> سيتعين عليك طرح مشروعك من جديد في حال لم يتم التعاقد مع مكتب هندسي
@@ -252,11 +253,8 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: 'Prices_offers'
-
-}
+<script setup>
+import BusinessHeader from "../../components/BusinessHeader.vue"
 </script>
 
 <style scoped>

@@ -1,6 +1,6 @@
 <template>
+    <MainHeader/>
     <div class="container-fluid row align-items-center">
-
         <div class="row view align-items-center">
             <div class="col-lg-3 offset-lg-1 qdas ">
                 <h1 class="mb-">منصة قد<span>ة</span></h1>
@@ -66,10 +66,9 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: "LoginPanal",
-};
+<script setup>
+import MainHeader from "./Main_Header.vue"
+
 </script>
 
 <style scoped>
