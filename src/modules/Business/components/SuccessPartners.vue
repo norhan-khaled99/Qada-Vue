@@ -1,5 +1,5 @@
 <template>
-    <div class="row m-auto justify-content-between p-3 w-25 filter-projects my-5">
+    <!-- <div class="row m-auto justify-content-between p-3 w-25 filter-projects my-5">
         <div class="col-lg-4">
             <p>المدينة</p>
             <select class="form-select" aria-label="Default select example">
@@ -19,11 +19,10 @@
             </select>
         </div>
         <div class="col-lg-2 my-auto mb-2 ms-3">
-            <img src="../assets/magnifier.png" />
+            <img src="../../../assets/magnifier.png" />
         </div>
-    </div>
-
-    <div class="row justify-content-between w-50 p-3 m-auto my-3 cardd">
+    </div> -->
+    <div class="row justify-content-between w-50 p-3 m-auto my-3 cardd mt-5">
         <div class="col-lg-3 col-sm-12 text-center">
             <p>المكتب الهندسي</p>
             <h5>شركة المهندسين</h5>
@@ -188,7 +187,7 @@ export default {
 
 .cardd {
     border-radius: 10px;
-    border: 1px solid#48847B;
+    border: 1px solid #259F5A;
     box-shadow: 0px 4px 4px 0px rgba(0.25, 0.25, 0.25, 0.25);
 }
 
@@ -201,6 +200,6 @@ export default {
 }
 
 .number {
-    color: #B18718;
+    color: #FFB800;
 }
 </style>

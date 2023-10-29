@@ -11,7 +11,7 @@ import FAQComponent from "../components/FAQComponent.vue";
 import ContactUs from "../components/ContactUs.vue";
 import maintabs from "../modules/members/pages/Tabs/mainTabs.vue";
 import ProjectListforMember from "../modules/members/pages/dashboardForMember/MyProjects.vue";
-import BusinessPanner from "../modules/Business/pages/BusinessPanner.vue";
+// import BusinessPanner from "../modules/Business/pages/BusinessPanner.vue";
 import PersonLogin from "../modules/members/pages/PersonLogin.vue";
 import Engineering_officesRegister from "../modules/Engineering_offices/Pages/Engineering_officesRegister.vue";
 import Engineering_officesLogin from "../modules/Engineering_offices/Pages/Engineering_officesLogin.vue";
@@ -27,7 +27,6 @@ import Prices_offers from "../modules/members/pages/Tabs/Prices_offers.vue";
 import projectTransactions from "../modules/members/pages/Tabs/projectTransactions.vue";
 import projectFiles from "../modules/members/pages/Tabs/projectsFile.vue";
 import projectQuereries from "../modules/members/pages/Tabs/projectQuereries";
-
 import AcceptedProject from "../modules/members/pages/dashboardForMember/AcceptedProject.vue";
 import DashboardCard from "../modules/members/pages/dashboardForMember/DashboardCard.vue";
 import PendingProject from "../modules/members/pages/dashboardForMember/PendingProject.vue";
@@ -50,8 +49,12 @@ import BusinessComponent from "../modules/members/pages/dashboardForMember/Busin
 //--------Business------------
 import BusinessRegister from "../modules/Business/pages/BusinessRegister.vue";
 import BusinessLogin from "../modules/Business/pages/BusinessLogin.vue";
-
-
+//---routes for components for Business
+import BAboutUs from "../modules/Business/components/AboutUs.vue";
+import BContactUs from "../modules/Business/components/ContactUs.vue";
+import BFAQComponent from "../modules/Business/components/FAQComponent.vue";
+import BSuccessPartners from "../modules/Business/components/SuccessPartners.vue";
+import BTermsAndConditions from "../modules/Business/components/TermsAndConditions.vue";
 
 
 
@@ -197,8 +200,24 @@ const routes = [
         component: BusinessLogin,
       },
       {
-        path: "businessPanner",
-        component: BusinessPanner,
+        path: "aboutus",
+        component: BAboutUs,
+      },
+      {
+        path: "ContactUs",
+        component: BContactUs,
+      },
+      {
+        path: "FAQ",
+        component: BFAQComponent,
+      },
+      {
+        path: "SuccessPartners",
+        component: BSuccessPartners,
+      },
+      {
+        path: "TermsAndConditions",
+        component: BTermsAndConditions,
       },
     ],
   },
@@ -285,9 +304,9 @@ const routes = [
     component: MainHomepage,
   },
   {
-    path:"/UserAccountDashboard",
-    component:UserAccountDashboard
-  }
+    path: "/UserAccountDashboard",
+    component: UserAccountDashboard,
+  },
 ];
 
 const router = createRouter({

@@ -23,7 +23,7 @@
 
         <div class="col-lg-2 card my-5">
             <div class="container">
-                <div><img class="image" src="../assets/Ellipse.png" alt=""></div>
+                <div><img class="image" src="../../../assets/Ellipse.png" alt=""></div>
                 <div class="headercard">اريج علي</div>
                 <p class="pcard">( عميل مميز <i class="fa-solid fa-star"></i> )</p>
                 <p class="p2" style="font-size: 3rem; margin-bottom: -1rem;"><i class="fa-solid fa-quote-right"></i></p>
@@ -39,8 +39,8 @@
         </div>
         <div class="col-lg-2 card my-5">
             <div class="container">
-                <div><img class="image" src="../assets/Ellipse.png" alt=""></div>
-                <div class="headercard">اريج علي</div>
+                    <div><img class="image" src="../../../assets/Ellipse.png" alt=""></div>
+                    <div class="headercard">اريج علي</div>
                 <p class="pcard">( عميل مميز <i class="fa-solid fa-star"></i> )</p>
                 <p class="p2" style="font-size: 3rem; margin-bottom: -1rem;"><i class="fa-solid fa-quote-right"></i></p>
                 <p class="p2 ">
@@ -55,8 +55,8 @@
         </div>
         <div class="col-lg-2 card my-5">
             <div class="container">
-                <div><img class="image" src="../assets/Ellipse.png" alt=""></div>
-                <div class="headercard">اريج علي</div>
+                    <div><img class="image" src="../../../assets/Ellipse.png" alt=""></div>
+                    <div class="headercard">اريج علي</div>
                 <p class="pcard">( عميل مميز <i class="fa-solid fa-star"></i> )</p>
                 <p class="p2" style="font-size: 3rem; margin-bottom: -1rem;"><i class="fa-solid fa-quote-right"></i></p>
                 <p class="p2 ">
@@ -150,7 +150,7 @@ header h3 {
 .card {
     /* margin-right: 7rem; */
     /* margin-top: 5rem; */
-    background-color: rgba(15, 150, 120, 1);
+    background-color: #259F5A;
     width: 18rem;
     height: 25rem;
     border-radius: 1rem;
@@ -193,7 +193,7 @@ header h3 {
 }
 
 .share input {
-    border: 0.2rem solid rgba(15, 150, 120, 1);
+    border: 0.2rem solid #259F5A;
     border-radius: 2rem;
 }
 
@@ -201,7 +201,7 @@ header h3 {
     Width: 98.45px;
     Height: 35.75px;
     border-radius: 20px;
-    background-color: rgba(15, 150, 120, 1);
+    background-color: #259F5A;
     color: rgba(255, 255, 255, 1);
     margin-top: 2rem;
 }
