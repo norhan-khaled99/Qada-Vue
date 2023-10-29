@@ -51,7 +51,10 @@ import BusinessRegister from "../modules/Business/pages/BusinessRegister.vue";
 import BusinessLogin from "../modules/Business/pages/BusinessLogin.vue";
 import BusinessPanner from "../modules/Business/pages/BusinessPanner.vue";
 import BusinessHomePage from "../modules/Business/pages/bussinessHomePage.vue";
+import chatOffice from "../modules/Engineering_offices/Pages/chatMember.vue"
 
+
+///////////////////////////////////////////////////////////
 
 
 
@@ -209,6 +212,10 @@ const routes = [
         path: "BprojectDetails",
         component: BprojectDetails,
       },
+      {
+        path:"chatOffice",
+        component:chatOffice
+      }
     ],
   },
 
