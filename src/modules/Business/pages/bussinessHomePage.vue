@@ -19,7 +19,7 @@
     </div>
   </div>
     <div class="my-5 triangel">
-      <TriangleDesign />
+      <TriangleForBussiness />
     </div>
   
   <div class="container">
@@ -126,7 +126,7 @@
         </select>
       </div>
       <div class="col-md-1 my-auto mb-2 ms-3">
-        <img src="../../../assets/magnifier.png" />
+        <img src="../../../assets/maginifierBussiness.png" />
       </div>
     </div>
 
@@ -588,8 +588,15 @@
   </div>  
 </template>
 
-<script setup>
-import MainHeader from "../../../components/Main_Header.vue"
+<script>
+// import MainHeader from "../../../components/Main_Header.vue"
+import TriangleForBussiness from "../pages/Tabs/TriangleDesign.vue"
+export default{
+  components:{
+  TriangleForBussiness,
+},
+
+}
 </script>
 
 <style scoped>
