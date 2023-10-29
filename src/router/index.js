@@ -55,6 +55,8 @@ import BelectronicContract from "../modules/Business/pages/Tabs/ElectronicContra
 import BprojectQuereries from "../modules/Business/pages/Tabs/projectQuereries";
 import Bprojectphases from "../modules/Business/pages/Tabs/projectPhases.vue";
 import BprojectFiles from "../modules/Business/pages/Tabs/projectsFile.vue";
+import BprojectTransactions from "../modules/Business/pages/Tabs/projectTransactions.vue";
+
 
 //---routes for components for Business
 import BAboutUs from "../modules/Business/components/AboutUs.vue";
@@ -129,7 +131,7 @@ const routes = [
     children: [
       {
         path: "",
-        component:HomePageForMembers,
+        component: HomePageForMembers,
       },
       {
         path: "addproject",
@@ -265,7 +267,7 @@ const routes = [
         path: "BprojectFiles",
         component: BprojectFiles,
       },
-        {
+      {
         path: "BPrices_offers",
         component: BPrices_offers,
       },
@@ -277,6 +279,10 @@ const routes = [
         path: "projectPhases",
         component: Bprojectphases,
       },
+      {
+        path: "projectTransactions",
+        component: BprojectTransactions,
+      },
     ],
   },
 
@@ -284,8 +290,8 @@ const routes = [
     path: "/EngineeringOffices",
     children: [
       {
-        path:"",
-        component:HomePageforOffice
+        path: "",
+        component: HomePageforOffice,
       },
       {
         path: "Engineering_officesRegister",
@@ -296,9 +302,9 @@ const routes = [
         component: Engineering_officesLogin,
       },
       {
-        path:"chatOffice",
-        component:chatOffice
-      }
+        path: "chatOffice",
+        component: chatOffice,
+      },
     ],
   },
   {
