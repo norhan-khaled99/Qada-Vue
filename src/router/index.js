@@ -50,21 +50,22 @@ import HomePageforOffice from '@/modules/Engineering_offices/Pages/HomePageforOf
 //--------Business------------
 import BusinessRegister from "../modules/Business/pages/BusinessRegister.vue";
 import BusinessLogin from "../modules/Business/pages/BusinessLogin.vue";
+import BusinessHomePage from "../modules/Business/pages/bussinessHomePage.vue";
+
+//---routes for Tabs for Business
+import BprojectDetails from "../modules/Business/pages/Tabs/projectDetails.vue";
+import BPrices_offers from "../modules/Business/pages/Tabs/Prices_offers.vue";
+import BelectronicContract from "../modules/Business/pages/Tabs/ElectronicContract.vue";
+import BprojectQuereries from "../modules/Business/pages/Tabs/projectQuereries";
+import Bprojectphases from "../modules/Business/pages/Tabs/projectPhases.vue";
+import BprojectFiles from "../modules/Business/pages/Tabs/projectsFile.vue";
+
 //---routes for components for Business
 import BAboutUs from "../modules/Business/components/AboutUs.vue";
 import BContactUs from "../modules/Business/components/ContactUs.vue";
 import BFAQComponent from "../modules/Business/components/FAQComponent.vue";
 import BSuccessPartners from "../modules/Business/components/SuccessPartners.vue";
 import BTermsAndConditions from "../modules/Business/components/TermsAndConditions.vue";
-import BprojectDetails from "../modules/Business/pages/Tabs/projectDetails.vue"
-import BelectronicContract from "../modules/Business/pages/Tabs/ElectronicContract.vue";
-import BPrices_offers from "../modules/Business/pages/Tabs/Prices_offers.vue";
-import BprojectFiles from "../modules/Business/pages/Tabs/projectsFile.vue";
-import BprojectQuereries from "../modules/Business/pages/Tabs/projectQuereries";
-import Bprojectphases from "../modules/Business/pages/Tabs/projectPhases.vue";
-// import BusinessPanner from "../modules/Business/pages/BusinessPanner.vue";
-import BusinessHomePage from "../modules/Business/pages/bussinessHomePage.vue";
-
 
 ///////////////////////////////////////////////////////////
 
