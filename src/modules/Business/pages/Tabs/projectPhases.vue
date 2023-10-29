@@ -323,7 +323,7 @@ export default {
   position: relative;
   margin: auto;
   border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.70);
+  border: 1px solid #259F5A;
 }
 
 .first-svg {
@@ -373,22 +373,22 @@ button {
 
 .first-stage {
   border-radius: 5px;
-  border: 2px solid #48847B;
-  color: #48847B;
+  border: 2px solid #259F5A;
+  color: #259F5A;
   padding: 5px 25px;
   background-color: #fff;
 }
 
 .recieve-stage {
   border-radius: 5px;
-  background: #48847B;
+  background: #259F5A;
   color: #FFFFFF;
   padding: 5px 25px;
-  border: 2px solid #48847B;
+  border: 2px solid #259F5A;
 }
 
 .seperator {
-  border-bottom: 1px solid #48847B;
+  border-bottom: 1px solid #259F5A;
   width: 99.9%;
 }
 
@@ -398,7 +398,7 @@ button {
 
 .numbers,
 .fasel {
-  color: #0C483F;
+  color: #0B6C35;
   font-family: Cairo;
   font-size: 17px;
   font-weight: 700;
@@ -413,13 +413,13 @@ button {
 
 .request-start-working {
   border-radius: 5px;
-  background: #48847B;
+  background: #259F5A;
   color: #FFFFFF;
   padding: 5px 15px;
 }
 
 .second-card-title {
-  color: #245C54;
+  color: #0B6C35;
   text-align: right;
   font-family: Cairo;
   font-size: 17px;
