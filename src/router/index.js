@@ -11,7 +11,6 @@ import FAQComponent from "../components/FAQComponent.vue";
 import ContactUs from "../components/ContactUs.vue";
 import maintabs from "../modules/members/pages/Tabs/mainTabs.vue";
 import ProjectListforMember from "../modules/members/pages/dashboardForMember/MyProjects.vue";
-import BusinessPanner from "../modules/Business/pages/BusinessPanner.vue";
 import PersonLogin from "../modules/members/pages/PersonLogin.vue";
 import Engineering_officesRegister from "../modules/Engineering_offices/Pages/Engineering_officesRegister.vue";
 import Engineering_officesLogin from "../modules/Engineering_offices/Pages/Engineering_officesLogin.vue";
@@ -50,7 +49,8 @@ import BusinessComponent from "../modules/members/pages/dashboardForMember/Busin
 //--------Business------------
 import BusinessRegister from "../modules/Business/pages/BusinessRegister.vue";
 import BusinessLogin from "../modules/Business/pages/BusinessLogin.vue";
-
+import BusinessPanner from "../modules/Business/pages/BusinessPanner.vue";
+import BusinessHomePage from "../modules/Business/pages/bussinessHomePage.vue";
 
 
 
@@ -189,6 +189,10 @@ const routes = [
   {
     path: "/business",
     children: [
+      {
+        path: "",
+        component: BusinessHomePage,
+      },
       {
         path: "businessRegister",
         component: BusinessRegister,
