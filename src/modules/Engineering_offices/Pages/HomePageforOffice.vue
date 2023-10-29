@@ -6,9 +6,6 @@
         <div class="header mt-5">
           <div>جميع مشاريعك الهندسية تحت</div>
           <div class="mensa mt-3">منصة واحدة</div>
-          <div class="col-lg-4 m-auto mt-5 text-center">
-            <p>انشئ مشروعك. قارن عروض الاسعار. تعاقد اونلاين تابع واستلم مخططاتك وقيم الخدمة ! </p>
-          </div>
         </div>
       </div>
   
