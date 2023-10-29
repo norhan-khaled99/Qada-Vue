@@ -161,7 +161,7 @@ import BusinessHeader from "../../components/BusinessHeader.vue"
 }
 
 .header-title {
-  color: #0c483f;
+  color: #259F5A;
   text-align: center;
   font-size: 32px;
   font-weight: 800;
@@ -171,7 +171,7 @@ import BusinessHeader from "../../components/BusinessHeader.vue"
 }
 .contract {
   border-radius: 20px;
-  background: #6ab38a;
+  background: #259F5A;
   color: #fff;
   padding: 0.625rem 3.125rem;
   margin-left: 1.25rem;
