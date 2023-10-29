@@ -12,7 +12,6 @@
     </div>
 
       <div class="my-5 mosls">
-        <TriangleDesign />
       </div>
     
     <div class="container">
@@ -84,7 +83,7 @@
           </select>
         </div>
         <div class="col-md-1 my-auto mb-2 ms-3">
-          <img src="../../../assets/magnifier.png" />
+          <img src="../../../assets/maginifieroffice.png" />
         </div>
       </div>
   
@@ -233,6 +232,11 @@
                   <span>2024-5-25</span>
                 </div>
               </div>
+            </div>
+            <div class="row justify-content-center my-3">
+              <div class="col-3">
+              <button class="btn mx-auto add-offer">اضافة عرض سعر</button>
+            </div>
             </div>
           </div>
         </div>
@@ -546,7 +550,6 @@
   </template>
   
   <script setup>
-  import TriangleDesign from "./Tabs/TriangleDesign.vue"
   import MainHeader from "../../../components/Main_Header.vue"
   
   
@@ -706,12 +709,20 @@
     margin-bottom: 10px;
   }
   
+  .add-offer{
+    background-color: #C4A551;
+    display: none;
+  }
   .card-content-text {
     color: rgba(0, 0, 0, 0.5);
   }
   
   .card:hover {
     border: 5px solid #C4A551;
+  }
+  .card:hover  .add-offer{
+    background-color: #C4A551;
+    display: flex;
   }
   
   @media(max-width: 576px) {
