@@ -70,7 +70,7 @@ import BTermsAndConditions from "../modules/Business/components/TermsAndConditio
 
 
 // import DashboardAccount from "../modules/members/pages/dashboardForMember/DashboardAccount.vue"
-import UsersStats from "../modules/Admin/pages/UsersStats.vue";
+import UsersStats from "../modules/Admin/users/UsersStats.vue";
 //-----------------
 // import TriangleDesign from "../modules/members/pages/Tabs/TriangleDesign.vue"
 
@@ -78,7 +78,7 @@ import UsersStats from "../modules/Admin/pages/UsersStats.vue";
 // import UsersComponent from "../modules/modules/Admin/pages/UsersComponent.vue";
 import DashboardAccount from "../modules/members/pages/dashboardForMember/DashboardAccount.vue";
 // import UsersStats from "../modules/Admin/pages//UsersStats.vue";
-import  UserAccountDashboard from "../modules/Admin/pages/UserAccountDashboard.vue";
+import  UserAccountDashboard from "../modules/members/pages/dashboardForMember/UserAccountDashboard.vue";
 // import UsersStats from "../modules/Admin/pages//UsersStats.vue";
 //-----------------
 import TriangleDesign from "../modules/members/pages/Tabs/TriangleDesign.vue";
@@ -87,19 +87,20 @@ import DashboardTest from "../modules/members/pages/dashboardForMember/Dashboard
 import MainHomepage from "../modules/Admin/pages/MainHomepage.vue";
 //-----------------------------admin-------------------------------------------------
 //------Users--Dashboard----admin-----
-import UserSettings from "../modules/Admin/pages/UserSettings.vue";
-import UserAccount from "../modules/Admin/pages/UserAccount.vue";
-import UsersComponent from "../modules/Admin/pages/UsersComponent.vue";
+import UserSettings from "../modules/Admin/users/UserSettings.vue";
+import UserAccount from "../modules/Admin/users/UserAccount.vue";
+import UsersComponent from "../modules/Admin/users/UsersComponent.vue";
 
 //------Offices--Dashboard----admin-----
-import OfficesComponent from "../modules/members/pages/dashboardForMember/OfficesComponent.vue";
-import OfficeAccount from "../modules/members/pages/dashboardForMember/OfficeAccount.vue";
-import OfficeSettings from "../modules/members/pages/dashboardForMember/OfficeSettings.vue";
+import OfficesComponent from "../modules/Admin/offices/OfficesComponent.vue";
+import OfficeAccount from "../modules/Admin/offices/OfficeAccount.vue";
+import OfficeSettings from "../modules/Admin/offices/OfficeSettings.vue";
 
 //--------Business--Dashboard----admin------
-import BusinessSettings from "../modules/members/pages/dashboardForMember/BusinessSettings.vue";
-import BusinessAccount from "../modules/members/pages/dashboardForMember/BusinessAccount.vue";
-import BusinessComponent from "../modules/members/pages/dashboardForMember/BusinessComponent.vue";
+import BusinessSettings from "../modules/Admin/business/BusinessSettings.vue";
+import BusinessAccount from "../modules/Admin/business/BusinessAccount.vue";
+import BusinessComponent from "../modules/Admin/business/BusinessComponent.vue";
+
 import chatOffice from "../modules/Engineering_offices/Pages/chatOffice.vue"
 import HomePageforOffice from '@/modules/Engineering_offices/Pages/HomePageforOffice'
 
