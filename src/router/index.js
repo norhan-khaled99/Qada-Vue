@@ -234,7 +234,8 @@ const routes = [
       {
         path: "TermsAndConditions",
         component: BTermsAndConditions,
-      },{
+      },
+      {
         path: "BprojectDetails",
         component: BprojectDetails,
       },
