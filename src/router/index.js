@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 // import HomeView from "../views/HomeView.vue";
 import LoginPanal from "../components/LoginPanal.vue";
 import SuccessPartners from "../components/SuccessPartners.vue";
-import HomePageForMembers from "../modules/members/pages/HomePageForMembers.vue";
+import HomePageForMembers from "../modules/members/pages/HomeFormeMebers.vue";
 import Addproject from "../modules/members/pages/addProjectMember.vue";
 import PersonRegister from "../modules/members/pages/PersonRegister.vue";
 import AboutUs from "../components/AboutUs.vue";
@@ -100,7 +100,7 @@ const routes = [
     children: [
       {
         path: "",
-        component: HomePageForMembers,
+        component:HomePageForMembers,
       },
       {
         path: "addproject",
