@@ -47,7 +47,7 @@ import PendingProject from "../modules/members/pages/dashboardForMember/PendingP
 import BusinessRegister from "../modules/Business/pages/BusinessRegister.vue";
 import BusinessLogin from "../modules/Business/pages/BusinessLogin.vue";
 import BusinessHomePage from "../modules/Business/pages/bussinessHomePage.vue";
-
+import addProjectBussiness from '@/modules/Business/pages/addProjectBussiness'
 //---routes for Tabs for Business
 import BprojectDetails from "../modules/Business/pages/Tabs/projectDetails.vue";
 import BPrices_offers from "../modules/Business/pages/Tabs/Prices_offers.vue";
@@ -227,6 +227,10 @@ const routes = [
       {
         path: "",
         component: BusinessHomePage,
+      },
+      {
+        path:"addProjectBussiness",
+        component:addProjectBussiness
       },
       {
         path: "businessRegister",
