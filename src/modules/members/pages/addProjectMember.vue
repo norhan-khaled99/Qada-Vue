@@ -1,4 +1,5 @@
 <template>
+  <div>
   <MemberHeader />
   <div class="container">
     <div class="d-flex justify-content-between align-items-center mx-auto mt-5 main-section">
@@ -20,18 +21,24 @@
     <p class="projecttitle">تفاصيل المشروع</p>
     <form action="" class="add-project">
       <div class="row">
-        <input type="text" class="form-control  project-details" v-model="form.project_details"
+        <div class="col-12">
+          <input type="text" class="form-control  project-details" v-model="form.project_details"
           placeholder="المشروع عبارة عن مسودة يجب إرساله للمراجعة بعد الانتهاء." />
+        </div>  
       </div>
       <div class="row">
+        <div class="col-12">
         <p>اسم المشروع</p>
         <input type="text" class="form-control" v-model="form.project_title" />
       </div>
+      </div>
       <div class="row ">
+         <div class="col-12">
         <p>وصف المشروع (مثال: عدد غرف النوم، والفراغات، ومكونات المشروع )</p>
         <textarea class="form-control" style="height: 100px"
           placeholder="ارغب في تصميم فيلا دوبليكس مكونه من 4 غرف نوم و 5 حمامات والمرافق الخدمية لها..."></textarea>
         <p class="descriptionfortextarea">عدد الحروف لا يقل عن 150 (95/150)</p>
+         </div>
       </div>
       <div class="row">
         <div class="col-md-6 col-sm-12">
@@ -139,6 +146,7 @@
       </div>
     </form>
   </div>
+  </div>  
 </template>
 
 <script>
