@@ -130,7 +130,7 @@
      
 
 
-  </div>
+
   <div class="dashed-hr my-5 w-100"></div>
   <div class="me-lg-5 ">
     <div class="my-5">
@@ -156,6 +156,7 @@
       </div>
     </div>
   </div>
+</div> 
 </template>
 
 <script>
