@@ -15,12 +15,12 @@
       aria-hidden="true"
     >
       <div class="modal-dialog ">
-        <div class="modal-content rounded-5 " style="background-color: #0F9678; width:45rem ">
+        <div class="modal-content rounded-5 " style="background-color: #259F5A; width:45rem ">
           <div class="modal-body d-flex flex-column align-items-center ">
              <img src="../../../../assets/Ellipse31.png" alt="" class="my-3">
-             <svg xmlns="http://www.w3.org/2000/svg" width="130" height="124" viewBox="0 0 130 124" fill="none">
-                <path d="M6.5 72.3L56.5652 108L120.5 6" stroke="#0F9678" stroke-width="22"/>
-              </svg>
+             <svg xmlns="http://www.w3.org/2000/svg" width="131" height="124" viewBox="0 0 131 124" fill="none">
+              <path d="M7 72.3L57.0652 108L121 6" stroke="#259F5A" stroke-width="22"/>
+            </svg>
             <div class="modal-text my-3">
                 تم إرسال رسالتك الي فريقنا بنجاح , نشكرك لتواصلك معنا
             </div>
@@ -30,7 +30,7 @@
     </div>
 </div>
   </template>
-  
+<!--   
   <script setup>
   import { ref, onMounted } from "vue";
   
@@ -54,7 +54,25 @@
 //   const saveChanges = () => {
 //     console.log("Changes saved!");
 //   };
-  </script>
+  </script> -->
+
+  <script setup>
+  import { ref, onMounted } from "vue";
+
+  const modal = ref(null);
+
+  onMounted(() => {
+    // eslint-disable-next-line no-undef
+    modal.value = new bootstrap.Modal(document.getElementById("demoModal"));
+  });
+
+  const showModal = () => {
+    modal.value.show();
+    setTimeout(() => {
+      modal.value.hide();
+    }, 10000); // 10000 milliseconds = 10 seconds
+  };
+</script>
 
 
 <style scoped>

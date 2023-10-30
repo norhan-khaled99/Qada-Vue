@@ -15,13 +15,13 @@
       aria-hidden="true"
     >
       <div class="modal-dialog ">
-        <div class="modal-content rounded-5 " style="background-color: #0F9678; width:35rem ">
+        <div class="modal-content rounded-5 " style="background-color: #259F5A; width:35rem ">
           <div class="modal-body d-flex flex-column align-items-center ">
             <div class="modal-text my-5">
                 تم إرسال رسالتك الي فريقنا بنجاح , نشكرك لتواصلك معنا
             </div>
             <div class="d-flex justify-content-around">
-              <button class="btn btn-success">نعم</button>
+              <button class="btn btn-dark">نعم</button>
               <button class="btn btn-danger">لا</button>
             </div>
           </div>
@@ -62,9 +62,6 @@
   direction: rtl;
  }
 
-.test-5{
-    background-color: #0F9678;
-}
 
 .modal-text{
 color:#FFF;

@@ -65,7 +65,7 @@ export default {
     position: absolute;
     top:0%;
     height: 370px;
-    background: url(../../../../assets/Rectangle4.png);
+    background: url(../../../../assets/Rectangle444.png);
     background-size: 100% 100%;
     width: 100%;
 }
@@ -73,7 +73,7 @@ export default {
     position: absolute;
     top: 0%;
     height: 370px;
-    background: url(../../../../assets/Rectangle5.png);
+    background: url(../../../../assets/Rectangle555.png);
     background-size: 100% 100%;
     width: 100%;
     margin-bottom: 10px;
