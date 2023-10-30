@@ -52,10 +52,10 @@
     </div>
     <div class="row my-5"></div>
     <div class="row d-flex justify-content-between my-5">
-      <div class="col-9 subtitle_text">
+      <div class="col-8 subtitle_text">
         <p class="text-end">اخر المشاريع المضافة</p>
       </div>
-      <div class="col-3 add-new-project">
+      <div class="col-4 add-new-project ">
         <router-link to="/member/addproject">
           <button class="border-none">اضف مشروعك</button>
         </router-link>
@@ -684,10 +684,8 @@ import MainHeader from "../../../components/Main_Header.vue"
 .add-new-project button {
   border-radius: 20px;
   background: #48847b;
-  width: 198px;
-  height: 52px;
   flex-shrink: 0;
-  padding: 0;
+  padding: 10px 20px;
   color: #fff;
   font-size: 1.25rem;
   border: none;
