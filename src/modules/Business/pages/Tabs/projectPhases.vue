@@ -318,25 +318,21 @@ export default {
 * {
   direction: rtl;
 }
-
 .card {
   position: relative;
   margin: auto;
   border-radius: 10px;
-  border: 1px solid #259F5A;
+  border: 2px solid #259F5A;
 }
-
 .first-svg {
   position: absolute;
   top: -10px;
   right: -15px;
 }
-
 button {
   min-width: 9rem;
   border: none;
 }
-
 .card-body {
   color: #000;
   font-family: Inter;
@@ -345,7 +341,6 @@ button {
   font-weight: 400;
   line-height: normal;
 }
-
 .card-title {
   color: #336059;
   text-align: right;
@@ -354,14 +349,12 @@ button {
   font-weight: 600;
   white-space: nowrap;
 }
-
 .card-content {
   color: #259F5A;
   text-align: center;
   font-size: 24px;
   font-weight: 700;
 }
-
 .header {
   color: #259F5A;
   font-family: Cairo;
@@ -370,7 +363,6 @@ button {
   margin: 1rem 0;
   text-align: center;
 }
-
 .first-stage {
   border-radius: 5px;
   border: 2px solid #259F5A;
@@ -378,25 +370,19 @@ button {
   padding: 5px 25px;
   background-color: #fff;
 }
-
 .recieve-stage {
   border-radius: 5px;
   background: #259F5A;
   color: #FFFFFF;
   padding: 5px 25px;
   border: 2px solid #259F5A;
-}
-
-.seperator {
+}.seperator {
   border-bottom: 1px solid #259F5A;
   width: 99.9%;
 }
-
 /* .button-stage button {
   margin: 0rem 0.25rem;
 } */
-
-.numbers,
 .fasel {
   color: #0B6C35;
   font-family: Cairo;
