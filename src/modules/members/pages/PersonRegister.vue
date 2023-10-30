@@ -35,7 +35,7 @@
         <div class="row">
           <div class="col-md-6 mb-4">
             <label for="email">البريد اللإلكتروني</label>
-            <input type="text" class="form-control mt-2" />
+            <input type="text" class="form-control mt-2"  v-model="email"/>
           </div>
         </div>
 

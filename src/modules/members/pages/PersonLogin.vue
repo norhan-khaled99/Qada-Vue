@@ -45,7 +45,7 @@ export default {
         email: this.email,
          password: this.password,
       };
-      let {data}  = await axios.post("https://finalqada.000webhostapp.com/person/login", credentials)
+      let {data}  = await axios.post("http://127.0.0.1:8000/person/login", credentials)
         // setMovies(data.results);
         console.log(data)
       // await fetch("https://finalqada.000webhostapp.com/api/terms", {
