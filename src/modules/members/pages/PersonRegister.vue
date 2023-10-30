@@ -11,31 +11,31 @@
           <div class="col-md-6 mb-4">
             <i class="fa-solid fa-user mx-2"></i>
             <label for="name">اسم المستخدم</label>
-            <input type="text" class="form-control mt-2" v-model.trim="name" />
+            <input type="text" class="form-control mt-2" v-model.trim="form.name" />
           </div>
           <div class="col-md-6 mb-4">
             <i class="fa-solid fa-phone mx-2 mb-1"></i>
             <label for="phone">رقم الهاتف</label>
-            <input type="text" class="form-control mt-2" v-model.trim="phone" />
+            <input type="text" class="form-control mt-2" v-model.trim="form.phone" />
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 mb-4">
             <i class="fa-solid fa-lock mx-2"></i>
             <label for="password">كلمة السر</label>
-            <input type="text" class="form-control mt-2" v-model.trim="password" />
+            <input type="text" class="form-control mt-2" v-model.trim="form.password" />
           </div>
           <div class="col-md-6 mb-4">
             <i class="fa-solid fa-lock mx-2"></i>
             <label for="password">تأكيد كلمة السر</label>
-            <input type="text" class="form-control mt-2" v-model.trim="confirmPassword" />
+            <input type="text" class="form-control mt-2" v-model.trim="form.confirmPassword" />
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-6 mb-4">
             <label for="email">البريد اللإلكتروني</label>
-            <input type="text" class="form-control mt-2"  v-model="email"/>
+            <input type="text" class="form-control mt-2"  v-model="form.email"/>
           </div>
         </div>
 
@@ -60,7 +60,7 @@
   </div>
 </template>
 
-<script>
+<!-- <script>
 import authService from '@/services/AuthService';
 
 
@@ -110,9 +110,9 @@ export default {
   }
 
 }
-</script> 
+</script>  -->
 
-<!-- <script>
+<script>
 import { ref } from 'vue';
 import authService from '@/services/AuthService';
 import router from '@/router';
@@ -130,6 +130,7 @@ export default {
     const registrationSuccess = ref(false);
 
     const register = () => {
+      console.log(form.value);
       authService
         .register(form.value)
         .then(response => {
@@ -152,7 +153,7 @@ export default {
     };
   },
 };
-</script> -->
+</script>
 
 <style scoped>
 * {

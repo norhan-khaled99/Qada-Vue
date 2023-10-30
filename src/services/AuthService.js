@@ -1,7 +1,11 @@
 import axios from "axios";
 const apiClient = axios.create({
   baseURL: "http://127.0.0.1:8000",
-  headers: {},
+  headers: {
+    "Content-Type": "application/json",
+      Accept: "application/json",
+      'Authorization': 'Bearer ' + localStorage.getItem('token')
+  },
 });
 
 const authService = {
@@ -10,7 +14,6 @@ const authService = {
     return apiClient.post("person/register", credentials);
   },
   login(credentials) {
-    console.log("sjzalZJLx")
     return apiClient.post("person/login", credentials);
   },
 };
