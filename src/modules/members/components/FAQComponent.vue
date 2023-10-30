@@ -42,7 +42,7 @@
 </template>
 
 <script setup>
-import MemberHeader from "../modules/members/MemberHeader.vue"
+import MemberHeader from "../components/MemberHeader.vue"
 
 </script>
 

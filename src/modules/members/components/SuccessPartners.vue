@@ -20,7 +20,7 @@
             </select>
         </div>
         <div class="col-lg-2 my-auto mb-2 ms-3">
-            <img src="../assets/magnifier.png" />
+            <img src="../../../assets/magnifier.png" />
         </div>
     </div>
 
@@ -168,7 +168,7 @@
 </template>
 
 <script setup>
-import MemberHeader from "../modules/members/MemberHeader.vue"
+import MemberHeader from "../components/MemberHeader.vue"
 
 </script>
 

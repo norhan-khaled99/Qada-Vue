@@ -30,7 +30,7 @@
     </div>
 </div>
   </template>
-  
+<!--   
   <script setup>
   import { ref, onMounted } from "vue";
   
@@ -54,7 +54,25 @@
 //   const saveChanges = () => {
 //     console.log("Changes saved!");
 //   };
-  </script>
+  </script> -->
+
+  <script setup>
+  import { ref, onMounted } from "vue";
+
+  const modal = ref(null);
+
+  onMounted(() => {
+    // eslint-disable-next-line no-undef
+    modal.value = new bootstrap.Modal(document.getElementById("demoModal"));
+  });
+
+  const showModal = () => {
+    modal.value.show();
+    setTimeout(() => {
+      modal.value.hide();
+    }, 10000); 
+  };
+</script>
 
 
 <style scoped>

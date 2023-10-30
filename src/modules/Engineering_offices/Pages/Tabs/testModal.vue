@@ -8,21 +8,23 @@
   
     <!-- Modal -->
     <div
-      class="modal fade "
+      class="modal fade"
       id="demoModal"
       tabindex="-1"
       aria-labelledby="demoModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog ">
-        <div class="modal-content rounded-5 " style="background-color: #259F5A; width:35rem ">
+        <div class="modal-content rounded-5 " style="background-color: #4A4E53;
+
+        ; width:45rem ">
           <div class="modal-body d-flex flex-column align-items-center ">
-            <div class="modal-text my-5">
+             <img src="../../../../assets/Ellipseoffice.png" alt="" class="my-3">
+             <svg xmlns="http://www.w3.org/2000/svg" width="131" height="124" viewBox="0 0 131 124" fill="none">
+              <path d="M7 72.3L57.0652 108L121 6" stroke="#4A4E53" stroke-width="22"/>
+            </svg>
+            <div class="modal-text my-3">
                 تم إرسال رسالتك الي فريقنا بنجاح , نشكرك لتواصلك معنا
-            </div>
-            <div class="d-flex justify-content-around">
-              <button class="btn btn-dark">نعم</button>
-              <button class="btn btn-danger">لا</button>
             </div>
           </div>
         </div>
@@ -31,7 +33,7 @@
 </div>
   </template>
   
-  <script setup>
+  <!-- <script setup>
   import { ref, onMounted } from "vue";
   
   const modal = ref(null);
@@ -54,13 +56,32 @@
 //   const saveChanges = () => {
 //     console.log("Changes saved!");
 //   };
-  </script>
+  </script> -->
+
+  <script setup>
+  import { ref, onMounted } from "vue";
+
+  const modal = ref(null);
+
+  onMounted(() => {
+    // eslint-disable-next-line no-undef
+    modal.value = new bootstrap.Modal(document.getElementById("demoModal"));
+  });
+
+  const showModal = () => {
+    modal.value.show();
+    setTimeout(() => {
+      modal.value.hide();
+    }, 10000); // 10000 milliseconds = 10 seconds
+  };
+</script>
 
 
 <style scoped>
- *{
-  direction: rtl;
- }
+
+.blur-background {
+  filter: blur(5px);
+}
 
 
 .modal-text{
@@ -85,10 +106,5 @@ svg{
   position: absolute;
   top: 100px;
 
-}
-button{
-  margin: 0rem 0.5rem;
-  padding: 0.5rem 1.5rem;
-  border-radius: 20px;
 }
 </style>

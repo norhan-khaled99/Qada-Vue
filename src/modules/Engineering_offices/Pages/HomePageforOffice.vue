@@ -12,6 +12,7 @@
     </div>
 
       <div class="my-5 mosls">
+          <TriangleDesign />
       </div>
     
     <div class="container">
@@ -551,7 +552,8 @@
   
   <script setup>
   import MainHeader from "../../../components/Main_Header.vue"
-  
+  import TriangleDesign from "./Tabs/TriangleDesign.vue"
+
   
   
   </script>
