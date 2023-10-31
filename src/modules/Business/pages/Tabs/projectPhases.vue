@@ -1,5 +1,4 @@
 <template>
-  <BusinessHeader/>
   <div class="container">
     <div class="my-5">
       <div class="card col-md-7 col-sm-12 text-center">
@@ -292,11 +291,10 @@
 
 <script>
 import ModalComponent from "../../components/projectPhaseModal";
-import BusinessHeader from "../../components/BusinessHeader.vue"
 export default {
   components: {
     ModalComponent,
-    BusinessHeader
+    
   },
   data() {
     return {

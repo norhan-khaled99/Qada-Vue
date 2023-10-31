@@ -1,4 +1,5 @@
 <template>
+  <BusinessHeader/>
   <div class=" mt-5">
     <ul class="nav " id="myTab" role="tablist">
       <li class="nav-item" role="presentation" @click="activeTab = '1'">
@@ -166,6 +167,7 @@
 
 
 <script>
+import BusinessHeader from '../../components/BusinessHeader.vue';
 import ProjectDetails from './projectDetails'
 import ProjectPhases from './projectPhases'
 import ElectronicContract from "./ElectronicContract.vue";
@@ -183,6 +185,7 @@ export default {
     projectsFile,
     projectTransactions,
     ProjectQuereries,
+    BusinessHeader
 
   },
   data() {

@@ -1,5 +1,4 @@
 <template>
-  <BusinessHeader/>
   <div class="container">
     <p class="table-header">الصفحة</p>
     <div class=" table-responsive  my-3">
@@ -47,7 +46,6 @@
 </template>
 
 <script setup>
-import BusinessHeader from "../../components/BusinessHeader.vue"
 </script>
 
 <style scoped>
