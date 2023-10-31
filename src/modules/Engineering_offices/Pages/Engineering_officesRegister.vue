@@ -1,4 +1,5 @@
 <template>
+    <FHeader/>
     <div class="container">
         <div class="row my-3">
             <div class="header mb-5">
@@ -64,7 +65,11 @@
 import { ref } from 'vue';
 import authService from '@/services/AuthService';
 import router from '@/router';
+import FHeader from "../components/FHeader.vue";
 export default {
+    components: {
+        FHeader,
+    },
     name: 'App',
     setup() {
         const form = ref({
