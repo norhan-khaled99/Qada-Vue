@@ -15,7 +15,9 @@
             </div>
             <input type="text" class="form-control " v-model="password" />
             <div class=" text-center">
+                <router-link class="link" to="/EngineeringOffices">
                 <button type="submit" class="btn btn-primary mt-4 ">دخول</button>
+                </router-link>
             </div>
         </form>
         <div class=" text-center">

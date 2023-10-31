@@ -20,7 +20,9 @@
           <input type="text" class="form-control" v-model="form.password" />
         </div>  
           <div class="text-center">
+            <router-link to="/member">
             <button type="submit" class="btn mt-4">دخول</button>
+            </router-link>
           </div>
       </div>   
     </form>
