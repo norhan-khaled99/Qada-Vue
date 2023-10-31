@@ -1,5 +1,4 @@
 <template>
-    <BusinessHeader />
     <div class="container-fliud overflow-x-hidden ">
         <div class="row text-center my-5">
             <h1>الملفات المتاحة الان</h1>
@@ -279,7 +278,6 @@
 </template>
 
 <script setup>
-import BusinessHeader from "../../components/BusinessHeader.vue"
 </script>
 
 <style scoped>

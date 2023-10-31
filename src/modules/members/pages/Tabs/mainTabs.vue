@@ -1,4 +1,5 @@
 <template>
+  <MemberHeader/>
   <div class=" mt-5">
     <ul class="nav " id="myTab" role="tablist">
       <li class="nav-item" role="presentation" @click="activeTab = '1'">
@@ -173,6 +174,7 @@ import ProjectQuereries from './projectQuereries.vue';
 import projectTransactions from './projectTransactions.vue';
 import projectsFile from './projectsFile.vue';
 import Prices_offers from './Prices_offers.vue';
+import MemberHeader from '../../components/MemberHeader.vue';
 
 export default {
   components: {
@@ -183,6 +185,7 @@ export default {
     projectsFile,
     projectTransactions,
     ProjectQuereries,
+    MemberHeader,
 
   },
   data() {

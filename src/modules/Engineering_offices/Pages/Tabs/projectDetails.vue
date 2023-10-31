@@ -5,10 +5,6 @@
       <h4>افراد</h4>
     </div>
     <div class="dashed-hr my-5 w-100"></div>
-
-     
-
-
   </div>
   <div class="dashed-hr my-5 w-100"></div>
   <div class="me-lg-5 ">
