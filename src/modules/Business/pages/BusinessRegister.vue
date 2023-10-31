@@ -1,4 +1,5 @@
 <template>
+        <BHeader/>
     <div class="container">
         <div class="row my-3">
             <div class="header mb-5">
@@ -40,7 +41,7 @@
                 </div>
 
                 <div class="row text-center">
-                    <span> قراءة الاحكام والشروط </span>
+                    <router-link class="span" to="/termsandconditions"> قراءة الاحكام والشروط </router-link>
                     <div class="border"></div>
                     <div class="form-check">
                         <label class="checkbox-label">الموافقة علي الشروط والاحكام
@@ -55,16 +56,20 @@
         </form>
         <div class="my-5 text-center">
             <p class="p1"> لديك حساب بالفعل ؟</p>
-            <p class="p2 "> <router-link to="login"> سجل دخولك من هنا </router-link> </p>
+            <p class="p2 "> <router-link to="businessLogin"> سجل دخولك من هنا </router-link> </p>
         </div>
     </div>
 </template>
 
 <script>
+import BHeader from "../components/BHeader.vue";
 import { ref } from 'vue';
 import authService from '../services/AuthService';
 import router from '@/router';
 export default {
+     components: {
+        BHeader,
+    },
     name: 'App',
     setup() {
         const form = ref({
@@ -120,11 +125,12 @@ h1 {
     font-size: 3rem;
 }
 
-form span {
+form .span {
     color: #000000;
     font-size: 2.0rem;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 input {

@@ -1,4 +1,5 @@
 <template>
+    <PHeader/>
   <div class="container m-auto my-5">
     <div class="header">
       <p>تسجيل الدخول للأفراد</p>
@@ -27,11 +28,15 @@
   </div>
 </template>
 <script>
+import PHeader from "../components/PHeader.vue";
 import { ref } from "vue";
 import authService from "../services/AuthService";
 import router from "@/router";
 
 export default {
+  components: {
+    PHeader,
+  },
   setup() {
     const form = ref({
       email: "",

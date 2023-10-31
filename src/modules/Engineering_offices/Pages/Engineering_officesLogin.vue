@@ -1,4 +1,5 @@
 <template>
+    <FHeader/>
     <div class="container m-auto my-5">
         <div class="header">
             <p>تسجيل الدخول للمكاتب الهندسية</p>
@@ -21,7 +22,7 @@
         <div class=" text-center">
             <button type="button" class="register mt-4">
                 <img src="../../../assets/Vector2.png" class="mx-2" alt="">
-                <router-link class="link" to="register"> حساب جديد </router-link>
+                <router-link class="link" to="Engineering_officesRegister"> حساب جديد </router-link>
             </button>
         </div>
     </div>
@@ -31,6 +32,7 @@
 import { ref } from "vue";
 import authService from "../services/AuthService";
 import router from "@/router";
+import FHeader from "../components/FHeader.vue";
 
 export default {
     setup() {
@@ -38,33 +40,28 @@ export default {
             email: "",
             password: "",
         });
-
         const loginSuccess = ref(false);
-
         const login = () => {
             authService
                 .login(form.value)
                 .then((response) => {
-                    console.log(response.data);
-                    loginSuccess.value = true;
-                    const { token, name, phone, email, id } = response.data;
-
-                    localStorage.setItem("token", token);
-                    localStorage.setItem("name", name);
-                    localStorage.setItem("id", id);
-                    localStorage.setItem("phone", phone);
-                    localStorage.setItem("email", email);
-                    router.push("/");
-                })
+                console.log(response.data);
+                loginSuccess.value = true;
+                const { token, name, phone, email, id } = response.data;
+                localStorage.setItem("token", token);
+                localStorage.setItem("name", name);
+                localStorage.setItem("id", id);
+                localStorage.setItem("phone", phone);
+                localStorage.setItem("email", email);
+                router.push("/");
+            })
                 .catch((error) => {
-                    console.error(error);
-                });
+                console.error(error);
+            });
         };
-
         const goToRegister = () => {
             router.push("/register");
         };
-
         return {
             form,
             loginSuccess,
@@ -72,6 +69,7 @@ export default {
             goToRegister,
         };
     },
+    components: { FHeader }
 };
 </script>
 

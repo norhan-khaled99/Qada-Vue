@@ -1,4 +1,5 @@
 <template>
+    <BHeader/>
     <div class="container m-auto my-5">
         <div class="header">
             <p>تسجيل الدخول للأعمال</p>
@@ -23,18 +24,22 @@
         <div class=" text-center">
             <button type="button" class="register mt-4">
                 <img src="../../../assets/Vector2.png" class="mx-2" alt="">
-                <router-link class="link" to="register"> حساب جديد </router-link>
+                <router-link class="link" to="businessRegister"> حساب جديد </router-link>
             </button>
         </div>
     </div>
 </template>
 
 <script>
+import BHeader from "../components/BHeader.vue";
 import { ref } from "vue";
 import authService from "../services/AuthService";
 import router from "@/router";
 
 export default {
+     components: {
+        BHeader,
+    },
     setup() {
         const form = ref({
             email: "",
