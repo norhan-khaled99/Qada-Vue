@@ -131,6 +131,7 @@
     </div>
 
     <!-- startCard -->
+    <router-link to="/business/maintabsForBussiness" class="card-link">
     <div class="row justify-content-center my-3">
       <div class="col-lg-11 col-md-8  col-sm-12">
         <div class="card">
@@ -279,6 +280,7 @@
         </div>
       </div>
     </div>
+    </router-link>
     
 
     <div class="row justify-content-center my-3">
@@ -756,7 +758,10 @@ export default{
 .card:hover {
   border: 5px solid #259F5A;
 }
-
+.card-link{
+text-decoration: none; /* Removes underline */
+color: inherit;
+}
 @media(max-width: 576px) {
   .subtitle_text {
     color: #000;

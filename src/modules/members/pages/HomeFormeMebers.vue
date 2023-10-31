@@ -101,7 +101,8 @@
       </div>
 
       <!-- startCard -->
-      <div class="row justify-content-center my-3">
+      <router-link to="/member/maintabsForMember" class="card-link">
+      <div class="row justify-content-center my-3 text-decoration-none">
         <div class="col-lg-11 col-md-8 col-sm-12">
           <div class="card">
             <div class="row align-items-baseline justify-content-between">
@@ -349,6 +350,8 @@
           </div>
         </div>
       </div>
+      </router-link>
+  
 
       <div class="row justify-content-center my-3">
         <div class="col-lg-11 col-md-8 col-sm-12">
@@ -852,7 +855,7 @@
 </template>
 
 <script>
-import { onMounted, ref } from 'vue'; // Import onMounted and ref from Vue 3
+import { onMounted, ref } from 'vue';
 import TriangleDesign from "./Tabs/TriangleDesign.vue";
 import MainHeader from "../../../components/Main_Header.vue";
 import memberService from '../services/memberService';
@@ -1044,6 +1047,10 @@ export default {
 
 .card:hover {
   border: 5px solid #48847b;
+}
+.card-link{
+  text-decoration: none; /* Removes underline */
+  color: inherit;
 }
 
 @media (max-width: 576px) {

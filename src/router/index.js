@@ -17,7 +17,7 @@ import CheckLine from "../modules/members/pages/dashboardForMember/CheckLine.vue
 import chatMember from "@/modules/members/pages/dashboardForMember/chatMember";
 import ProjectListforMember from "../modules/members/pages/dashboardForMember/MyProjects.vue";
 
-import maintabs from "../modules/members/pages/Tabs/mainTabs.vue";
+import maintabsForMember from "../modules/members/pages/Tabs/mainTabs.vue";
 import PersonLogin from "../modules/members/pages/PersonLogin.vue";
 
 //--Engineering_offices
@@ -56,7 +56,7 @@ import BprojectQuereries from "../modules/Business/pages/Tabs/projectQuereries";
 import Bprojectphases from "../modules/Business/pages/Tabs/projectPhases.vue";
 import BprojectFiles from "../modules/Business/pages/Tabs/projectsFile.vue";
 import BprojectTransactions from "../modules/Business/pages/Tabs/projectTransactions.vue";
-
+import maintabsForBussiness from "../modules/Business/pages/Tabs/mainTabs.vue";
 
 //---routes for components for Business
 import BAboutUs from "../modules/Business/components/AboutUs.vue";
@@ -191,8 +191,8 @@ const routes = [
         component: DashboardCard,
       },
       {
-        path: "maintabs",
-        component: maintabs,
+        path: "maintabsForMember",
+        component: maintabsForMember,
       },
       {
         path: "testModal",
@@ -292,6 +292,10 @@ const routes = [
         path: "projectTransactions",
         component: BprojectTransactions,
       },
+      {
+        path:"maintabsForBussiness",
+        component:maintabsForBussiness
+      }
     ],
   },
 
