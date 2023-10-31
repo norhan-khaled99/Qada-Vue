@@ -1,4 +1,5 @@
 <template>
+  <div>
   <PHeader />
   <div class="container">
     <div class="row my-3">
@@ -58,6 +59,7 @@
       <p class="p2 "> <router-link to="login"> سجل دخولك من هنا </router-link> </p>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -82,10 +84,10 @@ export default {
     const registrationSuccess = ref(false);
 
     const register = () => {
-      console.log(form.value);
       authService
         .register(form.value)
         .then(response => {
+          console.log(form.value);
           registrationSuccess.value = true;
           const { token, name, id, email, phone } = response.data;
           localStorage.setItem('token', token);

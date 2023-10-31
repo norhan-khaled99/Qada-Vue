@@ -1,4 +1,5 @@
 <template>
+  <div>
     <PHeader/>
   <div class="container m-auto my-5">
     <div class="header">
@@ -26,6 +27,8 @@
       </button>
     </div>
   </div>
+</div>
+
 </template>
 <script>
 import PHeader from "../components/PHeader.vue";
