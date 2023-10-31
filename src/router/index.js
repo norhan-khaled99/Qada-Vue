@@ -37,7 +37,7 @@ import projectFiles from "../modules/members/pages/Tabs/projectsFile.vue";
 import projectQuereries from "../modules/members/pages/Tabs/projectQuereries";
 import testModal from "../modules/members/pages/Tabs/testModal.vue";
 import testModal2 from "@/modules/members/pages/Tabs/testModal2.vue";
-
+// import requestToEdit from "../modules/members/components/requestToEdit.vue"
 import AcceptedProject from "../modules/members/pages/dashboardForMember/AcceptedProject.vue";
 import DashboardCard from "../modules/members/pages/dashboardForMember/DashboardCard.vue";
 import PendingProject from "../modules/members/pages/dashboardForMember/PendingProject.vue";
@@ -218,6 +218,10 @@ const routes = [
         path: "dashboardTest",
         component: DashboardTest,
       },
+      // {
+      //   path:"requestToEdit",
+      //   component:requestToEdit
+      // }
     ],
   },
 
