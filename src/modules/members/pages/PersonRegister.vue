@@ -5,7 +5,7 @@
         <h1>إنشاء حساب </h1>
       </div>
     </div>
-    <form @submit.prevent="register" class="w-75 m-auto">
+    <form @submit.prevent="register()" class="w-75 m-auto">
       <div class="container">
         <div class="row ">
           <div class="col-md-6 mb-4">

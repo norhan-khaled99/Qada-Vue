@@ -35,7 +35,9 @@
             <router-link to="/loginPanal">
               <button type="button" class="btn  login mx-lg-4">تسجيل الدخول</button>
             </router-link>
+            <router-link to="/loginPanal">
             <button type="button" class="btn   create">إنشاء حساب</button>
+            </router-link>
             <li class="nav-item mx-lg-5 position-relative">
               <i class="fa-regular fa-bell"></i>
               <span class="position-absolute top-0 start-lg-100  badge rounded-pill bg-danger text-light">
