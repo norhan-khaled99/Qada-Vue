@@ -47,9 +47,9 @@
               <input type="checkbox" name="mycheckbox" class="mycheckbox">
             </label>
           </div>
-          <div class="">
+          <router-link to="/member" class="">
             <button type="submit" class="btn btn-primary mt-3">إنشاء</button>
-          </div>
+          </router-link>
         </div>
       </div>
     </form>

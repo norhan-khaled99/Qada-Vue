@@ -15,7 +15,9 @@
             </div>
             <input type="text" class="form-control " v-model="password" />
             <div class=" text-center">
+            <router-link to="/business" class=" text-center">
                 <button type="submit" class="btn y mt-4 ">دخول</button>
+            </router-link>
             </div>
         </form>
         <div class=" text-center">
