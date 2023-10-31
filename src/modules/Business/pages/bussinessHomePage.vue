@@ -13,7 +13,7 @@
     </div>
 
     <div class="row-col-6 my-5 add-project">
-      <router-link class="linkk" to="/member/addproject">
+      <router-link class="linkk" to="/business/addProjectBussiness">
         <button class="btn add-project-text">اطرح مشروعك الآن</button>
       </router-link>
     </div>
@@ -91,7 +91,7 @@
         <p class="text-end">اخر المشاريع المضافة</p>
       </div>
       <div class="col-md-3  col-6 add-new-project">
-        <router-link to="/member/addproject">
+        <router-link to="/business/addProjectBussiness">
           <button class="border-none">اضف مشروعك</button>
         </router-link>
       </div>
