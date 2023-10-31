@@ -3,21 +3,19 @@
         <div class="header">
             <p>تسجيل الدخول للمكاتب الهندسية</p>
         </div>
-        <form @submit.prevent="login" class="w-50 m-auto mt-5">
+        <form @submit.prevent="login()" class="w-50 m-auto mt-5">
             <div class="mb-2">
                 <i class="fa-solid fa-user mx-2"></i>
                 <label for="name">اسم المستخدم</label>
             </div>
-            <input type="text" class="form-control " v-model="name" />
+            <input type="text" class="form-control " v-model="form.email" />
             <div class="mb-2">
                 <i class="fa-solid fa-lock mx-2"></i>
                 <label class="my-3 " for="password mx-2">كلمة السر</label>
             </div>
-            <input type="text" class="form-control " v-model="password" />
+            <input type="text" class="form-control " v-model="form.password" />
             <div class=" text-center">
-                <router-link class="link" to="/EngineeringOffices">
                 <button type="submit" class="btn btn-primary mt-4 ">دخول</button>
-                </router-link>
             </div>
         </form>
         <div class=" text-center">
@@ -30,44 +28,49 @@
 </template>
 
 <script>
-import authService from '@/services/AuthService';
+import { ref } from "vue";
+import authService from "../services/AuthService";
+import router from "@/router";
 
 export default {
-    data() {
-        return {
-            email: '',
-            password: '',
-            loginSuccess: false,
-        };
-    }, methods: {
-        login() {
-            const credentials = {
-                email: this.email,
-                password: this.password,
-            };
+    setup() {
+        const form = ref({
+            email: "",
+            password: "",
+        });
+
+        const loginSuccess = ref(false);
+
+        const login = () => {
             authService
-                .login(credentials)
-                .then(response => {
-
+                .login(form.value)
+                .then((response) => {
                     console.log(response.data);
-                    this.loginSuccess = true;
-                    const token = response.data.token;
-                    const name = response.data.name;
-                    const phone = response.data.phone;
-                    const email = response.data.email;
-                    const id = response.data.id;
+                    loginSuccess.value = true;
+                    const { token, name, phone, email, id } = response.data;
 
-                    localStorage.setItem('token', token);
-                    localStorage.setItem('name', name);
-                    localStorage.setItem('id', id);
-                    localStorage.setItem('phone', phone);
-                    localStorage.setItem('email', email);
-                    this.$router.push('/');
+                    localStorage.setItem("token", token);
+                    localStorage.setItem("name", name);
+                    localStorage.setItem("id", id);
+                    localStorage.setItem("phone", phone);
+                    localStorage.setItem("email", email);
+                    router.push("/");
                 })
-                .catch(error => {
-                    console.log(error);
+                .catch((error) => {
+                    console.error(error);
                 });
-        },
+        };
+
+        const goToRegister = () => {
+            router.push("/register");
+        };
+
+        return {
+            form,
+            loginSuccess,
+            login,
+            goToRegister,
+        };
     },
 };
 </script>

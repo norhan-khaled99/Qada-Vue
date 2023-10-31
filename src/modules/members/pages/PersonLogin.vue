@@ -28,7 +28,7 @@
 </template>
 <script>
 import { ref } from "vue";
-import authService from "@/services/AuthService";
+import authService from "../services/AuthService";
 import router from "@/router";
 
 export default {
@@ -73,6 +73,7 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 * {
   direction: rtl;

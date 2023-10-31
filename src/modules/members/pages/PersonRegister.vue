@@ -31,7 +31,6 @@
             <input type="text" class="form-control mt-2" v-model="form.confirmPassword" />
           </div>
         </div>
-
         <div class="row">
           <div class="col-md-6 mb-4">
             <label for="email">البريد اللإلكتروني</label>
@@ -62,7 +61,7 @@
 
 <script>
 import { ref } from 'vue';
-import authService from '@/services/AuthService';
+import authService from '../services/AuthService';
 import router from '@/router';
 export default {
   name: 'App',
