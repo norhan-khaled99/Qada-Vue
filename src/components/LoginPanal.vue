@@ -28,9 +28,9 @@
                         <div class="card-body">
                             <h5 class="card-title member">أفراد</h5>
                             <p class="card-text">خدمات هندسية الكترونية متكاملة</p>
-                            <a href="#" class="btn btn-primary my-2">تسجيل دخول</a>
+                            <router-link to="/person/login" class="btn btn-primary my-2">تسجيل دخول</router-link>
                             <div>
-                                <a href="#" class="btn createBtn">إنشاء حساب</a>
+                                <router-link to="/person/register" class="btn createBtn">إنشاء حساب</router-link>
                             </div>
                         </div>
                     </div>
@@ -38,9 +38,9 @@
                         <div class="card-body">
                             <h5 class="card-title bussinse">أعمال</h5>
                             <p class="card-text">دعم هندسي الكتروني متكامل</p>
-                            <a href="#" class="btn btn-success my-2">تسجيل دخول</a>
+                            <router-link to="/business/businessLogin" class="btn btn-success my-2">تسجيل دخول</router-link>
                             <div class="">
-                                <a href="#" class="btn createBtn">إنشاء حساب</a>
+                                <router-link to="business/businessRegister" class="btn createBtn">إنشاء حساب</router-link>
                             </div>
                         </div>
                     </div>
@@ -48,19 +48,13 @@
                         <div class="card-body">
                             <h4 class="card-title office">مكتب هندسي</h4>
                             <p class="card-text">خدمات اعمالك الهندسية بين يديك</p>
-                            <a href="#" class="btn btn-secondary my-2">تسجيل دخول</a>
+                            <router-link to="/EngineeringOffices/Engineering_officesLogin" class="btn btn-secondary my-2">تسجيل دخول</router-link>
                             <div class="">
-                                <a href="#" class="btn createBtn">إنشاء حساب</a>
+                                <router-link to="/EngineeringOffices/Engineering_officesRegister" class="btn createBtn">إنشاء حساب</router-link>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-lg-2 card officeCard ">
-                <h4 class="expert-name office">مكتب هندسي</h4>
-                <p class="bio">خدمات اعمالك الهندسية بين يديك</p>
-                <button class='btn bg-main text-white w-100 my-3 login'>تسجيل دخول</button>
-                <button class='btn bg-main text-white w-100 my-3 register'>إنشاء حساب</button>
-            </div> -->
             </div>
         </div>
     </div>
