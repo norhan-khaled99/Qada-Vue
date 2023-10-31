@@ -1,6 +1,6 @@
 <template>
     <div>
-    <MainHeader/>
+    <!-- <MainHeader/> -->
     <div class="container w-100 mt-5">
       <div class="row ">
         <div class="header mt-5">
@@ -388,10 +388,14 @@
                 </div>
               </div>
             </div>
+            <div class="row justify-content-center my-3">
+              <div class="col-3">
+              <button class="btn mx-auto add-offer">اضافة عرض سعر</button>
+            </div>
+            </div>
           </div>
         </div>
       </div>
-  
    
   
       <div class="row justify-content-center my-3">
@@ -539,10 +543,14 @@
                 </div>
               </div>
             </div>
+            <div class="row justify-content-center my-3">
+              <div class="col-3">
+              <button class="btn mx-auto add-offer">اضافة عرض سعر</button>
+            </div>
+            </div>
           </div>
         </div>
       </div>
-  
    
   
   
@@ -550,11 +558,19 @@
   </div>  
   </template>
   
-  <script setup>
-  import MainHeader from "../../../components/Main_Header.vue"
+  <script >
+  // import MainHeader from "../../../components/Main_Header.vue"
   import TriangleDesign from "./Tabs/TriangleDesign.vue"
+   
+  export default {
+  components:{
+    TriangleDesign
+  },
+  setup(){
 
-  
+  }
+
+  }
   
   </script>
   
