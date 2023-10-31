@@ -5,37 +5,37 @@
                 <h1>إنشاء حساب </h1>
             </div>
         </div>
-        <form @submit.prevent="register" class="w-75 m-auto">
+        <form @submit.prevent="register()" class="w-75 m-auto">
             <div class="container">
                 <div class="row ">
                     <div class="col-md-6 mb-4">
                         <i class="fa-solid fa-user mx-2"></i>
                         <label for="name">اسم المستخدم</label>
-                        <input type="text" class="form-control mt-2" v-model.trim="name" />
+                        <input type="text" class="form-control mt-2" v-model="form.name" />
                     </div>
                     <div class="col-md-6 mb-4">
                         <i class="fa-solid fa-phone mx-2 mb-1"></i>
                         <label for="phone">رقم الهاتف</label>
-                        <input type="text" class="form-control mt-2" v-model.trim="phone" />
+                        <input type="text" class="form-control mt-2" v-model="form.phone" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 mb-4">
                         <i class="fa-solid fa-lock mx-2"></i>
                         <label for="password">كلمة السر</label>
-                        <input type="text" class="form-control mt-2" v-model.trim="password" />
+                        <input type="text" class="form-control mt-2" v-model="form.password" />
                     </div>
                     <div class="col-md-6 mb-4">
                         <i class="fa-solid fa-lock mx-2"></i>
                         <label for="password">تأكيد كلمة السر</label>
-                        <input type="text" class="form-control mt-2" v-model.trim="confirmPassword" />
+                        <input type="text" class="form-control mt-2" v-model="form.confirmPassword" />
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-6 mb-4">
                         <label for="email">البريد اللإلكتروني</label>
-                        <input type="text" class="form-control mt-2" />
+                        <input type="text" class="form-control mt-2" v-model="form.email" />
                     </div>
                 </div>
 
@@ -44,7 +44,7 @@
                     <div class="border"></div>
                     <div class="form-check">
                         <label class="checkbox-label">الموافقة علي الشروط والاحكام
-                            <input type="checkbox" name="mycheckbox" class="mycheckbox">
+                            <input required type="checkbox" name="mycheckbox" class="mycheckbox">
                         </label>
                     </div>
                     <router-link to="/business">
@@ -61,54 +61,44 @@
 </template>
 
 <script>
-import authService from '@/services/AuthService';
-
-
+import { ref } from 'vue';
+import authService from '../services/AuthService';
+import router from '@/router';
 export default {
     name: 'App',
-    components: {
-    },
-    data() {
-        return {
+    setup() {
+        const form = ref({
             name: '',
             email: '',
             password: '',
             phone: '',
             confirmPassword: '',
-            registrationSuccess: false,
-        }
-    },
-    methods: {
-        register() {
-            const personData = {
-                name: this.name,
-                email: this.email,
-                phone: this.phone,
-                password: this.password,
-            };
+        });
 
+        const registrationSuccess = ref(false);
+
+        const register = () => {
+            console.log(form.value);
             authService
-                .register(personData)
+                .register(form.value)
                 .then(response => {
-                    this.registrationSuccess = true;
-                    const token = response.data.token;
-                    const name = response.data.name;
-                    const id = response.data.id;
-                    const email = response.data.email;
-                    const phone = response.data.phone;
+                    registrationSuccess.value = true;
+                    const { token, name, id, email, phone } = response.data;
                     localStorage.setItem('token', token);
                     localStorage.setItem('name', name);
                     localStorage.setItem('id', id);
                     localStorage.setItem('phone', phone);
                     localStorage.setItem('email', email);
-                    this.$router.push('/');
-                }).catch(error => {
-                    console.log(error);
-                });
-        }
-    }
-
-}
+                    router.push('/');
+                })
+        };
+        return {
+            form,
+            registrationSuccess,
+            register,
+        };
+    },
+};
 </script>
 
 <style scoped>
