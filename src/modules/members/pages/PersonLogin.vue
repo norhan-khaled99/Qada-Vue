@@ -3,28 +3,20 @@
     <div class="header">
       <p>تسجيل الدخول للأفراد</p>
     </div>
-    <form @submit.prevent="login()" class=" mt-5">
-      <div class="row d-flex flex-column justify-content-center align-items-center">
-        <div class="col-md-4 col-sm-10">
-        <div class="mb-2">
-          <img src="../../../assets/Vector.png" class="mx-2" alt="" />
-          <label for="name">اسم المستخدم</label>
-          <input type="text" class="form-control" v-model="form.email" />
-        </div>
-        </div> 
-        <div class="col-md-4 col-sm-10">
-          <div class="mb-2">
-          <img src="../../../assets/passwd.png" class="mx-2" alt="" />
-          <label class="my-3" for="password mx-2">كلمة السر</label>
-          </div>
-          <input type="text" class="form-control" v-model="form.password" />
-        </div>  
-          <div class="text-center">
-            <router-link to="/member">
-            <button type="submit" class="btn mt-4">دخول</button>
-            </router-link>
-          </div>
-      </div>   
+    <form @submit.prevent="login()" class="w-50 m-auto mt-5">
+      <div class="mb-2">
+        <img src="../../../assets/Vector.png" class="mx-2" alt="" />
+        <label for="name">اسم المستخدم</label>
+      </div>
+      <input type="text" class="form-control" v-model="form.email" />
+      <div class="mb-2">
+        <img src="../../../assets/passwd.png" class="mx-2" alt="" />
+        <label class="my-3" for="password mx-2">كلمة السر</label>
+      </div>
+      <input type="text" class="form-control" v-model="form.password" />
+      <div class="text-center">
+        <button type="submit" class="btn mt-4">دخول</button>
+      </div>
     </form>
     <div class="text-center">
       <button type="button" class="register mt-4">
@@ -33,9 +25,7 @@
       </button>
     </div>
   </div>
-
 </template>
-
 <script>
 import { ref } from "vue";
 import authService from "@/services/AuthService";
@@ -51,12 +41,10 @@ export default {
     const loginSuccess = ref(false);
 
     const login = () => {
-       console.log(form.value);
       authService
         .login(form.value)
         .then((response) => {
           console.log(response.data);
-          console.log("login successfully")
           loginSuccess.value = true;
           const { token, name, phone, email, id } = response.data;
 
@@ -85,8 +73,6 @@ export default {
   },
 };
 </script>
-
-
 <style scoped>
 * {
   direction: rtl;
@@ -121,15 +107,17 @@ input {
 }
 
 .btn {
-  padding: 10px 40px;
+  width: 200px;
+  height: 55px;
   border-radius: 20px;
   background-color: #0378ae;
 }
 
 .register {
-  border-color: #fff;
+  border-color: #616567;
+  width: 180px;
+  height: 30px;
   border-radius: 20px;
-  padding-left: 40px;
 }
 
 .link {

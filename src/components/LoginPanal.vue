@@ -1,4 +1,5 @@
 <template>
+    <MainHeader/>
     <div class="container-fluid row align-items-center">
 
         <div class="row view align-items-center">
@@ -61,7 +62,12 @@
 </template>
 
 <script>
+import MainHeader from "@/components/Main_Header.vue";
+
 export default {
+    components: {
+        MainHeader,
+    },
     name: "LoginPanal",
 };
 </script>
