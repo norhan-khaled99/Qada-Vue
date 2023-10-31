@@ -1,6 +1,6 @@
 <template>
     <div>
-    <MainHeader/>
+    <FHeader/>
     <div class="container w-100 mt-5">
       <div class="row ">
         <div class="header mt-5">
@@ -551,7 +551,7 @@
   </template>
   
   <script setup>
-  import MainHeader from "../../../components/Main_Header.vue"
+  import FHeader from "../components/FHeader.vue";
   import TriangleDesign from "./Tabs/TriangleDesign.vue"
 
   

@@ -1,4 +1,5 @@
 <template>
+    <BHeader/>
     <div class="container m-auto my-5">
         <div class="header">
             <p>تسجيل الدخول للأعمال</p>
@@ -30,11 +31,15 @@
 </template>
 
 <script>
+import BHeader from "../components/BHeader.vue";
 import { ref } from "vue";
 import authService from "../services/AuthService";
 import router from "@/router";
 
 export default {
+     components: {
+        BHeader,
+    },
     setup() {
         const form = ref({
             email: "",

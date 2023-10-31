@@ -1,6 +1,6 @@
 <template>
   <div>
-  <MainHeader/>
+  <BHeader/>
   <div class="container w-100 mt-5">
     <div class="row ">
       <div class="header mt-5">
@@ -589,11 +589,12 @@
 </template>
 
 <script>
-// import MainHeader from "../../../components/Main_Header.vue"
+import BHeader from "../components/BHeader.vue";
 import TriangleForBussiness from "../pages/Tabs/TriangleDesign.vue"
 export default{
   components:{
   TriangleForBussiness,
+  BHeader
 },
 
 }

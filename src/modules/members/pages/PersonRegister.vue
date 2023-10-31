@@ -1,4 +1,5 @@
 <template>
+  <MainHeader/>
   <div class="container">
     <div class="row my-3">
       <div class="header mb-5">
@@ -60,10 +61,14 @@
 </template>
 
 <script>
+import MainHeader from "../../../components/Main_Header.vue";
 import { ref } from 'vue';
 import authService from '../services/AuthService';
 import router from '@/router';
 export default {
+  components: {
+    MainHeader,
+  },
   name: 'App',
   setup() {
     const form = ref({

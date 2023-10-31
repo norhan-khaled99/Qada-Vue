@@ -1,4 +1,5 @@
 <template>
+        <BHeader/>
     <div class="container">
         <div class="row my-3">
             <div class="header mb-5">
@@ -61,10 +62,14 @@
 </template>
 
 <script>
+import BHeader from "../components/BHeader.vue";
 import { ref } from 'vue';
 import authService from '../services/AuthService';
 import router from '@/router';
 export default {
+     components: {
+        BHeader,
+    },
     name: 'App',
     setup() {
         const form = ref({
