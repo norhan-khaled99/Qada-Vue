@@ -21,7 +21,7 @@
         <div class=" text-center">
             <button type="button" class="register mt-4">
                 <img src="../../../assets/Vector2.png" class="mx-2" alt="">
-                <router-link class="link" to="register"> حساب جديد </router-link>
+                <router-link class="link" to="Engineering_officesRegister"> حساب جديد </router-link>
             </button>
         </div>
     </div>

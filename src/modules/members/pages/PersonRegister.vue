@@ -1,5 +1,5 @@
 <template>
-  <MainHeader/>
+  <PHeader />
   <div class="container">
     <div class="row my-3">
       <div class="header mb-5">
@@ -35,12 +35,12 @@
         <div class="row">
           <div class="col-md-6 mb-4">
             <label for="email">البريد اللإلكتروني</label>
-            <input type="text" class="form-control mt-2"  v-model="form.email"/>
+            <input type="text" class="form-control mt-2" v-model="form.email" />
           </div>
         </div>
 
         <div class="row text-center">
-          <span> قراءة الاحكام والشروط </span>
+          <router-link class="span" to="/termsandconditions"> قراءة الاحكام والشروط </router-link>
           <div class="border"></div>
           <div class="form-check">
             <label class="checkbox-label">الموافقة علي الشروط والاحكام
@@ -61,13 +61,13 @@
 </template>
 
 <script>
-import MainHeader from "../../../components/Main_Header.vue";
+import PHeader from "../components/PHeader.vue";
 import { ref } from 'vue';
 import authService from '../services/AuthService';
 import router from '@/router';
 export default {
   components: {
-    MainHeader,
+    PHeader,
   },
   name: 'App',
   setup() {
@@ -94,7 +94,7 @@ export default {
           localStorage.setItem('phone', phone);
           localStorage.setItem('email', email);
           router.push('/');
-        })   
+        })
     };
     return {
       form,
@@ -124,11 +124,13 @@ h1 {
   font-size: 3rem;
 }
 
-form span {
+form .span {
   color: #000000;
   font-size: 2.0rem;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+
 }
 
 input {
