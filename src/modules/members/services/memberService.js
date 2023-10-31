@@ -1,6 +1,6 @@
 import axios from "axios";
 const apiClient = axios.create({
-    baseURL: "https://finalqada.000webhostapp.com",
+    baseURL: "http://127.0.0.1:8000",
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
@@ -23,7 +23,10 @@ const memberService = {
     },
     placeproject(){
         return apiClient.post(`person/offers/placeOffer`)
-    }
+    },
+    getAllProjectFormember(){
+       return apiClient.get(`api/welcome`)
+    },
    
 };
 
