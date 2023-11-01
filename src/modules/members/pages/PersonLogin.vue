@@ -137,5 +137,4 @@ input {
 hr {
   border: 1px solid rgba(53, 53, 53, 0.7);
 }
-
 </style>

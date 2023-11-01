@@ -1,4 +1,5 @@
 <template>
+    <AdminHeader/>
     <form @submit.prevent="login" class="w-75 mx-auto ">
         <div class="container justify-content-center ">
             <div class="row justify-content-center">
@@ -41,8 +42,21 @@
 </template>
 
 <script>
+import { usebackgroundStore } from "../../../stores/background"
+import AdminHeader from "../AdminHeader.vue"
 export default {
-
+    components: {
+        AdminHeader
+    },
+    data: () => ({
+        backgroundStore: usebackgroundStore()
+    }),
+    mounted() {
+        this.backgroundStore.setBgColor(1)
+    },
+    unmounted() {
+        this.backgroundStore.setBgColor(0)
+    }
 }
 </script>
 

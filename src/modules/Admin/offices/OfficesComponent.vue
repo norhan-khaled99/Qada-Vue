@@ -1,4 +1,5 @@
 <template>
+    <AdminHeader/>
     <div class="container">
         <div class="row justify-content-center align-items-center mx-auto my-5">
             <div class="col-2 box">
@@ -45,8 +46,21 @@
 </template>
 
 <script>
+import { usebackgroundStore } from "../../../stores/background"
+import AdminHeader from "../AdminHeader.vue"
 export default {
-
+    components: {
+        AdminHeader
+    },
+    data: () => ({
+        backgroundStore: usebackgroundStore()
+    }),
+    mounted() {
+        this.backgroundStore.setBgColor(1)
+    },
+    unmounted() {
+        this.backgroundStore.setBgColor(0)
+    }
 }
 </script>
 

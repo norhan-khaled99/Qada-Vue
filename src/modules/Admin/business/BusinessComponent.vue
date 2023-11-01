@@ -1,4 +1,5 @@
 <template>
+    <AdminHeader/>
     <div class="container">
         <div class="row justify-content-center align-items-center mx-auto my-5">
             <div class="col-2 box">
@@ -37,16 +38,27 @@
                 </svg>
                 <p class="text">عدد الحسابات علي الموقع</p>
                 <p class="number">9077</p>
-
             </div>
         </div>
-
     </div>
 </template>
 
 <script>
+import { usebackgroundStore } from "../../../stores/background"
+import AdminHeader from "../AdminHeader.vue"
 export default {
-
+    components: {
+        AdminHeader
+    },
+    data: () => ({
+        backgroundStore: usebackgroundStore()
+    }),
+    mounted() {
+        this.backgroundStore.setBgColor(1)
+    },
+    unmounted() {
+        this.backgroundStore.setBgColor(0)
+    }
 }
 </script>
 

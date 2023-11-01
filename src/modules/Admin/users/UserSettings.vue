@@ -1,5 +1,6 @@
-<template>
+<template >
     <div class="nada">
+        <AdminHeader/>
         <!-- <div class="sideCard">
             <p >مرحبا</p>
             <h4>عبدالعزيز</h4>
@@ -12,11 +13,11 @@
         <div class="container">
             <div class="col-lg-5 me-5">
                 <ul class="d-flex ">
-                    <li class="mx-5"><a>الملف الشخصي</a></li>
-                    <li><a class="secondLink">الاعدادات</a></li>
+                    <li class="mx-5 "><router-link to="useraccount">الملف الشخصي</router-link></li>
+                    <li><router-link to="usersettings" class="secondLink">الاعدادات</router-link></li>
                 </ul>
             </div>
-            <form @submit.prevent="login"   class="p-5" >
+            <form @submit.prevent="login"  class="p-5" >
                 <div class="">
                     <div class="row formContainer col-lg-10 m-auto py-5">
                         <div class="col-lg-7 m-auto ">
@@ -55,8 +56,21 @@
 </template>
 
 <script>
+import { usebackgroundStore } from "../../../stores/background"
+import AdminHeader from "../AdminHeader.vue"
 export default {
-
+    components: {
+        AdminHeader
+    },
+    data: () => ({
+        backgroundStore :usebackgroundStore()
+    }),
+    mounted() {
+        this.backgroundStore.setBgColor(1)
+    },
+    unmounted() {
+        this.backgroundStore.setBgColor(0)
+    }
 }
 </script>
 
@@ -64,10 +78,9 @@ export default {
 * {
     direction: rtl;
 }
-
-.nada {
+/* .nada {
     background: #59467C;
-}
+} */
 /* .sideCard {
     position: absolute;
     top: 45%;
@@ -91,18 +104,15 @@ li{
     background-color: #fff;
     border-radius: 10px;
 }
-
 .text {
     color: #9E5488;
 }
-
 input {
     border: 0.1rem solid #9E5488;
     border-radius: 20px;
     margin-bottom: 3rem;
     height: 50px;
 }
-
 .btnn {
     color: #FFFFFF;
     background-color: #9E5488;
@@ -111,4 +121,5 @@ input {
     margin-bottom: 3rem;
     border-radius: 0.6rem;
     border: none;
-}</style>
+}
+</style>
