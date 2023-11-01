@@ -1,6 +1,6 @@
 import axios from "axios";
 const apiClient = axios.create({
-    baseURL: "https://finalqada.000webhostapp.com",
+    baseURL: "http://127.0.0.1:8000",
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
@@ -9,6 +9,15 @@ const apiClient = axios.create({
 
 
 const adminService = {
+    // this is public service
+    getAllTerms(){
+      return apiClient.get(`api/terms`)
+    },
+    getAllQuestion(){
+      return apiClient.get(`api/terms`)
+    },
+    ////////////////////////////
+
     approveproject(projectID){
         return apiClient.post(`admin/projects/approve`,projectID)
     },

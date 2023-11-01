@@ -1,12 +1,12 @@
 <template>
   <div>
-  <MemberHeader />
+  <BusinessHeader />
   <div class="container">
     <div class="d-flex justify-content-between align-items-center mx-auto mt-5 main-section">
       <div class="col-md-2 col-sm-4">
         <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
-          <circle cx="50" cy="50" r="50" fill="#48847B" />
-          <path d="M31.5 54.5L46.2122 65L65 35" stroke="white" stroke-width="5" />
+          <circle cx="50" cy="50" r="50" fill="#259F5A"/>
+          <path d="M31.5 54.5L46.2122 65L65 35" stroke="white" stroke-width="5"/>
         </svg>
         <p class="project-draft">مسودة المشروع</p>
       </div>
@@ -41,13 +41,13 @@
          </div>
       </div>
       <div class="row">
-        <div class="col-md-6 col-sm-12">
+        <div class="col-12">
           <p>مساحة المشروع</p>
           <input type="number" class="form-control text-start" min="0" placeholder="م^2" v-model="form.space" />
         </div>
-        <div class="col-md-6 col-sm-12">
+        <div class="col-12">
           <p>تصنيف المشروع</p>
-          <select class="form-select  custom-select" id="floatingSelect" v-model="form.service_category">
+          <select class="form-select  custom-select p-1" id="floatingSelect" v-model="form.service_category">
             <option selected></option>
             <option value="1">تجاري</option>
             <option value="2">سكني</option>
@@ -55,29 +55,31 @@
           </select>
         </div>
       </div>
+      
       <div class="row">
-        <p>الخدمة الإلكترونية المطلوبة</p>
-        <select class="form-select" id="floatingSelect" v-model="form.request_qty_tables">
-          <option selected></option>
-          <option value="1">مراجعة و إعتماد المخططات لإصدار التراخيص</option>
-          <option value="2">تصميم هندسي بغرض إستخراج رخصة بناء</option>
-          <option value="3">تصميم داخلي</option>
-          <option value="4">تصميم حدائق</option>
-          <option value="5">
-            تصميم هندسي بغرض إستخراج رخصة تصحيح وضع مبني قائم
-          </option>
-          <option value="6">تصميم هندسي بغرض إستخراج رخصة ترميم</option>
-        </select>
-      </div>
-      <div class="row">
+        <div class="col-12">
         <p>تاريخ نهاية طرح المشروع</p>
-        <select class="form-select" id="floatingSelect" v-model="form.last_offers_date">
+        <select class="form-select custom-select  px-0" id="floatingSelect" v-model="form.last_offers_date">
           <option selected></option>
           <option value="1">طرح المشروع في منصة المشاريع لمدة 4 أيام</option>
           <option value="2">طرح المشروع في منصة المشاريع لمدة 9 أيام</option>
         </select>
         <p class="descriptionfortextarea">لن يتم استقبال عروض اسعار جديدة ولن يظهر المشروع في منصة المشاريع بعد انتهاء طرح
           المشروع </p>
+        </div>  
+      </div>
+
+      <div class="row">
+        
+        <div class="col-md-6 col-sm-12">
+          <p>تاريخ ترسيخ نهاية المشروع</p>
+          <input type="number"  class="form-control" min="0" v-model="form.project_days_limit" />
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+          <p>المدة المقترحة لأنهاء الاعمال المطلوبة</p>
+          <input type="number" placeholder="عدد الايام" class="form-control" min="0" v-model="form.project_days_limit" />
+        </div>
       </div>
       <div class="row">
         <div class="col-md-6 col-sm-12">
@@ -88,21 +90,7 @@
             <option value="2">طرح المشروع في منصة المشاريع لمدة 9 أيام</option>
           </select>
         </div>
-        <div class="col-md-6 col-sm-12">
-          <p>المدة المقترحة لأنهاء الاعمال المطلوبة</p>
-          <input type="number" placeholder="عدد الايام" class="form-control" min="0" v-model="form.project_days_limit" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-sm-12">
-          <p>اختيار تصنيف المكاتب الهندسية</p>
-          <select class="form-select" id="floatingSelect" v-model="form.request_engs">
-            <option selected></option>
-            <option value="1">تصنيف درجة 1 الي 3 </option>
-            <option value="2">تصنيف درجة 3 الي 6 </option>
-          </select>
-          <p class="descriptionfortextarea">تختلف الاسعار نسبيا مع اختيار التصنيف (حيث انه التصنيف خو الاعلي سعرا) </p>
-        </div>
+
         <div class="col-md-6 col-sm-12">
           <p>المدينة</p>
           <select class="form-select" id="floatingSelect" v-model="form.city">
@@ -116,6 +104,8 @@
           </select>
         </div>
       </div>
+
+
       <div class="row my-5 justify-content-center  text-center">
         <div class="col">
           <input type="file" @change="handleFileChange" />
@@ -141,22 +131,32 @@
           <input class="form-check-input " type="checkbox" value="" v-model="form.request_qty_tables">
         </div>
       </div>
+
+      <div class="row d-flex justify-content-between">
+        <div class="col-6">
+          <span> عرض المشروع علي مهندسين ذو تصنيف معين</span>
+        </div>
+        <div class="col-6">
+          <input class="form-check-input " type="checkbox" value="" v-model="form.request_qty_tables">
+        </div>
+      </div>
+
       <div class="row">
         <button class="btn btn-success">طرح المشروع </button>
       </div>
     </form>
   </div>
-  </div>  
+</div> 
 </template>
 
 <script>
 import { ref, onMounted } from "vue";
-import memberService from "../services/memberService";
-import MemberHeader from "../components/MemberHeader.vue"
+// import memberService from "../services/memberService";
+import BusinessHeader from "../components/BusinessHeader.vue"
 
 export default {
   components: {
-    MemberHeader
+    BusinessHeader
   },
   setup() {
     const form = ref({
@@ -178,7 +178,7 @@ export default {
     });
 
     const addproject = () => {
-      memberService.addproject(form.value).then()
+      // memberService.addproject(form.value).then()
     }
     onMounted(() => {
       addproject();
@@ -223,10 +223,11 @@ form {
 
 form .form-control {
   margin-right: 0px;
+  
 }
 
 form .form-select {
-  margin-right: 10px;
+  background-color: aqua;
 }
 
 .custom-select {
@@ -236,14 +237,14 @@ form .form-select {
 /* Style the selected option */
 /* Style the selected option */
 select#floatingSelect option:checked {
-  background-color: #0C483F;
+  background-color: #259F5A;
   color: #fff;
 }
 
 
 /* Style the options on hover */
 .custom-select:hover option:hover {
-  background-color: #0C483F;
+  background-color: #259F5A;
   color: #fff;
 }
 
@@ -266,34 +267,35 @@ select#floatingSelect {
 .form-control {
   border: 1.5px solid #656565;
   background: #fff;
+  padding: -px 20px;
 }
 
 .form-control.project-details::placeholder {
-  color: rgba(84, 132, 125, 0.7);
+  color: rgba(37, 159, 90, 0.70);
 }
 
 
 .descriptionfortextarea {
-  color: #0C483F;
+  color: #259F5A;
   text-align: right;
   font-size: 16px;
   font-weight: 400;
 }
 
 .form-control::-webkit-selection {
-  background-color: #0C483F;
+  background-color: #259F5A;
   color: white;
 }
 
 /* For Firefox */
 .form-control::selection {
-  background-color: #0C483F;
+  background-color: #259F5A;
   color: white;
 }
 
 /* For Internet Explorer */
 .form-control::-ms-value {
-  background-color: #0C483F;
+  background-color: #259F5A;
   color: white;
 }
 
@@ -311,14 +313,14 @@ select#floatingSelect {
 }
 
 .form-check-input {
-  background-color: #0C483F;
+  background-color: #259F5A;
 }
 
 .form-check-input:checked {
-  border-color: #0C483F;
-  background-color: #0C483F;
+  border-color: #259F5A;
+  background-color: #259F5A;
 }
 
 .project-draft {
-  color: #48847B;
+  color: #259F5A;
 }</style>

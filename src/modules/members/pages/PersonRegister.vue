@@ -1,50 +1,51 @@
 <template>
+  <div>
+  <PHeader />
   <div class="container">
     <div class="row my-3">
       <div class="header mb-5">
         <h1>إنشاء حساب </h1>
       </div>
     </div>
-    <form @submit.prevent="register" class="w-75 m-auto">
+    <form @submit.prevent="register()" class="w-75 m-auto">
       <div class="container">
         <div class="row ">
           <div class="col-md-6 mb-4">
             <i class="fa-solid fa-user mx-2"></i>
             <label for="name">اسم المستخدم</label>
-            <input type="text" class="form-control mt-2" v-model.trim="name" />
+            <input type="text" class="form-control mt-2" v-model="form.name" />
           </div>
           <div class="col-md-6 mb-4">
             <i class="fa-solid fa-phone mx-2 mb-1"></i>
             <label for="phone">رقم الهاتف</label>
-            <input type="text" class="form-control mt-2" v-model.trim="phone" />
+            <input type="text" class="form-control mt-2" v-model="form.phone" />
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 mb-4">
             <i class="fa-solid fa-lock mx-2"></i>
             <label for="password">كلمة السر</label>
-            <input type="text" class="form-control mt-2" v-model.trim="password" />
+            <input type="text" class="form-control mt-2" v-model="form.password" />
           </div>
           <div class="col-md-6 mb-4">
             <i class="fa-solid fa-lock mx-2"></i>
             <label for="password">تأكيد كلمة السر</label>
-            <input type="text" class="form-control mt-2" v-model.trim="confirmPassword" />
+            <input type="text" class="form-control mt-2" v-model="form.confirmPassword" />
           </div>
         </div>
-
         <div class="row">
           <div class="col-md-6 mb-4">
             <label for="email">البريد اللإلكتروني</label>
-            <input type="text" class="form-control mt-2"  v-model="email"/>
+            <input type="text" class="form-control mt-2" v-model="form.email" />
           </div>
         </div>
 
         <div class="row text-center">
-          <span> قراءة الاحكام والشروط </span>
+          <router-link class="span" to="/termsandconditions"> قراءة الاحكام والشروط </router-link>
           <div class="border"></div>
           <div class="form-check">
             <label class="checkbox-label">الموافقة علي الشروط والاحكام
-              <input type="checkbox" name="mycheckbox" class="mycheckbox">
+              <input required type="checkbox" name="mycheckbox" class="mycheckbox">
             </label>
           </div>
           <div class="">
@@ -58,65 +59,18 @@
       <p class="p2 "> <router-link to="login"> سجل دخولك من هنا </router-link> </p>
     </div>
   </div>
+</div>
 </template>
 
 <script>
-import authService from '@/services/AuthService';
-
-
-export default {
-  name: 'App',
-  components: {
-  },
-  data() {
-    return {
-      name: '',
-      email: '',
-      password: '',
-      phone: '',
-      confirmPassword: '',
-      registrationSuccess: false,
-    }
-  },
-  methods: {
-    register() {
-      const personData = {
-        name: this.name,
-        email: this.email,
-        phone: this.phone,
-        password: this.password,
-      };
-
-      authService
-        .register(personData)
-        .then(response => {
-          console.log(response.data);
-          this.registrationSuccess = true;
-          const token = response.data.token;
-          const name = response.data.name;
-          const id = response.data.id;
-          const email = response.data.email;
-          const phone = response.data.phone;
-          localStorage.setItem('token', token);
-          localStorage.setItem('name', name);
-          localStorage.setItem('id', id);
-          localStorage.setItem('phone', phone);
-          localStorage.setItem('email', email);
-          this.$router.push('/');
-        }).catch(error => {
-          console.log(error);
-        });
-    }
-  }
-
-}
-</script> 
-
-<!-- <script>
+import PHeader from "../components/PHeader.vue";
 import { ref } from 'vue';
-import authService from '@/services/AuthService';
+import authService from '../services/AuthService';
 import router from '@/router';
 export default {
+  components: {
+    PHeader,
+  },
   name: 'App',
   setup() {
     const form = ref({
@@ -133,6 +87,7 @@ export default {
       authService
         .register(form.value)
         .then(response => {
+          console.log(form.value);
           registrationSuccess.value = true;
           const { token, name, id, email, phone } = response.data;
           localStorage.setItem('token', token);
@@ -142,9 +97,7 @@ export default {
           localStorage.setItem('email', email);
           router.push('/');
         })
-        
     };
-
     return {
       form,
       registrationSuccess,
@@ -152,7 +105,7 @@ export default {
     };
   },
 };
-</script> -->
+</script>
 
 <style scoped>
 * {
@@ -173,11 +126,13 @@ h1 {
   font-size: 3rem;
 }
 
-form span {
+form .span {
   color: #000000;
   font-size: 2.0rem;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+
 }
 
 input {

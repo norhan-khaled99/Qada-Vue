@@ -1,6 +1,6 @@
 <template>
   <div>
-  <MainHeader/>
+  <BHeader/>
   <div class="container w-100 mt-5">
     <div class="row ">
       <div class="header mt-5">
@@ -13,7 +13,7 @@
     </div>
 
     <div class="row-col-6 my-5 add-project">
-      <router-link class="linkk" to="/member/addproject">
+      <router-link class="linkk" to="/business/addProjectBussiness">
         <button class="btn add-project-text">اطرح مشروعك الآن</button>
       </router-link>
     </div>
@@ -91,7 +91,7 @@
         <p class="text-end">اخر المشاريع المضافة</p>
       </div>
       <div class="col-md-3  col-6 add-new-project">
-        <router-link to="/member/addproject">
+        <router-link to="/business/addProjectBussiness">
           <button class="border-none">اضف مشروعك</button>
         </router-link>
       </div>
@@ -131,6 +131,7 @@
     </div>
 
     <!-- startCard -->
+    <router-link to="/business/maintabsForBussiness" class="card-link">
     <div class="row justify-content-center my-3">
       <div class="col-lg-11 col-md-8  col-sm-12">
         <div class="card">
@@ -279,6 +280,7 @@
         </div>
       </div>
     </div>
+    </router-link>
     
 
     <div class="row justify-content-center my-3">
@@ -589,11 +591,12 @@
 </template>
 
 <script>
-// import MainHeader from "../../../components/Main_Header.vue"
+import BHeader from "../components/BHeader.vue";
 import TriangleForBussiness from "../pages/Tabs/TriangleDesign.vue"
 export default{
   components:{
   TriangleForBussiness,
+  BHeader
 },
 
 }
@@ -756,7 +759,10 @@ export default{
 .card:hover {
   border: 5px solid #259F5A;
 }
-
+.card-link{
+text-decoration: none; /* Removes underline */
+color: inherit;
+}
 @media(max-width: 576px) {
   .subtitle_text {
     color: #000;

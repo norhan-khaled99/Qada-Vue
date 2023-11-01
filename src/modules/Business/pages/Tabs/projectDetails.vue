@@ -1,6 +1,5 @@
 <template>
-  <BusinessHeader/>
-  <div class="">
+ <div class="">
     <div class="container mt-5">
       <h2 class="my-3">فيلا سكنية - بدون مواد</h2>
       <h4>افراد</h4>
@@ -35,7 +34,6 @@
 </template>
 
 <script setup>
-import BusinessHeader from "../../components/BusinessHeader.vue"
 </script>
 
 <style scoped>

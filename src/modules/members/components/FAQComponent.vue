@@ -1,4 +1,5 @@
 <template>
+    <div>
     <MemberHeader/>
     <div class="container">
         <div class="row justify-content-center">
@@ -39,10 +40,45 @@
         </div>
 
     </div>
+</div>
 </template>
 
-<script setup>
+<script>
 import MemberHeader from "../components/MemberHeader.vue"
+import adminService from "../../../modules/Admin/services/adminService"
+import { ref ,onMounted} from "vue";
+export default{
+ components:{
+    MemberHeader
+ },
+  setup(){
+   const allTerms=ref([]);
+    
+   const getAllTerms=()=>{
+    adminService.getAllTerms()
+        .then((res) => {
+          allTerms.value = res.data;
+          console.log(allTerms.value);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+
+   };
+
+   onMounted(() => {
+    getAllTerms();
+   });
+
+  return{
+    allTerms,
+  };
+  },
+
+
+}
+
+
 
 </script>
 

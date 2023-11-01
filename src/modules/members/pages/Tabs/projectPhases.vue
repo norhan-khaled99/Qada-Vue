@@ -290,10 +290,10 @@
 </template>
 
 <script>
-import ModalComponent from "../../components/projectPhaseModal";
+// import ModalComponent from "../../components/projectPhaseModal";
 export default {
   components: {
-    ModalComponent
+    // ModalComponent
   },
   data() {
     return {

@@ -1,19 +1,20 @@
 <template>
+    <FHeader/>
     <div class="container m-auto my-5">
         <div class="header">
             <p>تسجيل الدخول للمكاتب الهندسية</p>
         </div>
-        <form @submit.prevent="login" class="w-50 m-auto mt-5">
+        <form @submit.prevent="login()" class="w-50 m-auto mt-5">
             <div class="mb-2">
                 <i class="fa-solid fa-user mx-2"></i>
                 <label for="name">اسم المستخدم</label>
             </div>
-            <input type="text" class="form-control " v-model="name" />
+            <input type="text" class="form-control " v-model="form.email" />
             <div class="mb-2">
                 <i class="fa-solid fa-lock mx-2"></i>
                 <label class="my-3 " for="password mx-2">كلمة السر</label>
             </div>
-            <input type="text" class="form-control " v-model="password" />
+            <input type="text" class="form-control " v-model="form.password" />
             <div class=" text-center">
                 <button type="submit" class="btn btn-primary mt-4 ">دخول</button>
             </div>
@@ -21,52 +22,54 @@
         <div class=" text-center">
             <button type="button" class="register mt-4">
                 <img src="../../../assets/Vector2.png" class="mx-2" alt="">
-                <router-link class="link" to="register"> حساب جديد </router-link>
+                <router-link class="link" to="Engineering_officesRegister"> حساب جديد </router-link>
             </button>
         </div>
     </div>
 </template>
 
 <script>
-import authService from '@/services/AuthService';
+import { ref } from "vue";
+import authService from "../services/AuthService";
+import router from "@/router";
+import FHeader from "../components/FHeader.vue";
 
 export default {
-    data() {
-        return {
-            email: '',
-            password: '',
-            loginSuccess: false,
-        };
-    }, methods: {
-        login() {
-            const credentials = {
-                email: this.email,
-                password: this.password,
-            };
+    setup() {
+        const form = ref({
+            email: "",
+            password: "",
+        });
+        const loginSuccess = ref(false);
+        const login = () => {
             authService
-                .login(credentials)
-                .then(response => {
-
-                    console.log(response.data);
-                    this.loginSuccess = true;
-                    const token = response.data.token;
-                    const name = response.data.name;
-                    const phone = response.data.phone;
-                    const email = response.data.email;
-                    const id = response.data.id;
-
-                    localStorage.setItem('token', token);
-                    localStorage.setItem('name', name);
-                    localStorage.setItem('id', id);
-                    localStorage.setItem('phone', phone);
-                    localStorage.setItem('email', email);
-                    this.$router.push('/');
-                })
-                .catch(error => {
-                    console.log(error);
-                });
-        },
+                .login(form.value)
+                .then((response) => {
+                console.log(response.data);
+                loginSuccess.value = true;
+                const { token, name, phone, email, id } = response.data;
+                localStorage.setItem("token", token);
+                localStorage.setItem("name", name);
+                localStorage.setItem("id", id);
+                localStorage.setItem("phone", phone);
+                localStorage.setItem("email", email);
+                router.push("/");
+            })
+                .catch((error) => {
+                console.error(error);
+            });
+        };
+        const goToRegister = () => {
+            router.push("/register");
+        };
+        return {
+            form,
+            loginSuccess,
+            login,
+            goToRegister,
+        };
     },
+    components: { FHeader }
 };
 </script>
 

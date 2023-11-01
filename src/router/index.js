@@ -17,7 +17,7 @@ import CheckLine from "../modules/members/pages/dashboardForMember/CheckLine.vue
 import chatMember from "@/modules/members/pages/dashboardForMember/chatMember";
 import ProjectListforMember from "../modules/members/pages/dashboardForMember/MyProjects.vue";
 
-import maintabs from "../modules/members/pages/Tabs/mainTabs.vue";
+import maintabsForMember from "../modules/members/pages/Tabs/mainTabs.vue";
 import PersonLogin from "../modules/members/pages/PersonLogin.vue";
 
 //--Engineering_offices
@@ -37,7 +37,7 @@ import projectFiles from "../modules/members/pages/Tabs/projectsFile.vue";
 import projectQuereries from "../modules/members/pages/Tabs/projectQuereries";
 import testModal from "../modules/members/pages/Tabs/testModal.vue";
 import testModal2 from "@/modules/members/pages/Tabs/testModal2.vue";
-
+// import requestToEdit from "../modules/members/components/requestToEdit.vue"
 import AcceptedProject from "../modules/members/pages/dashboardForMember/AcceptedProject.vue";
 import DashboardCard from "../modules/members/pages/dashboardForMember/DashboardCard.vue";
 import PendingProject from "../modules/members/pages/dashboardForMember/PendingProject.vue";
@@ -47,7 +47,7 @@ import PendingProject from "../modules/members/pages/dashboardForMember/PendingP
 import BusinessRegister from "../modules/Business/pages/BusinessRegister.vue";
 import BusinessLogin from "../modules/Business/pages/BusinessLogin.vue";
 import BusinessHomePage from "../modules/Business/pages/bussinessHomePage.vue";
-
+import addProjectBussiness from '@/modules/Business/pages/addProjectBussiness'
 //---routes for Tabs for Business
 import BprojectDetails from "../modules/Business/pages/Tabs/projectDetails.vue";
 import BPrices_offers from "../modules/Business/pages/Tabs/Prices_offers.vue";
@@ -56,7 +56,7 @@ import BprojectQuereries from "../modules/Business/pages/Tabs/projectQuereries";
 import Bprojectphases from "../modules/Business/pages/Tabs/projectPhases.vue";
 import BprojectFiles from "../modules/Business/pages/Tabs/projectsFile.vue";
 import BprojectTransactions from "../modules/Business/pages/Tabs/projectTransactions.vue";
-
+import maintabsForBussiness from "../modules/Business/pages/Tabs/mainTabs.vue";
 
 //---routes for components for Business
 import BAboutUs from "../modules/Business/components/AboutUs.vue";
@@ -241,8 +241,8 @@ const routes = [
         component: DashboardCard,
       },
       {
-        path: "maintabs",
-        component: maintabs,
+        path: "maintabsForMember",
+        component: maintabsForMember,
       },
       {
         path: "testModal",
@@ -268,6 +268,10 @@ const routes = [
         path: "dashboardTest",
         component: DashboardTest,
       },
+      // {
+      //   path:"requestToEdit",
+      //   component:requestToEdit
+      // }
     ],
   },
 
@@ -277,6 +281,10 @@ const routes = [
       {
         path: "",
         component: BusinessHomePage,
+      },
+      {
+        path:"addProjectBussiness",
+        component:addProjectBussiness
       },
       {
         path: "businessRegister",
@@ -334,6 +342,10 @@ const routes = [
         path: "projectTransactions",
         component: BprojectTransactions,
       },
+      {
+        path:"maintabsForBussiness",
+        component:maintabsForBussiness
+      }
     ],
   },
 
