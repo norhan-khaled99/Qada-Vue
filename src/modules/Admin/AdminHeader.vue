@@ -8,37 +8,30 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-baseline ">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0 align-items-lg-baseline ">
             <li class="nav-item mx-lg-2">
-              <router-link class="nav-link qada" to="/business">قد<span>ة</span></router-link>
+              <router-link class="nav-link ra2esia " to="/member"> الرئيسية</router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <router-link class="nav-link ra2esia" to="/business"> الرئيسية</router-link>
+              <router-link to="/aboutus" class="nav-link">من نحن؟</router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <router-link to="/business/aboutus" class="nav-link">من نحن؟</router-link>
+              <router-link class="nav-link" router-link to="/member/addproject">لوحة التحكم</router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <router-link class="nav-link" router-link to="/business/addProjectBussiness">لوحة التحكم</router-link>
+              <router-link to="/faq" class="nav-link">الاسئلة المتكررة</router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <router-link to="/business/faq" class="nav-link">الاسئلة المتكررة</router-link>
+              <router-link to="/termsandconditions" class="nav-link">الشروط والاحكام</router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <router-link to="/business/termsandconditions" class="nav-link">الشروط والاحكام</router-link>
+              <router-link to="/successPartners" class="nav-link">شركاء النجاح</router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <router-link to="/business/successPartners" class="nav-link">شركاء النجاح</router-link>
+              <router-link to="/contactus" class="nav-link">إتصل بنا</router-link>
             </li>
-            <li class="nav-item mx-lg-2">
-              <router-link to="/business/contactus" class="nav-link">إتصل بنا</router-link>
-            </li>
-            <router-link to="/loginPanal">
             <button type="button" class="btn  login mx-lg-4">تسجيل دخول</button>
-            </router-link>
-            <router-link to="/loginPanal">
             <button type="button" class="btn   create">إنشاء حساب</button>
-            </router-link>
             <li class="nav-item mx-lg-5 position-relative">
               <i class="fa-regular fa-bell"></i>
               <span class="position-absolute top-0 start-lg-100  badge rounded-pill bg-danger text-light">
@@ -70,10 +63,8 @@ export default {};
 
 nav {
   font-family: "Cairo", sans-serif;
-  /* background: linear-gradient(95.07deg, rgba(42, 102, 93, 0.8) 56.22%, rgba(48, 255, 81, 0.48) 157.23%);
-  margin-bottom: 20px;
-  height: 380px; */
-  ;
+  padding: 20px;
+  
 }
 
 .nav-link:hover {
@@ -83,7 +74,6 @@ nav {
 .content {
   height: 50vh;
   width: 100%;
-  background: linear-gradient(95.07deg, #259F5A 56.22%, #000000 157.23%);
   /* background-color: #59467C; */
 }
 
@@ -109,7 +99,7 @@ p {
 }
 
 li a {
-  color: #fff;
+  color: #FFFFFFCC;
   /* color: rgba(0, 0, 0, 0.80); */
   font-weight: 500;
   font-size: 18px;
@@ -120,15 +110,15 @@ li .qada {
 }
 
 .fa-bell {
-  font-size: 1.5rem;
+  /* font-size: 2rem; */
   color: rgba(0, 0, 0, 0.80);
   color: #fff;
 }
 
 .create {
   background-color: #fff;
-  color: #259F5A;
-  border-color: #259F5A;
+  color: #59467C;
+  border-color: #59467C;
   border-radius: 1rem;
   width: 150px;
   height: 40px;
@@ -137,13 +127,13 @@ li .qada {
 
 .login {
   /* background-color: #2A665D; */
-  color: #259F5A;
+  color: #59467C;
   /* color: linear-gradient(121.09deg, #59467C 30.12%, #000000 173.77%); */
   background-color: #fff;
   width: 150px;
   height: 40px;
   border-radius: 1rem;
-  border-color: #259F5A;
+  border-color: #59467C;
 }
 
 a {
@@ -151,12 +141,11 @@ a {
 }
 
 li .ra2esia {
-  color: #259F5A;
   text-decoration-line: underline;
 }
 
 li span {
-  color: #259F5A;
+  color: #48ac9d;
 }
 
 /* section{
@@ -175,5 +164,4 @@ li span {
   .artcl {
     left: 0;
   }
-}
-</style>
+}</style>
