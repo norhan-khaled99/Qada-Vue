@@ -1,4 +1,5 @@
 <template>
+    <AdminHeader/>
     <div class="header me-5">
         <div class="inf" style="display:inline">معلومات العميل</div>
         <span class="header textcolor" style="font-size: 1.5rem;font-weight: 600;">(أعمال)</span>
@@ -39,8 +40,21 @@
 </template>
 
 <script>
+import { usebackgroundStore } from "../../../stores/background"
+import AdminHeader from "../AdminHeader.vue"
 export default {
-
+    components: {
+        AdminHeader
+    },
+    data: () => ({
+        backgroundStore: usebackgroundStore()
+    }),
+    mounted() {
+        this.backgroundStore.setBgColor(1)
+    },
+    unmounted() {
+        this.backgroundStore.setBgColor(0)
+    }
 }
 </script>
 

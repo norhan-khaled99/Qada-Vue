@@ -128,6 +128,56 @@ const routes = [
     component: SuccessPartners,
   },
   {
+    path: "/admin",
+    children: [
+      {
+        path: "homepage",
+        component: MainHomepage,
+      },
+      {
+        path: "usersettings",
+        component: UserSettings,
+      },
+      {
+        path: "businesssettings",
+        component: BusinessSettings,
+      },
+      {
+        path: "/officesettings",
+        component: OfficeSettings,
+      },
+      {
+        path: "businessaccount",
+        component: BusinessAccount,
+      },
+      {
+        path: "useraccount",
+        component: UserAccount,
+      },
+      {
+        path: "officeaccount",
+        component: OfficeAccount,
+      },
+      {
+        path: "business",
+        component: BusinessComponent,
+      },
+      {
+        path: "offices",
+        component: OfficesComponent,
+      },
+      {
+        path: "/users",
+        component: UsersComponent,
+      },
+      {
+        path: "/usersstats",
+        component: UsersStats,
+      },
+      
+    ]
+  },
+  {
     path: "/member",
     children: [
       {
@@ -331,50 +381,6 @@ const routes = [
   {
     path: "/contactus",
     component: ContactUs,
-  },
-  {
-    path: "/businesssettings",
-    component: BusinessSettings,
-  },
-  {
-    path: "/usersettings",
-    component: UserSettings,
-  },
-  {
-    path: "/officesettings",
-    component: OfficeSettings,
-  },
-  {
-    path: "/businessaccount",
-    component: BusinessAccount,
-  },
-  {
-    path: "/useraccount",
-    component: UserAccount,
-  },
-  {
-    path: "/officeaccount",
-    component: OfficeAccount,
-  },
-  {
-    path: "/business",
-    component: BusinessComponent,
-  },
-  {
-    path: "/offices",
-    component: OfficesComponent,
-  },
-  {
-    path: "/users",
-    component: UsersComponent,
-  },
-  {
-    path: "/usersstats",
-    component: UsersStats,
-  },
-  {
-    path: "/admin/homepage",
-    component: MainHomepage,
   },
   {
     path: "/UserAccountDashboard",

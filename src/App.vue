@@ -4,16 +4,20 @@
     <router-link to="/about">About</router-link>
   </nav>
   <router-view/> -->
-  <div class="tmn">
+  <div :class="[backgroundStore.bgColor==1? 'tmn':'']">
     <router-view />
     <MainFooter />
   </div>
 </template>
 <script>
 import MainFooter from './components/MainFooter.vue'
+import {usebackgroundStore} from "./stores/background"
 
 export default {
   name: 'App',
+  data: () => ({
+    backgroundStore: usebackgroundStore(),
+  }),
   components: {
     MainFooter,
   }
@@ -28,7 +32,7 @@ export default {
 }
 
 .tmn {
-  /* background: linear-gradient(121.09deg, #59467C 30.12%, #000000 173.77%); */
+  background: linear-gradient(121.09deg, #59467C 30.12%, #000000 173.77%);
 }
 
 /* *{

@@ -43,11 +43,11 @@ export default {
     async postData() {
       const credentials = {
         email: this.email,
-         password: this.password,
+        password: this.password,
       };
-      let {data}  = await axios.post("http://127.0.0.1:8000/person/login", credentials)
-        // setMovies(data.results);
-        console.log(data)
+      let { data } = await axios.post("http://127.0.0.1:8000/person/login", credentials)
+      // setMovies(data.results);
+      console.log(data)
       // await fetch("https://finalqada.000webhostapp.com/api/terms", {
       //   method: "GET",
       //   // headers: {
@@ -261,5 +261,4 @@ input {
 hr {
   border: 1px solid rgba(53, 53, 53, 0.7);
 }
-
 </style>

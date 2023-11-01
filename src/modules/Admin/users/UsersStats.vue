@@ -1,4 +1,5 @@
 <template>
+    <AdminHeader/>
     <div class="main">
         <!-- <div class="sideCard">
             <p >مرحبا</p>
@@ -115,8 +116,21 @@
 </template>
 
 <script>
+import { usebackgroundStore } from "../../../stores/background"
+import AdminHeader from "../AdminHeader.vue"
 export default {
-
+    components: {
+        AdminHeader
+    },
+    data: () => ({
+        backgroundStore: usebackgroundStore()
+    }),
+    mounted() {
+        this.backgroundStore.setBgColor(1)
+    },
+    unmounted() {
+        this.backgroundStore.setBgColor(0)
+    }
 }
 </script>
 
