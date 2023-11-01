@@ -1,6 +1,6 @@
 <template>
     <div class="mt-5">
-    <div class="row justify-content-between w-50 p-3 m-auto my-3 text-center card1 ">
+    <div class="row justify-content-between  p-3 m-auto my-3 text-center card1 ">
         <p><span>ملاحظة : </span> سيتعين عليك طرح مشروعك من جديد في حال لم يتم التعاقد مع مكتب هندسي
             خلال مدة 10 أيام</p>
         <p><span>تنويه : </span>تنويه : طلب تخفيض عرض السعر متاح فقط لعدد 3 عروض اسعار</p>
@@ -13,7 +13,7 @@
             <p>15عرض</p>
         </div>
     </div>
-    <div class="row justify-content-between w-50 p-3 m-auto my-3 cardd">
+    <div class="row justify-content-between  p-3 m-auto my-3 cardd">
         <div class="row">
             <div class="col-lg-3 text-center">
                 <p>المكتب الهندسي</p>
@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <div class="row justify-content-between w-50 p-3 m-auto my-3 cardd">
+    <div class="row justify-content-between  p-3 m-auto my-3 cardd">
         <div class="row">
             <div class="col-lg-3 text-center">
                 <p>المكتب الهندسي</p>
@@ -81,7 +81,7 @@
         </div>
     </div>
 
-    <div class="row justify-content-between w-50 p-3 m-auto my-3 cardd">
+    <div class="row justify-content-between  p-3 m-auto my-3 cardd">
         <div class="row">
             <div class="col-lg-3 text-center">
                 <p>المكتب الهندسي</p>
@@ -115,7 +115,7 @@
         </div>
     </div>
 
-    <div class="row justify-content-between w-50 p-3 m-auto my-3 cardd">
+    <div class="row justify-content-between  p-3 m-auto my-3 cardd">
         <div class="row">
             <div class="col-lg-3 text-center">
                 <p>المكتب الهندسي</p>
@@ -149,7 +149,7 @@
         </div>
     </div>
 
-    <div class="row justify-content-between w-50 p-3 m-auto my-3 cardd">
+    <div class="row justify-content-between  p-3 m-auto my-3 cardd">
         <div class="row">
             <div class="col-lg-3 text-center">
                 <p>المكتب الهندسي</p>
@@ -183,7 +183,7 @@
         </div>
     </div>
 
-    <div class="row justify-content-between w-50 p-3 m-auto my-3 cardd">
+    <div class="row justify-content-between  p-3 m-auto my-3 cardd">
         <div class="row">
             <div class="col-lg-3 text-center">
                 <p>المكتب الهندسي</p>
@@ -216,7 +216,7 @@
         </div>
     </div>
 
-    <div class="row justify-content-between w-50 p-3 m-auto my-3 cardd">
+    <div class="row justify-content-between  p-3 m-auto my-3 cardd">
         <div class="row">
             <div class="col-lg-3 text-center">
                 <p>المكتب الهندسي</p>
@@ -266,6 +266,7 @@ export default {
     direction: rtl;
 }
 .card1 {
+    width: 50%;
     border-radius: 10px;
     border: 1px solid#48847B;
 }
@@ -287,6 +288,7 @@ span {
     line-height: 46.85px;
 }
 .cardd {
+    width: 50%;
     border-radius: 10px;
     border: 1px solid#48847B;
     box-shadow: 0px 4px 4px 0px rgba(0.25, 0.25, 0.25, 0.25);
@@ -323,4 +325,11 @@ span {
     height: 37px;
 }
 
+
+@media(max-width: 576px){
+        
+    .cardd .card1{
+        width: 80%;
+    }
+}
 </style>
