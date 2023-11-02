@@ -41,7 +41,7 @@ import testModal2 from "@/modules/members/pages/Tabs/testModal2.vue";
 import AcceptedProject from "../modules/members/pages/dashboardForMember/AcceptedProject.vue";
 import DashboardCard from "../modules/members/pages/dashboardForMember/DashboardCard.vue";
 import PendingProject from "../modules/members/pages/dashboardForMember/PendingProject.vue";
-
+import acceptedProjectModal from '@/modules/members/components/acceptedProjectModal.vue'
 
 //--------Business------------
 import BusinessRegister from "../modules/Business/pages/BusinessRegister.vue";
@@ -268,6 +268,10 @@ const routes = [
         path: "dashboardTest",
         component: DashboardTest,
       },
+      {
+        path:"acceptedProjectModal",
+        component:acceptedProjectModal
+      }
       // {
       //   path:"requestToEdit",
       //   component:requestToEdit
