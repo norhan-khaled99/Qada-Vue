@@ -22,8 +22,8 @@
     <form action="" class="add-project">
       <div class="row">
         <div class="col-12">
-          <input type="text" class="form-control  project-details" v-model="form.project_details"
-          placeholder="المشروع عبارة عن مسودة يجب إرساله للمراجعة بعد الانتهاء." />
+          <input type="text" class="form-control  project-details" 
+          placeholder="المشروع عبارة عن مسودة يجب إرساله للمراجعة بعد الانتهاء."  disabled/>
         </div>  
       </div>
       <div class="row">
@@ -35,7 +35,7 @@
       <div class="row ">
          <div class="col-12">
         <p>وصف المشروع (مثال: عدد غرف النوم، والفراغات، ومكونات المشروع )</p>
-        <textarea class="form-control" style="height: 100px"
+        <textarea class="form-control" style="height: 6.5rem" v-model="form.project_details"
           placeholder="ارغب في تصميم فيلا دوبليكس مكونه من 4 غرف نوم و 5 حمامات والمرافق الخدمية لها..."></textarea>
         <p class="descriptionfortextarea">عدد الحروف لا يقل عن 150 (95/150)</p>
          </div>
