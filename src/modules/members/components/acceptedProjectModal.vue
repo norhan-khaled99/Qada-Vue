@@ -90,10 +90,11 @@ line-height: normal;
 }
 
 .accepted-btn{
-    padding: 10px 30px;
+    padding: 5px 30px;
     background-color: #48847B;
     border: none;
     border-radius: 5px;
+    color: #FFFF;
 }
 .custom-close-button {
     color: #48847B;
