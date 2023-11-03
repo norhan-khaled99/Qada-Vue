@@ -273,7 +273,7 @@ select#floatingSelect {
 .form-control {
   border: 1.5px solid #656565;
   background: #fff;
-  padding: -px 20px;
+  
 }
 
 .form-control.project-details::placeholder {
@@ -329,4 +329,20 @@ select#floatingSelect {
 
 .project-draft {
   color: #259F5A;
-}</style>
+}
+.file-label {
+  cursor: pointer;
+}
+
+/* Style for the uploaded images */
+.upload-image {
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  object-fit: cover;
+  padding: 10px;
+  border-radius: 13px;
+  background-color: #f2f2f2;
+  box-shadow: 3px 4px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+</style>
