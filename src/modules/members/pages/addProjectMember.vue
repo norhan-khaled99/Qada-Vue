@@ -101,7 +101,7 @@
             <option value="1">تصنيف درجة 1 الي 3 </option>
             <option value="2">تصنيف درجة 3 الي 6 </option>
           </select>
-          <p class="descriptionfortextarea">تختلف الاسعار نسبيا مع اختيار التصنيف (حيث انه التصنيف خو الاعلي سعرا) </p>
+          <p class="descriptionfortextarea">تختلف الاسعار نسبيا مع اختيار التصنيف (حيث انه التصنيف هو الاعلي سعرا) </p>
         </div>
         <div class="col-md-6 col-sm-12">
           <p>المدينة</p>
@@ -116,23 +116,33 @@
           </select>
         </div>
       </div>
-      <div class="row my-5 justify-content-center  text-center">
+
+
+      <div class="row my-5 justify-content-center text-center">
         <div class="col">
-          <input type="file" @change="handleFileChange" />
-          <p class="text-center">صورة من صك الملكية</p>
-          <img src="../../../assets/3322766-2001.png">
+            <p class="text-center">صورة من صك الملكية</p>
+            <label for="propertyDoc" class="file-label">
+                <img src="../../../assets/3322766-2001.png" class="upload-image">
+            </label>
+            <input type="file" id="propertyDoc" class="file-input" style="display: none;">
         </div>
         <div class="col">
-          <input type="file" @change="handleFileChange" />
-          <p class="text-center"> صورة من هوية المالك <span class="text-danger">*</span></p>
-          <img src="../../../assets/3322766-2001.png">
+            <p class="text-center"> صورة من هوية المالك <span class="text-danger">*</span></p>
+            <label for="ownerIdDoc" class="file-label">
+                <img src="../../../assets/3322766-2001.png" class="upload-image">
+            </label>
+            <input type="file" id="ownerIdDoc" class="file-input" style="display: none;">
         </div>
         <div class="col">
-          <input type="file" @change="handleFileChange" />
-          <p class="text-center">مستندات اخري داعمة </p>
-          <img src="../../../assets/3322766-2001.png">
+            <p class="text-center">مستندات اخري داعمة </p>
+            <label for="otherDocs" class="file-label">
+                <img src="../../../assets/3322766-2001.png" class="upload-image">
+            </label>
+            <input type="file" id="otherDocs" class="file-input" style="display: none;">
         </div>
-      </div>
+    </div>
+    
+
       <div class="row d-flex justify-content-between">
         <div class="col-6">
           <span>طلب جداول الكميات</span>
@@ -321,4 +331,18 @@ select#floatingSelect {
 
 .project-draft {
   color: #48847B;
-}</style>
+}
+
+/* Style for the file input labels */
+.file-label {
+  cursor: pointer;
+}
+
+/* Style for the uploaded images */
+.upload-image {
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  object-fit: cover;
+}
+
+</style>

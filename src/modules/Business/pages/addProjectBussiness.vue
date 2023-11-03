@@ -105,24 +105,30 @@
         </div>
       </div>
 
-
-      <div class="row my-5 justify-content-center  text-center">
+      <div class="row my-5 justify-content-center text-center">
         <div class="col">
-          <input type="file" @change="handleFileChange" />
-          <p class="text-center">صورة من صك الملكية</p>
-          <img src="../../../assets/3322766-2001.png">
+            <p class="text-center">صورة من صك الملكية</p>
+            <label for="propertyDoc" class="file-label">
+                <img src="../../../assets/3322766-2001.png" class="upload-image">
+            </label>
+            <input type="file" id="propertyDoc" class="file-input" style="display: none;">
         </div>
         <div class="col">
-          <input type="file" @change="handleFileChange" />
-          <p class="text-center"> صورة من هوية المالك <span class="text-danger">*</span></p>
-          <img src="../../../assets/3322766-2001.png">
+            <p class="text-center"> صورة من هوية المالك <span class="text-danger">*</span></p>
+            <label for="ownerIdDoc" class="file-label">
+                <img src="../../../assets/3322766-2001.png" class="upload-image">
+            </label>
+            <input type="file" id="ownerIdDoc" class="file-input" style="display: none;">
         </div>
         <div class="col">
-          <input type="file" @change="handleFileChange" />
-          <p class="text-center">مستندات اخري داعمة </p>
-          <img src="../../../assets/3322766-2001.png">
+            <p class="text-center">مستندات اخري داعمة </p>
+            <label for="otherDocs" class="file-label">
+                <img src="../../../assets/3322766-2001.png" class="upload-image">
+            </label>
+            <input type="file" id="otherDocs" class="file-input" style="display: none;">
         </div>
-      </div>
+    </div>
+      
       <div class="row d-flex justify-content-between">
         <div class="col-6">
           <span>طلب جداول الكميات</span>
