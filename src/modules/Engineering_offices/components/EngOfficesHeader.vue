@@ -1,5 +1,4 @@
 <template>
-  <!-- <img class="navBg-img" src="../assets/bg-color.png" alt="navBg-img"> -->
   <div class="content">
     <nav class="navbar navbar-expand-lg ">
       <div class="container-fluid ">
@@ -10,25 +9,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-baseline ">
             <li class="nav-item mx-lg-2">
-              <router-link class="nav-link qada" to="/member">قد<span>ة</span></router-link>
+              <router-link class="nav-link qada" to="/EngineeringOffices">قد<span>ة</span></router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <router-link class="nav-link ra2esia" to="/member"> الرئيسية</router-link>
+              <router-link class="nav-link ra2esia" to="/EngineeringOffices"> الرئيسية</router-link>
             </li>
             <li class="nav-item mx-lg-2">
               <router-link to="/aboutus" class="nav-link">من نحن؟</router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <router-link class="nav-link" router-link to="/member/addproject">لوحة التحكم</router-link>
+              <router-link class="nav-link" router-link to="/EngineeringOffices/addproject">لوحة التحكم</router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <router-link to="/faq" class="nav-link">الاسئلة المتكررة</router-link>
+              <router-link to="/EngineeringOffices/faq" class="nav-link">الاسئلة المتكررة</router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <router-link to="/termsandconditions" class="nav-link">الشروط والاحكام</router-link>
+              <router-link to="/EngineeringOffices/termsandconditions" class="nav-link">الشروط والاحكام</router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <router-link to="/successPartners" class="nav-link">شركاء النجاح</router-link>
+              <router-link to="/EngineeringOffices/successPartners" class="nav-link">شركاء النجاح</router-link>
             </li>
             <li class="nav-item mx-lg-2">
               <router-link to="/contactus" class="nav-link">إتصل بنا</router-link>
@@ -155,18 +154,6 @@ li span {
   color: #259F5A;
 }
 
-/* section{
-    width: 100%;
-    height: 50vh;
-    background: url(../assets/bg-color.png);
-    background-size: cover;
-    background-position: center;
-    top: 0;
-  } */
-/* .rounded-pill{
-  background-color: #FF4B4B;
-  color: #fff;
-  } */
 @media (max-width: 576px) {
   .artcl {
     left: 0;
