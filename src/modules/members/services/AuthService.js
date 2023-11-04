@@ -5,7 +5,7 @@ const apiClient = axios.create({
 });
 
 const authService = {
-  personData: {},
+  // personData: {},
   register(credentials) {
     return apiClient.post("person/register", credentials);
   },

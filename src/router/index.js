@@ -88,8 +88,8 @@ import MainHomepage from "../modules/Admin/pages/MainHomepage.vue";
 //-----------------------------admin-------------------------------------------------
 //------Users--Dashboard----admin-----
 import UserSettings from "../modules/Admin/users/UserSettings.vue";
-import UserAccount from "../modules/Admin/users/UserAccount.vue";
 import UsersComponent from "../modules/Admin/users/UsersComponent.vue";
+import UserAccount from "../modules/Admin/users/UserAccount.vue"
 
 //------Offices--Dashboard----admin-----
 import OfficesComponent from "../modules/Admin/offices/OfficesComponent.vue";
@@ -143,17 +143,18 @@ const routes = [
         component: BusinessSettings,
       },
       {
-        path: "/officesettings",
+        path: "officesettings",
         component: OfficeSettings,
+      },
+      {
+        path: "useraccount",
+        component: UserAccount
       },
       {
         path: "businessaccount",
         component: BusinessAccount,
       },
-      {
-        path: "useraccount",
-        component: UserAccount,
-      },
+      
       {
         path: "officeaccount",
         component: OfficeAccount,

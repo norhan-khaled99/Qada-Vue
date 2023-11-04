@@ -80,9 +80,7 @@ export default {
       phone: '',
       confirmPassword: '',
     });
-
     const registrationSuccess = ref(false);
-
     const register = () => {
       authService
         .register(form.value)
