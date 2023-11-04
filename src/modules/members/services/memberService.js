@@ -2,10 +2,9 @@ import axios from "axios";
 const apiClient = axios.create({
     baseURL: "http://127.0.0.1:8000",
     headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-      'Authorization': 'Bearer ' + localStorage.getItem('token')
-
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        'Authorization': 'Bearer ' + localStorage.getItem('token')
     },
 });
 
@@ -25,9 +24,8 @@ const memberService = {
         return apiClient.post(`person/offers/placeOffer`)
     },
     getAllProjectFormember(){
-       return apiClient.get(`api/welcome`)
+        return apiClient.get(`api/welcome`)
     },
-   
 };
 
 

@@ -18,9 +18,9 @@
           <p style="color: #656565">إرسال للمراجعة</p>
         </div>
       </div>
-      
+
       <p class="projecttitle">تفاصيل المشروع</p>
-      <form class="add-project" @submit.prevent="addproject()">
+      <form class="add-project" @submit.prevent="addproject()" enctype="multipart/form-data">
         <div class="row">
           <div class="col-12">
             <input type="text" class="form-control project-details"
@@ -60,9 +60,9 @@
             </select>
           </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <p>الخدمة الإلكترونية المطلوبة</p>
-          <select class="form-select" id="floatingSelect" v-model="form.Electronic_service">
+          <select multiple class="form-select" id="floatingSelect" v-model="form.Electronic_service">
             <option selected></option>
             <option value="1">مراجعة و إعتماد المخططات لإصدار التراخيص</option>
             <option value="2">تصميم هندسي بغرض إستخراج رخصة بناء</option>
@@ -71,6 +71,17 @@
             <option value="5">
               تصميم هندسي بغرض إستخراج رخصة تصحيح وضع مبني قائم
             </option>
+            <option value="6">تصميم هندسي بغرض إستخراج رخصة ترميم</option>
+          </select>
+        </div> -->
+        <div class="row">
+          <p>الخدمة الإلكترونية المطلوبة</p>
+          <select multiple class="form-select" id="floatingSelect" v-model="form.Electronic_service">
+            <option value="1">مراجعة و إعتماد المخططات لإصدار التراخيص</option>
+            <option value="2">تصميم هندسي بغرض إستخراج رخصة بناء</option>
+            <option value="3">تصميم داخلي</option>
+            <option value="4">تصميم حدائق</option>
+            <option value="5">تصميم هندسي بغرض إستخراج رخصة تصحيح وضع مبني قائم</option>
             <option value="6">تصميم هندسي بغرض إستخراج رخصة ترميم</option>
           </select>
         </div>
@@ -157,8 +168,7 @@
           <div class="col-6">
             <input class="form-check-input " type="checkbox" value="" v-model="form.request_qty_tables">
           </div>
-         </div>
-
+        </div>
         <div class="row">
           <button type="submit" class="btn btn-success">
             طرح المشروع
@@ -171,7 +181,7 @@
 
 <script>
 import { ref, onMounted } from "vue";
-// import memberService from "../services/memberService";
+import memberService from "../services/memberService";
 import MemberHeader from "../components/MemberHeader.vue";
 
 export default {
@@ -184,12 +194,13 @@ export default {
       project_details: "",
       space: "",
       service_category: "",
-      Electronic_service: "",
+      Electronic_service: [],
       last_offers_date: "",
       area: "",
       project_days_limit: "",
+      Eng_offices_class:"",
       city: "",
-      offer_choosing_date: Date(),
+      offer_choosing_date: "12-11-2023",
       title_deed: "",
       owner_id: "",
       other_files: ref([]),
@@ -198,47 +209,57 @@ export default {
     });
 
     const selectedFile = ref([]);
-
     const handleFileSelect = (event) => {
       if (event.target.files.length > 0) {
-        selectedFile.value = event.target.files[0];
+        selectedFile.value.push(event.target.files[0]);
       }
     };
 
     const addproject = () => {
+      const convertedObject = {};
+      for (const value of form.value.Electronic_service) {
+        const option = document.querySelector(`option[value="${value}"`);
+        if (option) {
+          convertedObject[value] = option.text;
+        }
+      }
+      // console.log(convertedObject)
       const formData = new FormData();
       formData.append("project_title", form.value.project_title);
       formData.append("project_details", form.value.project_details);
       formData.append("space", form.value.space);
       formData.append("service_category", form.value.service_category);
-      formData.append("Electronic_service", form.value.Electronic_service);
+      formData.append("Electronic_service",JSON.stringify(convertedObject));
       formData.append("last_offers_date", form.value.last_offers_date);
       formData.append("area", form.value.area);
       formData.append("project_days_limit", form.value.project_days_limit);
+      formData.append("Eng_offices_class",form.value.Eng_offices_class)
       formData.append("city", form.value.city);
       formData.append("offer_choosing_date", form.value.offer_choosing_date);
+      formData.append("title_deed", selectedFile.value[0]);
+      formData.append("owner_id", selectedFile.value[1]);
+      formData.append("other_files", selectedFile.value[2]);
       formData.append("request_qty_tables", form.value.request_qty_tables);
       formData.append("request_engs", form.value.request_engs);
-        
+
       const formDataObject = Object.fromEntries(formData);
+      // console.log(formDataObject);
+      memberService.addproject(formDataObject).then()
 
       // if (form.value.title_deed && selectedFile.value.length > 0) {
       //   formData.append('title_deed', form.value.title_deed);
       // } else if (selectedFile.value.length > 0) {
       //   formData.append('title_deed', selectedFile.value);
       // }
-
-      console.log(formDataObject);
     };
-    // memberService.addproject(formData).then()
     onMounted(() => {
-      addproject();
+      // addproject();
     });
     return {
       form,
       handleFileSelect,
       selectedFile,
-      addproject
+      addproject,
     };
   },
 };
@@ -400,6 +421,6 @@ select#floatingSelect {
   border-radius: 13px;
   background-color: #f2f2f2;
   box-shadow: 3px 4px 20px 0px rgba(0, 0, 0, 0.25);
-color: #48847B;
+  color: #48847B;
 }
 </style>
