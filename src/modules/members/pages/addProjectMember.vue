@@ -83,7 +83,7 @@
         <div class="row">
           <div class="col-md-6 col-sm-12">
             <p>المنطقة</p>
-            <input class="form-select" id="area" v-model="form.area">
+            <input class="form-control" id="area" v-model="form.area">
           </div>
           <div class="col-md-6 col-sm-12">
             <p>المدة المقترحة لأنهاء الاعمال المطلوبة</p>
@@ -94,7 +94,7 @@
         <div class="row">
           <div class="col-md-6 col-sm-12">
             <p>اختيار تصنيف المكاتب الهندسية</p>
-            <select class="form-select" id="floatingSelect" v-model="form.request_engs">
+            <select class="form-select" id="floatingSelect" v-model="form.Eng_offices_class">
               <option selected></option>
               <option value="1">تصنيف درجة 1 الي 3 </option>
               <option value="2">تصنيف درجة 3 الي 6 </option>
@@ -114,21 +114,33 @@
             </select>
           </div>
         </div>
-        <div class="row my-5 justify-content-center  text-center">
+
+        <div class="row my-5 justify-content-center text-center">
           <div class="col">
-            <input type="file" @change="handleFileChange" />
             <p class="text-center">صورة من صك الملكية</p>
-            <img src="../../../assets/3322766-2001.png">
+            <label for="propertyDoc" class="file-label">
+              <img src="../../../assets/3322766-2001.png" class="upload-image" />
+            </label>
+            <input type="file" id="" class="file-input" name="image1" @change="handleFileSelect" accept="image/*"
+              style="display: none" />
           </div>
           <div class="col">
-            <input type="file" @change="handleFileChange" />
-            <p class="text-center"> صورة من هوية المالك <span class="text-danger">*</span></p>
-            <img src="../../../assets/3322766-2001.png">
+            <p class="text-center">
+              صورة من هوية المالك <span class="text-danger">*</span>
+            </p>
+            <label for="ownerIdDoc" class="file-label">
+              <img src="../../../assets/3322766-2001.png" class="upload-image" />
+            </label>
+            <input type="file" id="" class="file-input" name="image2" @change="handleFileSelect" accept="image/*"
+              style="display: none" />
           </div>
           <div class="col">
-            <input type="file" @change="handleFileChange" />
-            <p class="text-center">مستندات اخري داعمة </p>
-            <img src="../../../assets/3322766-2001.png">
+            <p class="text-center">مستندات اخري داعمة</p>
+            <label for="otherDocs" class="file-label">
+              <img src="../../../assets/3322766-2001.png" class="upload-image" />
+            </label>
+            <input type="file" id="" class="file-input" name="image3" @change="handleFileSelect" accept="image/*"
+              style="display: none" />
           </div>
         </div>
         <div class="row d-flex justify-content-between">
@@ -162,20 +174,41 @@ export default {
       project_details: "",
       space: "",
       service_category: "",
-      Electronic_service:"",
-      area: "",
-      city: "",
-      offer_choosing_date: "",
-      project_days_limit: "",
+      Electronic_service: "",
       last_offers_date: "",
-      request_qty_tables: ref(false),
-      request_engs: "",
-      delivery_date: "",
+      area: "",
+      project_days_limit: "",
+      city: "",
+      offer_choosing_date: Date(),
       title_deed: "",
       owner_id: "",
       other_files: ref([]),
+      request_qty_tables: false,
+      request_engs: 0,
     });
-
+    const formData = new FormData();
+    formData.append('project_title', form.project_title);
+    formData.append('project_details', form.project_details);
+    formData.append('space', form.space);
+    formData.append('service_category', form.service_category);
+    formData.append('Electronic_service', form.Electronic_service);
+    formData.append('last_offers_date', form.last_offers_date);
+    formData.append('area', form.area);
+    formData.append('project_days_limit', form.project_days_limit);
+    formData.append('city', form.city);
+    formData.append('offer_choosing_date', Date(form.offer_choosing_date));
+    formData.append('request_qty_tables', form.request_qty_tables);
+    formData.append('request_engs', form.request_engs);
+    if (this.product.image && this.selectedFile.length > 0) {
+      formData.append('image', this.product.image);
+    } else {
+      formData.append('image', this.selectedFile);
+    }
+    const handleFileSelect =(event) =>{
+      if (event.target.files.length >= 0) {
+        this.selectedFile = event.target.files[0];
+      }
+    }
     const addproject = () => {
       memberService.addproject(form.value).then()
     }
@@ -183,7 +216,8 @@ export default {
       addproject();
     })
     return {
-      form
+      form,
+      handleFileSelect
     }
   }
 
@@ -320,4 +354,5 @@ select#floatingSelect {
 
 .project-draft {
   color: #48847B;
-}</style>
+}
+</style>
