@@ -19,7 +19,7 @@
         </div>
       </div>
       <p class="projecttitle">تفاصيل المشروع</p>
-      <form action="" class="add-project">
+      <form class="add-project">
         <div class="row">
           <div class="col-12">
             <input type="text" class="form-control  project-details"
@@ -121,8 +121,8 @@
             <label for="propertyDoc" class="file-label">
               <img src="../../../assets/3322766-2001.png" class="upload-image" />
             </label>
-            <input type="file" id="" class="file-input" name="image1" @change="handleFileSelect" accept="image/*"
-              style="display: none" />
+            <input type="file" id="propertyDoc" class="file-input" name="image1" @change="handleFileSelect"
+              accept="image/*" style="display: none" />
           </div>
           <div class="col">
             <p class="text-center">
@@ -131,15 +131,15 @@
             <label for="ownerIdDoc" class="file-label">
               <img src="../../../assets/3322766-2001.png" class="upload-image" />
             </label>
-            <input type="file" id="" class="file-input" name="image2" @change="handleFileSelect" accept="image/*"
-              style="display: none" />
+            <input type="file" id="ownerIdDoc" class="file-input" name="image2" @change="handleFileSelect"
+              accept="image/*" style="display: none" />
           </div>
           <div class="col">
             <p class="text-center">مستندات اخري داعمة</p>
             <label for="otherDocs" class="file-label">
               <img src="../../../assets/3322766-2001.png" class="upload-image" />
             </label>
-            <input type="file" id="" class="file-input" name="image3" @change="handleFileSelect" accept="image/*"
+            <input type="file" id="otherDocs" class="file-input" name="image3" @change="handleFileSelect" accept="image/*"
               style="display: none" />
           </div>
         </div>
@@ -152,7 +152,7 @@
           </div>
         </div>
         <div class="row">
-          <button class="btn btn-success">طرح المشروع </button>
+          <button @click="addproject" class="btn btn-success">طرح المشروع </button>
         </div>
       </form>
     </div>
@@ -161,7 +161,7 @@
 
 <script>
 import { ref, onMounted } from "vue";
-import memberService from "../services/memberService";
+// import memberService from "../services/memberService";
 import MemberHeader from "../components/MemberHeader.vue"
 
 export default {
@@ -186,41 +186,48 @@ export default {
       request_qty_tables: false,
       request_engs: 0,
     });
-    const formData = new FormData();
-    formData.append('project_title', form.project_title);
-    formData.append('project_details', form.project_details);
-    formData.append('space', form.space);
-    formData.append('service_category', form.service_category);
-    formData.append('Electronic_service', form.Electronic_service);
-    formData.append('last_offers_date', form.last_offers_date);
-    formData.append('area', form.area);
-    formData.append('project_days_limit', form.project_days_limit);
-    formData.append('city', form.city);
-    formData.append('offer_choosing_date', Date(form.offer_choosing_date));
-    formData.append('request_qty_tables', form.request_qty_tables);
-    formData.append('request_engs', form.request_engs);
-    if (this.product.image && this.selectedFile.length > 0) {
-      formData.append('image', this.product.image);
-    } else {
-      formData.append('image', this.selectedFile);
-    }
-    const handleFileSelect =(event) =>{
-      if (event.target.files.length >= 0) {
-        this.selectedFile = event.target.files[0];
+
+    const selectedFile = ref([])
+
+    const handleFileSelect = (event) => {
+      if (event.target.files.length > 0) { // Use '>' instead of '>='
+        selectedFile.value = event.target.files[0];
       }
     }
-    const addproject = () => {
-      memberService.addproject(form.value).then()
-    }
-    onMounted(() => {
-      addproject();
-    })
-    return {
-      form,
-      handleFileSelect
-    }
-  }
 
+    const addproject = () => {
+      alert("noooooorhan")
+      const formData = new FormData();
+      formData.append('project_title', form.value.project_title);
+      formData.append('project_details', form.value.project_details);
+      formData.append('space', form.value.space);
+      formData.append('service_category', form.value.service_category);
+      formData.append('Electronic_service', form.value.Electronic_service);
+      formData.append('last_offers_date', form.value.last_offers_date);
+      formData.append('area', form.value.area);
+      formData.append('project_days_limit', form.value.project_days_limit);
+      formData.append('city', form.value.city);
+      formData.append('offer_choosing_date', form.value.offer_choosing_date);
+      formData.append('request_qty_tables', form.value.request_qty_tables);
+      formData.append('request_engs', form.value.request_engs);
+
+      // if (form.value.title_deed && selectedFile.value.length > 0) {
+      //   formData.append('title_deed', form.value.title_deed);
+      // } else if (selectedFile.value.length > 0) {
+      //   formData.append('title_deed', selectedFile.value);
+      // }
+      console.log(typeof(formData));
+    }
+    // memberService.addproject(formData).then()
+    onMounted(() => {
+  addproject();
+})
+return {
+  form,
+  handleFileSelect,
+  selectedFile
+}
+  }
 };
 </script>
 
