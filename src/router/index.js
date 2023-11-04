@@ -42,7 +42,8 @@ import AcceptedProject from "../modules/members/pages/dashboardForMember/Accepte
 import DashboardCard from "../modules/members/pages/dashboardForMember/DashboardCard.vue";
 import PendingProject from "../modules/members/pages/dashboardForMember/PendingProject.vue";
 import acceptedProjectModal from '@/modules/members/components/acceptedProjectModal.vue'
-
+import electronicContractpopup from '@/modules/members/components/electronicContractpopup'
+import editprojectModal from '@/modules/members/components/editprojectModal'
 //--------Business------------
 import BusinessRegister from "../modules/Business/pages/BusinessRegister.vue";
 import BusinessLogin from "../modules/Business/pages/BusinessLogin.vue";
@@ -81,7 +82,6 @@ import DashboardAccount from "../modules/members/pages/dashboardForMember/Dashbo
 import  UserAccountDashboard from "../modules/members/pages/dashboardForMember/UserAccountDashboard.vue";
 // import UsersStats from "../modules/Admin/pages//UsersStats.vue";
 //-----------------
-import TriangleDesign from "../modules/members/pages/Tabs/TriangleDesign.vue";
 
 import DashboardTest from "../modules/members/pages/dashboardForMember/DashboardTest.vue";
 import MainHomepage from "../modules/Admin/pages/MainHomepage.vue";
@@ -261,16 +261,20 @@ const routes = [
         component: DashboardAccount,
       },
       {
-        path: "triangle",
-        component: TriangleDesign,
-      },
-      {
         path: "dashboardTest",
         component: DashboardTest,
       },
       {
         path:"acceptedProjectModal",
         component:acceptedProjectModal
+      },
+      {
+        path:"electronicContractpopup",
+        component:electronicContractpopup
+      },
+      {
+        path:"editprojectModal",
+        component:editprojectModal
       }
       // {
       //   path:"requestToEdit",

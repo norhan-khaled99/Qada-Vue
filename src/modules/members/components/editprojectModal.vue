@@ -14,8 +14,8 @@
       aria-labelledby="demoModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog">
-        <div class="modal-content">
+      <div class="modal-dialog" style="width:800px;">
+        <div class="modal-content" >
           <div class="modal-header">
             <h5 class="modal-title">اضافة تعديل</h5>
             <button
@@ -26,9 +26,9 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body d-flex flex-column align-items-center">
+          <div class="modal-body">
             <div>
-                <div class="form-floating">
+                <div class="form-floating ">
                     <textarea class="form-control" placeholder="" id="floatingTextarea2" style="height: 100px"></textarea>
                     <label for="floatingTextarea2"></label>
                   </div>
@@ -40,8 +40,10 @@
             <button type="button" class="footer-button">
               استعراض المرفقات
             </button>
+            <span>
             <button type="button" class="cancel-button">الغاء</button>
-            <div class="footer-text">عدد التعديلات للمرحلة: 2/5</div>
+            <span class="footer-text">عدد التعديلات للمرحلة: 2/5</span>
+          </span>
           </div>
         </div>
       </div>
