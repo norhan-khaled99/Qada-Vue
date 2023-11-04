@@ -10,19 +10,20 @@
           </svg>
           <p class="project-draft">مسودة المشروع</p>
         </div>
-        <hr class="col-md-6 col-sm-5 my-4 custom-hr">
+        <hr class="col-md-6 col-sm-5 my-4 custom-hr" />
         <div class="col-md-2 col-sm-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
             <circle cx="50" cy="50" r="50" fill="#656565" />
           </svg>
-          <p style="color:#656565;"> إرسال للمراجعة</p>
+          <p style="color: #656565">إرسال للمراجعة</p>
         </div>
       </div>
+      
       <p class="projecttitle">تفاصيل المشروع</p>
-      <form class="add-project">
+      <form class="add-project" @submit.prevent="addproject()">
         <div class="row">
           <div class="col-12">
-            <input type="text" class="form-control  project-details"
+            <input type="text" class="form-control project-details"
               placeholder="المشروع عبارة عن مسودة يجب إرساله للمراجعة بعد الانتهاء." />
           </div>
         </div>
@@ -32,12 +33,16 @@
             <input type="text" class="form-control" v-model="form.project_title" />
           </div>
         </div>
-        <div class="row ">
+        <div class="row">
           <div class="col-12">
-            <p>وصف المشروع (مثال: عدد غرف النوم، والفراغات، ومكونات المشروع )</p>
+            <p>
+              وصف المشروع (مثال: عدد غرف النوم، والفراغات، ومكونات المشروع )
+            </p>
             <textarea class="form-control" style="height: 100px" v-model="form.project_details"
               placeholder="ارغب في تصميم فيلا دوبليكس مكونه من 4 غرف نوم و 5 حمامات والمرافق الخدمية لها..."></textarea>
-            <p class="descriptionfortextarea">عدد الحروف لا يقل عن 150 (95/150)</p>
+            <p class="descriptionfortextarea">
+              عدد الحروف لا يقل عن 150 (95/150)
+            </p>
           </div>
         </div>
         <div class="row">
@@ -47,7 +52,7 @@
           </div>
           <div class="col-md-6 col-sm-12">
             <p>تصنيف المشروع</p>
-            <select class="form-select  custom-select" id="floatingSelect" v-model="form.service_category">
+            <select class="form-select custom-select" id="floatingSelect" v-model="form.service_category">
               <option selected></option>
               <option value="1">تجاري</option>
               <option value="2">سكني</option>
@@ -76,14 +81,15 @@
             <option value="1">طرح المشروع في منصة المشاريع لمدة 4 أيام</option>
             <option value="2">طرح المشروع في منصة المشاريع لمدة 9 أيام</option>
           </select>
-          <p class="descriptionfortextarea">لن يتم استقبال عروض اسعار جديدة ولن يظهر المشروع في منصة المشاريع بعد انتهاء
-            طرح
-            المشروع </p>
+          <p class="descriptionfortextarea">
+            لن يتم استقبال عروض اسعار جديدة ولن يظهر المشروع في منصة المشاريع
+            بعد انتهاء طرح المشروع
+          </p>
         </div>
         <div class="row">
           <div class="col-md-6 col-sm-12">
             <p>المنطقة</p>
-            <input class="form-control" id="area" v-model="form.area">
+            <input class="form-control" id="area" v-model="form.area" />
           </div>
           <div class="col-md-6 col-sm-12">
             <p>المدة المقترحة لأنهاء الاعمال المطلوبة</p>
@@ -96,10 +102,13 @@
             <p>اختيار تصنيف المكاتب الهندسية</p>
             <select class="form-select" id="floatingSelect" v-model="form.Eng_offices_class">
               <option selected></option>
-              <option value="1">تصنيف درجة 1 الي 3 </option>
-              <option value="2">تصنيف درجة 3 الي 6 </option>
+              <option value="1">تصنيف درجة 1 الي 3</option>
+              <option value="2">تصنيف درجة 3 الي 6</option>
             </select>
-            <p class="descriptionfortextarea">تختلف الاسعار نسبيا مع اختيار التصنيف (حيث انه التصنيف خو الاعلي سعرا) </p>
+            <p class="descriptionfortextarea">
+              تختلف الاسعار نسبيا مع اختيار التصنيف (حيث انه التصنيف خو الاعلي
+              سعرا)
+            </p>
           </div>
           <div class="col-md-6 col-sm-12">
             <p>المدينة</p>
@@ -121,8 +130,7 @@
             <label for="propertyDoc" class="file-label">
               <img src="../../../assets/3322766-2001.png" class="upload-image" />
             </label>
-            <input type="file" id="propertyDoc" class="file-input" name="image1" @change="handleFileSelect"
-              accept="image/*" style="display: none" />
+            <input type="file" id="propertyDoc" class="file-input" @change="handleFileSelect" style="display: none" />
           </div>
           <div class="col">
             <p class="text-center">
@@ -131,17 +139,30 @@
             <label for="ownerIdDoc" class="file-label">
               <img src="../../../assets/3322766-2001.png" class="upload-image" />
             </label>
-            <input type="file" id="ownerIdDoc" class="file-input" name="image2" @change="handleFileSelect"
-              accept="image/*" style="display: none" />
+            <input type="file" id="ownerIdDoc" class="file-input" @change="handleFileSelect" style="display: none" />
           </div>
           <div class="col">
             <p class="text-center">مستندات اخري داعمة</p>
             <label for="otherDocs" class="file-label">
-            <input class="form-check-input " type="checkbox" value="" v-model="form.request_qty_tables">
+              <img src="../../../assets/3322766-2001.png" class="upload-image" />
+            </label>
+            <input type="file" id="otherDocs" class="file-input" @change="handleFileSelect" style="display: none" />
           </div>
         </div>
+
+        <div class="row d-flex justify-content-between">
+          <div class="col-6">
+            <span>طلب جداول الكميات</span>
+          </div>
+          <div class="col-6">
+            <input class="form-check-input " type="checkbox" value="" v-model="form.request_qty_tables">
+          </div>
+         </div>
+
         <div class="row">
-          <button @click="addproject" class="btn btn-success">طرح المشروع </button>
+          <button type="submit" class="btn btn-success">
+            طرح المشروع
+          </button>
         </div>
       </form>
     </div>
@@ -151,7 +172,7 @@
 <script>
 import { ref, onMounted } from "vue";
 // import memberService from "../services/memberService";
-import MemberHeader from "../components/MemberHeader.vue"
+import MemberHeader from "../components/MemberHeader.vue";
 
 export default {
   components: {
@@ -179,44 +200,47 @@ export default {
     const selectedFile = ref([]);
 
     const handleFileSelect = (event) => {
-      if (event.target.files.length > 0) { // Use '>' instead of '>='
+      if (event.target.files.length > 0) {
         selectedFile.value = event.target.files[0];
       }
-    }
+    };
 
     const addproject = () => {
-  
       const formData = new FormData();
-      formData.append('project_title', form.value.project_title);
-      formData.append('project_details', form.value.project_details);
-      formData.append('space', form.value.space);
-      formData.append('service_category', form.value.service_category);
-      formData.append('Electronic_service', form.value.Electronic_service);
-      formData.append('last_offers_date', form.value.last_offers_date);
-      formData.append('area', form.value.area);
-      formData.append('project_days_limit', form.value.project_days_limit);
-      formData.append('city', form.value.city);
-      formData.append('offer_choosing_date', form.value.offer_choosing_date);
-      formData.append('request_qty_tables', form.value.request_qty_tables);
-      formData.append('request_engs', form.value.request_engs);
+      formData.append("project_title", form.value.project_title);
+      formData.append("project_details", form.value.project_details);
+      formData.append("space", form.value.space);
+      formData.append("service_category", form.value.service_category);
+      formData.append("Electronic_service", form.value.Electronic_service);
+      formData.append("last_offers_date", form.value.last_offers_date);
+      formData.append("area", form.value.area);
+      formData.append("project_days_limit", form.value.project_days_limit);
+      formData.append("city", form.value.city);
+      formData.append("offer_choosing_date", form.value.offer_choosing_date);
+      formData.append("request_qty_tables", form.value.request_qty_tables);
+      formData.append("request_engs", form.value.request_engs);
+        
+      const formDataObject = Object.fromEntries(formData);
 
       // if (form.value.title_deed && selectedFile.value.length > 0) {
       //   formData.append('title_deed', form.value.title_deed);
       // } else if (selectedFile.value.length > 0) {
       //   formData.append('title_deed', selectedFile.value);
       // }
-      console.log(typeof(formData));
-    }
+
+      console.log(formDataObject);
+    };
     // memberService.addproject(formData).then()
     onMounted(() => {
-  addproject();
-})
-return {
-  form,
-  handleFileSelect,
-  selectedFile
-}
-  }
+      addproject();
+    });
+    return {
+      form,
+      handleFileSelect,
+      selectedFile,
+      addproject
+    };
+  },
 };
 </script>
 
@@ -253,7 +277,7 @@ form {
 .form-control {
   border: 1.5px solid #656565;
   background: #fff;
-  
+
 }
 
 form .form-control {
@@ -357,7 +381,6 @@ select#floatingSelect {
 }
 
 .project-draft {
-<<<<<<< HEAD
   color: #48847b;
 }
 
@@ -368,15 +391,15 @@ select#floatingSelect {
 
 /* Style for the uploaded images */
 .upload-image {
-  width: 100px; /* Adjust the width as needed */
-  height: 100px; /* Adjust the height as needed */
+  width: 100px;
+  /* Adjust the width as needed */
+  height: 100px;
+  /* Adjust the height as needed */
   object-fit: cover;
   padding: 10px;
   border-radius: 13px;
   background-color: #f2f2f2;
   box-shadow: 3px 4px 20px 0px rgba(0, 0, 0, 0.25);
-=======
-  color: #48847B;
->>>>>>> d03860cab994b717725d27dbc313eca8009726b8
+color: #48847B;
 }
 </style>
