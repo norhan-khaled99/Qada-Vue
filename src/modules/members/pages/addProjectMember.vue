@@ -75,6 +75,7 @@
           </select>
         </div> -->
         <div class="row">
+          <div class="col-12">
           <p>الخدمة الإلكترونية المطلوبة</p>
           <select multiple class="form-select" id="floatingSelect" v-model="form.Electronic_service">
             <option value="1">مراجعة و إعتماد المخططات لإصدار التراخيص</option>
@@ -85,7 +86,9 @@
             <option value="6">تصميم هندسي بغرض إستخراج رخصة ترميم</option>
           </select>
         </div>
+        </div>
         <div class="row">
+          <div class="col-12">
           <p>تاريخ نهاية طرح المشروع</p>
           <select class="form-select" id="floatingSelect" v-model="form.last_offers_date">
             <option selected></option>
@@ -96,6 +99,7 @@
             لن يتم استقبال عروض اسعار جديدة ولن يظهر المشروع في منصة المشاريع
             بعد انتهاء طرح المشروع
           </p>
+        </div>
         </div>
         <div class="row">
           <div class="col-md-6 col-sm-12">
@@ -168,9 +172,10 @@
             <span>طلب جداول الكميات</span>
           </div>
           <div class="col-6">
-            <input class="form-check-input " type="checkbox" value="" v-model="form.request_qty_tables">
+            <input class="form-check-input" type="checkbox" value="" v-model="form.request_qty_tables">
           </div>
         </div>
+
         <div class="row">
           <button type="submit" class="btn btn-success">
             طرح المشروع
@@ -263,6 +268,11 @@ export default {
       memberService.addproject(formData).then((result) => {
         console.log(result)
       })
+      .catch((error) => {
+          console.error(error);
+      });
+
+
     };
     onMounted(() => {
       // addproject();
@@ -311,6 +321,7 @@ form {
   margin: auto;
 }
 
+
 .form-control {
   border: 1.5px solid #656565;
   background: #fff;
@@ -318,10 +329,14 @@ form {
 }
 
 form .form-control {
-  margin-right: 0px;
+  margin-right: 10px;
   border-radius: 10px;
   border: 1.5px solid #656565;
   background: #fff;
+}
+
+form p{
+  margin-right: 10px;
 }
 
 form .form-select {
