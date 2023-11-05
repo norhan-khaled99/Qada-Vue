@@ -141,7 +141,8 @@
             <label for="propertyDoc" class="file-label">
               <img src="../../../assets/3322766-2001.png" class="upload-image" />
             </label>
-            <input type="file" id="propertyDoc" class="file-input" @change="handleFileSelect" style="display: none" />
+            <input type="file" id="propertyDoc" accept="image/*" @change="handleFileTitle_deed" class="file-input"
+              style="display:none" />
           </div>
           <div class="col">
             <p class="text-center">
@@ -150,14 +151,15 @@
             <label for="ownerIdDoc" class="file-label">
               <img src="../../../assets/3322766-2001.png" class="upload-image" />
             </label>
-            <input type="file" id="ownerIdDoc" class="file-input" @change="handleFileSelect" style="display: none" />
+            <input type="file" id="ownerIdDoc" @change="handleFileOwner_id" class="file-input" style="display: none" />
           </div>
           <div class="col">
             <p class="text-center">مستندات اخري داعمة</p>
             <label for="otherDocs" class="file-label">
               <img src="../../../assets/3322766-2001.png" class="upload-image" />
             </label>
-            <input type="file" id="otherDocs" class="file-input" @change="handleFileSelect" style="display: none" />
+            <input type="file" id="otherDocs" multiple @change="handleFileOtherDocs" class="file-input"
+              style="display: none" />
           </div>
         </div>
 
@@ -198,22 +200,36 @@ export default {
       last_offers_date: "",
       area: "",
       project_days_limit: "",
-      Eng_offices_class:"",
+      Eng_offices_class: "",
       city: "",
       offer_choosing_date: "12-11-2023",
-      title_deed: "",
+      title_deed: {},
       owner_id: "",
       other_files: ref([]),
       request_qty_tables: false,
       request_engs: 0,
     });
-
-    const selectedFile = ref([]);
-    const handleFileSelect = (event) => {
-      if (event.target.files.length > 0) {
-        selectedFile.value.push(event.target.files[0]);
+    const selectedTitle_deedFile = ref(null);
+    const handleFileTitle_deed = (event) => {
+      if (event.target.files.length >= 0) {
+        selectedTitle_deedFile.value = event.target.files[0];
       }
-    };
+    }
+
+    const selectedOwner_idFile = ref(null);
+    const handleFileOwner_id = (event) => {
+      if (event.target.files.length >= 0) {
+        selectedOwner_idFile.value = event.target.files[0];
+      }
+    }
+
+    const selectedOtherDocsFile = ref(null);
+    const handleFileOtherDocs = (event) => {
+      if (event.target.files.length >= 0) {
+        selectedOtherDocsFile.value = event.target.files[0];
+        // console.log(selectedOtherDocsFile.value)
+      }
+    }
 
     const addproject = () => {
       const convertedObject = {};
@@ -222,43 +238,43 @@ export default {
         if (option) {
           convertedObject[value] = option.text;
         }
+        form.value.Electronic_service = JSON.stringify(convertedObject);
       }
-      // console.log(convertedObject)
+      
       const formData = new FormData();
       formData.append("project_title", form.value.project_title);
       formData.append("project_details", form.value.project_details);
       formData.append("space", form.value.space);
       formData.append("service_category", form.value.service_category);
-      formData.append("Electronic_service",JSON.stringify(convertedObject));
+      formData.append("Electronic_service", form.value.Electronic_service);
       formData.append("last_offers_date", form.value.last_offers_date);
       formData.append("area", form.value.area);
       formData.append("project_days_limit", form.value.project_days_limit);
-      formData.append("Eng_offices_class",form.value.Eng_offices_class)
+      formData.append("Eng_offices_class", form.value.Eng_offices_class)
       formData.append("city", form.value.city);
       formData.append("offer_choosing_date", form.value.offer_choosing_date);
-      formData.append("title_deed", selectedFile.value[0]);
-      formData.append("owner_id", selectedFile.value[1]);
-      formData.append("other_files", selectedFile.value[2]);
+      formData.append('title_deed', selectedTitle_deedFile.value);
+      formData.append("owner_id", selectedOwner_idFile.value);
+      formData.append("other_files", selectedOtherDocsFile.value);
       formData.append("request_qty_tables", form.value.request_qty_tables);
       formData.append("request_engs", form.value.request_engs);
 
-      const formDataObject = Object.fromEntries(formData);
-      // console.log(formDataObject);
-      memberService.addproject(formDataObject).then()
-
-      // if (form.value.title_deed && selectedFile.value.length > 0) {
-      //   formData.append('title_deed', form.value.title_deed);
-      // } else if (selectedFile.value.length > 0) {
-      //   formData.append('title_deed', selectedFile.value);
-      // }
+      // console.log(typeof (selectedOtherDocsFile.value))
+      memberService.addproject(formData).then((result) => {
+        console.log(result)
+      })
     };
     onMounted(() => {
       // addproject();
     });
     return {
       form,
-      handleFileSelect,
-      selectedFile,
+      handleFileTitle_deed,
+      selectedTitle_deedFile,
+      handleFileOwner_id,
+      selectedOwner_idFile,
+      handleFileOtherDocs,
+      selectedOtherDocsFile,
       addproject,
     };
   },

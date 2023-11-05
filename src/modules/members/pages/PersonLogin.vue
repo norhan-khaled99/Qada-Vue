@@ -54,13 +54,12 @@ export default {
         .then((response) => {
           console.log(response.data);
           loginSuccess.value = true;
-          const { token, name, phone, email, id } = response.data;
-
-          localStorage.setItem("token", token);
-          localStorage.setItem("name", name);
-          localStorage.setItem("id", id);
-          localStorage.setItem("phone", phone);
-          localStorage.setItem("email", email);
+          // const { token, name, phone, email, id } = response.data;
+          localStorage.setItem("token", response.data.token);
+          localStorage.setItem("name", response.data.msg.name);
+          localStorage.setItem("id", response.data.msg.id);
+          localStorage.setItem("phone", response.data.msg.phone);
+          localStorage.setItem("email", response.data.msg.email);
           router.push("/");
         })
         .catch((error) => {

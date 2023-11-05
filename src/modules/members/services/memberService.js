@@ -2,13 +2,16 @@ import axios from "axios";
 const apiClient = axios.create({
     baseURL: "http://127.0.0.1:8000",
     headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
+        'Content-Type': 'multipart/form-data',
+        "Accept": "*/*",
+        "Content-Length": '',
+        "Accept-Encoding": 'gzip, deflate, br',
+        "Connection": 'keep-alive',
+        "Host": '',
         'Authorization': 'Bearer ' + localStorage.getItem('token')
+
     },
 });
-
-
 
 const memberService = {
     addproject(data){
