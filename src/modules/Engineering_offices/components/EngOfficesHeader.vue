@@ -15,7 +15,7 @@
               <router-link class="nav-link ra2esia" to="/EngineeringOffices"> الرئيسية</router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <router-link to="/aboutus" class="nav-link">من نحن؟</router-link>
+              <router-link to="/EngineeringOffices/aboutus" class="nav-link">من نحن؟</router-link>
             </li>
             <li class="nav-item mx-lg-2">
               <router-link class="nav-link" router-link to="/EngineeringOffices/addproject">لوحة التحكم</router-link>
@@ -30,7 +30,7 @@
               <router-link to="/EngineeringOffices/successPartners" class="nav-link">شركاء النجاح</router-link>
             </li>
             <li class="nav-item mx-lg-2">
-              <router-link to="/contactus" class="nav-link">إتصل بنا</router-link>
+              <router-link to="/EngineeringOffices/contactus" class="nav-link">إتصل بنا</router-link>
             </li>
             <button type="button" class="btn  login mx-lg-4">تسجيل دخول</button>
             <button type="button" class="btn   create">إنشاء حساب</button>
@@ -78,7 +78,7 @@ nav {
 .content {
   height: 50vh;
   width: 100%;
-  background: linear-gradient(95.07deg, #259F5A 56.22%, #000000 157.23%);
+  background: linear-gradient(95.07deg, rgba(74, 78, 83, 1) , rgba(0, 0, 0, 1) );
   /* background-color: #59467C; */
 }
 
@@ -122,8 +122,8 @@ li .qada {
 
 .create {
   background-color: #fff;
-  color: #259F5A;
-  border-color: #259F5A;
+  color: #4A4E53;
+  border-color: #4A4E53;
   border-radius: 1rem;
   width: 150px;
   height: 40px;
@@ -132,13 +132,13 @@ li .qada {
 
 .login {
   /* background-color: #2A665D; */
-  color: #259F5A;
+  color: #4A4E53;
   /* color: linear-gradient(121.09deg, #59467C 30.12%, #000000 173.77%); */
   background-color: #fff;
   width: 150px;
   height: 40px;
   border-radius: 1rem;
-  border-color: #259F5A;
+  border-color: #4A4E53;
 }
 
 a {
@@ -146,12 +146,12 @@ a {
 }
 
 li .ra2esia {
-  color: #259F5A;
+  color: #FFFFFF;
   text-decoration-line: underline;
 }
 
 li span {
-  color: #259F5A;
+  color: #4A4E53;
 }
 
 @media (max-width: 576px) {

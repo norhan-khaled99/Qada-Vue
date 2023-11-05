@@ -1,28 +1,6 @@
 <template>
-    <BusinessHeader/>
-    <!-- <div class="row m-auto justify-content-between p-3 w-25 filter-projects my-5">
-        <div class="col-lg-4">
-            <p>المدينة</p>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>الكل</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-        </div>
-        <div class="col-lg-4">
-            <p>التصنيف</p>
-            <select class="form-select" aria-label="Default select example">
-                <option selected></option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-        </div>
-        <div class="col-lg-2 my-auto mb-2 ms-3">
-            <img src="../../../assets/magnifier.png" />
-        </div>
-    </div>  -->
+    <EngOfficesHeader/>
+    
     <div class="row justify-content-between w-50 p-3 m-auto my-3 cardd mt-5">
         <div class="col-lg-3 col-sm-12 text-center">
             <p>المكتب الهندسي</p>
@@ -167,7 +145,7 @@
 </template>
 
 <script setup>
-import BusinessHeader from "./EngOfficesHeader.vue"
+import EngOfficesHeader from "./EngOfficesHeader.vue"
 </script>
 
 <style scoped>
