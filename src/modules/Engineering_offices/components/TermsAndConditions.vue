@@ -1,5 +1,5 @@
 <template>
-    <BusinessHeader/>
+    <EngOfficesHeader/>
     <div class="container-fliud article my-5 me-4">
         <div class="col-lg-8">
             <p>مرحبًا بك في قدة للمهندسين. يرجى قراءة هذه الشروط والأحكام بعناية قبل استخدام المنصة والتسجيل كمهندس حر. من
@@ -44,7 +44,7 @@
 </template>
 
 <script setup>
-import BusinessHeader from "./EngOfficesHeader.vue"
+import EngOfficesHeader from "./EngOfficesHeader.vue"
 
 </script>
 
