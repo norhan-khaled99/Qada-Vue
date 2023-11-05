@@ -1,11 +1,11 @@
 import axios from "axios";
 const apiClient = axios.create({
-  baseURL: "https://d6f7-156-209-81-46.ngrok-free.app",
+  baseURL: "http://127.0.0.1:8000",
   headers: {},
 });
 
 const authService = {
-  personData: {},
+  // personData: {},
   register(credentials) {
     return apiClient.post("person/register", credentials);
   },

@@ -105,24 +105,30 @@
         </div>
       </div>
 
-
-      <div class="row my-5 justify-content-center  text-center">
+      <div class="row my-5 justify-content-center text-center">
         <div class="col">
-          <input type="file" @change="handleFileChange" />
-          <p class="text-center">صورة من صك الملكية</p>
-          <img src="../../../assets/3322766-2001.png">
+            <p class="text-center">صورة من صك الملكية</p>
+            <label for="propertyDoc" class="file-label">
+                <img src="../../../assets/3322766-2001.png" class="upload-image">
+            </label>
+            <input type="file" id="propertyDoc" class="file-input" style="display: none;">
         </div>
         <div class="col">
-          <input type="file" @change="handleFileChange" />
-          <p class="text-center"> صورة من هوية المالك <span class="text-danger">*</span></p>
-          <img src="../../../assets/3322766-2001.png">
+            <p class="text-center"> صورة من هوية المالك <span class="text-danger">*</span></p>
+            <label for="ownerIdDoc" class="file-label">
+                <img src="../../../assets/3322766-2001.png" class="upload-image">
+            </label>
+            <input type="file" id="ownerIdDoc" class="file-input" style="display: none;">
         </div>
         <div class="col">
-          <input type="file" @change="handleFileChange" />
-          <p class="text-center">مستندات اخري داعمة </p>
-          <img src="../../../assets/3322766-2001.png">
+            <p class="text-center">مستندات اخري داعمة </p>
+            <label for="otherDocs" class="file-label">
+                <img src="../../../assets/3322766-2001.png" class="upload-image">
+            </label>
+            <input type="file" id="otherDocs" class="file-input" style="display: none;">
         </div>
-      </div>
+    </div>
+      
       <div class="row d-flex justify-content-between">
         <div class="col-6">
           <span>طلب جداول الكميات</span>
@@ -267,7 +273,7 @@ select#floatingSelect {
 .form-control {
   border: 1.5px solid #656565;
   background: #fff;
-  padding: -px 20px;
+  
 }
 
 .form-control.project-details::placeholder {
@@ -323,4 +329,20 @@ select#floatingSelect {
 
 .project-draft {
   color: #259F5A;
-}</style>
+}
+.file-label {
+  cursor: pointer;
+}
+
+/* Style for the uploaded images */
+.upload-image {
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  object-fit: cover;
+  padding: 10px;
+  border-radius: 13px;
+  background-color: #f2f2f2;
+  box-shadow: 3px 4px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+</style>

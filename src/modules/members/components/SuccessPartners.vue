@@ -1,4 +1,5 @@
 <template>
+    <div>
     <MemberHeader/>
     <div class="row m-auto justify-content-between p-3 w-25 filter-projects my-5">
         <div class="col-lg-4">
@@ -165,10 +166,42 @@
             <h5 class="number">1</h5>
         </div>
     </div>
+    </div>
 </template>
 
-<script setup>
-import MemberHeader from "../components/MemberHeader.vue"
+<script >
+
+import { ref , onMounted } from "vue";
+import MemberHeader from "../components/MemberHeader.vue";
+import  globalservice from "../../../services/globalservice"
+export default {
+  components: {
+    MemberHeader,
+  },
+  setup() {
+    
+    const allPartners=ref([]);
+    
+    const getAllPartners=()=>{
+        globalservice.getGlobalSites()
+        .then((res) => {
+          allPartners.value = res.data.partners;
+          console.log(allPartners.value);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
+
+    onMounted(() => {
+        getAllPartners();
+    });
+
+    return {
+        allPartners,
+    };
+  },
+};
 
 </script>
 

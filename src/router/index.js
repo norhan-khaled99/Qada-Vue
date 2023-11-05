@@ -48,8 +48,9 @@ import testModal2 from "@/modules/members/pages/Tabs/testModal2.vue";
 import AcceptedProject from "../modules/members/pages/dashboardForMember/AcceptedProject.vue";
 import DashboardCard from "../modules/members/pages/dashboardForMember/DashboardCard.vue";
 import PendingProject from "../modules/members/pages/dashboardForMember/PendingProject.vue";
-
-
+import acceptedProjectModal from '@/modules/members/components/acceptedProjectModal.vue'
+import electronicContractpopup from '@/modules/members/components/electronicContractpopup'
+import editprojectModal from '@/modules/members/components/editprojectModal'
 //--------Business------------
 import BusinessRegister from "../modules/Business/pages/BusinessRegister.vue";
 import BusinessLogin from "../modules/Business/pages/BusinessLogin.vue";
@@ -88,15 +89,14 @@ import DashboardAccount from "../modules/members/pages/dashboardForMember/Dashbo
 import  UserAccountDashboard from "../modules/members/pages/dashboardForMember/UserAccountDashboard.vue";
 // import UsersStats from "../modules/Admin/pages//UsersStats.vue";
 //-----------------
-import TriangleDesign from "../modules/members/pages/Tabs/TriangleDesign.vue";
 
 import DashboardTest from "../modules/members/pages/dashboardForMember/DashboardTest.vue";
 import MainHomepage from "../modules/Admin/pages/MainHomepage.vue";
 //-----------------------------admin-------------------------------------------------
 //------Users--Dashboard----admin-----
 import UserSettings from "../modules/Admin/users/UserSettings.vue";
-import UserAccount from "../modules/Admin/users/UserAccount.vue";
 import UsersComponent from "../modules/Admin/users/UsersComponent.vue";
+import UserAccount from "../modules/Admin/users/UserAccount.vue"
 
 //------Offices--Dashboard----admin-----
 import OfficesComponent from "../modules/Admin/offices/OfficesComponent.vue";
@@ -150,17 +150,18 @@ const routes = [
         component: BusinessSettings,
       },
       {
-        path: "/officesettings",
+        path: "officesettings",
         component: OfficeSettings,
+      },
+      {
+        path: "useraccount",
+        component: UserAccount
       },
       {
         path: "businessaccount",
         component: BusinessAccount,
       },
-      {
-        path: "useraccount",
-        component: UserAccount,
-      },
+      
       {
         path: "officeaccount",
         component: OfficeAccount,
@@ -267,13 +268,21 @@ const routes = [
         component: DashboardAccount,
       },
       {
-        path: "triangle",
-        component: TriangleDesign,
-      },
-      {
         path: "dashboardTest",
         component: DashboardTest,
       },
+      {
+        path:"acceptedProjectModal",
+        component:acceptedProjectModal
+      },
+      {
+        path:"electronicContractpopup",
+        component:electronicContractpopup
+      },
+      {
+        path:"editprojectModal",
+        component:editprojectModal
+      }
       // {
       //   path:"requestToEdit",
       //   component:requestToEdit

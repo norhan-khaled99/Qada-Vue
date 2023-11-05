@@ -2,14 +2,16 @@ import axios from "axios";
 const apiClient = axios.create({
     baseURL: "http://127.0.0.1:8000",
     headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-      'Authorization': 'Bearer ' + localStorage.getItem('token')
+        'Content-Type': 'multipart/form-data',
+        "Accept": "*/*",
+        "Content-Length": '',
+        "Accept-Encoding": 'gzip, deflate, br',
+        "Connection": 'keep-alive',
+        "Host": '',
+        'Authorization': 'Bearer ' + localStorage.getItem('token')
 
     },
 });
-
-
 
 const memberService = {
     addproject(data){
@@ -25,9 +27,8 @@ const memberService = {
         return apiClient.post(`person/offers/placeOffer`)
     },
     getAllProjectFormember(){
-       return apiClient.get(`api/welcome`)
+        return apiClient.get(`api/welcome`)
     },
-   
 };
 
 

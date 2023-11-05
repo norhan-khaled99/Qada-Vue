@@ -1,5 +1,15 @@
 <template>
+  <AdminHeader/>
   <div class="container">
+    <div class="col-lg-2 sideCard">
+      <p>مرحبا</p>
+      <h4>عبدالعزيز</h4>
+      <p>الرئيسية</p>
+      <p>الاحصائيات</p>
+      <p>الفريق</p>
+      <p> المشاريع</p>
+      <p>تسجيل خروج</p>
+    </div>
     <div class="header">معلومات العميل</div>
     <div class="row">
       <div class="col-8 first-card mx-auto flex-column my-3 text-right">
@@ -44,7 +54,6 @@
             <div class="col-md-6">
               <div class="card-body">فيلا 5 اوض، 3 حمامات في الرياض</div>
             </div>
-
           </div>
           <div class="row my-3">
             <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
@@ -182,12 +191,37 @@
 </template>
 
 <script>
-export default {};
+import { usebackgroundStore } from "../../../../stores/background"
+import AdminHeader from "../../../Admin/AdminHeader.vue"
+export default {
+  components: {
+    AdminHeader
+  },
+  data: () => ({
+    backgroundStore: usebackgroundStore()
+  }),
+  mounted() {
+    this.backgroundStore.setBgColor(1)
+  },
+  unmounted() {
+    this.backgroundStore.setBgColor(0)
+  }
+}
 </script>
 
 <style scoped>
 * {
   direction: rtl;
+}
+
+.sideCard {
+  /* position: absolute;
+    top: 45%; */
+  background: #59467C;
+  color: #fff;
+  width: 150px;
+  text-align: center;
+  border-radius: 18px 0 0 18px;
 }
 
 .header {
