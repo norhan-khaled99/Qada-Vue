@@ -23,6 +23,13 @@ import PersonLogin from "../modules/members/pages/PersonLogin.vue";
 //--Engineering_offices
 import Engineering_officesRegister from "../modules/Engineering_offices/Pages/Engineering_officesRegister.vue";
 import Engineering_officesLogin from "../modules/Engineering_offices/Pages/Engineering_officesLogin.vue";
+import Faboutus from "../modules/Engineering_offices/components/AboutUs.vue";
+import FContactUs from "../modules/Engineering_offices/components/ContactUs.vue";
+import FFAQComponent from "../modules/Engineering_offices/components/FAQComponent.vue";
+import FSuccessPartners from "../modules/Engineering_offices/components/SuccessPartners.vue";
+import FTermsAndConditions from "../modules/Engineering_offices/components/TermsAndConditions.vue";
+
+
 
 //--routes for tabs for Engineering_offices
 
@@ -181,8 +188,7 @@ const routes = [
         path: "/usersstats",
         component: UsersStats,
       },
-      
-    ]
+    ],
   },
   {
     path: "/member",
@@ -298,8 +304,8 @@ const routes = [
         component: BusinessHomePage,
       },
       {
-        path:"addProjectBussiness",
-        component:addProjectBussiness
+        path: "addProjectBussiness",
+        component: addProjectBussiness,
       },
       {
         path: "businessRegister",
@@ -358,9 +364,9 @@ const routes = [
         component: BprojectTransactions,
       },
       {
-        path:"maintabsForBussiness",
-        component:maintabsForBussiness
-      }
+        path: "maintabsForBussiness",
+        component: maintabsForBussiness,
+      },
     ],
   },
 
@@ -382,6 +388,26 @@ const routes = [
       {
         path: "chatOffice",
         component: chatOffice,
+      },
+      {
+        path: "aboutus",
+        component: Faboutus,
+      },
+      {
+        path: "TermsAndConditions",
+        component: FTermsAndConditions,
+      },
+      {
+        path: "SuccessPartners",
+        component: FSuccessPartners,
+      },
+      {
+        path: "ContactUs",
+        component: FContactUs,
+      },
+      {
+        path: "FAQ",
+        component: FFAQComponent,
       },
     ],
   },

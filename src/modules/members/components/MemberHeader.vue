@@ -1,5 +1,4 @@
 <template>
-  <!-- <img class="navBg-img" src="../assets/bg-color.png" alt="navBg-img"> -->
   <div class="content">
     <nav class="navbar navbar-expand-lg ">
       <div class="container-fluid ">

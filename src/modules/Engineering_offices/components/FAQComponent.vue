@@ -1,5 +1,5 @@
 <template>
-    <BusinessHeader />
+    <EngOfficesHeader />
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 w-25">
@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-import BusinessHeader from "./EngOfficesHeader.vue"
+import EngOfficesHeader from "./EngOfficesHeader.vue"
 </script>
 
 <style scoped>

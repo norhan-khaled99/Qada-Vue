@@ -1,5 +1,5 @@
 <template>
-    <BusinessHeader/>
+    <EngOfficesHeader/>
     <div class="container">
         <div class="row justify-content-center text-center ">
             <div class="col-lg-2 card align-items-center">
@@ -78,7 +78,7 @@
 </template>
 
 <script setup>
-import BusinessHeader from "./EngOfficesHeader.vue"
+import EngOfficesHeader from "./EngOfficesHeader.vue"
 
 </script>
 

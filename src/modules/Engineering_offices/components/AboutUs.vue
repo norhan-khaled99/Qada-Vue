@@ -1,5 +1,5 @@
 <template>
-    <BusinessHeader/>
+    <EngOfficesHeader/>
     <div class="container article mb-5">
         <p>مرحبًا بك في منصة قدة! نحن نسعى جاهدين لتوفير بيئة ملائمة ومبتكرة للمهندسين والعمل الحر في المملكة العربية
             السعودية. نؤمن بأن المهندسين لديهم الكفاءة والقدرة على إحداث تغيير إيجابي في المجتمع والمساهمة في تطويره.</p>
@@ -75,7 +75,7 @@
     <div class="container">
         <div class="header">
             <p style="display: inline; ">يمكنك ان تشارك معهم </p>
-            <p style="display: inline; color: rgba(255, 184, 0, 1);">, يهمنا رأيك حقًا </p>
+            <p style="display: inline; color: #FFB800;">, يهمنا رأيك حقًا </p>
             <p>شارك الآن !</p>
         </div>
     </div>
@@ -90,7 +90,7 @@
 </template>
 
 <script setup>
-import BusinessHeader from "./EngOfficesHeader.vue"
+import EngOfficesHeader from "./EngOfficesHeader.vue"
 
 </script>
 
@@ -149,7 +149,7 @@ header h3 {
 .card {
     /* margin-right: 7rem; */
     /* margin-top: 5rem; */
-    background-color: #259F5A;
+    background-color: #4A4E53;
     width: 18rem;
     height: 25rem;
     border-radius: 1rem;
@@ -162,11 +162,11 @@ header h3 {
     font-size: 2rem;
     font-weight: 600;
     margin-top: 2rem;
-    color: rgba(255, 235, 182, 1);
+    color: #E9AC0A;
 }
 
 .pcard {
-    color: rgba(255, 185, 0, 1);
+    color: #E9AC0A;
     text-align: center;
     margin-top: 1rem;
 }
@@ -192,7 +192,7 @@ header h3 {
 }
 
 .share input {
-    border: 0.2rem solid #259F5A;
+    border: 0.2rem solid #4A4E53;
     border-radius: 2rem;
 }
 
@@ -200,7 +200,7 @@ header h3 {
     Width: 98.45px;
     Height: 35.75px;
     border-radius: 20px;
-    background-color: #259F5A;
+    background-color: #4A4E53;
     color: rgba(255, 255, 255, 1);
     margin-top: 2rem;
 }
