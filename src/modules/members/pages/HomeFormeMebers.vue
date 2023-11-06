@@ -102,9 +102,11 @@
       </div> -->
 
       <!-- startCard -->
+
+
       <div v-for="project in allProjects" :key="project.id">
-      <router-link to="/member/maintabsForMember" class="card-link">
-      <div class="row justify-content-center my-3 text-decoration-none" >
+        <router-link :to="{ name: 'maintabsForMember', params: { id: project.id } }" class="card-link">
+          <div class="row justify-content-center my-3 text-decoration-none" >
         <div class="col-lg-11 col-md-8 col-sm-12">
           <div class="card">
             <div class="row align-items-baseline justify-content-between">
@@ -291,9 +293,8 @@
                   <span class="card-content-text">الخدمة المطلوبة</span>
                 </div>
                 <div>
-                  <!-- <span>{{ project.Electronic_service}}</span> -->
                   <span>
-                    {{ Object.values(JSON.parse(project.Electronic_service))[0] }}
+                    {{ Object.values(JSON.parse(project.Electronic_service))[0]}}
                   </span>
                   
                 </div>

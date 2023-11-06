@@ -248,8 +248,11 @@ const routes = [
         component: DashboardCard,
       },
       {
-        path: "maintabsForMember",
+        path: "maintabsForMember/:id",
+        name: 'maintabsForMember',
         component: maintabsForMember,
+        props:true
+      
       },
       {
         path: "testModal",
