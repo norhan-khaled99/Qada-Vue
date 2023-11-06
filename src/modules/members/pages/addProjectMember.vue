@@ -182,6 +182,7 @@
           </button>
         </div>
       </form>
+
     </div>
   </div>
 </template>
@@ -214,6 +215,7 @@ export default {
       request_qty_tables: false,
       request_engs: 0,
     });
+    
     const selectedTitle_deedFile = ref(null);
     const handleFileTitle_deed = (event) => {
       if (event.target.files.length >= 0) {
@@ -228,10 +230,12 @@ export default {
       }
     }
 
-    const selectedOtherDocsFile = ref(null);
+    const selectedOtherDocsFile = ref([]);
     const handleFileOtherDocs = (event) => {
       if (event.target.files.length >= 0) {
         selectedOtherDocsFile.value = event.target.files[0];
+        console.log(typeof(selectedOtherDocsFile.value))
+
       }
     }
 
@@ -263,8 +267,8 @@ export default {
       formData.append("request_qty_tables", form.value.request_qty_tables);
       formData.append("request_engs", form.value.request_engs);
       
-      memberService.addproject(formData).then((result) => {
-        console.log(result)
+      memberService.addproject(formData).then((response) => {
+        console.log(response)
       })
       .catch((error) => {
           console.error(error);

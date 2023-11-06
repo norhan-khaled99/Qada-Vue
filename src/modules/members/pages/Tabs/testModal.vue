@@ -22,7 +22,7 @@
                 <path d="M6.5 72.3L56.5652 108L120.5 6" stroke="#0F9678" stroke-width="22"/>
               </svg>
             <div class="modal-text my-3">
-                تم إرسال رسالتك الي فريقنا بنجاح , نشكرك لتواصلك معنا
+              {{ props.modalText }}
             </div>
           </div>
         </div>
@@ -57,10 +57,12 @@
   </script> -->
 
   <script setup>
-  import { ref, onMounted } from "vue";
+  import { ref, onMounted, defineProps } from "vue";
 
   const modal = ref(null);
-
+  const props = defineProps({
+    modalText: String,
+  });
   onMounted(() => {
     // eslint-disable-next-line no-undef
     modal.value = new bootstrap.Modal(document.getElementById("demoModal"));
