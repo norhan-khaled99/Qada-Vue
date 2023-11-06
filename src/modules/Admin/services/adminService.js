@@ -2,14 +2,22 @@ import axios from "axios";
 const apiClient = axios.create({
     baseURL: "http://127.0.0.1:8000",
     headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
+      'Content-Type': 'application/json',
+      "Accept": "*/*",
+      "Content-Length": '',
+      "Accept-Encoding": 'gzip, deflate, br',
+      "Connection": 'keep-alive',
+      "Host": '',
+      'Authorization': 'Bearer ' + localStorage.getItem('token')
     },
 });
 
 
 const adminService = {
-    // this is public service
+  // this is public service
+    getPendingProjects() {
+      return apiClient.post(`admin/projects/index`)
+    },
     getAllTerms(){
       return apiClient.get(`api/terms`)
     },
