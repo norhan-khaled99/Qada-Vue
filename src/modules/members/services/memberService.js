@@ -9,7 +9,6 @@ const apiClient = axios.create({
         "Connection": 'keep-alive',
         "Host": '',
         'Authorization': 'Bearer ' + localStorage.getItem('token')
-
     },
 });
 

@@ -93,6 +93,7 @@ import  UserAccountDashboard from "../modules/members/pages/dashboardForMember/U
 import DashboardTest from "../modules/members/pages/dashboardForMember/DashboardTest.vue";
 import MainHomepage from "../modules/Admin/pages/MainHomepage.vue";
 //-----------------------------admin-------------------------------------------------
+import PendingProjects from "../modules/Admin/PendingProjects.vue"
 //------Users--Dashboard----admin-----
 import UserSettings from "../modules/Admin/users/UserSettings.vue";
 import UsersComponent from "../modules/Admin/users/UsersComponent.vue";
@@ -140,6 +141,11 @@ const routes = [
       {
         path: "homepage",
         component: MainHomepage,
+      },
+      {
+        path: "pendingProjects",
+        component:PendingProjects
+
       },
       {
         path: "usersettings",

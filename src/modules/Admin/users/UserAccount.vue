@@ -197,7 +197,7 @@ export default {
     }
 }
 </script>
-
+    
 <style scoped>
 * {
     direction: rtl;

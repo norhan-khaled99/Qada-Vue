@@ -232,7 +232,6 @@ export default {
     const handleFileOtherDocs = (event) => {
       if (event.target.files.length >= 0) {
         selectedOtherDocsFile.value = event.target.files[0];
-        // console.log(selectedOtherDocsFile.value)
       }
     }
 
@@ -263,8 +262,7 @@ export default {
       formData.append("other_files", selectedOtherDocsFile.value);
       formData.append("request_qty_tables", form.value.request_qty_tables);
       formData.append("request_engs", form.value.request_engs);
-
-      // console.log(typeof (selectedOtherDocsFile.value))
+      
       memberService.addproject(formData).then((result) => {
         console.log(result)
       })
@@ -275,7 +273,6 @@ export default {
 
     };
     onMounted(() => {
-      // addproject();
     });
     return {
       form,
