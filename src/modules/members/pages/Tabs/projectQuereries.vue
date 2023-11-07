@@ -1,7 +1,7 @@
 <template>
   <div class="container m-auto">
     <div class="row justify-content-center text-center">
-        
+      
     <div class="col-md-8 col-sm-12 mt-5">
     <span class="d-flex">
       <div class="avatar">

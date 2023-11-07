@@ -1,7 +1,9 @@
 <template>
   <div class="container m-auto">
     <div class="row justify-content-center text-center">
-        
+      <div class="col-md-8 col-sm-12 mt-5">
+        <input type="text" v-model="form.comment" class="form-control" placeholder="">  
+      </div>
     <div class="col-md-8 col-sm-12 mt-5">
     <span class="d-flex">
       <div class="avatar">
@@ -163,7 +165,34 @@
 </template>
 
 <script>
-export default {};
+import { ref, onMounted } from "vue";
+import engineerofficesService from "../../services/engineeroffice";
+export default {
+  setup(){
+    const form=ref({
+      project_id:"",
+      comment:""
+    });
+
+    const addComment=()=>{
+    
+
+      engineerofficesService.addComment(form.value).then((res) => {
+           console.log(res.data)
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
+    onMounted(()=>{
+
+    });
+    return{
+      form,
+      addComment,
+    };
+  }
+};
 </script>
 
 <style scoped>
