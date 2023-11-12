@@ -9,13 +9,15 @@ const apiClient = axios.create({
     },
 });
 
-
-
 const globalService = {
 //return aboutus , qa , parteners
-   getGlobalSites(){
+  getGlobalSites(){
     return apiClient.get(`api/globals`)
-   },
+  },
+   //only accepted projects
+  getAllProjectForlandingpage(){
+    return apiClient.get(`api/welcome`)
+  },
 };
 
 

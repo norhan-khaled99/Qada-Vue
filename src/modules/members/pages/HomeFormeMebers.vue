@@ -263,7 +263,6 @@ export default {
   },
   setup() {
     const allProjects = ref([]);
-
     const getAllProjects = () => {
       globalService.getAllProjectForlandingpage()
         .then((res) => {
