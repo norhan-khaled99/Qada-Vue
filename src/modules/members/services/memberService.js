@@ -25,9 +25,6 @@ const memberService = {
     placeproject(){
         return apiClient.post(`person/offers/placeOffer`)
     },
-    getAllProjectFormember(){
-        return apiClient.get(`api/welcome`)
-    },
 };
 
 

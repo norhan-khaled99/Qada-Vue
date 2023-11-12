@@ -176,6 +176,7 @@ import projectTransactions from './projectTransactions.vue';
 import projectsFile from './projectsFile.vue';
 import Prices_offers from './Prices_offers.vue';
 
+import { ref } from "vue";
 export default {
   components: {
     ProjectDetails,
@@ -185,12 +186,18 @@ export default {
     projectsFile,
     projectTransactions,
     ProjectQuereries,
-    BusinessHeader
-
+    BusinessHeader,
   },
-  data() {
+  setup() {
+    const activeTab = ref("1");
+
+    const changeTab = (tabNumber) => {
+      activeTab.value = tabNumber;
+    };
     return {
-      activeTab: '1', 
+      activeTab,
+      changeTab,
+
     };
   },
 };

@@ -94,7 +94,7 @@ export default {
                     localStorage.setItem('id', id);
                     localStorage.setItem('phone', phone);
                     localStorage.setItem('email', email);
-                    router.push('/');
+                    router.push('/EngineeringOffices');
                 })
         };
         return {

@@ -192,7 +192,7 @@
 
 <script>
 import { usebackgroundStore } from "../../../../stores/background"
-import AdminHeader from "../../../Admin/AdminHeader.vue"
+import AdminHeader from "../../../Admin/pages/AdminHeader.vue"
 export default {
   components: {
     AdminHeader

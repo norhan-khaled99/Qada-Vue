@@ -57,12 +57,12 @@
   </script> -->
 
   <script setup>
-  import { ref, onMounted, defineProps } from "vue";
+  import { ref, onMounted } from "vue";
 
   const modal = ref(null);
-  const props = defineProps({
-    modalText: String,
-  });
+  // const props = defineProps({
+  //   modalText: String,
+  // });
   onMounted(() => {
     // eslint-disable-next-line no-undef
     modal.value = new bootstrap.Modal(document.getElementById("demoModal"));

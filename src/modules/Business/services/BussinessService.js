@@ -12,13 +12,13 @@ const apiClient = axios.create({
       },
 });
 
-const engineeringoffice = {
+const bussinessService = {
   addComment(data) {
-    return apiClient.post(`office/comments/create`, data);
+    return apiClient.post(`bussiness/comments/create`, data);
   },
   updateComment(data) {
-    return apiClient.post(`office/comments/edit`, data);
+    return apiClient.post(`bussiness/comments/edit`, data);
   },
 };
 
-export default engineeringoffice;
+export default bussinessService;

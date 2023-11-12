@@ -57,23 +57,12 @@
               <option value="1">تجاري</option>
               <option value="2">سكني</option>
               <option value="3">صناعي</option>
+              <option value="4">تعليمي</option>
+              <option value="2">طبي</option>
+              <option value="3">اخري</option>
             </select>
           </div>
         </div>
-        <!-- <div class="row">
-          <p>الخدمة الإلكترونية المطلوبة</p>
-          <select multiple class="form-select" id="floatingSelect" v-model="form.Electronic_service">
-            <option selected></option>
-            <option value="1">مراجعة و إعتماد المخططات لإصدار التراخيص</option>
-            <option value="2">تصميم هندسي بغرض إستخراج رخصة بناء</option>
-            <option value="3">تصميم داخلي</option>
-            <option value="4">تصميم حدائق</option>
-            <option value="5">
-              تصميم هندسي بغرض إستخراج رخصة تصحيح وضع مبني قائم
-            </option>
-            <option value="6">تصميم هندسي بغرض إستخراج رخصة ترميم</option>
-          </select>
-        </div> -->
         <div class="row">
           <div class="col-12">
           <p>الخدمة الإلكترونية المطلوبة</p>
@@ -84,6 +73,8 @@
             <option value="4">تصميم حدائق</option>
             <option value="5">تصميم هندسي بغرض إستخراج رخصة تصحيح وضع مبني قائم</option>
             <option value="6">تصميم هندسي بغرض إستخراج رخصة ترميم</option>
+            <option value="7">استخراج الاقرار المساحي الالكتروني</option>
+            <option value="8">عمل رفع مساحي</option>
           </select>
         </div>
         </div>
@@ -118,7 +109,7 @@
             <select class="form-select" id="floatingSelect" v-model="form.Eng_offices_class">
               <option selected></option>
               <option value="1">تصنيف درجة 1 الي 3</option>
-              <option value="2">تصنيف درجة 3 الي 6</option>
+              <option value="2">تصنيف درجة 4 الي 6</option>
             </select>
             <p class="descriptionfortextarea">
               تختلف الاسعار نسبيا مع اختيار التصنيف (حيث انه التصنيف خو الاعلي
@@ -141,7 +132,7 @@
 
         <div class="row my-5 justify-content-center text-center">
           <div class="col">
-            <p class="text-center">صورة من صك الملكية</p>
+            <p class="text-center">وثيقة تملك عقاري</p>  
             <label for="propertyDoc" class="file-label">
               <img src="../../../assets/3322766-2001.png" class="upload-image" />
             </label>
@@ -150,7 +141,8 @@
           </div>
           <div class="col">
             <p class="text-center">
-              صورة من هوية المالك <span class="text-danger">*</span>
+              صورة من نظام البناء 
+              <span class="text-danger">*</span>
             </p>
             <label for="ownerIdDoc" class="file-label">
               <img src="../../../assets/3322766-2001.png" class="upload-image" />
@@ -167,13 +159,9 @@
           </div>
         </div>
 
-        <div class="row d-flex justify-content-between">
-          <div class="col-6">
-            <span>طلب جداول الكميات</span>
-          </div>
-          <div class="col-6">
-            <input class="form-check-input" type="checkbox" value="" v-model="form.request_qty_tables">
-          </div>
+        <div class="d-flex">
+            <div class="me-4">طلب جداول الكميات</div>
+            <input class="form-check-input me-3" type="checkbox" value="" v-model="form.request_qty_tables">
         </div>
 
         <div class="row">

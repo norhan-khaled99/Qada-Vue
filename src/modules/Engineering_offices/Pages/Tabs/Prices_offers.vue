@@ -3,7 +3,6 @@
     <div class="row justify-content-between  p-3 m-auto my-3 text-center card1 ">
         <p><span>ملاحظة : </span> سيتعين عليك طرح مشروعك من جديد في حال لم يتم التعاقد مع مكتب هندسي
             خلال مدة 10 أيام</p>
-        <p><span>تنويه : </span>تنويه : طلب تخفيض عرض السعر متاح فقط لعدد 3 عروض اسعار</p>
     </div>
     <div class="row justify-content-between w-50  m-auto my-3 ">
         <div class="col-lg-5 offers">
@@ -266,7 +265,9 @@ export default {
     direction: rtl;
 }
 .card1 {
+    width: 50%;
     border-radius: 10px;
+    white-space: nowrap;
     border: 1px solid#48847B;
 }
 p {
