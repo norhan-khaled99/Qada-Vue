@@ -1,12 +1,14 @@
 <template>
   <div>
     <PHeader/>
-  <div class="container m-auto my-5">
+  <div class="container mx-auto my-5">
     <div class="header">
       <p>تسجيل الدخول للأفراد</p>
     </div>
-    <form @submit.prevent="login()" class="w-50 m-auto mt-5">
-      <div class="mb-2">
+    <div class="row">
+    <form @submit.prevent="login()" class=" mt-5">
+      <div class="col-md-4 col-sm-8 mx-auto">
+        <div class="mb-2">
         <img src="../../../assets/Vector.png" class="mx-2" alt="" />
         <label for="name">اسم المستخدم</label>
       </div>
@@ -19,7 +21,10 @@
       <div class="text-center">
         <button type="submit" class="btn mt-4">دخول</button>
       </div>
+      </div>
     </form>
+  </div>
+
     <div class="text-center">
       <button type="button" class="register mt-4">
         <img src="../../../assets/Vector2.png" class="mx-2" alt="" />
@@ -30,6 +35,7 @@
 </div>
 
 </template>
+
 <script>
 import PHeader from "../components/PHeader.vue";
 import { ref } from "vue";
@@ -115,16 +121,14 @@ input {
 }
 
 .btn {
-  width: 200px;
-  height: 55px;
+  padding: 10px 55px;
   border-radius: 20px;
   background-color: #0378ae;
 }
 
 .register {
   border-color: #616567;
-  width: 180px;
-  height: 30px;
+  padding: 5px 20px;
   border-radius: 20px;
 }
 

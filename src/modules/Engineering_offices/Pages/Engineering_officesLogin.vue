@@ -5,7 +5,9 @@
       <div class="header">
         <p>تسجيل الدخول للمكاتب الهندسية</p>
       </div>
-      <form @submit.prevent="login()" class="w-50 m-auto mt-5">
+      <div class="row">
+      <form @submit.prevent="login()" class="mt-5">
+        <div class="col-md-4 col-sm-8 mx-auto">
         <div class="mb-2">
           <i class="fa-solid fa-user mx-2"></i>
           <label for="name">اسم المستخدم</label>
@@ -19,7 +21,9 @@
         <div class="text-center">
           <button type="submit" class="btn btn-primary mt-4">دخول</button>
         </div>
+        </div>
       </form>
+     </div>
       <div class="text-center">
         <button type="button" class="register mt-4">
           <img src="../../../assets/Vector2.png" class="mx-2" alt="" />
@@ -110,8 +114,7 @@ input {
 }
 
 .btn {
-  width: 200px;
-  height: 55px;
+  padding: 10px 55px;
   border-radius: 20px;
   background-color: #626466;
   border: #626466;
@@ -119,8 +122,7 @@ input {
 
 .register {
   border-color: #616567;
-  width: 180px;
-  height: 30px;
+  padding: 5px 20px;
   border-radius: 20px;
 }
 
