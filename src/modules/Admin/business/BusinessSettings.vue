@@ -83,7 +83,7 @@
 
 <script>
 import { usebackgroundStore } from "../../../stores/background"
-import AdminHeader from "../AdminHeader.vue"
+import AdminHeader from "../pages/AdminHeader.vue"
 export default {
     components: {
         AdminHeader

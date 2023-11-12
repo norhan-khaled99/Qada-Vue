@@ -15,8 +15,17 @@ const apiClient = axios.create({
 
 const adminService = {
   // this is public service
+    login(credentials) {
+      return apiClient.post("admin/login", credentials);
+    },
     getPendingProjects() {
       return apiClient.post(`admin/projects/index`)
+    },
+    approveproject(projectID){
+        return apiClient.post(`admin/projects/approve`,projectID)
+    },
+    projectRejection(projectId) {
+      return apiClient.post(`admin/projects/approve`,projectId)
     },
     getAllTerms(){
       return apiClient.get(`api/terms`)
@@ -26,9 +35,6 @@ const adminService = {
     },
     ////////////////////////////
 
-    approveproject(projectID){
-        return apiClient.post(`admin/projects/approve`,projectID)
-    },
     addcontract(projectID){
         return apiClient.post(`admin/projects/reject`,projectID)
     },

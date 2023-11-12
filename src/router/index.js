@@ -28,20 +28,14 @@ import FContactUs from "../modules/Engineering_offices/components/ContactUs.vue"
 import FFAQComponent from "../modules/Engineering_offices/components/FAQComponent.vue";
 import FSuccessPartners from "../modules/Engineering_offices/components/SuccessPartners.vue";
 import FTermsAndConditions from "../modules/Engineering_offices/components/TermsAndConditions.vue";
-
+import mainTabsForOffice from "../modules/Engineering_offices/Pages/Tabs/mainTabs.vue"
 
 
 //--routes for tabs for Engineering_offices
 
 
 //  routes for tabs for member
-import electronicContract from "../modules/members/pages/Tabs/ElectronicContract.vue";
-import projectDetails from "../modules/members/pages/Tabs/projectDetails.vue";
-import projectPhases from "../modules/members/pages/Tabs/projectPhases.vue";
-import Prices_offers from "../modules/members/pages/Tabs/Prices_offers.vue";
-import projectTransactions from "../modules/members/pages/Tabs/projectTransactions.vue";
-import projectFiles from "../modules/members/pages/Tabs/projectsFile.vue";
-import projectQuereries from "../modules/members/pages/Tabs/projectQuereries";
+
 import testModal from "../modules/members/pages/Tabs/testModal.vue";
 import testModal2 from "@/modules/members/pages/Tabs/testModal2.vue";
 // import requestToEdit from "../modules/members/components/requestToEdit.vue"
@@ -57,13 +51,7 @@ import BusinessLogin from "../modules/Business/pages/BusinessLogin.vue";
 import BusinessHomePage from "../modules/Business/pages/bussinessHomePage.vue";
 import addProjectBussiness from '@/modules/Business/pages/addProjectBussiness'
 //---routes for Tabs for Business
-import BprojectDetails from "../modules/Business/pages/Tabs/projectDetails.vue";
-import BPrices_offers from "../modules/Business/pages/Tabs/Prices_offers.vue";
-import BelectronicContract from "../modules/Business/pages/Tabs/ElectronicContract.vue";
-import BprojectQuereries from "../modules/Business/pages/Tabs/projectQuereries";
-import Bprojectphases from "../modules/Business/pages/Tabs/projectPhases.vue";
-import BprojectFiles from "../modules/Business/pages/Tabs/projectsFile.vue";
-import BprojectTransactions from "../modules/Business/pages/Tabs/projectTransactions.vue";
+
 import maintabsForBussiness from "../modules/Business/pages/Tabs/mainTabs.vue";
 
 //---routes for components for Business
@@ -80,7 +68,6 @@ import BTermsAndConditions from "../modules/Business/components/TermsAndConditio
 // import DashboardAccount from "../modules/members/pages/dashboardForMember/DashboardAccount.vue"
 import UsersStats from "../modules/Admin/users/UsersStats.vue";
 //-----------------
-// import TriangleDesign from "../modules/members/pages/Tabs/TriangleDesign.vue"
 
 
 // import UsersComponent from "../modules/modules/Admin/pages/UsersComponent.vue";
@@ -93,7 +80,9 @@ import  UserAccountDashboard from "../modules/members/pages/dashboardForMember/U
 import DashboardTest from "../modules/members/pages/dashboardForMember/DashboardTest.vue";
 import MainHomepage from "../modules/Admin/pages/MainHomepage.vue";
 //-----------------------------admin-------------------------------------------------
-import PendingProjects from "../modules/Admin/PendingProjects.vue"
+import AdminLogin from "../modules/Admin/pages/AdminLogin.vue"
+import AddedProjects from "../modules/Admin/pages/AddedProjects.vue"
+import PendingProjects from "../modules/Admin/pages/PendingProjects.vue"
 //------Users--Dashboard----admin-----
 import UserSettings from "../modules/Admin/users/UserSettings.vue";
 import UsersComponent from "../modules/Admin/users/UsersComponent.vue";
@@ -135,17 +124,29 @@ const routes = [
     path: "/successPartners",
     component: SuccessPartners,
   },
+  // admin routes
   {
     path: "/admin",
     children: [
+      {
+        path: "",
+        component: AdminLogin
+      },
       {
         path: "homepage",
         component: MainHomepage,
       },
       {
+        path: "adminSidBar",
+        component: ()=> import ('../modules/Admin/pages/AdminSideBar.vue')
+      },
+      {
+        path: "addedProjects",
+        component:AddedProjects
+      },
+      {
         path: "pendingProjects",
         component:PendingProjects
-
       },
       {
         path: "usersettings",
@@ -167,7 +168,6 @@ const routes = [
         path: "businessaccount",
         component: BusinessAccount,
       },
-      
       {
         path: "officeaccount",
         component: OfficeAccount,
@@ -181,15 +181,24 @@ const routes = [
         component: OfficesComponent,
       },
       {
-        path: "/users",
+        path: "users",
         component: UsersComponent,
       },
       {
-        path: "/usersstats",
+        path: "usersstats",
         component: UsersStats,
       },
+      {
+        path: "businessState",
+        component: ()=> import ('../modules/Admin/business/BusinessStats.vue')
+      },
+      {
+        path: "officeStats",
+        component: ()=> import ('../modules/Admin/offices/OfficeStats.vue')
+      }
     ],
   },
+
   {
     path: "/member",
     children: [
@@ -204,34 +213,6 @@ const routes = [
       {
         path: "dashborad/projects",
         component: ProjectListforMember,
-      },
-      {
-        path: "projectdetails",
-        component: projectDetails,
-      },
-      {
-        path: "pricesOffers",
-        component: Prices_offers,
-      },
-      {
-        path: "projectPhases",
-        component: projectPhases,
-      },
-      {
-        path: "electronicContract",
-        component: electronicContract,
-      },
-      {
-        path: "projecttransactions",
-        component: projectTransactions,
-      },
-      {
-        path: "projectfiles",
-        component: projectFiles,
-      },
-      {
-        path: "projectquereries",
-        component: projectQuereries,
       },
       {
         path: "checkLine",
@@ -258,7 +239,6 @@ const routes = [
         name: 'maintabsForMember',
         component: maintabsForMember,
         props:true
-      
       },
       {
         path: "testModal",
@@ -311,11 +291,11 @@ const routes = [
         component: addProjectBussiness,
       },
       {
-        path: "businessRegister",
+        path: "register",
         component: BusinessRegister,
       },
       {
-        path: "businessLogin",
+        path: "login",
         component: BusinessLogin,
       },
       {
@@ -339,34 +319,6 @@ const routes = [
         component: BTermsAndConditions,
       },
       {
-        path: "BprojectDetails",
-        component: BprojectDetails,
-      },
-      {
-        path: "BprojectQuereries",
-        component: BprojectQuereries,
-      },
-      {
-        path: "BprojectFiles",
-        component: BprojectFiles,
-      },
-      {
-        path: "BPrices_offers",
-        component: BPrices_offers,
-      },
-      {
-        path: "BelectronicContract",
-        component: BelectronicContract,
-      },
-      {
-        path: "projectPhases",
-        component: Bprojectphases,
-      },
-      {
-        path: "projectTransactions",
-        component: BprojectTransactions,
-      },
-      {
         path: "maintabsForBussiness",
         component: maintabsForBussiness,
       },
@@ -381,11 +333,11 @@ const routes = [
         component: HomePageforOffice,
       },
       {
-        path: "Engineering_officesRegister",
+        path: "register",
         component: Engineering_officesRegister,
       },
       {
-        path: "Engineering_officesLogin",
+        path: "login",
         component: Engineering_officesLogin,
       },
       {
@@ -412,6 +364,12 @@ const routes = [
         path: "FAQ",
         component: FFAQComponent,
       },
+      {
+          path: "mainTabsForOffice/:id",
+          name: 'mainTabsForOffice',
+          component: mainTabsForOffice,
+          props:true
+      }
     ],
   },
   {

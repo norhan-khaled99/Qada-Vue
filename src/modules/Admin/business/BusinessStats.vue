@@ -16,7 +16,7 @@
             <div class="col-lg-9">
                 <div class="row g-0">
                     <ul class="tabs d-flex">
-                        <li class="me-5 "><router-link to="userStats" class="tab">افراد</router-link></li>
+                        <li class="me-5 "><router-link to="usersStats" class="tab">افراد</router-link></li>
                         <li class="mx-5 "><router-link to="businessState" class="tab">اعمال</router-link></li>
                         <li><router-link to="officeStats" class="tab">مكاتب هندسية</router-link></li>
                     </ul>
@@ -68,7 +68,7 @@
             </div>
         </div>
         <div class="row g-0 justify-content-center text-center my-5 ">
-            <div class="col-lg-3 col-md-5 col-5 d-flex flex-column justify-content-center boxpackage me-3 mt-2">
+            <div class="col-lg-3 col-md-5 col-5 d-flex flex-column justify-content-center box me-3 mt-2">
                 <div class="d-flex align-items-center justify-content-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path
@@ -79,14 +79,14 @@
                 </div>
                 <p class="number">12000</p>
             </div>
-            <div class="col-lg-2 col-md-5 col-5 d-flex flex-column justify-content-center boxx me-3 mt-2">
+            <div class="col-lg-2 col-md-5 col-5 d-flex flex-column justify-content-center box me-3 mt-2">
                 <div class="d-flex align-items-center justify-content-center">
                     <p class="text me-2 mt-3"> X </p>
                     <p class="text me-2 mt-3">مشاريع ملغية</p>
                 </div>
                 <p class="number">12000</p>
             </div>
-            <div class="col-lg-2 col-md-5 col-5 d-flex flex-column justify-content-center boxx me-3 mt-2">
+            <div class="col-lg-2 col-md-5 col-5 d-flex flex-column justify-content-center box me-3 mt-2">
                 <div class="d-flex align-items-center justify-content-center">
                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path opacity="0.3" d="M15 17H9V16H5V19H19V16H15V17ZM4 14H9V11H15V14H20V9H4V14Z" fill="white" />
@@ -98,7 +98,7 @@
                 </div>
                 <p class="number">12000</p>
             </div>
-            <div class="col-lg-2 col-md-5 col-5 d-flex flex-column justify-content-center boxx me-3 mt-2">
+            <div class="col-lg-2 col-md-5 col-5 d-flex flex-column justify-content-center box me-3 mt-2">
                 <div class="d-flex align-items-center justify-content-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path
@@ -109,7 +109,7 @@
                 </div>
                 <p class="number">12000</p>
             </div>
-            <div class="col-lg-2 col-md-5 col-5 d-flex flex-column justify-content-center boxx me-3 mt-lg-2 mt-5">
+            <div class="col-lg-2 col-md-5 col-5 d-flex flex-column justify-content-center box me-3 mt-lg-2 mt-5">
                 <div class="d-flex align-items-center justify-content-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path
@@ -178,7 +178,6 @@ export default {
     font-size: 25px;
     line-height: 46.85px;
 }
-
 .tabs {
     list-style-type: none;
 }
@@ -192,9 +191,9 @@ export default {
 }
 
 .box {
-    height: 178px;
+    height: 188px;
     border-radius: 10px;
-    background: #0378AE;
+    background: #259F5A;
 }
 
 .text {
@@ -207,17 +206,5 @@ export default {
     color: #FFFFFF;
     font-size: 20px;
     font-weight: 600;
-}
-
-.boxpackage {
-    height: 188px;
-    border-radius: 10px;
-    background: #0378AE;
-}
-
-.boxx {
-    height: 188px;
-    border-radius: 10px;
-    background: #0378AE;
 }
 </style>
