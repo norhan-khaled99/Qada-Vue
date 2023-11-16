@@ -19,6 +19,11 @@ const engineeringoffice = {
   updateComment(data) {
     return apiClient.post(`office/comments/edit`, data);
   },
+  addOffer(data){
+    return apiClient.post(`office/offers/placeOffer`,data)
+  }
+
+  
 };
 
 export default engineeringoffice;
