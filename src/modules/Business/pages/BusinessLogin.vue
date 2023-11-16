@@ -5,7 +5,9 @@
       <div class="header">
         <p>تسجيل الدخول للأعمال</p>
       </div>
-      <form @submit.prevent="login()" class="w-50 m-auto mt-5">
+      <div class="row">
+        <form @submit.prevent="login()" class="mt-5">
+          <div class="col-md-4 col-sm-8 mx-auto">
         <div class="mb-2">
           <img src="../../../assets/login_business.png" class="mx-2" alt="" />
           <label for="name">اسم المستخدم</label>
@@ -21,7 +23,9 @@
             <button type="submit" class="btn y mt-4">دخول</button>
           </router-link>
         </div>
+        </div>
       </form>
+      </div>
       <div class="text-center">
         <button type="button" class="register mt-4">
           <img src="../../../assets/Vector2.png" class="mx-2" alt="" />
@@ -64,7 +68,7 @@ export default {
           localStorage.setItem("phone", response.data.data.phone);
           localStorage.setItem("email", response.data.data.email);
 
-          router.push("/");
+          router.push("/business");
         })
         .catch((error) => {
           console.log(error);
@@ -127,16 +131,14 @@ label {
 
 .btn {
   color: #fff;
-  height: 55px;
-  width: 200px;
+  padding: 10px 55px;
   background-color: #259f5a;
   border-radius: 20px;
 }
 
 .register {
   border-color: #616567;
-  width: 180px;
-  height: 30px;
+  padding: 5px 20px;
   border-radius: 20px;
 }
 .link {
