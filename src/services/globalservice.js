@@ -5,10 +5,8 @@ const apiClient = axios.create({
       "Content-Type": "application/json",
       Accept: "application/json",
       'Authorization': 'Bearer ' + localStorage.getItem('token')
-
     },
 });
-
 const globalService = {
 //return aboutus , qa , parteners
   getGlobalSites(){
@@ -19,7 +17,6 @@ const globalService = {
     return apiClient.get(`api/welcome`)
   },
 };
-
 
 export default globalService;
 
