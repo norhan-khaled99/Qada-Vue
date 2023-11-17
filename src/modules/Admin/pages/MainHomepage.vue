@@ -8,7 +8,7 @@
                     <li class="authName">عبدالعزيز</li>
                     <li class="mt-4"><router-link class="sidbarLink" to="homepage">الرئيسية</router-link></li>
                     <li class="mt-4"><router-link class="sidbarLink" to="usersStats">الاحصائيات</router-link></li>
-                    <li class="mt-4"><router-link class="sidbarLink" to="">الفريق</router-link></li>
+                    <li class="mt-4"><router-link class="sidbarLink" to="useraccount">الفريق</router-link></li>
                     <li class="mt-4"><router-link class="sidbarLink" to="addedProjects">المشاريع</router-link></li>
                     <li class="mt-4"><router-link class="sidbarLink" to="">تسجيل خروج</router-link></li>
                 </ul>
@@ -93,7 +93,7 @@
             <div class="team-member mb-3">
                 اعضاء الفريق
             </div>
-            <div class="team-member-content bg-light mb-5">
+            <div class="col-lg-10 m-auto team-member-content bg-light my-5">
                 <div class="row align-self-baseline">
                     <div class="col team-member-content-title">الموظف</div>
                     <div class="col team-member-content-title">موعد التسليم</div>
