@@ -23,7 +23,7 @@
                                     المشاريع</router-link></li>
                         </ul>
                     </div>
-                    <div v-for="project in addedprojects" :key="project.id">
+                    <div v-for="project in filteredProjects" :key="project.id">
                         <div class="row justify-content-center my-5">
                             <div class="col-lg-12 col-md-8  col-sm-12">
                                 <div class="card">
