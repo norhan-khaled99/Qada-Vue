@@ -176,7 +176,7 @@
                       </div>
                       <div>
                         <span v-if="project.offers.length === 0">ليس هناك عروض</span>
-                        <span v-else>{{ project.offers }}</span>
+                        <span v-else>0</span>
 
                       </div>
                     </div>

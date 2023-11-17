@@ -191,11 +191,10 @@
                     </div>
                     <div>
                       <span v-if="project.offers.length === 0">ليس هناك عروض</span>
-                      <span v-else>{{ project.offers }}</span>
-
+                      <!-- <span v-else>{{ project.offers }}</span> -->
+                      <span v-else>ليس هناك عروض</span>
                     </div>
                   </div>
-
                   <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
                     <div class="card-content">
                       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
@@ -218,7 +217,6 @@
                       <span>
                         {{ Object.values(JSON.parse(project.Electronic_service))[0] }}
                       </span>
-
                     </div>
                     <div class="card-content">
                       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
@@ -229,7 +227,6 @@
                           d="M16.125 16.4062C15.9844 16.4062 15.8437 16.375 15.7187 16.2969L11.8125 13.9531C11.6968 13.8836 11.6013 13.785 11.5355 13.6671C11.4697 13.5493 11.4359 13.4162 11.4375 13.2812V7.03125C11.4375 6.59375 11.7812 6.25 12.2187 6.25C12.6562 6.25 13 6.59375 13 7.03125V12.8438L16.5312 14.9531C16.6767 15.0423 16.7891 15.1764 16.8515 15.3352C16.9138 15.494 16.9227 15.6688 16.8768 15.8331C16.8308 15.9974 16.7326 16.1422 16.5969 16.2456C16.4613 16.3491 16.2956 16.4055 16.125 16.4062Z"
                           fill="#48847B" />
                       </svg>
-
                       <span class="card-content-text">آخر موعد لأستلام عروض الاسعار</span>
                     </div>
                     <div>
