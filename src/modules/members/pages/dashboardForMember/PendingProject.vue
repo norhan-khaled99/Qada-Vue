@@ -1,13 +1,14 @@
 <template>
+    <MemberHeader />
     <div class="containe">
-        <!-- <div class="sideCard">
+        <div class="sideCard">
             <p>مرحبا</p>
             <h4>عبدالعزيز</h4>
             <p>الرئيسية</p>
             <p>حسابي</p>
             <p>المراسلات</p>
             <p>تسجيل خروج</p>
-        </div> -->
+        </div>
         <div class="">
             <CheckLine />
         </div>
@@ -75,10 +76,12 @@
 
 <script>
 import CheckLine from './CheckLine.vue';
+import MemberHeader from "../../components/MemberHeader.vue";
 export default {
     name: 'PendingProject',
     components: {
         CheckLine,
+        MemberHeader
     }
 }
 </script>

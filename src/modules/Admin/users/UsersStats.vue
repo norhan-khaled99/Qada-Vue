@@ -7,8 +7,8 @@
                     <li class="text-light">مرحبا</li>
                     <li class="authName">عبدالعزيز</li>
                     <li class="mt-4"><router-link class="sidbarLink" to="homepage">الرئيسية</router-link></li>
-                    <li class="mt-4"><router-link class="sidbarLink" to="usersStats">الاحصائيات</router-link></li>
-                    <li class="mt-4"><router-link class="sidbarLink" to="">الفريق</router-link></li>
+                    <li class="mt-4"><router-link class="sidbarLink" to="/admin/usersStats">الاحصائيات</router-link></li>
+                    <li class="mt-4"><router-link class="sidbarLink" to="useraccount">الفريق</router-link></li>
                     <li class="mt-4"><router-link class="sidbarLink" to="addedProjects">المشاريع</router-link></li>
                     <li class="mt-4"><router-link class="sidbarLink" to="">تسجيل خروج</router-link></li>
                 </ul>
@@ -16,7 +16,7 @@
             <div class="col-lg-9">
                 <div class="row g-0">
                     <ul class="tabs d-flex">
-                        <li class="me-5 "><router-link to="userStats" class="tab">افراد</router-link></li>
+                        <li class="me-5 "><router-link to="usersStats" class="tab">افراد</router-link></li>
                         <li class="mx-5 "><router-link to="businessState" class="tab">اعمال</router-link></li>
                         <li><router-link to="officeStats" class="tab">مكاتب هندسية</router-link></li>
                     </ul>

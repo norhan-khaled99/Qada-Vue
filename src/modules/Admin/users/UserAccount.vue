@@ -1,43 +1,43 @@
 <template>
     <AdminHeader />
-    <div class="row g-0 bg-warning">
+    <div class="row g-0">
         <div class="col-lg-2 sideCard">
-            <p>مرحبا</p>
-            <h4>عبدالعزيز</h4>
-            <p>الرئيسية</p>
-            <p>الاحصائيات</p>
-            <p>الفريق</p>
-            <p> المشاريع</p>
-            <p>تسجيل خروج</p>
+            <ul>
+                <li class="text-light">مرحبا</li>
+                <li class="authName">عبدالعزيز</li>
+                <li class="mt-4"><router-link class="sidbarLink" to="homepage">الرئيسية</router-link></li>
+                <li class="mt-4"><router-link class="sidbarLink" to="usersStats">الاحصائيات</router-link></li>
+                <li class="mt-4"><router-link class="sidbarLink" to="useraccount">الفريق</router-link></li>
+                <li class="mt-4"><router-link class="sidbarLink" to="addedProjects">المشاريع</router-link></li>
+                <li class="mt-4"><router-link class="sidbarLink" to="">تسجيل خروج</router-link></li>
+            </ul>
         </div>
-        <div class="col-lg-9 bg-danger">
-            <div class="">
-                <ul class="d-flex ">
-                    <li class=""><router-link class="text-decoration-none text-light" to="useraccount">الملف
-                            الشخصي</router-link></li>
-                    <li><router-link to="usersettings" class="secondLink  me-3">الاعدادات</router-link></li>
-                </ul>
-                <div class="header ">
-                    <div class="">
-                        <p class="inf me-5">معلومات العميل </p>
-                    </div>
+        <div class="col-lg-9">
+            <ul class="col-lg-9 me-5 d-flex ">
+                <li class=""><router-link class="text-decoration-none text-light" to="useraccount">الملف
+                        الشخصي</router-link></li>
+                <li><router-link to="usersettings" class="secondLink  me-5">الاعدادات</router-link></li>
+            </ul>
+            <div class=" col-lg-9 me-5 header ">
+                <div class="">
+                    <p class="inf me-5">معلومات العميل </p>
                 </div>
-                <div class="col-lg-9 m-auto card1 ">
-                    <div class="col-lg-3 m-auto mt-5">
-                        <i class="fa-solid fa-user  textcolor fs-5"></i>
-                        <label class="text textsize me-2" for="email">اسم العميل</label>
-                        <p class="textcolor mt-3 me-4">احمد</p>
-                    </div>
-                    <div class="col-lg-3 m-auto mt-5">
-                        <i class="fa-solid fa-envelope textcolor fs-5"></i>
-                        <label class="text textsize me-2" for="email">البريد الإلكتروني</label>
-                        <p class="textcolor mt-3 me-4">example@gmail.com</p>
-                    </div>
-                    <div class="col-lg-3 m-auto my-5">
-                        <i class="fa-solid fa-phone textcolor fs-5"></i>
-                        <label class="text textsize me-2" for="email">رقم هاتف</label>
-                        <p class="textcolor  me-4">+20 102 375 3410</p>
-                    </div>
+            </div>
+            <div class="col-lg-9 m-auto card1 ">
+                <div class="col-lg-3 m-auto mt-5">
+                    <i class="fa-solid fa-user  textcolor fs-5"></i>
+                    <label class="text textsize me-2" for="email">اسم العميل</label>
+                    <p class="textcolor mt-3 me-4">احمد</p>
+                </div>
+                <div class="col-lg-3 m-auto mt-5">
+                    <i class="fa-solid fa-envelope textcolor fs-5"></i>
+                    <label class="text textsize me-2" for="email">البريد الإلكتروني</label>
+                    <p class="textcolor mt-3 me-4">example@gmail.com</p>
+                </div>
+                <div class="col-lg-3 m-auto my-5">
+                    <i class="fa-solid fa-phone textcolor fs-5"></i>
+                    <label class="text textsize me-2" for="email">رقم هاتف</label>
+                    <p class="textcolor  me-4">+20 102 375 3410</p>
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@
                 <div class="col-md-6">
                     <div class="card-body">فيلا 5 اوض، 3 حمامات في الرياض</div>
                 </div>
-                <div class="col-lg-10 d-flex justify-content-center card2">
+                <div class="col-lg-12 d-flex justify-content-center card2">
                     <div class="col-lg-2">
                         <div class="card-content">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
@@ -206,15 +206,32 @@ export default {
 }
 
 .sideCard {
-    /* position: absolute;
-    top: 45%; */
-    background: #59467C;
+    background-color: #59467C;
     color: #fff;
-    width: 150px;
-    height: 20rem;
+    width: 170px;
+    height: 461px;
     text-align: center;
     border-radius: 18px 0 0 18px;
 }
+
+.sideCard li {
+    list-style-type: none;
+}
+
+.sidbarLink {
+    text-decoration: none;
+    color: #FFFFFFB2;
+    font-size: 18px;
+    line-height: 33.73px;
+}
+
+.sideCard .authName {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 46.85px;
+}
+
 
 li {
     list-style-type: none;

@@ -9,7 +9,7 @@
                         <li class="authName">عبدالعزيز</li>
                         <li class="mt-4"><router-link class="sidbarLink" to="homepage">الرئيسية</router-link></li>
                         <li class="mt-4"><router-link class="sidbarLink" to="usersStats">الاحصائيات</router-link></li>
-                        <li class="mt-4"><router-link class="sidbarLink" to="">الفريق</router-link></li>
+                        <li class="mt-4"><router-link class="sidbarLink" to="useraccount">الفريق</router-link></li>
                         <li class="mt-4"><router-link class="sidbarLink" to="addedProjects">المشاريع</router-link></li>
                         <li class="mt-4"><router-link class="sidbarLink" to="">تسجيل خروج</router-link></li>
                     </ul>
