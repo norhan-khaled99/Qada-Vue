@@ -39,9 +39,9 @@
                         <div class="card-body">
                             <h5 class="card-title bussinse">أعمال</h5>
                             <p class="card-text">دعم هندسي الكتروني متكامل</p>
-                            <router-link to="/business/businessLogin" class="btn btn-success my-2">تسجيل دخول</router-link>
+                            <router-link to="/business/login" class="btn btn-success my-2">تسجيل دخول</router-link>
                             <div class="">
-                                <router-link to="business/businessRegister" class="btn createBtn">إنشاء حساب</router-link>
+                                <router-link to="business/register" class="btn createBtn">إنشاء حساب</router-link>
                             </div>
                         </div>
                     </div>
@@ -49,9 +49,9 @@
                         <div class="card-body">
                             <h4 class="card-title office">مكتب هندسي</h4>
                             <p class="card-text">خدمات اعمالك الهندسية بين يديك</p>
-                            <router-link to="/EngineeringOffices/Engineering_officesLogin" class="btn btn-secondary my-2">تسجيل دخول</router-link>
+                            <router-link to="/EngineeringOffices/login" class="btn btn-secondary my-2">تسجيل دخول</router-link>
                             <div class="">
-                                <router-link to="/EngineeringOffices/Engineering_officesRegister" class="btn createBtn">إنشاء حساب</router-link>
+                                <router-link to="/EngineeringOffices/register" class="btn createBtn">إنشاء حساب</router-link>
                             </div>
                         </div>
                     </div>

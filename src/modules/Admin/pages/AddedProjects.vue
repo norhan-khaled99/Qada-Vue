@@ -17,11 +17,13 @@
                 <div class="col-lg-10  ">
                     <div class=" mb-3">
                         <ul class="d-flex ">
-                            <li><router-link to="/admin/addedProjects" class="tab ">اخر المشاريع المضافة علي المنصة</router-link></li>
-                            <li class=""><router-link to="/admin/pendingProjects" class="tab mx-5">طلبات المشاريع</router-link></li>
+                            <li><router-link to="/admin/addedProjects" class="tab ">اخر المشاريع المضافة علي
+                                    المنصة</router-link></li>
+                            <li class=""><router-link to="/admin/pendingProjects" class="tab mx-5">طلبات
+                                    المشاريع</router-link></li>
                         </ul>
                     </div>
-                    <div v-for="project in allProjects" :key="project.id">
+                    <div v-for="project in addedprojects" :key="project.id">
                         <div class="row justify-content-center my-5">
                             <div class="col-lg-12 col-md-8  col-sm-12">
                                 <div class="card">
@@ -165,15 +167,22 @@ export default {
     setup() {
         const backgroundStore = usebackgroundStore()
         const allProjects = ref([]);
+        let addedprojects = ref([])
         const getAllProjects = () => {
             globalService.getAllProjectForlandingpage()
                 .then((res) => {
                     allProjects.value = res.data.data;
-                    console.log((allProjects.value));
+                    // console.log((allProjects.value[1]));
                 })
                 .catch((error) => {
                     console.error(error);
                 });
+            allProjects.value.forEach((element) => {
+                if (element.state == 1) {
+                    addedprojects.value.push(element)
+                }
+            });
+            // console.log(addedprojects)
         };
         onMounted(() => {
             getAllProjects();
@@ -190,6 +199,7 @@ export default {
         return {
             backgroundStore,
             allProjects,
+            addedprojects,
             getAllProjects,
             filteredProjects
         };
@@ -201,14 +211,16 @@ export default {
 * {
     direction: rtl;
 }
-.container{
+
+.container {
     margin: 0;
 }
+
 .sideCard {
     background-color: #59467C;
     color: #fff;
     width: 170px;
-    height:461px ;
+    height: 461px;
     text-align: center;
     border-radius: 18px 0 0 18px;
 }
@@ -230,12 +242,14 @@ export default {
     font-size: 25px;
     line-height: 46.85px;
 }
-.tab{
+
+.tab {
     text-decoration: none;
     color: #ffffff;
     font-size: 2rem;
     font-weight: 600;
 }
+
 .header {
     color: #fff;
     text-align: right;
@@ -245,10 +259,12 @@ export default {
     font-weight: 700;
     line-height: normal;
 }
+
 .first-card {
     border-radius: 10px;
     background: #fff;
 }
+
 .card-title {
     color: #000;
     text-align: center;
@@ -261,7 +277,7 @@ export default {
 
 .card-body {
     color: #9E5488;
-;
+    ;
     text-align: right;
     font-size: 24px;
     font-weight: 600;
