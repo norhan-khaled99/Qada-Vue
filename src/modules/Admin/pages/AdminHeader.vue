@@ -30,8 +30,15 @@
             <li class="nav-item mx-lg-2">
               <router-link to="/contactus" class="nav-link">إتصل بنا</router-link>
             </li>
-            <button type="button" class="btn  login mx-lg-4">تسجيل دخول</button>
-            <button type="button" class="btn   create">إنشاء حساب</button>
+            <template v-if="!isLoggedIn">
+              <router-link to="/loginPanal">
+                <button type="button" class="btn login mx-lg-4">تسجيل الدخول</button>
+              </router-link>
+              <router-link to="/loginPanal">
+                <button type="button" class="btn create">إنشاء حساب</button>
+              </router-link>
+            </template>
+            <button v-else type="button" class="btn login" @click="logout"> تسجيل خروج </button>
             <li class="nav-item mx-lg-5 position-relative">
               <i class="fa-regular fa-bell"></i>
               <span class="position-absolute top-0 start-lg-100  badge rounded-pill bg-danger text-light">
@@ -51,7 +58,29 @@
 </template>
 
 <script>
-export default {};
+import router from "@/router";
+export default {
+  data() {
+    return {
+      token: null
+    };
+  },
+  computed: {
+    isLoggedIn() {
+      return this.token !== null;
+    }
+  },
+  mounted() {
+    this.token = localStorage.getItem('token');
+  },
+  methods: {
+    logout() {
+      localStorage.clear();
+      this.token = null;
+      router.push("/loginPanal");
+    }
+  }
+};
 </script>
 
 <style scoped>
