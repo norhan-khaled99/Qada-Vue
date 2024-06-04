@@ -3,8 +3,8 @@
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid ">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -19,13 +19,15 @@
                             <router-link to="/business/aboutus" class="nav-link">من نحن؟</router-link>
                         </li>
                         <li class="nav-item mx-lg-2">
-                            <router-link class="nav-link" router-link to="/business/addProjectBussiness">لوحة التحكم</router-link>
+                            <router-link class="nav-link" router-link to="/business/addProjectBussiness">لوحة
+                                التحكم</router-link>
                         </li>
                         <li class="nav-item mx-lg-2">
                             <router-link to="/business/faq" class="nav-link">الاسئلة المتكررة</router-link>
                         </li>
                         <li class="nav-item mx-lg-2">
-                            <router-link to="/business/termsandconditions" class="nav-link">الشروط والاحكام</router-link>
+                            <router-link to="/business/termsandconditions" class="nav-link">الشروط
+                                والاحكام</router-link>
                         </li>
                         <li class="nav-item mx-lg-2">
                             <router-link to="/business/successPartners" class="nav-link">شركاء النجاح</router-link>
@@ -33,12 +35,15 @@
                         <li class="nav-item mx-lg-2">
                             <router-link to="/business/contactus" class="nav-link">إتصل بنا</router-link>
                         </li>
-                        <router-link to="/loginPanal">
-                            <button type="button" class="btn  login mx-lg-4">تسجيل الدخول</button>
-                        </router-link>
-                        <router-link to="/loginPanal">
-                            <button type="button" class="btn   create">إنشاء حساب</button>
-                        </router-link>
+                        <template v-if="!isLoggedIn">
+                            <router-link to="/loginPanal">
+                                <button type="button" class="btn login mx-lg-4">تسجيل الدخول</button>
+                            </router-link>
+                            <router-link to="/loginPanal">
+                                <button type="button" class="btn create">إنشاء حساب</button>
+                            </router-link>
+                        </template>
+                        <button v-else type="button" class="btn login" @click="logout"> تسجيل خروج </button>
                         <li class="nav-item mx-lg-5 position-relative">
                             <i class="fa-regular fa-bell"></i>
                             <span class="position-absolute top-0 start-lg-100  badge rounded-pill bg-danger text-light">
@@ -54,7 +59,29 @@
 </template>
 
 <script>
-export default {};
+import router from "@/router";
+export default {
+    data() {
+        return {
+            token: null
+        };
+    },
+    computed: {
+        isLoggedIn() {
+            return this.token !== null;
+        }
+    },
+    mounted() {
+        this.token = localStorage.getItem('token');
+    },
+    methods: {
+        logout() {
+            localStorage.clear();
+            this.token = null;
+            router.push("/loginPanal");
+        }
+    }
+};
 </script>
 
 <style scoped>
