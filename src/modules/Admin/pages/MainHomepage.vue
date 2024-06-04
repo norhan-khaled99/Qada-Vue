@@ -13,12 +13,12 @@
                     <li class="mt-4"><router-link class="sidbarLink" to="">تسجيل خروج</router-link></li>
                 </ul>
             </div>
-            <div class="col-lg-8 me-5">
+            <div class="col-lg-8">
                 <div class="row header-title my-3">
                     مسار مشاريعك
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-sm-12 statics  ">
+                    <div class="col-md-4 col-sm-10 statics  ">
                         <div class="card-subtitle my-3">
                             المعلومات شاملة
                         </div>
@@ -47,7 +47,7 @@
                                         fill="white" />
                                 </svg>
                                 <span>11</span>
-                                <span>في تقدم </span>
+                                <span class="text-center">في تقدم </span>
                             </div>
                             <div class="col-2 third-column">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-12 statics">
+                    <div class="col-md-4 col-sm-10 statics">
                         <div class="card-subtitle my-3">
                             فاعلية الفريق
                             <span class="team-rate">95%</span>
@@ -89,7 +89,7 @@
                 </div>
             </div>
         </div>
-        <div class="row my-5">
+        <div class="row g-0 my-5">
             <div class="team-member mb-3">
                 اعضاء الفريق
             </div>
@@ -164,6 +164,7 @@ export default {
     width: 170px;
     text-align: center;
     border-radius: 18px 0 0 18px;
+    margin-left: 2rem;
 }
 
 .sideCard li {
@@ -281,7 +282,7 @@ export default {
 
 .team-member {
     color: #E4E4E4;
-    text-align: right;
+    text-align: center;
     font-family: Cairo;
     font-size: 40px;
     font-style: normal;
@@ -366,6 +367,7 @@ export default {
         border-radius: 10px;
         border: 1px solid #E4E4E4;
         margin-bottom: 1.5rem;
+        padding-left: 0.5rem;
     }
 }
 </style>
