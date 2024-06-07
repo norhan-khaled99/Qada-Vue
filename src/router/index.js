@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 // import HomeView from "../views/HomeView.vue";
 //---components
-import LoginPanal from "../components/LoginPanal.vue";
+// import LoginPanal from "../components/LoginPanal.vue";
 import SuccessPartners from "../modules/members/components/SuccessPartners.vue";
 import AboutUs from "../modules/members/components/AboutUs.vue";
 import TermsAndConditions from "../modules/members/components/TermsAndConditions.vue";
@@ -112,13 +112,13 @@ const routes = [
   },
   {
     path: "/loginPanal",
-    component: LoginPanal,
+    name: "LoginPanal",
+    component: () => import("../components/LoginPanal.vue")
   },
   {
     path: "/about",
     name: "about",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    component: () => import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
     path: "/successPartners",

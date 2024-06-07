@@ -877,6 +877,7 @@ export default {
 }
 .card:hover {
   border: 3px solid #48847b;
+  cursor: pointer;
 }
 
 .card-link {

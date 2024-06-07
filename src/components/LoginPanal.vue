@@ -1,16 +1,16 @@
 <template>
     <MainHeader/>
-    <div class="container-fluid row align-items-center">
+    <div class="container-fluid d-flex align-items-center">
 
         <div class="row view align-items-center">
             <div class="col-lg-3 offset-lg-1 qdas ">
                 <h1 class="mb-">منصة قد<span>ة</span></h1>
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <!-- <div class="carousel-item active">
                             <p>ساهمت منصة قدة في تقليل عمر القضية بنسبة %79</p>
-                        </div>
-                        <div class="carousel-item">
+                        </div> -->
+                        <div class="carousel-item active">
                             <p>ساهمت منصة قدة بإتاحة التقاضي إلكترونيًا لأكثر من 6 ملايين جلسة عن بعد، وإصدار 2 مليون حكم
                                 قضائي إلكتروني</p>
                         </div>
