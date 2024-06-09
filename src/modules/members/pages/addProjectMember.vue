@@ -342,7 +342,7 @@ form .form-select {
 /* Style the selected option */
 /* Style the selected option */
 select#floatingSelect option:checked {
-  background-color: #0c483f;
+  background-color: # ;
   color: #fff;
 }
 

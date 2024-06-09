@@ -2,44 +2,44 @@
   <MemberHeader />
   <div class="mt-5">
     <ul class="nav" id="myTab" role="tablist">
-      <li class="nav-item" role="presentation" @click="activeTab = '1'">
-        <a class="nav-link" :class="{ active: activeTab === '1' }" href="#header-i" role="tab" aria-controls="header-i"
+      <li class="nav-item" role="presentation" @click="changeTab('1', $event)">
+        <a class="nav-link" :class="{ active: activeTab === '1' }"  role="tab" aria-controls="header-i"
           aria-selected="true">
           تفاصيل المشروع
         </a>
       </li>
-      <li class="nav-item" role="presentation" @click="activeTab = '2'">
-        <a class="nav-link" :class="{ active: activeTab === '2' }" href="#header-ii" role="tab" aria-controls="header-ii"
+      <li class="nav-item" role="presentation" @click="changeTab('2', $event)">
+        <a class="nav-link" :class="{ active: activeTab === '2' }"  role="tab" aria-controls="header-ii"
           aria-selected="false">
           الإستفسارات
         </a>
       </li>
-      <li class="nav-item" role="presentation" @click="activeTab = '3'">
-        <a class="nav-link" :class="{ active: activeTab === '3' }" href="#header-iii" role="tab"
+      <li class="nav-item" role="presentation" @click="changeTab('3', $event)">
+        <a class="nav-link" :class="{ active: activeTab === '3' }"  role="tab"
           aria-controls="header-iii" aria-selected="false">
           ملفات المشروع
         </a>
       </li>
-      <li class="nav-item" role="presentation" @click="activeTab = '4'">
-        <a class="nav-link" :class="{ active: activeTab === '4' }" href="#header-iv" role="tab" aria-controls="header-iv"
+      <li class="nav-item" role="presentation" @click="changeTab('4', $event)">
+        <a class="nav-link" :class="{ active: activeTab === '4' }"  role="tab" aria-controls="header-iv"
           aria-selected="false">
           عروض الاسعار
         </a>
       </li>
-      <li class="nav-item" role="presentation" @click="activeTab = '5'">
-        <a class="nav-link" :class="{ active: activeTab === '5' }" href="#header-v" role="tab" aria-controls="header-v"
+      <li class="nav-item" role="presentation" @click="changeTab('5', $event)">
+        <a class="nav-link" :class="{ active: activeTab === '5' }"  role="tab" aria-controls="header-v"
           aria-selected="false">
           تعاقد إلكتروني
         </a>
       </li>
-      <li class="nav-item" role="presentation" @click="activeTab = '6'">
-        <a class="nav-link" :class="{ active: activeTab === '6' }" href="#header-vi" role="tab" aria-controls="header-vi"
+      <li class="nav-item" role="presentation" @click="changeTab('6', $event)">
+        <a class="nav-link" :class="{ active: activeTab === '6' }"  role="tab" aria-controls="header-vi"
           aria-selected="false">
           مراحل المشروع
         </a>
       </li>
-      <li class="nav-item" role="presentation" @click="activeTab = '7'">
-        <a class="nav-link" :class="{ active: activeTab === '7' }" href="#header-vii" role="tab"
+      <li class="nav-item" role="presentation" @click="changeTab('7', $event)">
+        <a class="nav-link" :class="{ active: activeTab === '7' }"  role="tab"
           aria-controls="header-vii" aria-selected="false">
           سجل حركات المشروع
         </a>
@@ -87,6 +87,8 @@
   </div>
 </template>
 
+
+
 <script>
 import ProjectDetails from "./projectDetails";
 import ProjectPhases from "./projectPhases";
@@ -97,6 +99,7 @@ import projectsFile from "./projectsFile.vue";
 import Prices_offers from "./Prices_offers.vue";
 import MemberHeader from "../../components/MemberHeader.vue";
 import { ref } from "vue";
+
 export default {
   components: {
     ProjectDetails,
@@ -111,13 +114,15 @@ export default {
   setup() {
     const activeTab = ref("1");
 
-    const changeTab = (tabNumber) => {
-      activeTab.value = tabNumber;
-    };
+    const changeTab = (tabNumber, event) => {
+  activeTab.value = tabNumber;
+  window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top
+  event.preventDefault(); // Prevent default scrolling behavior
+};
+
     return {
       activeTab,
       changeTab,
-
     };
   },
 };

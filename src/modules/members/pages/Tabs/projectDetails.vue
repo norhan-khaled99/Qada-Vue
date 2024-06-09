@@ -159,7 +159,10 @@
 
 <script>
 export default {
+  setup(){
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top
 
+  },
 }
 </script>
 

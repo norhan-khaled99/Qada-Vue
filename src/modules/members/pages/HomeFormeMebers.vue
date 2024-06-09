@@ -65,8 +65,9 @@
         </div>
       </div>
 
-      <div class="p-4">
-        <div class="row justify-content-center text-decoration-none">
+      <div class="p-4" >
+        <router-link to="/member/maintabsForMember" class="text-decoration-none">
+        <div class="row justify-content-center ">
           <div class="col-lg-11 col-md-8 col-sm-12">
             <div class="card">
               <div class="row align-items-baseline justify-content-between">
@@ -215,6 +216,7 @@
             </div>
           </div>
         </div>
+      </router-link>
       </div>
 
       <div class="p-4">
