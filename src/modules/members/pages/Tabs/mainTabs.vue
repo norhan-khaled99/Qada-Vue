@@ -144,6 +144,7 @@ export default {
 
 .nav-link:hover {
   color: rgba(85, 85, 85, 0.9);
+  cursor:pointer;
 }
 
 .nav-link.active {
