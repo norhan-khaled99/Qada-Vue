@@ -74,7 +74,7 @@
                             <span class="team-rate">95%</span>
                         </div>
                         <div class="d-flex justify-content-around mt-5">
-                            <div class="col-2 flex-column align-self-end">
+                            <!-- <div class="col-2 flex-column align-self-end">
                                 <div>100% </div>
                                 <div>75%</div>
                                 <div>50% </div>
@@ -83,7 +83,19 @@
                             </div>
                             <div class="col-2  first-column-two ">50%</div>
                             <div class="col-2  second-column-two">91%</div>
-                            <div class="col-2 third-column-two ">73% </div>
+                            <div class="col-2 third-column-two ">73% </div> -->
+                            <div class="chart-container">
+                                <div class="bar first-column-two">
+                                    <span>50%</span>
+                                </div>
+                                <div class="bar second-column-two">
+                                    <span>91%</span>
+                                </div>
+                                <div class="bar third-column-two ">
+                                    <span>73%</span>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -280,6 +292,49 @@ export default {
     margin: 1rem 0;
 }
 
+.chart-container {
+    display: flex;
+    align-items: flex-end;
+    height: 200px; /* Adjust as needed */
+    margin-top: 20px; /* Adjust as needed */
+    position: relative;
+}
+
+.chart-container .bar {
+    width: 50px; /* Adjust as needed */
+    margin: 0 10px; /* Adjust as needed */
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.first-column-two {
+    background: #259F5A;
+    height: 50%; /* Representing 50% */
+}
+
+.second-column-two {
+    background: #007FBB;
+    height: 150%; /* Representing 91% */
+}
+
+.third-column-two  {
+    background: #95244E;
+    height: 73%;
+}
+
+.bar span {
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 5px;
+    font-size: 14px;
+    margin-left:10px;
+    color: #fff;
+}
+
+
 .team-member {
     color: #E4E4E4;
     text-align: center;
@@ -328,7 +383,7 @@ export default {
     text-align: center;
     border-radius: 10px;
     background: #259F5A;
-    max-height: 4rem;
+    max-height: 7rem;
 }
 
 .second-column-two {
@@ -338,7 +393,7 @@ export default {
     align-items: center;
     border-radius: 10px;
     background: #007FBB;
-    max-height: 6.25rem;
+    max-height: 12rem;
 }
 
 .third-column-two {
@@ -348,7 +403,7 @@ export default {
     align-items: center;
     border-radius: 10px;
     background: #95244E;
-    max-height: 4.75rem;
+    max-height: 8rem;
 }
 
 
