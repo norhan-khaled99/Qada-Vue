@@ -1,103 +1,3 @@
-<!-- <template>
-  <div>
-    <PHeader/>
-  <div class="container mx-auto my-5">
-    <div class="header">
-      <p>تسجيل الدخول للأفراد</p>
-    </div>
-    <div class="row">
-    <form @submit.prevent="login()"  class=" mt-5">
-      <div class="col-md-4 col-sm-8 mx-auto">
-        <div class="mb-2">
-        <img src="../../../assets/Vector.png" class="mx-2" alt="" />
-        <label for="name">اسم المستخدم</label>
-      </div>
-      <input type="text" class="form-control" v-model="v$.email"  />
-      <div class="mb-2">
-        <img src="../../../assets/passwd.png" class="mx-2" alt="" />
-        <label class="my-3" for="password mx-2">كلمة السر</label>
-      </div>
-      <input type="text" class="form-control" v-model="form.password" />
-      <div class="text-center">
-        <button type="submit" class="btn mt-4">دخول</button>
-      </div>
-      </div>
-    </form>
-  </div>
-
-    <div class="text-center">
-      <button type="button" class="register mt-4">
-        <img src="../../../assets/Vector2.png" class="mx-2" alt="" />
-        <router-link class="link" to="register"> حساب جديد </router-link>
-      </button>
-    </div>
-  </div>
-</div>
-
-</template>
-
-<script>
-import PHeader from "../components/PHeader.vue";
-import { reactive, ref } from "vue";
-import authService from "../services/AuthService";
-import router from "@/router";
-import { useVuelidate } from '@vuelidate/core'
-import { required, email } from '@vuelidate/validators'
-
-export default {
-  components: {
-    PHeader,
-  },
-  setup() {
-    const form = reactive({
-    email: "",
-    password: "",
-  });
-
-  const rules = {
-    form: {
-      email: { required, email },
-      password: { required },
-    },
-  };
-
-  const v$ = useVuelidate(rules);
-    const loginSuccess = ref(false);
-
-    const login = () => {
-      authService
-        .login(form.value)
-        .then((response) => {
-          console.log(response.data);
-          loginSuccess.value = true;
-          localStorage.setItem("token", response.data.token);
-          localStorage.setItem("name", response.data.msg.name);
-          localStorage.setItem("id", response.data.msg.id);
-          localStorage.setItem("phone", response.data.msg.phone);
-          localStorage.setItem("email", response.data.msg.email);
-          router.push("/");
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    };
-
-    const goToRegister = () => {
-      router.push("/register");
-    };
-
-    return {
-      form,
-      loginSuccess,
-      login,
-      goToRegister,
-      rules,
-      v$,
-    };
-  },
-};
-</script> -->
-
 <template>
   <div>
     <PHeader/>
@@ -156,10 +56,10 @@ export default {
 <script>
 import PHeader from "../components/PHeader.vue";
 import { reactive, ref } from "vue";
+import useVuelidate from '@vuelidate/core';
+import { required, email } from '@vuelidate/validators';
 import authService from "../services/AuthService";
 import router from "@/router";
-import useVuelidate from '@vuelidate/core'
-import { required, email } from '@vuelidate/validators'
 
 export default {
   components: {
@@ -181,12 +81,13 @@ export default {
     const loginSuccess = ref(false);
 
     const login = () => {
-      v$.email.$touch();
-      v$.password.$touch();
+      v$.value.email.$touch();
+      v$.value.password.$touch();
 
-      if (v$.email.$error || v$.password.$error) {
+      if (v$.value.email.$error || v$.value.password.$error) {
         return;
       }
+
       authService
         .login(form)
         .then((response) => {
