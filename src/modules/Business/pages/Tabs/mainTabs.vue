@@ -221,7 +221,7 @@ line-height: normal;
 }
 .nav-link.active {
   color: #0F9678;
-  
+  cursor: pointer;
   /*  
   border-bottom:2px solid #0F9678  ;
   */
