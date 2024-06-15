@@ -17,11 +17,11 @@
           <img src="../../../assets/login_business2.png" class="mx-2" alt="" />
           <label class="my-3 mx-2" for="password">كلمة السر</label>
         </div>
-        <input type="text" class="form-control" v-model="form.password" />
+        <input type="password" class="form-control" v-model="form.password" />
         <div class="text-center">
-          <router-link to="/business" class="text-center">
+          
             <button type="submit" class="btn y mt-4">دخول</button>
-          </router-link>
+         
         </div>
         </div>
       </form>
@@ -60,7 +60,7 @@ export default {
       authService
         .login(form.value)
         .then((response) => {
-          console.log(response.data);
+          console.log("response.data");
           loginSuccess.value = true;
           localStorage.setItem("token", response.data.token);
           localStorage.setItem("name", response.data.data.name);

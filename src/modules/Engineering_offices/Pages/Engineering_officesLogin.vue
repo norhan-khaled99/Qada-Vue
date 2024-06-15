@@ -17,7 +17,7 @@
           <i class="fa-solid fa-lock mx-2"></i>
           <label class="my-3" for="password mx-2">كلمة السر</label>
         </div>
-        <input type="text" class="form-control" v-model="form.password" />
+        <input type="password" class="form-control" v-model="form.password" />
         <div class="text-center">
           <button type="submit" class="btn btn-primary mt-4">دخول</button>
         </div>
